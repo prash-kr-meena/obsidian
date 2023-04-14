@@ -4,18 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "dcf875bd91ad186e",
+        "id": "251cc13e70ea5ab1",
         "type": "tabs",
         "children": [
           {
-            "id": "22b295aa9ce335f4",
+            "id": "7da55845e7796848",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
-              "state": {
-                "file": "README.md",
-                "staged": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -132,12 +129,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -149,10 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "22b295aa9ce335f4",
+  "active": "7da55845e7796848",
   "lastOpenFiles": [
-    "README.md",
     "Learning Obsidian.md",
+    "README.md",
     "2023-04-14.md",
     "Untitled.canvas"
   ]
