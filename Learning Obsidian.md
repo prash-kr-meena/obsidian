@@ -8,6 +8,6 @@ Content around setting up obsidian and learning to obsidian for improving my mem
 
 
 Backup with Git
-[Backup your Obsidian Vault for free](https://www.youtube.com/watch?v=BTN6hJ65qk8&ab_channel=BrandonBoswell)
+* *[Backup your Obsidian Vault for free](https://www.youtube.com/watch?v=BTN6hJ65qk8&ab_channel=BrandonBoswell)
 [How to back up your notes with Obsidian Git](https://www.youtube.com/watch?v=XR7PYaMVDw0&ab_channel=DannyHatcher)
 
