@@ -7,7 +7,10 @@ Content around setting up obsidian and learning to obsidian for improving my mem
 [Publish your Obsidian Vault Online for Free with Quartz](https://www.youtube.com/watch?v=ITiiuBNVue0&ab_channel=BrandonBoswell)
 
 
+Publishing your notes
+	[How to Set Up a Digital Garden With Obsidian For Free](https://www.youtube.com/watch?v=kg-9n_A4Tf0&ab_channel=PrakashJoshiPax)
+
 Backup with Git
-* *[Backup your Obsidian Vault for free](https://www.youtube.com/watch?v=BTN6hJ65qk8&ab_channel=BrandonBoswell)
-[How to back up your notes with Obsidian Git](https://www.youtube.com/watch?v=XR7PYaMVDw0&ab_channel=DannyHatcher)
+	[Backup your Obsidian Vault for free](https://www.youtube.com/watch?v=BTN6hJ65qk8&ab_channel=BrandonBoswell)
+	[How to back up your notes with Obsidian Git](https://www.youtube.com/watch?v=XR7PYaMVDw0&ab_channel=DannyHatcher)
 
