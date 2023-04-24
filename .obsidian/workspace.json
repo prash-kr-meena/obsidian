@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "251cc13e70ea5ab1",
+        "id": "7f89bbeb0126b086",
         "type": "tabs",
         "children": [
           {
-            "id": "7da55845e7796848",
+            "id": "62f6d6cb0322b924",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {}
             }
           }
@@ -146,7 +146,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7da55845e7796848",
+  "active": "62f6d6cb0322b924",
   "lastOpenFiles": [
     "Learning Obsidian.md",
     "README.md",
