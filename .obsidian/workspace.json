@@ -158,7 +158,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -177,8 +178,12 @@
   },
   "active": "a812caf9f44a4746",
   "lastOpenFiles": [
-    "CNCF - Cloud Native Computing Foundation.md",
     "Home.md",
+    "kubenetes/Kubernetes.md",
+    "kubenetes/Deployments.md",
+    "kubenetes/Pod.md",
+    "kubenetes",
+    "kubenetes/CNCF - Cloud Native Computing Foundation.md",
     "Learning Obsidian.md",
     "README.md",
     "2023-04-14.md",
