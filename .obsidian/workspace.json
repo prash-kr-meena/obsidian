@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "7f89bbeb0126b086",
+        "id": "36fe8ca0d5b82915",
         "type": "tabs",
         "children": [
           {
-            "id": "62f6d6cb0322b924",
+            "id": "f731162621aa50a2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learning Obsidian.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a812caf9f44a4746",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Home.md",
+                "file": "kubenetes/Kode Kloud Labs & Slack Community.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Home.md",
+                "file": "kubenetes/Kode Kloud Labs & Slack Community.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Home.md",
+                "file": "kubenetes/Kode Kloud Labs & Slack Community.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Home.md"
+                "file": "kubenetes/Kode Kloud Labs & Slack Community.md"
               }
             }
           },
@@ -176,15 +163,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a812caf9f44a4746",
+  "active": "f731162621aa50a2",
   "lastOpenFiles": [
-    "Home.md",
     "kubenetes/Kubernetes.md",
+    "kubenetes/Kode Kloud Labs & Slack Community.md",
+    "kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
     "kubenetes/Deployments.md",
-    "kubenetes/Pod.md",
-    "kubenetes",
+    "Access Kode Kloud Labs.md",
     "kubenetes/CNCF - Cloud Native Computing Foundation.md",
+    "kubenetes/Pod.md",
     "Learning Obsidian.md",
+    "Screenshot 2023-05-06 at 7.24.19 PM.png",
+    "Home.md",
+    "kubenetes",
     "README.md",
     "2023-04-14.md",
     "Untitled.canvas"
