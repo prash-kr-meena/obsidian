@@ -3,6 +3,9 @@
 
 
 
+kubernetes = [[Containers]] + orchestration
+
+
 Major topics starting points
 
 - [[Pod]]

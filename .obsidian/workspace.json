@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "36fe8ca0d5b82915",
+        "id": "c4a043c6e4774b47",
         "type": "tabs",
         "children": [
           {
-            "id": "f731162621aa50a2",
+            "id": "1f20e7b39a7fd6af",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "kubenetes/Kode Kloud Labs & Slack Community.md",
+                "file": "kubenetes/Containers.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 216.50271224975586
+    "width": 349.5086555480957
   },
   "right": {
     "id": "5affea21a0bdd9dc",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "kubenetes/Kode Kloud Labs & Slack Community.md",
+                "file": "kubenetes/Containers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "kubenetes/Kode Kloud Labs & Slack Community.md",
+                "file": "kubenetes/Containers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "kubenetes/Kode Kloud Labs & Slack Community.md"
+                "file": "kubenetes/Containers.md"
               }
             }
           },
@@ -163,20 +163,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f731162621aa50a2",
+  "active": "1f20e7b39a7fd6af",
   "lastOpenFiles": [
     "kubenetes/Kubernetes.md",
-    "kubenetes/Kode Kloud Labs & Slack Community.md",
-    "kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
+    "kubenetes/Containers.md",
+    "kubenetes/what is a container?.md",
+    "containerized applications architecture.png",
+    "README.md",
     "kubenetes/Deployments.md",
+    "kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
+    "kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png",
+    "kubenetes/Pod.md",
+    "kubenetes/Kode Kloud Labs & Slack Community.md",
     "Access Kode Kloud Labs.md",
     "kubenetes/CNCF - Cloud Native Computing Foundation.md",
-    "kubenetes/Pod.md",
     "Learning Obsidian.md",
-    "Screenshot 2023-05-06 at 7.24.19 PM.png",
     "Home.md",
     "kubenetes",
-    "README.md",
     "2023-04-14.md",
     "Untitled.canvas"
   ]
