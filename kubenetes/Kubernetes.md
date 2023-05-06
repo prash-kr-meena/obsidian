@@ -1,9 +1,12 @@
 [[Kode Kloud Labs & Slack Community]]
 [[Kubernetes For Beginners - Kode Kloud.pdf]]
 
+[[Containers & Container Images]]
+
+[[Virtualization]]
 
 
-kubernetes = [[Containers]] + orchestration
+Kubernetess = Containers + orchestration
 
 
 Major topics starting points

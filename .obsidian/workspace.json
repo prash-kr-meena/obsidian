@@ -4,18 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "c4a043c6e4774b47",
+        "id": "71acfc3d9a7b850a",
         "type": "tabs",
         "children": [
           {
-            "id": "1f20e7b39a7fd6af",
+            "id": "e2b83098218a7c1d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
-                "file": "kubenetes/Containers.md",
-                "mode": "source",
-                "source": false
+                "file": "kubenetes/container.md",
+                "staged": false
               }
             }
           }
@@ -93,7 +92,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "kubenetes/Containers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +108,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "kubenetes/Containers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +129,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "kubenetes/Containers.md"
-              }
+              "state": {}
             }
           },
           {
@@ -146,12 +141,11 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -163,13 +157,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1f20e7b39a7fd6af",
+  "active": "e2b83098218a7c1d",
   "lastOpenFiles": [
-    "kubenetes/Kubernetes.md",
-    "kubenetes/Containers.md",
-    "kubenetes/what is a container?.md",
-    "containerized applications architecture.png",
+    "Home.md",
     "README.md",
+    "Learning Obsidian.md",
+    "kubenetes/Virtualizations Practical Example.md",
+    "kubenetes/containerized applications architecture.png",
+    "kubenetes/server usage - with virtualization.png",
+    "kubenetes/container.md",
+    "kubenetes/Kubernetes.md",
+    "kubenetes/Virtualization.md",
+    "kubenetes/server usage - without virutalization.png",
+    "kubenetes/what is a container?.md",
+    "kubenetes/Containers & Container Images.md",
+    "kubenetes/what are containers based on?.md",
+    "kubenetes/whats included in a container.png",
+    "kubenetes/what is a container image?.md",
     "kubenetes/Deployments.md",
     "kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
     "kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png",
@@ -177,8 +181,6 @@
     "kubenetes/Kode Kloud Labs & Slack Community.md",
     "Access Kode Kloud Labs.md",
     "kubenetes/CNCF - Cloud Native Computing Foundation.md",
-    "Learning Obsidian.md",
-    "Home.md",
     "kubenetes",
     "2023-04-14.md",
     "Untitled.canvas"
