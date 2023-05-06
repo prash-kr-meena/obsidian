@@ -6,7 +6,7 @@
 [[Virtualization]]
 
 
-Kubernetess = Containers + orchestration
+Kubernetes = [[Containers & Container Images|Containers]] + orchestration
 
 
 Major topics starting points

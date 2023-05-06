@@ -4,17 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "71acfc3d9a7b850a",
+        "id": "2636e125b6ce2ba7",
         "type": "tabs",
         "children": [
           {
-            "id": "e2b83098218a7c1d",
+            "id": "c2bcf5f751d2c028",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": "kubenetes/container.md",
-                "staged": false
+                "file": "kubenetes/Virtualization.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -92,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "kubenetes/Virtualization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "kubenetes/Virtualization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "kubenetes/Virtualization.md"
+              }
             }
           },
           {
@@ -145,7 +150,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -157,16 +163,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e2b83098218a7c1d",
+  "active": "c2bcf5f751d2c028",
   "lastOpenFiles": [
-    "Home.md",
+    "kubenetes/Kubernetes.md",
     "README.md",
+    "Home.md",
     "Learning Obsidian.md",
     "kubenetes/Virtualizations Practical Example.md",
     "kubenetes/containerized applications architecture.png",
     "kubenetes/server usage - with virtualization.png",
     "kubenetes/container.md",
-    "kubenetes/Kubernetes.md",
     "kubenetes/Virtualization.md",
     "kubenetes/server usage - without virutalization.png",
     "kubenetes/what is a container?.md",
