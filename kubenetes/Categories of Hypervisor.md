@@ -18,17 +18,20 @@ There are two broad categories of hypervisors: Type 1 and Type 2.
 - Type 2 hypervisors rarely show up in server-based environments. Instead, they’re suitable for individual PC users needing to run multiple operating systems. 
 	- Examples include engineers, security professionals analyzing malware, and business users that need access to applications only available on other software platforms.
 
+##### Advantages of Hosted Hypervisor
+- Type 2 hypervisors often feature additional toolkits for users to install into the guest OS. 
+	- These tools provide enhanced connections between the guest and the host OS, 
+	 e.g. they often enable the user to cut and paste between the two or
+	 access host OS files and folders from within the guest VM.
 
-Type 2 hypervisors often feature additional toolkits for users to install into the guest OS. These tools provide enhanced connections between the guest and the host OS, often enabling the user to cut and paste between the two or access host OS files and folders from within the guest VM.
+- A Type 2 hypervisor enables quick and easy access to an alternative guest OS (VMs OS) alongside the primary one running on the host system. This makes it great for end-user productivity. 
+  A consumer might use it to access their favorite Linux-based development tools while using a speech dictation system only found on Windows, for example.
 
-A Type 2 hypervisor enables quick and easy access to an alternative guest OS alongside the primary one running on the host system. This makes it great for end-user productivity. A consumer might use it to access their favorite Linux-based development tools while using a speech dictation system only found in Windows, for example.
 
-But because a Type 2 hypervisor must access computing, memory, and network resources via the host OS, it introduces latency issues that can affect performance. It also introduces potential security risks if an attacker compromises the host OS because they could then manipulate any guest OS running in the Type 2 hypervisor.
+##### Disadvantage of Hosted Hypervisor
+- But because a <u>Type 2 hypervisor must access computing, memory, and network resources via the host OS</u>, **it introduces latency issues that can affect performance.** 
+- It also introduces potential security risks if an attacker compromises the host OS because they could then manipulate any guest OS running in the Type 2 hypervisor.
 
----
 
 
 ![[Pasted image 20230507134752.png]]
-
-
-

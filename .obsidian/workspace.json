@@ -4,55 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "2636e125b6ce2ba7",
+        "id": "5d0d31a74b05101a",
         "type": "tabs",
         "children": [
           {
-            "id": "c2bcf5f751d2c028",
+            "id": "57eaff04c1dcc69d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Categories of Hypervisor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9d43610bb4119581",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "What is a Hypervisor?.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "31837cb1ad2f3cfb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "What is a Hypervisor?.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "54b75af0865631f8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "What are virtual machines (VMs).md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -129,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Categories of Hypervisor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Categories of Hypervisor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -168,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Categories of Hypervisor.md"
-              }
+              "state": {}
             }
           },
           {
@@ -199,20 +155,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c2bcf5f751d2c028",
+  "active": "57eaff04c1dcc69d",
   "lastOpenFiles": [
-    "Pasted image 20230507134752.png",
-    "What is a Hypervisor?.md",
-    "Categories of Hypervisor.md",
+    "kubenetes/Beneifts of virtualization.md",
+    "kubenetes/Categories of Hypervisor.md",
+    "kubenetes/Pasted image 20230507134752.png",
+    "Learning Obsidian.md",
+    "kubenetes/What are virtual machines (VMs).md",
+    "kubenetes/What is a Hypervisor?.md",
     "kubenetes/Virtualization.md",
-    "What are virtual machines (VMs).md",
-    "Beneifts of virtualization.md",
     "kubenetes/Kubernetes.md",
     "kubenetes/Virtualizations Practical Example.md",
     "kubenetes/Containers & Container Images.md",
     "README.md",
     "Home.md",
-    "Learning Obsidian.md",
     "kubenetes/containerized applications architecture.png",
     "kubenetes/server usage - with virtualization.png",
     "kubenetes/container.md",
