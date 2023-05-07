@@ -11,8 +11,12 @@
             "id": "57eaff04c1dcc69d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "kubenetes/Containers & Container Images.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "kubenetes/Containers & Container Images.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "kubenetes/Containers & Container Images.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "kubenetes/Containers & Container Images.md"
+              }
             }
           },
           {
@@ -157,6 +165,19 @@
   },
   "active": "57eaff04c1dcc69d",
   "lastOpenFiles": [
+    "kubenetes/container.md",
+    "kubenetes/server usage - without virutalization.png",
+    "kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
+    "kubenetes/Pasted image 20230507134752.png",
+    "kubenetes/Deployments.md",
+    "kubenetes/what is a container image?.md",
+    "kubenetes/Containers & Container Images.md",
+    "kubenetes/containerized applications architecture.png",
+    "hosting.md",
+    "kubenetes/Kode Kloud Labs & Slack Community.md",
+    "custom Domain.md",
+    "kubenetes/Categories of Hypervisor.md",
+    "docker.md",
     "kubenetes/Beneifts of virtualization.md",
     "content/notes/Learning Obsidian.md",
     "content/notes/kubenetes/whats included in a container.png",
@@ -181,7 +202,6 @@
     "content/notes/kubenetes/Containers & Container Images.md",
     "content/notes/kubenetes/Categories of Hypervisor.md",
     "content/notes/kubenetes/CNCF - Cloud Native Computing Foundation.md",
-    "content/notes/kubenetes/Beneifts of virtualization.md",
     "content/notes/kubenetes",
     "assets/styles/_callouts.scss",
     "assets/styles/custom.scss",
@@ -190,19 +210,7 @@
     "assets/styles/darkmode.scss",
     "assets/styles/code-title.scss",
     "assets/styles/syntax.scss",
-    "assets/styles/base.scss",
-    "content/_index.md",
-    "content/templates/post.md",
-    "content/private/private-note.md",
-    "content/notes/ignore notes.md",
-    "content/notes/docker.md",
-    "content/notes/CJK + Latex Support (测试).md",
-    "content/notes/philosophy.md",
-    "content/notes/hosting.md",
     "content/notes/images/obsidian-settings.png",
-    "content/notes/images/google-domains.png",
-    "content/notes/images/github-pages.png",
-    "content/notes/images/github-actions.png",
     "Untitled.canvas"
   ]
 }
