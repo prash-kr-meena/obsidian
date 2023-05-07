@@ -31,5 +31,13 @@
       "key": "]"
     }
   ],
-  "editor:toggle-blockquote": []
+  "editor:toggle-blockquote": [],
+  "insert-template": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "T"
+    }
+  ]
 }
