@@ -1,22 +1,18 @@
 {
   "main": {
-    "id": "fb10115bf991d9f6",
+    "id": "0ee96f1a7b5b693f",
     "type": "split",
     "children": [
       {
-        "id": "5d0d31a74b05101a",
+        "id": "de750f932b52e7f5",
         "type": "tabs",
         "children": [
           {
-            "id": "57eaff04c1dcc69d",
+            "id": "12856d0ac9c5c983",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "kubenetes/Containers & Container Images.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -25,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "b5bc92d52b9f4202",
+    "id": "2f9d74e6244881c0",
     "type": "split",
     "children": [
       {
-        "id": "4bcbd33e5dd841d1",
+        "id": "f9b06bc4ac379349",
         "type": "tabs",
         "children": [
           {
-            "id": "e89f94d9dfdbe597",
+            "id": "88c7f9cc90f73262",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +39,7 @@
             }
           },
           {
-            "id": "ffea118c2e2436d4",
+            "id": "4cec89abaa4d3aa6",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,15 +54,7 @@
             }
           },
           {
-            "id": "64bb9890b22a5784",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
-          },
-          {
-            "id": "fdb2246b3fa75727",
+            "id": "50ff315f41f9e2ba",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -77,23 +65,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 349.5086555480957
+    "width": 300
   },
   "right": {
-    "id": "5affea21a0bdd9dc",
+    "id": "e894913006434ce4",
     "type": "split",
     "children": [
       {
-        "id": "b5a1ca60e0bf3db2",
+        "id": "1ca933ef01087105",
         "type": "tabs",
         "children": [
           {
-            "id": "4dc3e28254de26d9",
+            "id": "d3d8844eff824e43",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "kubenetes/Containers & Container Images.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,19 +92,18 @@
             }
           },
           {
-            "id": "82c1a1d96ccf9621",
+            "id": "31204e5f7db4f62a",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "kubenetes/Containers & Container Images.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "98fe7e80b18a02d1",
+            "id": "1e439a27af873127",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -128,25 +114,14 @@
             }
           },
           {
-            "id": "96d49f10186bbb04",
+            "id": "e7235f3e55416c27",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "kubenetes/Containers & Container Images.md"
-              }
-            }
-          },
-          {
-            "id": "c5b3ed388efa8016",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
               "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -163,54 +138,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "57eaff04c1dcc69d",
-  "lastOpenFiles": [
-    "kubenetes/Containers & Container Images.md",
-    "kubenetes/container.md",
-    "kubenetes/server usage - without virutalization.png",
-    "kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
-    "kubenetes/Pasted image 20230507134752.png",
-    "kubenetes/Deployments.md",
-    "kubenetes/what is a container image?.md",
-    "kubenetes/containerized applications architecture.png",
-    "hosting.md",
-    "kubenetes/Kode Kloud Labs & Slack Community.md",
-    "custom Domain.md",
-    "kubenetes/Categories of Hypervisor.md",
-    "docker.md",
-    "kubenetes/Beneifts of virtualization.md",
-    "content/notes/Learning Obsidian.md",
-    "content/notes/kubenetes/whats included in a container.png",
-    "content/notes/kubenetes/what is a container?.md",
-    "content/notes/kubenetes/what is a container image?.md",
-    "content/notes/kubenetes/what are containers based on?.md",
-    "content/notes/kubenetes/server usage - without virutalization.png",
-    "content/notes/kubenetes/server usage - with virtualization.png",
-    "content/notes/kubenetes/containerized applications architecture.png",
-    "content/notes/kubenetes/container.md",
-    "content/notes/kubenetes/What is a Hypervisor?.md",
-    "content/notes/kubenetes/What are virtual machines (VMs).md",
-    "content/notes/kubenetes/Virtualizations Practical Example.md",
-    "content/notes/kubenetes/Virtualization.md",
-    "content/notes/kubenetes/Pod.md",
-    "content/notes/kubenetes/Pasted image 20230507134752.png",
-    "content/notes/kubenetes/Kubernetes.md",
-    "content/notes/kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
-    "content/notes/kubenetes/Kode Kloud Labs & Slack Community.md",
-    "content/notes/kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png",
-    "content/notes/kubenetes/Deployments.md",
-    "content/notes/kubenetes/Containers & Container Images.md",
-    "content/notes/kubenetes/Categories of Hypervisor.md",
-    "content/notes/kubenetes/CNCF - Cloud Native Computing Foundation.md",
-    "content/notes/kubenetes",
-    "assets/styles/_callouts.scss",
-    "assets/styles/custom.scss",
-    "assets/styles/clipboard.scss",
-    "assets/styles/_light_syntax.scss",
-    "assets/styles/darkmode.scss",
-    "assets/styles/code-title.scss",
-    "assets/styles/syntax.scss",
-    "content/notes/images/obsidian-settings.png",
-    "Untitled.canvas"
-  ]
+  "active": "12856d0ac9c5c983",
+  "lastOpenFiles": []
 }
