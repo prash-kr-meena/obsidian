@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "ab4920a1bc15b5a9",
+        "id": "dcbd4ed2af0ed181",
         "type": "tabs",
         "children": [
           {
-            "id": "88bc3a2b09cf24c1",
+            "id": "ba7e2ad95f5f8a50",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "kubenetes/Virtualization.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "kubenetes/Virtualization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "kubenetes/Virtualization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "kubenetes/Virtualization.md"
+              }
             }
           },
           {
@@ -142,7 +150,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -154,11 +163,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "88bc3a2b09cf24c1",
+  "active": "ba7e2ad95f5f8a50",
   "lastOpenFiles": [
+    "kubenetes/Kubernetes.md",
+    "Learning Obsidian.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
-    "kubenetes/Kubernetes.md",
     "kubenetes/Virtualizations Practical Example.md",
     "_index.md",
     "Obsidian/Learning Obsidian.md",
