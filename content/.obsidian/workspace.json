@@ -4,31 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "19421e9f1a0ea130",
+        "id": "0e2c5eb8b8c6d0fa",
         "type": "tabs",
         "children": [
           {
-            "id": "0f60dbc0582a084e",
+            "id": "4a0210f6a5947094",
             "type": "leaf",
             "state": {
               "type": "empty",
               "state": {}
             }
-          },
-          {
-            "id": "734cdadfc1c5e977",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "asfasfd.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -102,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "asfasfd.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "asfasfd.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "asfasfd.md"
-              }
+              "state": {}
             }
           },
           {
@@ -172,9 +155,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "734cdadfc1c5e977",
+  "active": "4a0210f6a5947094",
   "lastOpenFiles": [
     "asfasfd.md",
+    "kubenetes/What is a Hypervisor?.md",
+    "kubenetes/whats included in a container.png",
     "kubenetes/Virtualization.md",
     "kubenetes/Virtualizations Practical Example.md",
     "kubenetes/what is a container?.md",
@@ -207,7 +192,6 @@
     "content/notes/kubenetes/container.md",
     "content/notes/kubenetes/What is a Hypervisor?.md",
     "content/notes/kubenetes/What are virtual machines (VMs).md",
-    "content/notes/kubenetes/Virtualizations Practical Example.md",
     "content/notes/kubenetes/Pasted image 20230507134752.png",
     "content/notes/kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
     "content/notes/kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png",
@@ -219,7 +203,6 @@
     "assets/styles/darkmode.scss",
     "assets/styles/code-title.scss",
     "assets/styles/syntax.scss",
-    "content/notes/images/obsidian-settings.png",
     "Untitled.canvas"
   ]
 }
