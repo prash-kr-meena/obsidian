@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "kubenetes/Virtualization.md",
+                "file": "Categories of Hypervisor.md",
                 "mode": "source",
                 "source": false
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "kubenetes/Virtualization.md",
+                "file": "Categories of Hypervisor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "kubenetes/Virtualization.md",
+                "file": "Categories of Hypervisor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,7 +169,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "kubenetes/Virtualization.md"
+                "file": "Categories of Hypervisor.md"
               }
             }
           },
@@ -201,9 +201,11 @@
   },
   "active": "c2bcf5f751d2c028",
   "lastOpenFiles": [
+    "Pasted image 20230507134752.png",
     "What is a Hypervisor?.md",
-    "What are virtual machines (VMs).md",
+    "Categories of Hypervisor.md",
     "kubenetes/Virtualization.md",
+    "What are virtual machines (VMs).md",
     "Beneifts of virtualization.md",
     "kubenetes/Kubernetes.md",
     "kubenetes/Virtualizations Practical Example.md",
