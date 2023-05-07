@@ -1,9 +1,12 @@
 [[Kode Kloud Labs & Slack Community]]
 [[Kubernetes For Beginners - Kode Kloud.pdf]]
 
-[[Containers & Container Images]]
+
+[Never install locally](https://www.youtube.com/watch?v=J0NuOlA2xDc&ab_channel=Coderized)
+
 
 [[Virtualization]]
+[[Containers & Container Images]]
 
 
 Kubernetes = [[Containers & Container Images|Containers]] + orchestration
