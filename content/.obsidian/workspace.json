@@ -11,8 +11,12 @@
             "id": "4a0210f6a5947094",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "editing.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "editing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "editing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "editing.md"
+              }
             }
           },
           {
@@ -157,6 +165,7 @@
   },
   "active": "4a0210f6a5947094",
   "lastOpenFiles": [
+    "config.md",
     "asfasfd.md",
     "kubenetes/What is a Hypervisor?.md",
     "kubenetes/whats included in a container.png",
@@ -191,7 +200,6 @@
     "content/notes/kubenetes/containerized applications architecture.png",
     "content/notes/kubenetes/container.md",
     "content/notes/kubenetes/What is a Hypervisor?.md",
-    "content/notes/kubenetes/What are virtual machines (VMs).md",
     "content/notes/kubenetes/Pasted image 20230507134752.png",
     "content/notes/kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
     "content/notes/kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png",
