@@ -1,18 +1,22 @@
 {
   "main": {
-    "id": "0ee96f1a7b5b693f",
+    "id": "fb10115bf991d9f6",
     "type": "split",
     "children": [
       {
-        "id": "de750f932b52e7f5",
+        "id": "e2f936f0fea4d308",
         "type": "tabs",
         "children": [
           {
-            "id": "12856d0ac9c5c983",
+            "id": "6299194d029cce3b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "kubenetes/Virtualizations Practical Example.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -21,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "2f9d74e6244881c0",
+    "id": "b5bc92d52b9f4202",
     "type": "split",
     "children": [
       {
-        "id": "f9b06bc4ac379349",
+        "id": "4bcbd33e5dd841d1",
         "type": "tabs",
         "children": [
           {
-            "id": "88c7f9cc90f73262",
+            "id": "e89f94d9dfdbe597",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -39,7 +43,7 @@
             }
           },
           {
-            "id": "4cec89abaa4d3aa6",
+            "id": "ffea118c2e2436d4",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -54,7 +58,15 @@
             }
           },
           {
-            "id": "50ff315f41f9e2ba",
+            "id": "64bb9890b22a5784",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "fdb2246b3fa75727",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -65,22 +77,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 349.5086555480957
   },
   "right": {
-    "id": "e894913006434ce4",
+    "id": "5affea21a0bdd9dc",
     "type": "split",
     "children": [
       {
-        "id": "1ca933ef01087105",
+        "id": "b5a1ca60e0bf3db2",
         "type": "tabs",
         "children": [
           {
-            "id": "d3d8844eff824e43",
+            "id": "4dc3e28254de26d9",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "kubenetes/Virtualizations Practical Example.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,18 +105,19 @@
             }
           },
           {
-            "id": "31204e5f7db4f62a",
+            "id": "82c1a1d96ccf9621",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "kubenetes/Virtualizations Practical Example.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "1e439a27af873127",
+            "id": "98fe7e80b18a02d1",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -114,19 +128,29 @@
             }
           },
           {
-            "id": "e7235f3e55416c27",
+            "id": "96d49f10186bbb04",
             "type": "leaf",
             "state": {
               "type": "outline",
+              "state": {
+                "file": "kubenetes/Virtualizations Practical Example.md"
+              }
+            }
+          },
+          {
+            "id": "c5b3ed388efa8016",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -138,6 +162,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "12856d0ac9c5c983",
-  "lastOpenFiles": []
+  "active": "6299194d029cce3b",
+  "lastOpenFiles": [
+    "_index.md",
+    "Obsidian/Learning Obsidian.md",
+    "obsidian.md",
+    "editing.md",
+    "config.md",
+    "asfasfd.md",
+    "kubenetes/What is a Hypervisor?.md",
+    "kubenetes/whats included in a container.png",
+    "kubenetes/Virtualization.md",
+    "kubenetes/Virtualizations Practical Example.md",
+    "kubenetes/what is a container?.md",
+    "kubenetes/What are virtual machines (VMs).md",
+    "kubenetes/Pod.md",
+    "kubenetes/Categories of Hypervisor.md",
+    "kubenetes/CNCF - Cloud Native Computing Foundation.md",
+    "kubenetes/container.md",
+    "kubenetes/containerized applications architecture.png",
+    "kubenetes/Beneifts of virtualization.md",
+    "kubenetes/Containers & Container Images.md",
+    "kubenetes/server usage - without virutalization.png",
+    "kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
+    "kubenetes/Pasted image 20230507134752.png",
+    "kubenetes/Deployments.md",
+    "kubenetes/what is a container image?.md",
+    "hosting.md",
+    "kubenetes/Kode Kloud Labs & Slack Community.md",
+    "custom Domain.md",
+    "docker.md",
+    "content/notes/Learning Obsidian.md",
+    "content/notes/kubenetes/whats included in a container.png",
+    "content/notes/kubenetes/what is a container?.md",
+    "content/notes/kubenetes/what is a container image?.md",
+    "content/notes/kubenetes/server usage - without virutalization.png",
+    "content/notes/kubenetes/server usage - with virtualization.png",
+    "content/notes/kubenetes/containerized applications architecture.png",
+    "content/notes/kubenetes/Pasted image 20230507134752.png",
+    "content/notes/kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
+    "content/notes/kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png",
+    "content/notes/kubenetes",
+    "assets/styles/_callouts.scss",
+    "assets/styles/custom.scss",
+    "assets/styles/clipboard.scss",
+    "assets/styles/_light_syntax.scss",
+    "assets/styles/darkmode.scss",
+    "assets/styles/code-title.scss",
+    "assets/styles/syntax.scss",
+    "Untitled.canvas"
+  ]
 }
