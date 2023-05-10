@@ -1,9 +1,9 @@
 {
   "hideRibbon": false,
   "hideStatus": false,
-  "hideTabs": true,
+  "hideTabs": false,
   "hideScroll": false,
-  "hideSidebarButtons": false,
+  "hideSidebarButtons": true,
   "hideTooltips": false,
   "hideSearchSuggestions": false,
   "hideSearchCounts": false,

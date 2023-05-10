@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Containers & Container Images",
-      "path": "kubenetes/Containers & Container Images.md"
+      "basename": "What is a Hypervisor?",
+      "path": "kubenetes/What is a Hypervisor?.md"
+    },
+    {
+      "basename": "What are virtual machines (VMs)",
+      "path": "kubenetes/What are virtual machines (VMs).md"
+    },
+    {
+      "basename": "Virtualization",
+      "path": "kubenetes/Virtualization.md"
     },
     {
       "basename": "Kubernetes",
       "path": "kubenetes/Kubernetes.md"
+    },
+    {
+      "basename": "Containers & Container Images",
+      "path": "kubenetes/Containers & Container Images.md"
     },
     {
       "basename": "Markdown Page",
@@ -39,10 +51,6 @@
     {
       "basename": "Virtualizations Practical Example",
       "path": "kubenetes/Virtualizations Practical Example.md"
-    },
-    {
-      "basename": "Virtualization",
-      "path": "kubenetes/Virtualization.md"
     },
     {
       "basename": "Kode Kloud $0 Billing Details - With Coupon Code",
