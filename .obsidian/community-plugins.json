@@ -1,5 +1,9 @@
 [
   "obsidian-git",
   "obsidian-underline",
-  "obsidian-languagetool-plugin"
+  "obsidian-languagetool-plugin",
+  "obsidian-minimal-settings",
+  "obsidian-hider",
+  "settings-search",
+  "obsidian-contextual-typography"
 ]
