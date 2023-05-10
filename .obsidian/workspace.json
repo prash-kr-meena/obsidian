@@ -72,9 +72,17 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "825a0701b2399978",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -164,7 +172,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ffea118c2e2436d4",
+  "active": "825a0701b2399978",
   "lastOpenFiles": [
     "kubenetes/Virtualization.md",
     "kubenetes/Kubernetes.md",
