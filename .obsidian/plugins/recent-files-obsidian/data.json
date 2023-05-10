@@ -1,10 +1,6 @@
 {
   "recentFiles": [
     {
-      "basename": "what is a container image?",
-      "path": "kubenetes/what is a container image?.md"
-    },
-    {
       "basename": "Containers & Container Images",
       "path": "kubenetes/Containers & Container Images.md"
     },
@@ -13,16 +9,28 @@
       "path": "kubenetes/Kubernetes.md"
     },
     {
-      "basename": "container",
-      "path": "kubenetes/container.md"
+      "basename": "Markdown Page",
+      "path": "Markdown Page.md"
+    },
+    {
+      "basename": "Learning Obsidian",
+      "path": "Learning Obsidian.md"
+    },
+    {
+      "basename": "what is a container image?",
+      "path": "kubenetes/what is a container image?.md"
+    },
+    {
+      "basename": "Pod",
+      "path": "kubenetes/Pod.md"
     },
     {
       "basename": "what are containers based on?",
       "path": "kubenetes/what are containers based on?.md"
     },
     {
-      "basename": "Pod",
-      "path": "kubenetes/Pod.md"
+      "basename": "container",
+      "path": "kubenetes/container.md"
     },
     {
       "basename": "Deployments",
