@@ -1,8 +1,48 @@
 {
   "recentFiles": [
     {
+      "basename": "what is a container image?",
+      "path": "kubenetes/what is a container image?.md"
+    },
+    {
+      "basename": "Containers & Container Images",
+      "path": "kubenetes/Containers & Container Images.md"
+    },
+    {
       "basename": "Kubernetes",
       "path": "kubenetes/Kubernetes.md"
+    },
+    {
+      "basename": "container",
+      "path": "kubenetes/container.md"
+    },
+    {
+      "basename": "what are containers based on?",
+      "path": "kubenetes/what are containers based on?.md"
+    },
+    {
+      "basename": "Pod",
+      "path": "kubenetes/Pod.md"
+    },
+    {
+      "basename": "Deployments",
+      "path": "kubenetes/Deployments.md"
+    },
+    {
+      "basename": "Virtualizations Practical Example",
+      "path": "kubenetes/Virtualizations Practical Example.md"
+    },
+    {
+      "basename": "Virtualization",
+      "path": "kubenetes/Virtualization.md"
+    },
+    {
+      "basename": "Kode Kloud $0 Billing Details - With Coupon Code",
+      "path": "kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png"
+    },
+    {
+      "basename": "Categories of Hypervisor",
+      "path": "kubenetes/Categories of Hypervisor.md"
     }
   ],
   "omittedPaths": [],
