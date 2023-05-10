@@ -7,5 +7,5 @@
   "textFontFamily": "Inter",
   "baseFontSizeAction": true,
   "showViewHeader": true,
-  "translucency": true
+  "translucency": false
 }

@@ -1,20 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Learning Obsidian",
-      "path": "Learning Obsidian.md"
+      "basename": "Categories of Hypervisor",
+      "path": "kubenetes/Categories of Hypervisor.md"
+    },
+    {
+      "basename": "Containers & Container Images",
+      "path": "kubenetes/Containers & Container Images.md"
     },
     {
       "basename": "Kubernetes",
       "path": "kubenetes/Kubernetes.md"
     },
     {
-      "basename": "Deployments",
-      "path": "kubenetes/Deployments.md"
+      "basename": "Learning Obsidian",
+      "path": "Learning Obsidian.md"
     },
     {
-      "basename": "Containers & Container Images",
-      "path": "kubenetes/Containers & Container Images.md"
+      "basename": "Deployments",
+      "path": "kubenetes/Deployments.md"
     },
     {
       "basename": "what are containers based on?",
@@ -59,10 +63,6 @@
     {
       "basename": "Kode Kloud $0 Billing Details - With Coupon Code",
       "path": "kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png"
-    },
-    {
-      "basename": "Categories of Hypervisor",
-      "path": "kubenetes/Categories of Hypervisor.md"
     }
   ],
   "omittedPaths": [],
