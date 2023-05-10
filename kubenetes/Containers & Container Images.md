@@ -1,5 +1,5 @@
 
-A container and a container image are related concepts in the world of [[containerization]], but they are not the same thing.
+A container and a container image are related concepts in the world of [[containerization]], but they are not the same thing\.
 
 - [[what is a container image?]]
 - [[what is a container?]]

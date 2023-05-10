@@ -1,4 +1,8 @@
 {
   "alwaysUpdateLinks": true,
-  "newLinkFormat": "absolute"
+  "newLinkFormat": "absolute",
+  "showFrontmatter": false,
+  "showLineNumber": false,
+  "spellcheck": true,
+  "showUnsupportedFiles": true
 }

@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "Learning Obsidian",
+      "path": "Learning Obsidian.md"
+    },
+    {
+      "basename": "Kubernetes",
+      "path": "kubenetes/Kubernetes.md"
+    },
+    {
+      "basename": "Deployments",
+      "path": "kubenetes/Deployments.md"
+    },
+    {
+      "basename": "Containers & Container Images",
+      "path": "kubenetes/Containers & Container Images.md"
+    },
+    {
+      "basename": "what are containers based on?",
+      "path": "kubenetes/what are containers based on?.md"
+    },
+    {
+      "basename": "Kode Kloud Labs & Slack Community",
+      "path": "kubenetes/Kode Kloud Labs & Slack Community.md"
+    },
+    {
+      "basename": "Kubernetes For Beginners - Kode Kloud",
+      "path": "kubenetes/Kubernetes For Beginners - Kode Kloud.pdf"
+    },
+    {
       "basename": "What is a Hypervisor?",
       "path": "kubenetes/What is a Hypervisor?.md"
     },
@@ -13,22 +41,6 @@
       "path": "kubenetes/Virtualization.md"
     },
     {
-      "basename": "Kubernetes",
-      "path": "kubenetes/Kubernetes.md"
-    },
-    {
-      "basename": "Containers & Container Images",
-      "path": "kubenetes/Containers & Container Images.md"
-    },
-    {
-      "basename": "Markdown Page",
-      "path": "Markdown Page.md"
-    },
-    {
-      "basename": "Learning Obsidian",
-      "path": "Learning Obsidian.md"
-    },
-    {
       "basename": "what is a container image?",
       "path": "kubenetes/what is a container image?.md"
     },
@@ -37,16 +49,8 @@
       "path": "kubenetes/Pod.md"
     },
     {
-      "basename": "what are containers based on?",
-      "path": "kubenetes/what are containers based on?.md"
-    },
-    {
       "basename": "container",
       "path": "kubenetes/container.md"
-    },
-    {
-      "basename": "Deployments",
-      "path": "kubenetes/Deployments.md"
     },
     {
       "basename": "Virtualizations Practical Example",

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a4205bb111569dca",
+        "id": "d0538525bc5bb5a4",
         "type": "tabs",
         "children": [
           {
-            "id": "24ca001ffe727b24",
+            "id": "4fd62d33dc2f5ea7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "kubenetes/What is a Hypervisor?.md",
+                "file": "Learning Obsidian.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "7c23cdcae82937ec",
+            "id": "5bceea0d6ccfffdb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "kubenetes/Containers & Container Images.md",
+                "file": "kubenetes/Deployments.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -46,6 +46,7 @@
       {
         "id": "4bcbd33e5dd841d1",
         "type": "tabs",
+        "dimension": 59.67413441955194,
         "children": [
           {
             "id": "e89f94d9dfdbe597",
@@ -55,14 +56,6 @@
               "state": {
                 "sortOrder": "alphabetical"
               }
-            }
-          },
-          {
-            "id": "825a0701b2399978",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {}
             }
           },
           {
@@ -89,10 +82,25 @@
             }
           }
         ]
+      },
+      {
+        "id": "7e4ee2a7062f149d",
+        "type": "tabs",
+        "dimension": 40.32586558044807,
+        "children": [
+          {
+            "id": "825a0701b2399978",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 251.50043487548828
+    "width": 368.5004348754883
   },
   "right": {
     "id": "5affea21a0bdd9dc",
@@ -103,41 +111,47 @@
         "type": "tabs",
         "children": [
           {
+            "id": "32300f34d168292b",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Learning Obsidian.md",
+                "options": {
+                  "collapse-filter": false,
+                  "search": "",
+                  "localJumps": 2,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": true,
+                  "showTags": true,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": false,
+                  "showArrow": true,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.9846573987124335,
+                  "close": true
+                }
+              }
+            }
+          },
+          {
             "id": "96d49f10186bbb04",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "kubenetes/What is a Hypervisor?.md"
-              }
-            }
-          },
-          {
-            "id": "82c1a1d96ccf9621",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "kubenetes/What is a Hypervisor?.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "4dc3e28254de26d9",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "kubenetes/What is a Hypervisor?.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "file": "Learning Obsidian.md"
               }
             }
           },
@@ -171,41 +185,35 @@
         ]
       },
       {
-        "id": "d466e21f02dbb86a",
+        "id": "582b42cccefa1a54",
         "type": "tabs",
         "children": [
           {
-            "id": "32300f34d168292b",
+            "id": "82c1a1d96ccf9621",
             "type": "leaf",
             "state": {
-              "type": "localgraph",
+              "type": "outgoing-link",
               "state": {
-                "file": "kubenetes/What is a Hypervisor?.md",
-                "options": {
-                  "collapse-filter": false,
-                  "search": "",
-                  "localJumps": 2,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": true,
-                  "showTags": true,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": true,
-                  "colorGroups": [],
-                  "collapse-display": false,
-                  "showArrow": true,
-                  "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 0.8082618656980598,
-                  "close": false
-                }
+                "file": "Learning Obsidian.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4dc3e28254de26d9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Learning Obsidian.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           }
@@ -213,7 +221,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 1040.5
+    "width": 384.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -226,21 +235,24 @@
       "graph:Open graph view": false
     }
   },
-  "active": "24ca001ffe727b24",
+  "active": "4fd62d33dc2f5ea7",
   "lastOpenFiles": [
+    "kubenetes/Kubernetes.md",
+    "kubenetes/Deployments.md",
+    "Learning Obsidian.md",
+    "kubenetes/Containers & Container Images.md",
+    "kubenetes/what are containers based on?.md",
+    "Markdown Page.md",
+    "kubenetes/Kode Kloud Labs & Slack Community.md",
+    "kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
+    "kubenetes/What is a Hypervisor?.md",
     "kubenetes/What are virtual machines (VMs).md",
     "kubenetes/Virtualization.md",
-    "kubenetes/Kubernetes.md",
-    "kubenetes/Containers & Container Images.md",
-    "Markdown Page.md",
-    "Learning Obsidian.md",
     "kubenetes/what is a container image?.md",
     "kubenetes/Pod.md",
     "Excalidraw/Drawing 2023-05-10 12.07.03.excalidraw.md",
-    "kubenetes/what are containers based on?.md",
     "Excalidraw",
     "kubenetes/container.md",
-    "kubenetes/Deployments.md",
     "kubenetes/Virtualizations Practical Example.md",
     "kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png",
     "kubenetes/Categories of Hypervisor.md",
@@ -248,7 +260,6 @@
     "projects/markdown/syntax.text.md",
     "projects/markdown",
     "projects",
-    "kubenetes/Kode Kloud Labs & Slack Community.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "_index.md",
@@ -257,13 +268,10 @@
     "editing.md",
     "config.md",
     "asfasfd.md",
-    "kubenetes/What is a Hypervisor?.md",
     "kubenetes/whats included in a container.png",
     "kubenetes/what is a container?.md",
-    "kubenetes/CNCF - Cloud Native Computing Foundation.md",
     "kubenetes/containerized applications architecture.png",
     "kubenetes/server usage - without virutalization.png",
-    "kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
     "kubenetes/Pasted image 20230507134752.png",
     "content/notes/kubenetes/whats included in a container.png",
     "content/notes/kubenetes/server usage - without virutalization.png",

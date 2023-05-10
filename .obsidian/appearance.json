@@ -2,5 +2,10 @@
   "accentColor": "",
   "theme": "moonstone",
   "cssTheme": "Minimal",
-  "baseFontSize": 16
+  "baseFontSize": 18,
+  "interfaceFontFamily": "",
+  "textFontFamily": "Inter",
+  "baseFontSizeAction": true,
+  "showViewHeader": true,
+  "translucency": true
 }
