@@ -11,9 +11,11 @@
             "id": "ba7e2ad95f5f8a50",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png"
+                "file": "kubenetes/Kubernetes.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -71,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -91,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png",
+                "file": "kubenetes/Kubernetes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png",
+                "file": "kubenetes/Kubernetes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png"
+                "file": "kubenetes/Kubernetes.md"
               }
             }
           },
@@ -161,18 +164,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ba7e2ad95f5f8a50",
+  "active": "ffea118c2e2436d4",
   "lastOpenFiles": [
-    "kubenetes/Containers & Container Images.md",
-    "kubenetes/Deployments.md",
-    "kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png",
-    "kubenetes/Kode Kloud Labs & Slack Community.md",
+    "kubenetes/Virtualization.md",
+    "kubenetes/Kubernetes.md",
+    "kubenetes/container.md",
+    "kubenetes/Beneifts of virtualization.md",
     "Markdown Page.md",
     "projects/markdown/syntax.text.md",
     "projects/markdown",
     "projects",
-    "kubenetes/Virtualization.md",
-    "kubenetes/Kubernetes.md",
+    "kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png",
+    "kubenetes/Containers & Container Images.md",
+    "kubenetes/Deployments.md",
+    "kubenetes/Kode Kloud Labs & Slack Community.md",
     "Learning Obsidian.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
@@ -190,9 +195,7 @@
     "kubenetes/Pod.md",
     "kubenetes/Categories of Hypervisor.md",
     "kubenetes/CNCF - Cloud Native Computing Foundation.md",
-    "kubenetes/container.md",
     "kubenetes/containerized applications architecture.png",
-    "kubenetes/Beneifts of virtualization.md",
     "kubenetes/server usage - without virutalization.png",
     "kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
     "kubenetes/Pasted image 20230507134752.png",
