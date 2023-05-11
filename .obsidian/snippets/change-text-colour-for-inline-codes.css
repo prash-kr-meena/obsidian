@@ -1,0 +1,9 @@
+.cm-s-obsidian span.cm-inline-code{
+	color: #f97c02;
+	background-color: #fae9de;
+}
+
+.markdown-rendered code {
+    color: #f97c02;
+    background-color: #fae9de;
+}
