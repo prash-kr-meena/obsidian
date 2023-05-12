@@ -1,28 +1,60 @@
 {
   "recentFiles": [
     {
-      "basename": "Kubernetes",
-      "path": "kubenetes/Kubernetes.md"
+      "basename": "Types of Virtualization",
+      "path": "Types of Virtualization.md"
     },
     {
       "basename": "Test Markdown File",
       "path": "Test Markdown File.md"
     },
     {
+      "basename": "Operating System",
+      "path": "Operating System.md"
+    },
+    {
       "basename": "Learning Obsidian",
       "path": "Learning Obsidian.md"
     },
     {
-      "basename": "what is a container?",
-      "path": "kubenetes/what is a container?.md"
+      "basename": "What are virtual machines (VMs)",
+      "path": "kubenetes/What are virtual machines (VMs).md"
+    },
+    {
+      "basename": "Categories of Hypervisor",
+      "path": "kubenetes/Categories of Hypervisor.md"
+    },
+    {
+      "basename": "What is a Hypervisor?",
+      "path": "kubenetes/What is a Hypervisor?.md"
+    },
+    {
+      "basename": "Kubernetes",
+      "path": "kubenetes/Kubernetes.md"
+    },
+    {
+      "basename": "Virtualization",
+      "path": "kubenetes/Virtualization.md"
+    },
+    {
+      "basename": "Beneifts of virtualization",
+      "path": "kubenetes/Beneifts of virtualization.md"
+    },
+    {
+      "basename": "Virtualizations Practical Example",
+      "path": "kubenetes/Virtualizations Practical Example.md"
     },
     {
       "basename": "Containers & Container Images",
       "path": "kubenetes/Containers & Container Images.md"
     },
     {
-      "basename": "Categories of Hypervisor",
-      "path": "kubenetes/Categories of Hypervisor.md"
+      "basename": "what is a container image?",
+      "path": "kubenetes/what is a container image?.md"
+    },
+    {
+      "basename": "what is a container?",
+      "path": "kubenetes/what is a container?.md"
     },
     {
       "basename": "Deployments",
@@ -41,32 +73,12 @@
       "path": "kubenetes/Kubernetes For Beginners - Kode Kloud.pdf"
     },
     {
-      "basename": "What is a Hypervisor?",
-      "path": "kubenetes/What is a Hypervisor?.md"
-    },
-    {
-      "basename": "What are virtual machines (VMs)",
-      "path": "kubenetes/What are virtual machines (VMs).md"
-    },
-    {
-      "basename": "Virtualization",
-      "path": "kubenetes/Virtualization.md"
-    },
-    {
-      "basename": "what is a container image?",
-      "path": "kubenetes/what is a container image?.md"
-    },
-    {
       "basename": "Pod",
       "path": "kubenetes/Pod.md"
     },
     {
       "basename": "container",
       "path": "kubenetes/container.md"
-    },
-    {
-      "basename": "Virtualizations Practical Example",
-      "path": "kubenetes/Virtualizations Practical Example.md"
     },
     {
       "basename": "Kode Kloud $0 Billing Details - With Coupon Code",

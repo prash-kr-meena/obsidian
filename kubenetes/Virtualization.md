@@ -9,6 +9,7 @@ Whereas traditionally, these applications would bound to hardware
 
 Virtualization is a concept that is used by [[What are virtual machines (VMs) |Virtual Machines]] and [[what is a container?|container]], hence virtualization allows us to run multiple virtual machines (VMs) or containers on a single physical host machine, **each with its own isolated environment**. 
 
+Virtualization is achived with the help of [[kubenetes/What is a Hypervisor?|hypervisor]]
 
 [[Virtualizations Practical Example]]
 

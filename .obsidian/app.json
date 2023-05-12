@@ -3,6 +3,6 @@
   "newLinkFormat": "absolute",
   "showFrontmatter": false,
   "showLineNumber": false,
-  "spellcheck": true,
+  "spellcheck": false,
   "showUnsupportedFiles": true
 }
