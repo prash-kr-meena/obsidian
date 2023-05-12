@@ -18,6 +18,8 @@ There are two broad categories of hypervisors: Type 1 and Type 2.
 - Type 2 hypervisors rarely show up in server-based environments. Instead, they’re suitable for individual PC users needing to run multiple operating systems. 
 	- Examples include engineers, security professionals analyzing malware, and business users that need access to applications only available on other software platforms.
 
+![Type 2 Hypervisor Example](https://www.ubackup.com/screenshot/en/acb/virtual-machine/type-1-hypervisor-vs-type-2/type-2-hypervisor-examples.png)
+
 ##### Advantages of Hosted Hypervisor
 - Type 2 hypervisors often feature additional toolkits for users to install into the guest OS. 
 	- These tools provide enhanced connections between the guest and the host OS, 
@@ -33,5 +35,7 @@ There are two broad categories of hypervisors: Type 1 and Type 2.
 - It also introduces potential security risks if an attacker compromises the host OS because they could then manipulate any guest OS running in the Type 2 hypervisor.
 
 
+![Type 1 Hypervisor vs Type 2 Hypervisor](https://linuxhandbook.com/content/images/2021/11/type1-type2-hypervisor.png)
 
-![[Pasted image 20230507134752.png]]
+
+![[kubenetes/Type1 vs Type 2 Hypervisor.png]]

@@ -1,8 +1,44 @@
 {
   "recentFiles": [
     {
+      "basename": "Kubernetes",
+      "path": "kubenetes/Kubernetes.md"
+    },
+    {
+      "basename": "what is a container?",
+      "path": "kubenetes/what is a container?.md"
+    },
+    {
+      "basename": "Containers & Container Images",
+      "path": "kubenetes/Containers & Container Images.md"
+    },
+    {
+      "basename": "Pod",
+      "path": "kubenetes/Pod.md"
+    },
+    {
+      "basename": "server usage - with virtualization",
+      "path": "kubenetes/server usage - with virtualization.png"
+    },
+    {
+      "basename": "server usage - without virutalization",
+      "path": "kubenetes/server usage - without virutalization.png"
+    },
+    {
+      "basename": "Categories of Hypervisor",
+      "path": "kubenetes/Categories of Hypervisor.md"
+    },
+    {
       "basename": "Types of Virtualization",
       "path": "Types of Virtualization.md"
+    },
+    {
+      "basename": "What is a Hypervisor?",
+      "path": "kubenetes/What is a Hypervisor?.md"
+    },
+    {
+      "basename": "Virtualization",
+      "path": "kubenetes/Virtualization.md"
     },
     {
       "basename": "Test Markdown File",
@@ -21,22 +57,6 @@
       "path": "kubenetes/What are virtual machines (VMs).md"
     },
     {
-      "basename": "Categories of Hypervisor",
-      "path": "kubenetes/Categories of Hypervisor.md"
-    },
-    {
-      "basename": "What is a Hypervisor?",
-      "path": "kubenetes/What is a Hypervisor?.md"
-    },
-    {
-      "basename": "Kubernetes",
-      "path": "kubenetes/Kubernetes.md"
-    },
-    {
-      "basename": "Virtualization",
-      "path": "kubenetes/Virtualization.md"
-    },
-    {
       "basename": "Beneifts of virtualization",
       "path": "kubenetes/Beneifts of virtualization.md"
     },
@@ -45,16 +65,8 @@
       "path": "kubenetes/Virtualizations Practical Example.md"
     },
     {
-      "basename": "Containers & Container Images",
-      "path": "kubenetes/Containers & Container Images.md"
-    },
-    {
       "basename": "what is a container image?",
       "path": "kubenetes/what is a container image?.md"
-    },
-    {
-      "basename": "what is a container?",
-      "path": "kubenetes/what is a container?.md"
     },
     {
       "basename": "Deployments",
@@ -71,10 +83,6 @@
     {
       "basename": "Kubernetes For Beginners - Kode Kloud",
       "path": "kubenetes/Kubernetes For Beginners - Kode Kloud.pdf"
-    },
-    {
-      "basename": "Pod",
-      "path": "kubenetes/Pod.md"
     },
     {
       "basename": "container",
