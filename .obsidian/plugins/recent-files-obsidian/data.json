@@ -5,16 +5,16 @@
       "path": "Cloud Computing.md"
     },
     {
-      "basename": "Virtualization",
-      "path": "kubenetes/Virtualization.md"
-    },
-    {
       "basename": "Advantages of Virtual Machines",
       "path": "Advantages of Virtual Machines.md"
     },
     {
       "basename": "What are virtual machines (VMs)",
       "path": "kubenetes/What are virtual machines (VMs).md"
+    },
+    {
+      "basename": "Virtualization",
+      "path": "kubenetes/Virtualization.md"
     },
     {
       "basename": "what is a container?",

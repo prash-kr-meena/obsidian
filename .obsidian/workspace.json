@@ -11,9 +11,30 @@
             "id": "6f2194ef58f7e4bc",
             "type": "leaf",
             "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "3356cac43f8187b8",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "kubenetes/Virtualization.md",
+                "file": "kubenetes/What are virtual machines (VMs).md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b4319603806e12bb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Advantages of Virtual Machines.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -34,7 +55,7 @@
             }
           }
         ],
-        "currentTab": 1,
+        "currentTab": 3,
         "stacked": true
       }
     ],
@@ -82,8 +103,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "7e4ee2a7062f149d",
@@ -141,7 +161,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1.0254022697913885,
+                  "scale": 0.8149092127626197,
                   "close": true
                 }
               }
@@ -237,12 +257,12 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "ffea118c2e2436d4",
+  "active": "e08f371a8703cf89",
   "lastOpenFiles": [
-    "kubenetes/Virtualization.md",
-    "Cloud Computing.md",
     "Advantages of Virtual Machines.md",
     "kubenetes/What are virtual machines (VMs).md",
+    "kubenetes/Virtualization.md",
+    "Cloud Computing.md",
     "kubenetes/what is a container?.md",
     "kubenetes/Containers & Container Images.md",
     "kubenetes/Kubernetes.md",
