@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Virtualization",
+      "path": "kubenetes/Virtualization.md"
+    },
+    {
+      "basename": "Types of Virtualization",
+      "path": "Types of Virtualization.md"
+    },
+    {
+      "basename": "Technologies used in Cloud Computing",
+      "path": "Technologies used in Cloud Computing.md"
+    },
+    {
       "basename": "Cloud Computing",
       "path": "Cloud Computing.md"
+    },
+    {
+      "basename": "Advantage of Cloud Computing",
+      "path": "Advantage of Cloud Computing.md"
     },
     {
       "basename": "Advantages of Virtual Machines",
@@ -11,10 +27,6 @@
     {
       "basename": "What are virtual machines (VMs)",
       "path": "kubenetes/What are virtual machines (VMs).md"
-    },
-    {
-      "basename": "Virtualization",
-      "path": "kubenetes/Virtualization.md"
     },
     {
       "basename": "what is a container?",
@@ -27,10 +39,6 @@
     {
       "basename": "Kubernetes",
       "path": "kubenetes/Kubernetes.md"
-    },
-    {
-      "basename": "Types of Virtualization",
-      "path": "Types of Virtualization.md"
     },
     {
       "basename": "Pod",

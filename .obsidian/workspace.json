@@ -4,58 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "f5768a31093377a6",
+        "id": "3921c8e49d26618b",
         "type": "tabs",
         "children": [
           {
-            "id": "6f2194ef58f7e4bc",
+            "id": "b8310e8fcccf4070",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {}
-            }
-          },
-          {
-            "id": "3356cac43f8187b8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "kubenetes/What are virtual machines (VMs).md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b4319603806e12bb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Advantages of Virtual Machines.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e08f371a8703cf89",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud Computing.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
             }
           }
         ],
-        "currentTab": 3,
         "stacked": true
       }
     ],
@@ -138,7 +98,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cloud Computing.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -172,9 +131,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Cloud Computing.md"
-              }
+              "state": {}
             }
           },
           {
@@ -204,7 +161,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       },
       {
         "id": "582b42cccefa1a54",
@@ -216,7 +174,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud Computing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,7 +185,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud Computing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -257,16 +213,19 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "e08f371a8703cf89",
+  "active": "b8310e8fcccf4070",
   "lastOpenFiles": [
+    "kubenetes/Virtualization.md",
+    "Untitled.md",
+    "Types of Virtualization.md",
+    "Technologies used in Cloud Computing.md",
+    "Cloud Computing.md",
+    "Advantage of Cloud Computing.md",
     "Advantages of Virtual Machines.md",
     "kubenetes/What are virtual machines (VMs).md",
-    "kubenetes/Virtualization.md",
-    "Cloud Computing.md",
     "kubenetes/what is a container?.md",
     "kubenetes/Containers & Container Images.md",
     "kubenetes/Kubernetes.md",
-    "Types of Virtualization.md",
     "kubenetes/Pod.md",
     "kubenetes/server usage - with virtualization.png",
     "kubenetes/server usage - without virutalization.png",
@@ -294,12 +253,9 @@
     "kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
     "Excalidraw/Drawing 2023-05-10 12.07.03.excalidraw.md",
     "Excalidraw",
-    "kubenetes/container.md",
     "kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png",
-    "projects/markdown/syntax.text.md",
     "projects/markdown",
     "projects",
-    "_index.md",
     "kubenetes/whats included in a container.png",
     "kubenetes/containerized applications architecture.png",
     "content/notes/kubenetes/whats included in a container.png",
