@@ -11,13 +11,8 @@
             "id": "b8310e8fcccf4070",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud Computing Services.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ],
@@ -103,7 +98,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cloud Computing Services.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -137,9 +131,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Cloud Computing Services.md"
-              }
+              "state": {}
             }
           },
           {
@@ -169,8 +161,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       },
       {
         "id": "582b42cccefa1a54",
@@ -182,7 +173,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud Computing Services.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,7 +184,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud Computing Services.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",

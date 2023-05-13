@@ -22,3 +22,7 @@ Like how we have Internet Service Provider ISPs which provides us internet servi
 ### [[Technologies used in Cloud Computing]]
 ### [[Cloud Computing Services]]
 
+
+### Types of cloud computing
+
+
