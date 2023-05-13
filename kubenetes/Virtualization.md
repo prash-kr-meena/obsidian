@@ -1,7 +1,7 @@
 [Virtualization Explained - IBM Technology](https://www.youtube.com/watch?v=FZR0rG3HKIk)
 [Virtualization Concept - IBM Technology](https://www.ibm.com/topics/virtualization)
 
-Virtualization (v12n), is a technology that enables the creation of virtual versions of computer hardware, operating systems, storage devices, and networks. It is the foundation of [[cloud computing]].
+Virtualization (v12n), is a technology that enables the creation of virtual versions of computer hardware, operating systems, storage devices, and networks. It is the foundation of [[Cloud Computing]].
 
 Virtualization began as a method of **logically dividing the system resources** provided by mainframe computers between different applications. This provides a way to efficiently utilize hardware resources and enables applications to run in a more flexible and scalable manner.
 Whereas traditionally, these applications would bound to hardware

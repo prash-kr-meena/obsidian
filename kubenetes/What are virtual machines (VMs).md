@@ -10,3 +10,6 @@ This technology can go by many names, including
 - **virtual server**, 
 - **virtual server instance (VSI)** and 
 - **virtual private server (VPS)**, 
+
+
+[[Advantages of Virtual Machines]]

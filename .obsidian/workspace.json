@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8502660daa447307",
+        "id": "f5768a31093377a6",
         "type": "tabs",
         "children": [
           {
-            "id": "a8b0ed247f5b0a66",
+            "id": "6f2194ef58f7e4bc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "kubenetes/Kubernetes.md",
+                "file": "kubenetes/Virtualization.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -21,25 +21,12 @@
             }
           },
           {
-            "id": "73b7a94c60eea680",
+            "id": "e08f371a8703cf89",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "kubenetes/Containers & Container Images.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "07fb6dd85d3ca463",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "kubenetes/what is a container?.md",
+                "file": "Cloud Computing.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -47,6 +34,7 @@
             }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -94,7 +82,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "7e4ee2a7062f149d",
@@ -130,7 +119,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "kubenetes/Kubernetes.md",
+                "file": "Cloud Computing.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -165,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "kubenetes/Kubernetes.md"
+                "file": "Cloud Computing.md"
               }
             }
           },
@@ -208,7 +197,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "kubenetes/Kubernetes.md",
+                "file": "Cloud Computing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +209,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "kubenetes/Kubernetes.md",
+                "file": "Cloud Computing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -231,12 +220,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 564.5,
-    "collapsed": true
+    "width": 564.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -249,11 +238,16 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "a8b0ed247f5b0a66",
+  "active": "e08f371a8703cf89",
   "lastOpenFiles": [
+    "kubenetes/Virtualization.md",
+    "Cloud Computing.md",
+    "Advantages of Virtual Machines.md",
+    "kubenetes/What are virtual machines (VMs).md",
     "kubenetes/what is a container?.md",
     "kubenetes/Containers & Container Images.md",
     "kubenetes/Kubernetes.md",
+    "Types of Virtualization.md",
     "kubenetes/Pod.md",
     "kubenetes/server usage - with virtualization.png",
     "kubenetes/server usage - without virutalization.png",
@@ -261,13 +255,10 @@
     "kubenetes/Categories of Hypervisor.md",
     "Pasted image 20230513025954.png",
     "Pasted image 20230513030014.png",
-    "Types of Virtualization.md",
     "kubenetes/What is a Hypervisor?.md",
-    "kubenetes/Virtualization.md",
     "Test Markdown File.md",
     "Operating System.md",
     "Learning Obsidian.md",
-    "kubenetes/What are virtual machines (VMs).md",
     "hypervisors.md",
     "kubenetes/Beneifts of virtualization.md",
     "kubenetes/Virtualizations Practical Example.md",
@@ -290,7 +281,6 @@
     "projects/markdown",
     "projects",
     "_index.md",
-    "Obsidian/Learning Obsidian.md",
     "kubenetes/whats included in a container.png",
     "kubenetes/containerized applications architecture.png",
     "content/notes/kubenetes/whats included in a container.png",

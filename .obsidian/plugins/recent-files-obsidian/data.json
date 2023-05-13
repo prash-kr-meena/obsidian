@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "Kubernetes",
-      "path": "kubenetes/Kubernetes.md"
+      "basename": "Cloud Computing",
+      "path": "Cloud Computing.md"
+    },
+    {
+      "basename": "Virtualization",
+      "path": "kubenetes/Virtualization.md"
+    },
+    {
+      "basename": "Advantages of Virtual Machines",
+      "path": "Advantages of Virtual Machines.md"
+    },
+    {
+      "basename": "What are virtual machines (VMs)",
+      "path": "kubenetes/What are virtual machines (VMs).md"
     },
     {
       "basename": "what is a container?",
@@ -11,6 +23,14 @@
     {
       "basename": "Containers & Container Images",
       "path": "kubenetes/Containers & Container Images.md"
+    },
+    {
+      "basename": "Kubernetes",
+      "path": "kubenetes/Kubernetes.md"
+    },
+    {
+      "basename": "Types of Virtualization",
+      "path": "Types of Virtualization.md"
     },
     {
       "basename": "Pod",
@@ -29,16 +49,8 @@
       "path": "kubenetes/Categories of Hypervisor.md"
     },
     {
-      "basename": "Types of Virtualization",
-      "path": "Types of Virtualization.md"
-    },
-    {
       "basename": "What is a Hypervisor?",
       "path": "kubenetes/What is a Hypervisor?.md"
-    },
-    {
-      "basename": "Virtualization",
-      "path": "kubenetes/Virtualization.md"
     },
     {
       "basename": "Test Markdown File",
@@ -51,10 +63,6 @@
     {
       "basename": "Learning Obsidian",
       "path": "Learning Obsidian.md"
-    },
-    {
-      "basename": "What are virtual machines (VMs)",
-      "path": "kubenetes/What are virtual machines (VMs).md"
     },
     {
       "basename": "Beneifts of virtualization",
