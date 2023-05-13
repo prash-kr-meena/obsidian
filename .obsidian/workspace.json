@@ -65,7 +65,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "todo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -102,8 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 425.5026054382324,
-    "collapsed": true
+    "width": 425.5026054382324
   },
   "right": {
     "id": "5affea21a0bdd9dc",
@@ -238,7 +237,7 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "e08f371a8703cf89",
+  "active": "ffea118c2e2436d4",
   "lastOpenFiles": [
     "kubenetes/Virtualization.md",
     "Cloud Computing.md",
