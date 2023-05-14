@@ -1,9 +1,11 @@
+Cloud computing Categorized based on the different services models
+
 Cloud computing offers a range of services that cater to different needs and <u>levels of abstraction</u>. 
 
 
 Three primary types of cloud computing services:
 
-1. **Infrastructure as a Service (IaaS)**
+## 1. [[Infrastructure as a Service (IaaS)]]
    - IaaS provides users with virtualized computing resources over the internet. 
    - It offers fundamental infrastructure components, such as virtual machines, storage, and networking capabilities. 
    - Users have control over the operating systems, applications, and configurations deployed on the provided infrastructure. 
@@ -12,7 +14,7 @@ Three primary types of cloud computing services:
 	   - Microsoft Azure Virtual Machines, and 
 	   - Google Cloud Platform (GCP) Compute Engine
 
-2. **Platform as a Service (PaaS)**
+## 2. Platform as a Service (PaaS)
    - PaaS provides a platform and environment for developers to build, deploy, and manage applications without worrying about the underlying infrastructure. 
    - It includes the infrastructure components provided by IaaS, along with development tools, middleware, and database management systems. 
    - PaaS abstracts away the complexities of infrastructure management, allowing developers to focus on application development. 
@@ -22,7 +24,7 @@ Three primary types of cloud computing services:
 	   - Google App Engine
 	   - Heroku
 
-3. **Software as a Service (SaaS)** 
+## 3. Software as a Service (SaaS)
    - SaaS delivers complete software applications over the internet on a subscription basis. 
    - Users can access and use these applications directly through a web browser, eliminating the need for local installation and management.
    - The software is centrally hosted and maintained by the provider.

@@ -4,18 +4,63 @@
     "type": "split",
     "children": [
       {
-        "id": "3921c8e49d26618b",
+        "id": "c817f5926de05b49",
         "type": "tabs",
         "children": [
           {
-            "id": "b8310e8fcccf4070",
+            "id": "8f3a3160b487b27b",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Types of Cloud Computing.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6426655d8b159a89",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "What is a bare metal server?.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d7ae55c7a880d7ab",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Infrastructure as a Service (IaaS).md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "df58b685d170da06",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud Computing.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -98,6 +143,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "What is a bare metal server?.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -131,7 +177,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "What is a bare metal server?.md"
+              }
             }
           },
           {
@@ -173,6 +221,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "What is a bare metal server?.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -184,6 +233,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "What is a bare metal server?.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -212,51 +262,51 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "b8310e8fcccf4070",
+  "active": "6426655d8b159a89",
   "lastOpenFiles": [
-    "Cloud Computing.md",
+    "Types of Cloud Computing.md",
     "Cloud Computing Services.md",
+    "Infrastructure as a Service (IaaS).md",
+    "Cloud Computing.md",
+    "infrastructure-as-a-service (IaaS).md",
+    "What is a bare metal server?.md",
+    "Virtualization.md",
+    "Beneifts of virtualization.md",
     "Technologies used in Cloud Computing.md",
-    "kubenetes/Virtualization.md",
     "Untitled.md",
     "Types of Virtualization.md",
     "Advantage of Cloud Computing.md",
     "Advantages of Virtual Machines.md",
-    "kubenetes/What are virtual machines (VMs).md",
-    "kubenetes/what is a container?.md",
-    "kubenetes/Containers & Container Images.md",
-    "kubenetes/Kubernetes.md",
-    "kubenetes/Pod.md",
-    "kubenetes/server usage - with virtualization.png",
-    "kubenetes/server usage - without virutalization.png",
+    "What are virtual machines (VMs).md",
+    "what is a container?.md",
+    "Containers & Container Images.md",
+    "Kubernetes.md",
+    "Pod.md",
+    "server usage - with virtualization.png",
+    "server usage - without virutalization.png",
     "kubenetes/Type1 vs Type 2 Hypervisor.png",
-    "kubenetes/Categories of Hypervisor.md",
+    "Categories of Hypervisor.md",
     "Pasted image 20230513025954.png",
     "Pasted image 20230513030014.png",
-    "kubenetes/What is a Hypervisor?.md",
+    "What is a Hypervisor?.md",
     "Test Markdown File.md",
     "Operating System.md",
     "Learning Obsidian.md",
     "hypervisors.md",
-    "kubenetes/Beneifts of virtualization.md",
-    "kubenetes/Virtualizations Practical Example.md",
-    "kubenetes/what is a container image?.md",
+    "Virtualizations Practical Example.md",
+    "what is a container image?.md",
     "Canvas/Untitled.canvas",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "Canvas/Untitled 1.canvas",
     "Canvas",
-    "kubenetes/Deployments.md",
-    "kubenetes/what are containers based on?.md",
-    "Markdown Page.md",
-    "kubenetes/Kode Kloud Labs & Slack Community.md",
-    "kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
+    "Kubernetes For Beginners - Kode Kloud.pdf",
     "Excalidraw",
-    "kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png",
+    "Kode Kloud $0 Billing Details - With Coupon Code.png",
     "projects/markdown",
     "projects",
-    "kubenetes/whats included in a container.png",
-    "kubenetes/containerized applications architecture.png",
+    "whats included in a container.png",
+    "containerized applications architecture.png",
     "content/notes/kubenetes/whats included in a container.png",
     "content/notes/kubenetes/server usage - without virutalization.png",
     "content/notes/kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",

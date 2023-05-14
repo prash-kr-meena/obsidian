@@ -1,20 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "Cloud Computing",
-      "path": "Cloud Computing.md"
+      "basename": "What is a bare metal server?",
+      "path": "What is a bare metal server?.md"
+    },
+    {
+      "basename": "Types of Cloud Computing",
+      "path": "Types of Cloud Computing.md"
     },
     {
       "basename": "Cloud Computing Services",
       "path": "Cloud Computing Services.md"
     },
     {
-      "basename": "Technologies used in Cloud Computing",
-      "path": "Technologies used in Cloud Computing.md"
+      "basename": "Infrastructure as a Service (IaaS)",
+      "path": "Infrastructure as a Service (IaaS).md"
+    },
+    {
+      "basename": "Cloud Computing",
+      "path": "Cloud Computing.md"
     },
     {
       "basename": "Virtualization",
-      "path": "kubenetes/Virtualization.md"
+      "path": "Virtualization.md"
+    },
+    {
+      "basename": "Beneifts of virtualization",
+      "path": "Beneifts of virtualization.md"
+    },
+    {
+      "basename": "Technologies used in Cloud Computing",
+      "path": "Technologies used in Cloud Computing.md"
     },
     {
       "basename": "Types of Virtualization",
@@ -30,39 +46,39 @@
     },
     {
       "basename": "What are virtual machines (VMs)",
-      "path": "kubenetes/What are virtual machines (VMs).md"
+      "path": "What are virtual machines (VMs).md"
     },
     {
       "basename": "what is a container?",
-      "path": "kubenetes/what is a container?.md"
+      "path": "what is a container?.md"
     },
     {
       "basename": "Containers & Container Images",
-      "path": "kubenetes/Containers & Container Images.md"
+      "path": "Containers & Container Images.md"
     },
     {
       "basename": "Kubernetes",
-      "path": "kubenetes/Kubernetes.md"
+      "path": "Kubernetes.md"
     },
     {
       "basename": "Pod",
-      "path": "kubenetes/Pod.md"
+      "path": "Pod.md"
     },
     {
       "basename": "server usage - with virtualization",
-      "path": "kubenetes/server usage - with virtualization.png"
+      "path": "server usage - with virtualization.png"
     },
     {
       "basename": "server usage - without virutalization",
-      "path": "kubenetes/server usage - without virutalization.png"
+      "path": "server usage - without virutalization.png"
     },
     {
       "basename": "Categories of Hypervisor",
-      "path": "kubenetes/Categories of Hypervisor.md"
+      "path": "Categories of Hypervisor.md"
     },
     {
       "basename": "What is a Hypervisor?",
-      "path": "kubenetes/What is a Hypervisor?.md"
+      "path": "What is a Hypervisor?.md"
     },
     {
       "basename": "Test Markdown File",
@@ -77,40 +93,36 @@
       "path": "Learning Obsidian.md"
     },
     {
-      "basename": "Beneifts of virtualization",
-      "path": "kubenetes/Beneifts of virtualization.md"
-    },
-    {
       "basename": "Virtualizations Practical Example",
-      "path": "kubenetes/Virtualizations Practical Example.md"
+      "path": "Virtualizations Practical Example.md"
     },
     {
       "basename": "what is a container image?",
-      "path": "kubenetes/what is a container image?.md"
+      "path": "what is a container image?.md"
     },
     {
       "basename": "Deployments",
-      "path": "kubenetes/Deployments.md"
+      "path": "Deployments.md"
     },
     {
       "basename": "what are containers based on?",
-      "path": "kubenetes/what are containers based on?.md"
+      "path": "what are containers based on?.md"
     },
     {
       "basename": "Kode Kloud Labs & Slack Community",
-      "path": "kubenetes/Kode Kloud Labs & Slack Community.md"
+      "path": "Kode Kloud Labs & Slack Community.md"
     },
     {
       "basename": "Kubernetes For Beginners - Kode Kloud",
-      "path": "kubenetes/Kubernetes For Beginners - Kode Kloud.pdf"
+      "path": "Kubernetes For Beginners - Kode Kloud.pdf"
     },
     {
       "basename": "container",
-      "path": "kubenetes/container.md"
+      "path": "container.md"
     },
     {
       "basename": "Kode Kloud $0 Billing Details - With Coupon Code",
-      "path": "kubenetes/Kode Kloud $0 Billing Details - With Coupon Code.png"
+      "path": "Kode Kloud $0 Billing Details - With Coupon Code.png"
     }
   ],
   "omittedPaths": [],
