@@ -4,68 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c817f5926de05b49",
+        "id": "9ca315c1e515ea99",
         "type": "tabs",
         "children": [
           {
-            "id": "8f3a3160b487b27b",
+            "id": "dc7e358189181ec4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Types of Cloud Computing.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6426655d8b159a89",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Types of Cloud Computing.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "858495a2c877750f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "What is a Bare Metal Server?.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d7ae55c7a880d7ab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Infrastructure as a Service (IaaS).md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "df58b685d170da06",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud Computing.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -73,7 +21,6 @@
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -140,7 +87,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 425.5026054382324
+    "width": 425.5026054382324,
+    "collapsed": true
   },
   "right": {
     "id": "5affea21a0bdd9dc",
@@ -275,13 +223,15 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "6426655d8b159a89",
+  "active": "dc7e358189181ec4",
   "lastOpenFiles": [
+    "Cloud Computing.md",
+    "Infrastructure as a Service (IaaS).md",
     "What is a Bare Metal Server?.md",
+    "Elasticity in Cloud Computing.md",
+    "Cloud native.md",
     "Types of Cloud Computing.md",
     "Cloud Computing Services.md",
-    "Infrastructure as a Service (IaaS).md",
-    "Cloud Computing.md",
     "infrastructure-as-a-service (IaaS).md",
     "Virtualization.md",
     "Beneifts of virtualization.md",
@@ -306,8 +256,6 @@
     "Operating System.md",
     "Learning Obsidian.md",
     "hypervisors.md",
-    "Virtualizations Practical Example.md",
-    "what is a container image?.md",
     "Canvas/Untitled.canvas",
     "Untitled 1.canvas",
     "Untitled.canvas",

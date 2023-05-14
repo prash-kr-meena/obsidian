@@ -5,20 +5,28 @@
       "path": "Types of Cloud Computing.md"
     },
     {
-      "basename": "What is a Bare Metal Server?",
-      "path": "What is a Bare Metal Server?.md"
-    },
-    {
-      "basename": "Cloud Computing Services",
-      "path": "Cloud Computing Services.md"
+      "basename": "Cloud Computing",
+      "path": "Cloud Computing.md"
     },
     {
       "basename": "Infrastructure as a Service (IaaS)",
       "path": "Infrastructure as a Service (IaaS).md"
     },
     {
-      "basename": "Cloud Computing",
-      "path": "Cloud Computing.md"
+      "basename": "What is a Bare Metal Server?",
+      "path": "What is a Bare Metal Server?.md"
+    },
+    {
+      "basename": "Elasticity in Cloud Computing",
+      "path": "Elasticity in Cloud Computing.md"
+    },
+    {
+      "basename": "Cloud native",
+      "path": "Cloud native.md"
+    },
+    {
+      "basename": "Cloud Computing Services",
+      "path": "Cloud Computing Services.md"
     },
     {
       "basename": "Virtualization",

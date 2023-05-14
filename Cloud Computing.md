@@ -7,11 +7,13 @@ In cloud computing, users can access computing resources, such as storage, proce
 
 
 
+## Cloud Service Providers
 The companies that offer these cloud services are called Cloud Service Provider
 ![cloud service providers](https://f4n3x6c5.stackpathcdn.com/article/top-10-cloud-service-providers/Images/Top%20cloud%20providers.jpg)
 
 
 
+## Internet Service Providers
 Like how we have Internet Service Provider ISPs which provides us internet services
 
 ![internet services provider](https://www.vssmonitoring.com/wp-content/uploads/2021/06/Internet-Service-Companies-1024x464.png)
