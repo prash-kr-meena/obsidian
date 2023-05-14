@@ -4,37 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9ca315c1e515ea99",
+        "id": "aa40bf5a39b6b536",
         "type": "tabs",
         "children": [
           {
-            "id": "dc7e358189181ec4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Types of Cloud Computing.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7108cd020b1a3bdd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "What is multi-tenant (or multitenancy)?.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c04083a1264cd420",
+            "id": "dc101379731d7373",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -77,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "multi-tenan",
+                "query": "iframe",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -114,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 425.5026054382324
+    "width": 425.5026054382324,
+    "collapsed": true
   },
   "right": {
     "id": "5affea21a0bdd9dc",
@@ -130,7 +105,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Types of Cloud Computing.md",
+                "file": "What is multi-tenant (or multitenancy)?.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -165,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Types of Cloud Computing.md"
+                "file": "What is multi-tenant (or multitenancy)?.md"
               }
             }
           },
@@ -208,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Types of Cloud Computing.md",
+                "file": "What is multi-tenant (or multitenancy)?.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +195,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Types of Cloud Computing.md",
+                "file": "What is multi-tenant (or multitenancy)?.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -236,7 +211,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 564.5
+    "width": 564.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -249,10 +225,10 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "dc7e358189181ec4",
+  "active": "dc101379731d7373",
   "lastOpenFiles": [
-    "What is multi-tenant (or multitenancy)?.md",
     "Types of Cloud Computing.md",
+    "What is multi-tenant (or multitenancy)?.md",
     "Cloud Computing.md",
     "Infrastructure as a Service (IaaS).md",
     "What is a Bare Metal Server?.md",
