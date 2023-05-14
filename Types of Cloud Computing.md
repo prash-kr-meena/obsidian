@@ -7,7 +7,7 @@ Cloud computing Categorized based on the deployment models
 	- offered by [[Cloud Computing#Cloud Service Providers|CSPs]] like AWS, Google Cloud, Microsoft Azure, etc.
 - Customers access resources through subscription-based or pay-per-usage models.
 - The provider owns and manages the data centers, hardware, and infrastructure.
-- It is a [multi-tenant environment](https://www.ibm.com/topics/multi-tenant), serving millions of customers.
+- It is a [[What is multi-tenant (or multitenancy)?|multi-tenant environment]], serving millions of customers.
 	- ie the cloud provider's data center infrastructure is shared by all public cloud customers.
 - Enterprises adopt public cloud for [[Elasticity in Cloud Computing|elasticity]], scalability, and workload flexibility.
 - It offers efficiency, cost savings, and reduces reliance on on-premises infrastructure.
@@ -51,20 +51,16 @@ Todo: I need to watch
 
 ## 4. Multi Cloud and hybrid multicloud
 
-Multicloud is the use of two or more clouds from two or more different cloud providers. Having a multicloud environment can be as simple using email SaaS from one vendor and image editing SaaS from another. But when enterprises talk about multicloud, they're typically talking about using multiple cloud services—including SaaS, PaaS, and IaaS services—from two or more of the leading public cloud providers.
-
-Hybrid multicloud is the use of two or more public clouds together with a private cloud environment.
-
-Organizations choose multicloud to avoid vendor lock-in, to have more services to choose from, and to access to more innovation. But the more clouds you use—each with its own set of management tools, data transmission rates, and security protocols—the more difficult it can be to manage your environment. Multicloud management platforms provide visibility across multiple provider clouds through a central dashboard, where development teams can see their projects and deployments, operations teams can keep an eye on clusters and nodes, and the cybersecurity staff can monitor for threats.
-
-
-
-- Multicloud refers to using two or more clouds from different cloud providers, including SaaS, PaaS, and IaaS services.
+- **Multicloud** refers to using two or more clouds from different cloud providers (with services including SaaS, PaaS, and IaaS services).
 - It allows organizations to avoid vendor lock-in, access more services, and benefit from increased innovation.
-- Hybrid multicloud combines two or more public clouds with a private cloud environment.
+
+- **Hybrid multicloud** combines two or more public clouds with a private cloud environment.
 - Managing a multicloud environment can be challenging due to different management tools, data transmission rates, and security protocols.
+
 - Multicloud management platforms provide a centralized dashboard for visibility and monitoring across multiple provider clouds.
-- Development, operations, and cybersecurity teams can utilize the platform to oversee projects, deployments, clusters, nodes, and threat detection.
+	- where development teams can see their projects and deployments,  
+	- operations team can keep an eye on clusters and nodes and 
+	- The cybersecurity staff can monitor for threats
 
 
 [**Learn more about multicloud**](https://www.ibm.com/topics/multicloud)

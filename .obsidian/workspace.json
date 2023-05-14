@@ -19,6 +19,32 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7108cd020b1a3bdd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "What is multi-tenant (or multitenancy)?.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c04083a1264cd420",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "What is multi-tenant (or multitenancy)?.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
         "stacked": true
@@ -51,7 +77,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "todo",
+                "query": "multi-tenan",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,7 +94,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "7e4ee2a7062f149d",
@@ -87,8 +114,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 425.5026054382324,
-    "collapsed": true
+    "width": 425.5026054382324
   },
   "right": {
     "id": "5affea21a0bdd9dc",
@@ -225,12 +251,13 @@
   },
   "active": "dc7e358189181ec4",
   "lastOpenFiles": [
+    "What is multi-tenant (or multitenancy)?.md",
+    "Types of Cloud Computing.md",
     "Cloud Computing.md",
     "Infrastructure as a Service (IaaS).md",
     "What is a Bare Metal Server?.md",
     "Elasticity in Cloud Computing.md",
     "Cloud native.md",
-    "Types of Cloud Computing.md",
     "Cloud Computing Services.md",
     "infrastructure-as-a-service (IaaS).md",
     "Virtualization.md",
@@ -255,7 +282,6 @@
     "Test Markdown File.md",
     "Operating System.md",
     "Learning Obsidian.md",
-    "hypervisors.md",
     "Canvas/Untitled.canvas",
     "Untitled 1.canvas",
     "Untitled.canvas",

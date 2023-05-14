@@ -5,6 +5,10 @@
       "path": "Types of Cloud Computing.md"
     },
     {
+      "basename": "What is multi-tenant (or multitenancy)?",
+      "path": "What is multi-tenant (or multitenancy)?.md"
+    },
+    {
       "basename": "Cloud Computing",
       "path": "Cloud Computing.md"
     },
