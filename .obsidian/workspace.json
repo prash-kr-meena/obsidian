@@ -26,7 +26,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "What is a bare metal server?.md",
+                "file": "Types of Cloud Computing.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "858495a2c877750f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "What is a Bare Metal Server?.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -143,7 +156,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "What is a bare metal server?.md",
+                "file": "Types of Cloud Computing.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -178,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "What is a bare metal server?.md"
+                "file": "Types of Cloud Computing.md"
               }
             }
           },
@@ -221,7 +234,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "What is a bare metal server?.md",
+                "file": "Types of Cloud Computing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -233,7 +246,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "What is a bare metal server?.md",
+                "file": "Types of Cloud Computing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -264,12 +277,12 @@
   },
   "active": "6426655d8b159a89",
   "lastOpenFiles": [
+    "What is a Bare Metal Server?.md",
     "Types of Cloud Computing.md",
     "Cloud Computing Services.md",
     "Infrastructure as a Service (IaaS).md",
     "Cloud Computing.md",
     "infrastructure-as-a-service (IaaS).md",
-    "What is a bare metal server?.md",
     "Virtualization.md",
     "Beneifts of virtualization.md",
     "Technologies used in Cloud Computing.md",

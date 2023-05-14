@@ -7,14 +7,18 @@
 - Along with virtual machines, [networking](https://www.ibm.com/topics/networking), and [storage](https://www.ibm.com/topics/cloud-storage), bare metal servers are a foundational component of the [[Infrastructure as a Service (IaaS)]] stack in cloud computing.
 
 
-## Benefits of bare metal servers
+## Benefits of Bare Metal Server
 - Bare metal servers offer high performance with dedicated physical hardware.
 - They provide resource isolation, eliminating noisy neighbor issues.
+	- as there is not other user using that same hardware which is in case of traditional cloud based on [[What are virtual machines (VMs)|VMs]]
+	- so the user gets more consistent disk and network I/O performance due the same logic
 - Users have flexibility and customization options for operating systems and hardware configurations.
-- Bare metal servers enhance security and compliance by offering dedicated hardware.
+- Bare metal servers enhance security and **compliance** by offering dedicated hardware.
 - They are scalable, allowing organizations to adjust resources based on workload demands.
 - Users have complete control and management over the infrastructure.
 - Bare metal servers can optimize licensing and reduce virtualization costs.
+
+##### Disadvantage of bare metal servers
 - They may require advanced IT skills for management and maintenance.
 
 

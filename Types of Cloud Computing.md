@@ -11,7 +11,7 @@ Public cloud is a [multi-tenant environment](https://www.ibm.com/topics/multi-t
 Many enterprises are moving portions of their computing infrastructure to the public cloud because public cloud services are elastic and readily scalable, flexibly adjusting to meet changing workload demands. Others are attracted by the promise of greater efficiency and fewer wasted resources since customers pay only for what they use. Still others seek to reduce spending on hardware and on-premises infrastructures.
 
 - Public cloud provides computing resources over the public internet.
-- Public cloud is a type of cloud computing in which a cloud service provider makes computing resources (anything from SaaS applications, to individual [[What are virtual machines (VMs)|virtual machines (VMs)]] , to [[What is a bare metal server?|bare metal computing hardware]], to complete enterprise-grade infrastructures and development platforms) available to users over the public internet
+- Public cloud is a type of cloud computing in which a cloud service provider makes computing resources (anything from SaaS applications, to individual [[What are virtual machines (VMs)|virtual machines (VMs)]] , to [[What is a Bare Metal Server?|bare metal computing hardware]], to complete enterprise-grade infrastructures and development platforms) available to users over the public internet
 - It is offered by cloud service providers like AWS, Google Cloud, Microsoft Azure, etc.
 - Customers access resources through subscription-based or pay-per-usage models.
 - The provider owns and manages the data centers, hardware, and infrastructure.
