@@ -49,9 +49,7 @@ Todo: I need to watch
 [**Learn more about hybrid cloud**](https://www.ibm.com/topics/hybrid-cloud "hybrid-cloud")
 
 
-## 4. Multi Cloud
-
-**Multicloud and hybrid multicloud**
+## 4. Multi Cloud and hybrid multicloud
 
 Multicloud is the use of two or more clouds from two or more different cloud providers. Having a multicloud environment can be as simple using email SaaS from one vendor and image editing SaaS from another. But when enterprises talk about multicloud, they're typically talking about using multiple cloud services—including SaaS, PaaS, and IaaS services—from two or more of the leading public cloud providers.
 
@@ -61,12 +59,12 @@ Organizations choose multicloud to avoid vendor lock-in, to have more services t
 
 
 
-Multicloud refers to using two or more clouds from different cloud providers, including SaaS, PaaS, and IaaS services.
-It allows organizations to avoid vendor lock-in, access more services, and benefit from increased innovation.
-Hybrid multicloud combines two or more public clouds with a private cloud environment.
-Managing a multicloud environment can be challenging due to different management tools, data transmission rates, and security protocols.
-Multicloud management platforms provide a centralized dashboard for visibility and monitoring across multiple provider clouds.
-Development, operations, and cybersecurity teams can utilize the platform to oversee projects, deployments, clusters, nodes, and threat detection.
+- Multicloud refers to using two or more clouds from different cloud providers, including SaaS, PaaS, and IaaS services.
+- It allows organizations to avoid vendor lock-in, access more services, and benefit from increased innovation.
+- Hybrid multicloud combines two or more public clouds with a private cloud environment.
+- Managing a multicloud environment can be challenging due to different management tools, data transmission rates, and security protocols.
+- Multicloud management platforms provide a centralized dashboard for visibility and monitoring across multiple provider clouds.
+- Development, operations, and cybersecurity teams can utilize the platform to oversee projects, deployments, clusters, nodes, and threat detection.
 
 
 [**Learn more about multicloud**](https://www.ibm.com/topics/multicloud)
