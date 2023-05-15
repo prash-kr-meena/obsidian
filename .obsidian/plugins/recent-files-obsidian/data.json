@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "Containerization",
+      "path": "Containerization.md"
+    },
+    {
+      "basename": "whats included in a container",
+      "path": "whats included in a container.png"
+    },
+    {
+      "basename": "what is a container?",
+      "path": "what is a container?.md"
+    },
+    {
+      "basename": "what is a container image?",
+      "path": "what is a container image?.md"
+    },
+    {
+      "basename": "TOdo",
+      "path": "TOdo.md"
+    },
+    {
+      "basename": "Containers & Container Images",
+      "path": "Containers & Container Images.md"
+    },
+    {
+      "basename": "container",
+      "path": "container.md"
+    },
+    {
       "basename": "What is multi-tenant (or multitenancy)?",
       "path": "What is multi-tenant (or multitenancy)?.md"
     },
@@ -61,14 +89,6 @@
       "path": "What are virtual machines (VMs).md"
     },
     {
-      "basename": "what is a container?",
-      "path": "what is a container?.md"
-    },
-    {
-      "basename": "Containers & Container Images",
-      "path": "Containers & Container Images.md"
-    },
-    {
       "basename": "Kubernetes",
       "path": "Kubernetes.md"
     },
@@ -109,10 +129,6 @@
       "path": "Virtualizations Practical Example.md"
     },
     {
-      "basename": "what is a container image?",
-      "path": "what is a container image?.md"
-    },
-    {
       "basename": "Deployments",
       "path": "Deployments.md"
     },
@@ -127,10 +143,6 @@
     {
       "basename": "Kubernetes For Beginners - Kode Kloud",
       "path": "Kubernetes For Beginners - Kode Kloud.pdf"
-    },
-    {
-      "basename": "container",
-      "path": "container.md"
     },
     {
       "basename": "Kode Kloud $0 Billing Details - With Coupon Code",

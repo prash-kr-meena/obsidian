@@ -1,4 +1,4 @@
-
+todo: add image
 In the context of computing,
 - A container image is a lightweight, standalone, executable package that contains everything needed to run a piece of software, including application code, runtime environment, system tools, libraries, and settings. 
 
