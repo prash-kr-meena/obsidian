@@ -14,8 +14,22 @@
               "type": "empty",
               "state": {}
             }
+          },
+          {
+            "id": "6ff9cd20b97a4ecc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Git Workflow.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -98,6 +112,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Git Workflow.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -131,7 +146,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Git Workflow.md"
+              }
             }
           },
           {
@@ -173,6 +190,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Git Workflow.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -184,6 +202,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Git Workflow.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -213,8 +232,9 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "35cd09c15bd3f36a",
+  "active": "6ff9cd20b97a4ecc",
   "lastOpenFiles": [
+    "Git Workflow.md",
     "Containerization.md",
     "whats included in a container.png",
     "what is a container?.md",
