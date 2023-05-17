@@ -1,12 +1,52 @@
 {
   "recentFiles": [
     {
+      "basename": "Advantages of Virtual Machines",
+      "path": "Advantages of Virtual Machines.md"
+    },
+    {
+      "basename": "What are virtual machines (VMs)",
+      "path": "What are virtual machines (VMs).md"
+    },
+    {
+      "basename": "Cloud native",
+      "path": "Cloud native.md"
+    },
+    {
+      "basename": "What is multi-tenant (or multitenancy)?",
+      "path": "What is multi-tenant (or multitenancy)?.md"
+    },
+    {
+      "basename": "Types of Virtualization",
+      "path": "Types of Virtualization.md"
+    },
+    {
+      "basename": "Types of Cloud Computing",
+      "path": "Types of Cloud Computing.md"
+    },
+    {
+      "basename": "TOdo",
+      "path": "TOdo.md"
+    },
+    {
+      "basename": "Kubernetes",
+      "path": "Kubernetes.md"
+    },
+    {
       "basename": "Git Workflow",
       "path": "Git Workflow.md"
     },
     {
       "basename": "Containerization",
       "path": "Containerization.md"
+    },
+    {
+      "basename": "container",
+      "path": "container.md"
+    },
+    {
+      "basename": "Virtualization",
+      "path": "Virtualization.md"
     },
     {
       "basename": "whats included in a container",
@@ -21,24 +61,8 @@
       "path": "what is a container image?.md"
     },
     {
-      "basename": "TOdo",
-      "path": "TOdo.md"
-    },
-    {
       "basename": "Containers & Container Images",
       "path": "Containers & Container Images.md"
-    },
-    {
-      "basename": "container",
-      "path": "container.md"
-    },
-    {
-      "basename": "What is multi-tenant (or multitenancy)?",
-      "path": "What is multi-tenant (or multitenancy)?.md"
-    },
-    {
-      "basename": "Types of Cloud Computing",
-      "path": "Types of Cloud Computing.md"
     },
     {
       "basename": "Cloud Computing",
@@ -57,16 +81,8 @@
       "path": "Elasticity in Cloud Computing.md"
     },
     {
-      "basename": "Cloud native",
-      "path": "Cloud native.md"
-    },
-    {
       "basename": "Cloud Computing Services",
       "path": "Cloud Computing Services.md"
-    },
-    {
-      "basename": "Virtualization",
-      "path": "Virtualization.md"
     },
     {
       "basename": "Beneifts of virtualization",
@@ -77,24 +93,8 @@
       "path": "Technologies used in Cloud Computing.md"
     },
     {
-      "basename": "Types of Virtualization",
-      "path": "Types of Virtualization.md"
-    },
-    {
       "basename": "Advantage of Cloud Computing",
       "path": "Advantage of Cloud Computing.md"
-    },
-    {
-      "basename": "Advantages of Virtual Machines",
-      "path": "Advantages of Virtual Machines.md"
-    },
-    {
-      "basename": "What are virtual machines (VMs)",
-      "path": "What are virtual machines (VMs).md"
-    },
-    {
-      "basename": "Kubernetes",
-      "path": "Kubernetes.md"
     },
     {
       "basename": "Pod",
