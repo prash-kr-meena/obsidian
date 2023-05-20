@@ -4,15 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "fed4c7130685f1b7",
+        "id": "11b8745145ef145e",
         "type": "tabs",
         "children": [
           {
-            "id": "5fbcacf3bd94fb96",
+            "id": "300325b9d24e921c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Helm.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "517329718c71b141",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Resetting Minikube.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ],
@@ -71,8 +89,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "7e4ee2a7062f149d",
@@ -91,7 +108,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 425.5026054382324
+    "width": 425.5026054382324,
+    "collapsed": true
   },
   "right": {
     "id": "5affea21a0bdd9dc",
@@ -107,6 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Helm.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -140,7 +159,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Helm.md"
+              }
             }
           },
           {
@@ -182,6 +203,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Helm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -193,6 +215,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Helm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -208,7 +231,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 564.5
+    "width": 564.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -221,8 +245,12 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "5fbcacf3bd94fb96",
+  "active": "300325b9d24e921c",
   "lastOpenFiles": [
+    "Resetting Minikube.md",
+    "Helm.md",
+    "Git Workflow.md",
+    "container.md",
     "Advantages of Virtual Machines.md",
     "What are virtual machines (VMs).md",
     "Cloud native.md",
@@ -231,9 +259,7 @@
     "Types of Cloud Computing.md",
     "TOdo.md",
     "Kubernetes.md",
-    "Git Workflow.md",
     "Containerization.md",
-    "container.md",
     "Virtualization.md",
     "whats included in a container.png",
     "what is a container?.md",
@@ -248,11 +274,9 @@
     "Beneifts of virtualization.md",
     "Technologies used in Cloud Computing.md",
     "Advantage of Cloud Computing.md",
-    "Pod.md",
     "server usage - with virtualization.png",
     "server usage - without virutalization.png",
     "kubenetes/Type1 vs Type 2 Hypervisor.png",
-    "Categories of Hypervisor.md",
     "Pasted image 20230513025954.png",
     "Pasted image 20230513030014.png",
     "Canvas/Untitled.canvas",

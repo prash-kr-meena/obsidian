@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Helm",
+      "path": "Helm.md"
+    },
+    {
+      "basename": "Resetting Minikube",
+      "path": "Resetting Minikube.md"
+    },
+    {
+      "basename": "Git Workflow",
+      "path": "Git Workflow.md"
+    },
+    {
+      "basename": "container",
+      "path": "container.md"
+    },
+    {
       "basename": "Advantages of Virtual Machines",
       "path": "Advantages of Virtual Machines.md"
     },
@@ -33,16 +49,8 @@
       "path": "Kubernetes.md"
     },
     {
-      "basename": "Git Workflow",
-      "path": "Git Workflow.md"
-    },
-    {
       "basename": "Containerization",
       "path": "Containerization.md"
-    },
-    {
-      "basename": "container",
-      "path": "container.md"
     },
     {
       "basename": "Virtualization",
