@@ -51,7 +51,17 @@ but helm does
 
 
 
+`helm upgrade monitoring-stack prometheus-community/kube-prometheus-stack --set grafana.adminPassword=admin`
 
+
+
+
+
+`helm upgrade monitoring-stack prometheus-community/kube-prometheus-stack --values=values.yaml`
+
+What is the potential pitfalls of helm
+- snowflake clusters
+(checkout snowflake server and phenix server by martinFowler.com)
 
 
 
