@@ -12,7 +12,10 @@ Why we use it?
 How to install helm?
 Why is helm 3 very different from helm 2?
 
+
 What is artifact hub?
+
+what is oci registries? while downloading helm https://github.com/helm/helm/releases 
 
 
 
