@@ -1,6 +1,12 @@
 
 Java Multithreading
 [Java Concurrency & Multithreading Complete Course](https://youtu.be/WldMTtUWqTg?list=PL4WwUkr0wZURiHPaQDb-SwkY36QUAgc4p)
+[[Creating a Dead Lock situation]]
+
+Few advanced things like Executor Framework , Thread Pool , Atomic Integers would cover in a separate video later.(depends on this video's engagement)
+
+
+Need to do advanced multithreading
 
 
 [[JLS - Wait Set - Where is it?]]

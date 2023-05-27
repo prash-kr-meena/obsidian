@@ -13,7 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JLS - Wait Set - Where is it?.md",
+                "file": "Java.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a624ca60bd3e6c25",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Creating a Dead Lock situation.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -125,7 +138,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "JLS - Wait Set - Where is it?.md",
+                "file": "Java.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JLS - Wait Set - Where is it?.md"
+                "file": "Java.md"
               }
             }
           },
@@ -203,7 +216,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JLS - Wait Set - Where is it?.md",
+                "file": "Java.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -215,7 +228,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JLS - Wait Set - Where is it?.md",
+                "file": "Java.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -247,9 +260,10 @@
   },
   "active": "82bdaeb3f9a2e2c5",
   "lastOpenFiles": [
-    "Implicit Inheritance of Object Class in Java - Why isn't the `extends Object` Keyword Required?.md",
-    "JLS - Wait Set - Where is it?.md",
+    "Creating a Dead Lock situation.md",
     "Java.md",
+    "JLS - Wait Set - Where is it?.md",
+    "Implicit Inheritance of Object Class in Java - Why isn't the `extends Object` Keyword Required?.md",
     "Implicit Inheritance of Object Class in Java Why isn't the extends Object Keyword Required?.md",
     "Helm.md",
     "Resetting Minikube.md",
@@ -273,7 +287,6 @@
     "Infrastructure as a Service (IaaS).md",
     "What is a Bare Metal Server?.md",
     "Elasticity in Cloud Computing.md",
-    "Cloud Computing Services.md",
     "server usage - with virtualization.png",
     "server usage - without virutalization.png",
     "kubenetes/Type1 vs Type 2 Hypervisor.png",
