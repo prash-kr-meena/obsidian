@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "11b8745145ef145e",
+        "id": "4c6f0947eb525cb3",
         "type": "tabs",
         "children": [
           {
-            "id": "300325b9d24e921c",
+            "id": "82bdaeb3f9a2e2c5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Helm.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ],
@@ -95,8 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 425.5026054382324,
-    "collapsed": true
+    "width": 425.5026054382324
   },
   "right": {
     "id": "5affea21a0bdd9dc",
@@ -112,7 +106,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Helm.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -146,9 +139,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Helm.md"
-              }
+              "state": {}
             }
           },
           {
@@ -190,7 +181,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Helm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -202,7 +192,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Helm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -232,10 +221,10 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "300325b9d24e921c",
+  "active": "82bdaeb3f9a2e2c5",
   "lastOpenFiles": [
-    "Resetting Minikube.md",
     "Helm.md",
+    "Resetting Minikube.md",
     "Git Workflow.md",
     "container.md",
     "Advantages of Virtual Machines.md",
