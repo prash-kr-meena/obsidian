@@ -4,18 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "f4f38d5d19105641",
+        "id": "faee388a88ebf44e",
         "type": "tabs",
         "children": [
           {
-            "id": "26875653de8ef609",
+            "id": "7f37e782fe891457",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
-              "state": {
-                "file": ".obsidian/workspace.json",
-                "staged": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ],
@@ -226,7 +223,7 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "26875653de8ef609",
+  "active": "7f37e782fe891457",
   "lastOpenFiles": [
     "Virtualization.md",
     "Courses To Do.md",
