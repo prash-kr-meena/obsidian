@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Kubernetes",
+      "path": "Kubernetes.md"
+    },
+    {
       "basename": "Courses To Do",
       "path": "Courses To Do.md"
     },
@@ -59,10 +63,6 @@
     {
       "basename": "what is a container image?",
       "path": "what is a container image?.md"
-    },
-    {
-      "basename": "Kubernetes",
-      "path": "Kubernetes.md"
     },
     {
       "basename": "Advantage of Cloud Computing",

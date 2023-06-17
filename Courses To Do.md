@@ -9,24 +9,15 @@
 - [ ] [Computer NETWORKING Concept ROADMAP | Complete CN for Placement Interviews](https://www.youtube.com/watch?v=oYeJoJXIP9Q) LOve Babbar - Roadmap
 
 
-
-
-
-
 #### Software Design Shit
 - [ ] [Software Architecture & Design](https://www.udacity.com/course/software-architecture-design--ud821)
 - [ ] [Software Development Process](https://www.udacity.com/course/software-development-process--ud805)
 - [ ] [Writing READMEs](https://www.udacity.com/course/writing-readmes--ud777)
 - [ ] [Design of Computer Programs](https://www.udacity.com/course/design-of-computer-programs--cs212)
 
-
-
-
 #### Database Shit
 - [ ] [DBMS Placements Series 2022](https://www.youtube.com/playlist?list=PLDzeHZWIZsTpukecmA2p5rhHM14bl2dHU)
 - [ ] [Intro to Relational Databases](https://www.udacity.com/course/intro-to-relational-databases--ud197)
-
-
 
 
 #### Operating Systems
@@ -41,18 +32,10 @@
 - [ ] [NPTEL Design and Engineering of Computer Systems](https://www.youtube.com/playlist?list=PLDW872573QAZNlUzWVzoU8cCadXg1NUGK) Highly In-depth and new 
 
 
-
-
-
-
 #### Security
 - [ ] [Authentication & Authorization: OAuth](https://www.udacity.com/course/authentication-authorization-oauth--ud330)
 - [ ] [Applied Cryptography](https://www.udacity.com/course/applied-cryptography--cs387)
 - [ ] [Network Security](https://www.udacity.com/course/network-security--ud199)
-
-
-
-
 
 
 #### Cloud Computing
@@ -66,12 +49,6 @@
 - [ ] [Intro to Backend](https://www.udacity.com/course/intro-to-backend--ud171)
 
 
-
-
 #### For Palku may be?
 - [ ] [Human-Computer Interaction](https://www.udacity.com/course/human-computer-interaction--ud400)
-
-
-
-
 
