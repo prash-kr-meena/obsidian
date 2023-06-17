@@ -119,7 +119,3 @@ Virtualization is achived with the help of [[What is a Hypervisor?|hypervisor]]
 
 
 Now, regarding the [[Containerization|relationship between virtualization and containerization]]
-.
-.
-TEST
-.
