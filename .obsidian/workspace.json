@@ -4,17 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "f3273f6d978b3003",
+        "id": "6549f6dce66a2595",
         "type": "tabs",
         "children": [
           {
-            "id": "442362a1e0f43df8",
+            "id": "28f73163f3ec57f0",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": ".obsidian/workspace.json",
-                "staged": false
+                "file": "Courses To Do.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
               }
             }
           }
@@ -94,8 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 425.5026054382324,
-    "collapsed": true
+    "width": 425.5026054382324
   },
   "right": {
     "id": "5affea21a0bdd9dc",
@@ -111,6 +112,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Courses To Do.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -144,7 +146,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Courses To Do.md"
+              }
             }
           },
           {
@@ -187,6 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Courses To Do.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -198,6 +203,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Courses To Do.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -226,7 +232,7 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "442362a1e0f43df8",
+  "active": "28f73163f3ec57f0",
   "lastOpenFiles": [
     "Virtualization.md",
     "Courses To Do.md",
