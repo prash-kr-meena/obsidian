@@ -20,6 +20,10 @@ for understanding containers, we need to understand
 4. [[Docker]], which is one of the container engines
 
 
+----
+
+
+
 [KUBERNETES ELIMINATES MATRIX FROM HELL](https://www.devsamurai.com/en/kubernetes-eliminates-matrix-from-hell/)
 compatibility matrix issue is usually referred to as the matrix from hell.
 ![[from pdf - matrix of hell.png]]

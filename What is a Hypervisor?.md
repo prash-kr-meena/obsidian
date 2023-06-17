@@ -8,6 +8,9 @@ This process is called [[Virtualization]], and the operating system instances a
 
 Hypervisor is also known as **virtual machine monitor** (VMM) that manages these VMs as they run alongside each other. The hypervisor allocates physical computing resources—such as processors, memory, and storage—to each VM. It keeps each VM separate from others, so they don’t interfere with each other. So if, for example, one OS suffers a crash or a security compromise, the others survive
 
+
+![Hypervisor || Virtual Machine Manager || Cloud computing](https://www.youtube.com/watch?v=jKQFLXPih3M&ab_channel=K.SEasySolutions)
+
 ## Categories of Hypervisor
 
 There are two broad categories of hypervisors: Type 1 and Type 2.
@@ -51,3 +54,6 @@ There are two broad categories of hypervisors: Type 1 and Type 2.
 
 
 ![Type 1 Hypervisor vs Type 2 Hypervisor](https://linuxhandbook.com/content/images/2021/11/type1-type2-hypervisor.png)
+
+
+

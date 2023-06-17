@@ -10,8 +10,3 @@ https://www.freecodecamp.org/news/demystifying-containers-101-a-deep-dive-into-c
 https://www.freecodecamp.org/news/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b
 
 https://www.sumologic.com/blog/application-containers-vs-system-containers-understanding-difference/
-
-
-https://www.youtube.com/watch?v=MuVlT8hOW0c&ab_channel=K.SEasySolutions
-
-https://www.youtube.com/watch?v=jKQFLXPih3M&ab_channel=K.SEasySolutions
