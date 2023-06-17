@@ -66,12 +66,23 @@ These bare metal hypervisors interfear minimally with the normal operations of t
 
 
 
+
 ## L03b: Memory Virtualization
 ### introduction
 
 ![Introduction - Georgia Tech - Advanced Operating Systems](https://www.youtube.com/watch?v=Bq0qVZtd84w)
 
+
+### Memory Hierarchy
+![Memory Hierarchy - Georgia Tech - Advanced Operating Systems](https://www.youtube.com/watch?v=-y9J78wSJHY)
+
+### Todo -- remaining other lecture nee to complete
+
+
+
 ## L03c: CPU & Device Virtualization
+
+
 
 
 
@@ -83,8 +94,7 @@ These bare metal hypervisors interfear minimally with the normal operations of t
 
 
 
-
-
+--
 
 [Full and Para Virtualization - Dr. Sanjay P. Ahuja, Ph.D](https://www.unf.edu/~sahuja/cloudcourse/Fullandparavirtualization.pdf)
 Fidelity National Financial Distinguished Professor of CIS

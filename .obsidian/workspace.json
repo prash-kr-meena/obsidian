@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "6e284dc8fdf02af9",
+        "id": "b0b027a6d384a632",
         "type": "tabs",
         "children": [
           {
-            "id": "cbb8333460b5b1c1",
+            "id": "d2d7580400bcdd3a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Virtualization.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ],
@@ -107,6 +112,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Virtualization.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -140,7 +146,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Virtualization.md"
+              }
             }
           },
           {
@@ -170,8 +178,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "582b42cccefa1a54",
@@ -183,6 +190,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Virtualization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,6 +202,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Virtualization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -222,11 +231,12 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "cbb8333460b5b1c1",
+  "active": "d2d7580400bcdd3a",
   "lastOpenFiles": [
+    "Scratch - Left in between.md",
+    "Virtualization.md",
     "Kubernetes.md",
     "Courses To Do.md",
-    "Virtualization.md",
     "Types of Virtualization.md",
     "Containers & Container Images.md",
     "What is a Hypervisor?.md",
