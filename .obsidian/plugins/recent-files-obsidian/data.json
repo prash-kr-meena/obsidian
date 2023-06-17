@@ -1,12 +1,104 @@
 {
   "recentFiles": [
     {
-      "basename": "Java",
-      "path": "Java.md"
+      "basename": "Virtualization",
+      "path": "Virtualization.md"
+    },
+    {
+      "basename": "Courses To Do",
+      "path": "Courses To Do.md"
+    },
+    {
+      "basename": "Types of Virtualization",
+      "path": "Types of Virtualization.md"
+    },
+    {
+      "basename": "Containers & Container Images",
+      "path": "Containers & Container Images.md"
+    },
+    {
+      "basename": "What is a Hypervisor?",
+      "path": "What is a Hypervisor?.md"
+    },
+    {
+      "basename": "What are virtual machines (VMs)",
+      "path": "What are virtual machines (VMs).md"
+    },
+    {
+      "basename": "Hypervisors and their types",
+      "path": "Hypervisors and their types.png"
+    },
+    {
+      "basename": "Software Debugging - TODO",
+      "path": "Software Debugging - TODO.md"
+    },
+    {
+      "basename": "Operating System - TODO",
+      "path": "Operating System - TODO.md"
+    },
+    {
+      "basename": "Containerization",
+      "path": "Containerization.md"
+    },
+    {
+      "basename": "Docker",
+      "path": "Docker.md"
+    },
+    {
+      "basename": "Beneifts of virtualization",
+      "path": "Beneifts of virtualization.md"
+    },
+    {
+      "basename": "Virtualizations Practical Example",
+      "path": "Virtualizations Practical Example.md"
+    },
+    {
+      "basename": "what is a container?",
+      "path": "what is a container?.md"
+    },
+    {
+      "basename": "what is a container image?",
+      "path": "what is a container image?.md"
+    },
+    {
+      "basename": "Kubernetes",
+      "path": "Kubernetes.md"
+    },
+    {
+      "basename": "Advantage of Cloud Computing",
+      "path": "Advantage of Cloud Computing.md"
+    },
+    {
+      "basename": "what are containers based on?",
+      "path": "what are containers based on?.md"
+    },
+    {
+      "basename": "Kubernetes For Beginners - Kode Kloud",
+      "path": "Kubernetes For Beginners - Kode Kloud.pdf"
+    },
+    {
+      "basename": "Pasted image 20230617125108",
+      "path": "Pasted image 20230617125108.png"
+    },
+    {
+      "basename": "from pdf - what can container do?",
+      "path": "from pdf - what can container do?.png"
+    },
+    {
+      "basename": "from pdf - matrix of hell",
+      "path": "from pdf - matrix of hell.png"
+    },
+    {
+      "basename": "Kode Kloud Labs & Slack Community",
+      "path": "Kode Kloud Labs & Slack Community.md"
     },
     {
       "basename": "Creating a Dead Lock situation",
       "path": "Creating a Dead Lock situation.md"
+    },
+    {
+      "basename": "Java",
+      "path": "Java.md"
     },
     {
       "basename": "JLS - Wait Set - Where is it?",
@@ -29,16 +121,8 @@
       "path": "Git Workflow.md"
     },
     {
-      "basename": "container",
-      "path": "container.md"
-    },
-    {
       "basename": "Advantages of Virtual Machines",
       "path": "Advantages of Virtual Machines.md"
-    },
-    {
-      "basename": "What are virtual machines (VMs)",
-      "path": "What are virtual machines (VMs).md"
     },
     {
       "basename": "Cloud native",
@@ -49,10 +133,6 @@
       "path": "What is multi-tenant (or multitenancy)?.md"
     },
     {
-      "basename": "Types of Virtualization",
-      "path": "Types of Virtualization.md"
-    },
-    {
       "basename": "Types of Cloud Computing",
       "path": "Types of Cloud Computing.md"
     },
@@ -61,32 +141,8 @@
       "path": "TOdo.md"
     },
     {
-      "basename": "Kubernetes",
-      "path": "Kubernetes.md"
-    },
-    {
-      "basename": "Containerization",
-      "path": "Containerization.md"
-    },
-    {
-      "basename": "Virtualization",
-      "path": "Virtualization.md"
-    },
-    {
       "basename": "whats included in a container",
       "path": "whats included in a container.png"
-    },
-    {
-      "basename": "what is a container?",
-      "path": "what is a container?.md"
-    },
-    {
-      "basename": "what is a container image?",
-      "path": "what is a container image?.md"
-    },
-    {
-      "basename": "Containers & Container Images",
-      "path": "Containers & Container Images.md"
     },
     {
       "basename": "Cloud Computing",
@@ -109,16 +165,8 @@
       "path": "Cloud Computing Services.md"
     },
     {
-      "basename": "Beneifts of virtualization",
-      "path": "Beneifts of virtualization.md"
-    },
-    {
       "basename": "Technologies used in Cloud Computing",
       "path": "Technologies used in Cloud Computing.md"
-    },
-    {
-      "basename": "Advantage of Cloud Computing",
-      "path": "Advantage of Cloud Computing.md"
     },
     {
       "basename": "Pod",
@@ -133,44 +181,16 @@
       "path": "server usage - without virutalization.png"
     },
     {
-      "basename": "Categories of Hypervisor",
-      "path": "Categories of Hypervisor.md"
-    },
-    {
-      "basename": "What is a Hypervisor?",
-      "path": "What is a Hypervisor?.md"
-    },
-    {
       "basename": "Test Markdown File",
       "path": "Test Markdown File.md"
-    },
-    {
-      "basename": "Operating System",
-      "path": "Operating System.md"
     },
     {
       "basename": "Learning Obsidian",
       "path": "Learning Obsidian.md"
     },
     {
-      "basename": "Virtualizations Practical Example",
-      "path": "Virtualizations Practical Example.md"
-    },
-    {
       "basename": "Deployments",
       "path": "Deployments.md"
-    },
-    {
-      "basename": "what are containers based on?",
-      "path": "what are containers based on?.md"
-    },
-    {
-      "basename": "Kode Kloud Labs & Slack Community",
-      "path": "Kode Kloud Labs & Slack Community.md"
-    },
-    {
-      "basename": "Kubernetes For Beginners - Kode Kloud",
-      "path": "Kubernetes For Beginners - Kode Kloud.pdf"
     },
     {
       "basename": "Kode Kloud $0 Billing Details - With Coupon Code",

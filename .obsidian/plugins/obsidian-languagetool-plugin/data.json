@@ -1,6 +1,6 @@
 {
-  "serverUrl": "https://api.languagetoolplus.com",
-  "urlMode": "premium",
+  "serverUrl": "https://api.languagetool.org",
+  "urlMode": "standard",
   "glassBg": true,
   "shouldAutoCheck": true,
   "pickyMode": false,

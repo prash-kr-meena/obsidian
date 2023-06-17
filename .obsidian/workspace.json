@@ -4,42 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4c6f0947eb525cb3",
+        "id": "c07515aed3af1c67",
         "type": "tabs",
         "children": [
           {
-            "id": "82bdaeb3f9a2e2c5",
+            "id": "4fd5174a12b704ee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a624ca60bd3e6c25",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Creating a Dead Lock situation.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "87d5249ac5aca9b8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Implicit Inheritance of Object Class in Java - Why isn't the `extends Object` Keyword Required?.md",
+                "file": "Virtualization.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -77,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "todo",
+                "query": "vmm",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -102,7 +76,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "7e4ee2a7062f149d",
@@ -138,7 +113,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Java.md",
+                "file": "Virtualization.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -161,7 +136,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.8149092127626197,
+                  "scale": 0.8372374473601983,
                   "close": true
                 }
               }
@@ -173,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java.md"
+                "file": "Virtualization.md"
               }
             }
           },
@@ -216,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java.md",
+                "file": "Virtualization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,7 +203,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java.md",
+                "file": "Virtualization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -249,44 +224,49 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:Create new drawing": false,
       "switcher:Open quick switcher": false,
       "canvas:Create new canvas": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
       "graph:Open graph view": false,
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "82bdaeb3f9a2e2c5",
+  "active": "4fd5174a12b704ee",
   "lastOpenFiles": [
-    "Creating a Dead Lock situation.md",
-    "Java.md",
-    "JLS - Wait Set - Where is it?.md",
-    "Implicit Inheritance of Object Class in Java - Why isn't the `extends Object` Keyword Required?.md",
-    "Implicit Inheritance of Object Class in Java Why isn't the extends Object Keyword Required?.md",
-    "Helm.md",
-    "Resetting Minikube.md",
-    "Git Workflow.md",
-    "container.md",
-    "Advantages of Virtual Machines.md",
-    "What are virtual machines (VMs).md",
-    "Cloud native.md",
-    "What is multi-tenant (or multitenancy)?.md",
-    "Types of Virtualization.md",
-    "Types of Cloud Computing.md",
-    "TOdo.md",
-    "Kubernetes.md",
-    "Containerization.md",
     "Virtualization.md",
-    "whats included in a container.png",
+    "Courses To Do.md",
+    "Types of Virtualization.md",
+    "Containers & Container Images.md",
+    "What is a Hypervisor?.md",
+    "What are virtual machines (VMs).md",
+    "Categories of Hypervisor.md",
+    "Hypervisors and their types.png",
+    "kubenetes/Type1 vs Type 2 Hypervisor.png.md",
+    "kubenetes",
+    "Software Debugging - TODO.md",
+    "Operating System - TODO.md",
+    "Containerization.md",
+    "Untitled 1.md",
+    "Docker.md",
+    "Beneifts of virtualization.md",
+    "Virtualizations Practical Example.md",
     "what is a container?.md",
     "what is a container image?.md",
-    "Containers & Container Images.md",
-    "Cloud Computing.md",
-    "Infrastructure as a Service (IaaS).md",
-    "What is a Bare Metal Server?.md",
-    "Elasticity in Cloud Computing.md",
+    "Kubernetes.md",
+    "5.md",
+    "3.md",
+    "Advantage of Cloud Computing.md",
+    "what are containers based on?.md",
+    "container.md",
+    "Kubernetes For Beginners - Kode Kloud.pdf",
+    "Pasted image 20230617125108.png",
+    "from pdf - what can container do?.png",
+    "from pdf - matrix of hell.png",
+    "Kode Kloud Labs & Slack Community.md",
+    "Java.md",
+    "whats included in a container.png",
     "server usage - with virtualization.png",
     "server usage - without virutalization.png",
     "kubenetes/Type1 vs Type 2 Hypervisor.png",
@@ -297,18 +277,12 @@
     "Untitled.canvas",
     "Canvas/Untitled 1.canvas",
     "Canvas",
-    "Kubernetes For Beginners - Kode Kloud.pdf",
     "Excalidraw",
-    "Kode Kloud $0 Billing Details - With Coupon Code.png",
     "projects/markdown",
     "projects",
-    "containerized applications architecture.png",
-    "content/notes/kubenetes/whats included in a container.png",
-    "content/notes/kubenetes/server usage - without virutalization.png",
     "content/notes/kubenetes/Kubernetes For Beginners - Kode Kloud.pdf",
     "content/notes/kubenetes",
     "assets/styles/_callouts.scss",
-    "assets/styles/custom.scss",
-    "assets/styles/clipboard.scss"
+    "assets/styles/custom.scss"
   ]
 }

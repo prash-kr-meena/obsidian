@@ -13,6 +13,13 @@
         "Shift"
       ],
       "key": "F6"
+    },
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "F6"
     }
   ],
   "app:go-back": [
