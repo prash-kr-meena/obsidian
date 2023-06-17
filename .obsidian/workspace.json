@@ -11,12 +11,10 @@
             "id": "4fd5174a12b704ee",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
                 "file": "Virtualization.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
+                "staged": false
               }
             }
           }
@@ -113,7 +111,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Virtualization.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -147,9 +144,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Virtualization.md"
-              }
+              "state": {}
             }
           },
           {
@@ -179,7 +174,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
         "id": "582b42cccefa1a54",
@@ -191,7 +187,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Virtualization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -203,7 +198,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Virtualization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -219,8 +213,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 564.5,
-    "collapsed": true
+    "width": 564.5
   },
   "left-ribbon": {
     "hiddenItems": {
