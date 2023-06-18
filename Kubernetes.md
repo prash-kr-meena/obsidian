@@ -16,8 +16,11 @@ position to understand what Kubernetes is capable of.
 for understanding containers, we need to understand 
 1. [[Virtualization]]
 2. [[Containerization]]
-3. [[Containers & Container Images]]
-4. [[Docker]], which is one of the container engines
+3. [[Containers vs Virtualization]]
+4. [[What are virtual machines (VMs)| Virtual Machines]]
+5. [[Containers & Container Images]]
+6. [[Containers vs Virtual Machines]]
+7. [[Docker]], which is one of the container engines
 
 
 ----
