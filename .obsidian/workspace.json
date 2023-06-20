@@ -46,7 +46,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "todo",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -71,8 +71,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "7e4ee2a7062f149d",
@@ -221,7 +220,7 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "5a8d2802e972c71f",
+  "active": "e89f94d9dfdbe597",
   "lastOpenFiles": [
     "Docker.md",
     "What are virtual machines (VMs).md",
