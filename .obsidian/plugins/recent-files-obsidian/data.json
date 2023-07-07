@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Kubernetes",
+      "path": "Kubernetes.md"
+    },
+    {
       "basename": "Docker",
       "path": "Docker.md"
     },
@@ -15,10 +19,6 @@
     {
       "basename": "Scratch - Left in between",
       "path": "Scratch - Left in between.md"
-    },
-    {
-      "basename": "Kubernetes",
-      "path": "Kubernetes.md"
     },
     {
       "basename": "Containers & Container Images",

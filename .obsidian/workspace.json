@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "54e9a8336f9b7bb9",
+        "id": "fd30aa008ceb3cf7",
         "type": "tabs",
         "children": [
           {
-            "id": "5a8d2802e972c71f",
+            "id": "45f0efab7953f0d5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Kubernetes.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ],
@@ -28,7 +33,7 @@
       {
         "id": "4bcbd33e5dd841d1",
         "type": "tabs",
-        "dimension": 59.67413441955194,
+        "dimension": 65.66566566566567,
         "children": [
           {
             "id": "e89f94d9dfdbe597",
@@ -71,12 +76,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "7e4ee2a7062f149d",
         "type": "tabs",
-        "dimension": 40.32586558044807,
+        "dimension": 34.334334334334336,
         "children": [
           {
             "id": "825a0701b2399978",
@@ -90,7 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 425.5026054382324
+    "width": 376.50390243530273
   },
   "right": {
     "id": "5affea21a0bdd9dc",
@@ -106,6 +112,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Kubernetes.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -139,7 +146,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Kubernetes.md"
+              }
             }
           },
           {
@@ -181,6 +190,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Kubernetes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,6 +202,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Kubernetes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -207,7 +218,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 564.5
+    "width": 564.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -220,7 +232,7 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "e89f94d9dfdbe597",
+  "active": "45f0efab7953f0d5",
   "lastOpenFiles": [
     "Docker.md",
     "What are virtual machines (VMs).md",
