@@ -1,3 +1,8 @@
+Kubenetes Doc from UDemy Course
+![[KubernetesForBeginners-MumshadMannambeth.pdf]]
+
+
+
 [[Kode Kloud Labs & Slack Community]]
 [[Kubernetes For Beginners - Kode Kloud.pdf]]
 
@@ -26,6 +31,8 @@ for understanding containers, we need to understand
 ----
 
 
+
+Section 1
 
 [KUBERNETES ELIMINATES MATRIX FROM HELL](https://www.devsamurai.com/en/kubernetes-eliminates-matrix-from-hell/)
 compatibility matrix issue is usually referred to as the matrix from hell.
