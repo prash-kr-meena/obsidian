@@ -45,6 +45,15 @@ compatibility matrix issue is usually referred to as the matrix from hell.
 Kubernetes = [[Containers & Container Images|Containers]] + orchestration
 
 
+
+Containers are completely isolated environments, as in they can have their own processes or services, their own network interfaces, their own
+mounts, just like Virtual machines, except that they all share the same OS kernel.
+
+It's also important to note that containers are not new with Docker. Containers have existed for about 10 years now and some of the different types of containers are LXC, LXD , LXCFS etc. Docker utilizes LXC containers.
+
+Setting up these container environments is hard as they are very low level and that is were Docker offers a high-level tool with several powerful functionalities making it really easy for end users like us.
+
+
 Major topics starting points
 
 - [[Pod]]
@@ -53,4 +62,3 @@ Major topics starting points
 
 then each topics
 
-**todo**
