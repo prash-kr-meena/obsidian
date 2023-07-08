@@ -686,69 +686,33 @@ Both have the same purpose but **they are not the same.**
 However, whatever we discussed in the previous few slides remain applicable to both these technologies. 
 There are minor differences in the way each works and we will look at that in a bit.
 
-
 As such we will try to stick to Replica Sets in all of our demos and implementations going forward.
 
-59
+#### Creating a Replication Controller
+We start by creating a replication controller definition file `rc-definition.yml`.
 
-> kubectl create –f rc-definition.yml replicationcontroller “myapp-rc” created
+As with any kubernetes definition file, we will have 4 sections. The apiVersion, kind, metadata and spec. 
+- The `apiVersion` is specific to what we are creating. In this case replication controller is supported in kubernetes apiVersion v1. So we will write it as v1. 
+- The `kind` as we know is ReplicationController. 
+- Under `metadata`, 
+	- we will add a `name` and we will call it `myapp-rc`. 
+	- And we will also add a few labels, `app` and `type` and assign values to them. 
+So far, it has been very similar to how we created a POD in the previous section. 
 
-> kubectl get replicationcontroller
+![[Pasted image 20230708231723.png|400]]            ![[Pasted image 20230708232253.png|500]] 
 
-NAME DESIRED CURRENT READY AGE myapp-rc 3 3 3 19s
+The next is the most crucial part of the definition file and that is the specification written as `spec`. 
+For any kubernetes definition file, the `spec` section defines what’s inside the object we are creating. 
 
-> kubectl get pods  
-NAME READY STATUS RESTARTS AGE
+In this case we know that the replication controller creates multiple instances of a Pod. *But what POD?* 
+- We create a `template` section under `spec` to provide a Pod template to be used by the replication controller to create replicas. 
+- **Now how do we DEFINE the Pod template?** 
+  It’s not that hard because, we have already done that in the previous exercise. 
+  Remember, we created a `pod-definition.yaml` file in the previous exercise. We could re-use the contents of the same file to populate the template section.
+  
+   Move all the contents of the `pod-definition.yaml` file into the `template` section of the replication controller, except for the first two lines – which are `apiVersion` and `kind`. 
 
-MUMSHAD MANNAMBETH
-
-pod-definition.yml
-
-apiVersion: v1 kind: Pod
-
-metadata:  
-name: myapp-pod labels:
-
-app: myapp
-
-type: front-end spec:
-
-containers:  
-- name: nginx-container
-
-image: nginx
-
-myapp-rc-4lvk9 1/1 myapp-rc-mc2mf 1/1 myapp-rc-px9pz 1/1
-
-Running 0 20s
-
-Running 0 20s Running 0 20s
-
-rc-definition.yml
-
-|   |   |   |
-|---|---|---|
-|||POD<br><br>POD<br><br>POD|
-
-apiVersion: v1  
-kind: ReplicationController metadata: Replication Controller
-
-name: myapp-rc labels:
-
-app: myapp
-
-type: front-end  
-spec: Replication Controller
-
-template:
-
-replicas: 3
-
-Let us now look at how we create a replication controller. As with the previous lecture, we start by creating a replication controller definition file. We will name it rc- definition.yml. As with any kubernetes definition file, we will have 4 sections. The apiVersion, kind, metadata and spec. The apiVersion is specific to what we are creating. In this case replication controller is supported in kubernetes apiVersion v1. So we will write it as v1. The kind as we know is ReplicationController. Under metadata, we will add a name and we will call it myapp-rc. And we will also add a few labels, app and type and assign values to them. So far, it has been very similar to how we created a POD in the previous section. The next is the most crucial part of the definition file and that is the specification written as spec. For any kubernetes definition file, the spec section defines what’s inside the object we are creating. In this case we know that the replication controller creates multiple instances of a POD. But what POD? We create a template section under spec to provide a POD template to be used by the replication controller to create replicas. Now how do we DEFINE the POD template? It’s not that hard because, we have already done that in the previous exercise. Remember, we created a pod-definition file in the previous exercise. We could re-use the contents of the same file to populate the template section. Move all the contents of the pod-definition file into the template section of the replication controller, except for the first two lines – which are apiVersion and
-
-60
-
-kind. Remember whatever we move must be UNDER the template section. Meaning, they should be intended to the right and have more spaces before them than the template line itself. Looking at our file, we now have two metadata sections – one is for the Replication Controller and another for the POD and we have two spec sections – one for each. We have nested two definition files together. The replication controller being the parent and the pod-definition being the child.
+Remember whatever we move must be UNDER the template section. Meaning, they should be intended to the right and have more spaces before them than the template line itself. Looking at our file, we now have two metadata sections – one is for the Replication Controller and another for the POD and we have two spec sections – one for each. We have nested two definition files together. The replication controller being the parent and the pod-definition being the child.
 
 Now, there is something still missing. We haven’t mentioned how many replicas we need in the replication controller. For that, add another property to the spec called replicas and input the number of replicas you need under it. Remember that the template and replicas are direct children of the spec section. So they are siblings and must be on the same vertical line : having equal number of spaces before them.
 
