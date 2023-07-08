@@ -447,11 +447,11 @@ Since we are only creating a pod with a single container in it, it is easy.
 Spec is a dictionary so add a property under it called containers, which is a list or an array. 
 	The reason this property is a list is because the PODs can have multiple containers within them as we learned in the lecture earlier. 
 	In this case though, we will only add a single item in the list, since we plan to have only a single container in the POD. 
-	The item in the list is a dictionary, so add a name and image property. 
-	The value for image is nginx.
+	The item in the list is a dictionary, so add a name and image property. The value for image is nginx.
 
 
 Once the file is created, run the command `kubectl create -f` followed by the file name which is `pod-definition.yml` and kubernetes creates the pod.
+`kubectl create -f pod-definition.yaml`
 
 So to summarize **remember the 4 top level properties** `apiVersion`, `kind`, `metadata` and `spec`. Then start by adding values to those depending on the object you are creating.
 
@@ -470,11 +470,79 @@ spec:
       image: nginx
 ```
 
+Once we create the pod, how do you see it? 
+Use the `kubectl get pods` command to see a list of pods available. In this case its just one. 
+To see detailed information about the pod run the `kubectl describe pod` command. This will tell you information about the POD, when it was created, what labels are assigned to it, what docker containers are part of it and the events associated with that POD
 
 
+### Demo
+`kubectl create -f pod-definition.yaml `
+```
+pod/myapp-pod created
+```
 
+`kubectl get pods -o wide `
+```
+NAME        READY   STATUS    RESTARTS      AGE    IP           NODE                   NOMINATED NODE   READINESS GATES
+nginxxxx    1/1     Running   1 (23m ago)   172m   10.42.0.17   lima-rancher-desktop   <none>           <none>
+myapp-pod   1/1     Running   0             40s    10.42.0.21   lima-rancher-desktop   <none>           <none>
+```
 
-
+`kubectl describe pod/myapp-pod`
+```yaml
+Name:             myapp-pod
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             lima-rancher-desktop/192.168.5.15
+Start Time:       Sat, 08 Jul 2023 18:30:54 +0530
+Labels:           app=myapp
+                  type=front-end
+Annotations:      <none>
+Status:           Running
+IP:               10.42.0.21
+IPs:
+  IP:  10.42.0.21
+Containers:
+  nginx-container:
+    Container ID:   docker://a48f05618d4a759f86b7d7d761e60ca4c3f00795c6061ffa7a5f0e84de1366ac
+    Image:          nginx
+    Image ID:       docker-pullable://nginx@sha256:08bc36ad52474e528cc1ea3426b5e3f4bad8a130318e3140d6cfe29c8892c7ef
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Sat, 08 Jul 2023 18:31:06 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-gxfhs (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-gxfhs:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  2m55s  default-scheduler  Successfully assigned default/myapp-pod to lima-rancher-desktop
+  Normal  Pulling    2m54s  kubelet            Pulling image "nginx"
+  Normal  Pulled     2m43s  kubelet            Successfully pulled image "nginx" in 11.186713346s (11.186765569s including waiting)
+  Normal  Created    2m43s  kubelet            Created container nginx-container
+  Normal  Started    2m43s  kubelet            Started container nginx-container
+```
 
 
 
