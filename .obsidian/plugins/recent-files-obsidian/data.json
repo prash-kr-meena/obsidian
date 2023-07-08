@@ -5,6 +5,10 @@
       "path": "Kubernetes.md"
     },
     {
+      "basename": "Pasted image 20230708204530",
+      "path": "Pasted image 20230708204530.png"
+    },
+    {
       "basename": "Pasted image 20230708202045",
       "path": "Pasted image 20230708202045.png"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Cloud Computing Services",
       "path": "Cloud Computing Services.md"
-    },
-    {
-      "basename": "Technologies used in Cloud Computing",
-      "path": "Technologies used in Cloud Computing.md"
     }
   ],
   "omittedPaths": [],

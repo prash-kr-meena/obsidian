@@ -179,7 +179,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
         "id": "582b42cccefa1a54",
@@ -219,8 +220,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 564.5,
-    "collapsed": true
+    "width": 564.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -233,20 +233,20 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "c11a9efdc25a4412",
+  "active": "c5b3ed388efa8016",
   "lastOpenFiles": [
+    "Pasted image 20230708205728.png",
+    "Pasted image 20230708205707.png",
+    "Pasted image 20230708205244.png",
+    "Pasted image 20230708205039.png",
+    "Pasted image 20230708204530.png",
+    "Kubernetes.md",
+    "Pasted image 20230708204136.png",
+    "Pasted image 20230708203834.png",
+    "Pasted image 20230708203653.png",
+    "Pasted image 20230708203339.png",
     "Pasted image 20230708202828.png",
     "Pasted image 20230708202645.png",
-    "Pasted image 20230708202045.png",
-    "Kubernetes.md",
-    "Pasted image 20230708201922.png",
-    "Pasted image 20230708201942.png",
-    "Pasted image 20230708201720.png",
-    "Pasted image 20230708201512.png",
-    "Pasted image 20230708201428.png",
-    "Pasted image 20230708201050.png",
-    "Pasted image 20230708180145.png",
-    "Pasted image 20230708180534.png",
     "Virtualization.md",
     "what is a container?.md",
     "Deployments.md",

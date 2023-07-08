@@ -620,5 +620,22 @@ spec:
 ![[Pasted image 20230708202828.png|1000]]
 
 
+![[Pasted image 20230708203339.png|1000]]
 
+![[Pasted image 20230708203653.png|1000]]
+
+![[Pasted image 20230708203834.png|1000]]
+
+![[Pasted image 20230708204136.png|1000]]
+
+![[Pasted image 20230708204530.png|1000]]
+
+
+![[Pasted image 20230708205039.png|1000]]
+
+![[Pasted image 20230708205244.png|1000]]
+
+![[Pasted image 20230708205707.png|1000]]
+
+![[Pasted image 20230708205728.png|1000]]
 
