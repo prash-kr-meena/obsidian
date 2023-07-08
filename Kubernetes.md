@@ -590,15 +590,29 @@ spec:
 
 
 
+### Labs
+![[Pasted image 20230708201512.png|800]]
+
+#### Familirize with Lab Environment
+![[Pasted image 20230708201050.png|1000]]
 
 
 
 
+![[Pasted image 20230708201428.png|1000]]
 
 
 
 
+#### Pods and Yaml
 
+![[Pasted image 20230708201720.png|1000]]
+
+
+![[Pasted image 20230708201942.png|1000]]
+
+
+![[Pasted image 20230708202045.png|1000]]
 
 
 
