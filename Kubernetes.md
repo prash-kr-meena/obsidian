@@ -546,8 +546,47 @@ Events:
 
 
 
+### Questions
+**Instruction:** Create a Kubernetes Pod definition file using values below: 
+
+- **Name:** postgres 
+- **Labels:** tier => db-tier
+- **Container name:** postgres
+- **Image:** postgres
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+    name: postgres
+    labels:
+        tier: db-tier
+spec:
+    containers:
+        -   name: postgres
+            image: postgres
+```
 
 
+### Question
+**Introduction:** Postgres [Docker image](https://hub.docker.com/_/postgres/) requires an environment variable to be set for password.  
+
+**Instruction:** Set an environment variable for the docker container. **POSTGRES_PASSWORD** with a value **mysecretpassword**. I know we haven't discussed this in the lecture, but it is easy. To pass in an environment variable add a new property '**env**' to the container object. It is a sibling of image and name. **env** is an array/list. So add a new item under it. The item will have properties **name** and **value**. **name** should be the name of the environment variable - **POSTGRES_PASSWORD.** And **value** should be the password - **mysecretpassword**
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgres
+  labels:
+    tier: db-tier
+spec:
+  containers:
+    - name: postgres
+      image: postgres
+      env:
+        -   name: POSTGRES_PASSWORD
+            value: mysecretpassword
+```
 
 
 
