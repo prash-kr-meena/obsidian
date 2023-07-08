@@ -590,7 +590,7 @@ spec:
 
 
 
-### Labs
+### Labs - Pods
 ![[Pasted image 20230708201512.png|800]]
 
 #### Familirize with Lab Environment
@@ -638,4 +638,11 @@ spec:
 ![[Pasted image 20230708205707.png|1000]]
 
 ![[Pasted image 20230708205728.png|1000]]
+
+
+
+### Labs - Replica Set
+### Labs - Deployment
+### Labs - Practice Test - Rolling Updates
+### Labs - Services
 
