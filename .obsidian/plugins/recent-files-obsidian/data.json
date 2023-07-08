@@ -5,8 +5,20 @@
       "path": "Kubernetes.md"
     },
     {
+      "basename": "quiz-k8s-udemy-course-20230708133847",
+      "path": "quiz-k8s-udemy-course-20230708133847.png"
+    },
+    {
       "basename": "Containers & Container Images",
       "path": "Containers & Container Images.md"
+    },
+    {
+      "basename": "quiz-k8s-udemy-course-72398273",
+      "path": "quiz-k8s-udemy-course-72398273.png"
+    },
+    {
+      "basename": "components on - master vs worker node",
+      "path": "components on - master vs worker node.png"
     },
     {
       "basename": "KubernetesForBeginners-MumshadMannambeth",
@@ -187,18 +199,6 @@
     {
       "basename": "server usage - with virtualization",
       "path": "server usage - with virtualization.png"
-    },
-    {
-      "basename": "server usage - without virutalization",
-      "path": "server usage - without virutalization.png"
-    },
-    {
-      "basename": "Test Markdown File",
-      "path": "Test Markdown File.md"
-    },
-    {
-      "basename": "Learning Obsidian",
-      "path": "Learning Obsidian.md"
     }
   ],
   "omittedPaths": [],

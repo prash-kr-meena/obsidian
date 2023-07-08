@@ -4,5 +4,15 @@
   "showFrontmatter": false,
   "showLineNumber": false,
   "spellcheck": false,
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "spellcheckDictionary": [
+    "kubelet",
+    "etcd",
+    "kube",
+    "Kubectl",
+    "kubectl",
+    "kube",
+    "Kuberneteses",
+    " kubect"
+  ]
 }
