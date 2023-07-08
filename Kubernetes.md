@@ -837,9 +837,9 @@ It’s BECAUSE, replica set can ALSO manage pods that were not created as part o
 
 Say for example, there were pods created BEFORE the creation of the ReplicaSet that match the labels specified in the selector, the `ReplicSet` will also take THOSE pods into consideration when creating the replicas.
 
-But before we get into that, I would like to mention that <u>the selector is one of the major differences between replication controller and replica set</u>. The selector is not a **REQUIRED** field in case of a replication controller, but it is still available. When you skip it, as we did in the previous slide, it assumes it to be the same as the labels provided in the pod-definition file. In case of replica set a user input IS required for this property. And it has to be written in the form of matchLabels as shown here. The matchLabels selector simply matches the labels specified under it to the labels on the PODs. The replicaset selector also provides many other options for matching labels that were not available in a replication controller.
+But before we get into that, I would like to mention that <u>the selector is one of the major differences between replication controller and replica set</u>. The selector is not a **REQUIRED** field in case of a replication controller, **but it is still available**. When you skip it, as we did in the previous slide, it assumes it to be the same as the labels provided in the pod-definition file. In case of replica set a user input IS required for this property. And it has to be written in the form of `matchLabels` as shown here. The matchLabels selector simply matches the labels specified under it to the labels on the PODs. The replicaset selector also provides many other options for matching labels that were not available in a replication controller.
 
-And as always to create a ReplicaSet run the kubectl create command providing the definition file as input and to see the created replicasets run the kubectl get replicaset command. To get list of pods, simply run the kubectl get pods command.
+And as always to create a `ReplicaSet` run the kubectl create command providing the definition file as input and to see the created replicasets run the kubectl get replicaset command. To get list of pods, simply run the kubectl get pods command.
 
 
 
