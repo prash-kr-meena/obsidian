@@ -166,5 +166,89 @@ We will explore more commands with kubectl when we learn the associated concepts
 
 
 ### Pods
+With Kubernetes our ultimate aim is to deploy our application in the form of containers on a set of machines that are configured as worker nodes in a cluster. 
+However, Kubernetes does not deploy containers directly on the worker nodes. <u>The containers are encapsulated into a Kubernetes object known as PODs</u>. A POD is a single instance of an application. <u>A POD is the smallest object, that you can create in kubernetes</u>.
+![[Pasted image 20230708142403.png]]
 
 
+Below we see the simplest of simplest cases were you have a single node kubernetes cluster with a single instance of your application running in a single docker container encapsulated in a POD. 
+![[Pasted image 20230708141454.png]]
+
+
+What if the number of users accessing your application increase and you need to scale your application? You need to add additional instances of your web application to share the load. 
+
+Now, were would you spin up additional instances? Do we bring up a new container instance within the same POD? 
+
+No! We create a new POD altogether with a new instance of the same application. As you can see we now have two instances of our web application running on two separate PODs on the same kubernetes system or node.
+![[Pasted image 20230708141750.png]]
+
+
+
+What if the user base FURTHER increases and your current node has no sufficient capacity? 
+Well THEN you can always deploy additional PODs on a new node in the cluster. You will have a new node added to the cluster to expand the cluster’s physical capacity. 
+![[Pasted image 20230708141943.png]]
+
+
+SO, what I am trying to illustrate in this slide is that, PODs **usually** have a one-to-one relationship with containers running your application. 
+
+To scale UP you create new PODs and to scale down you delete PODs. You do not add additional containers to an existing POD to scale your application. 
+
+
+### Multi Container Pods
+Now we just said that PODs usually have a one-to-one relationship with the containers, but, are we restricted to having a single container in a single POD? 
+![[Pasted image 20230708142450.png]]
+
+
+No! A single POD CAN have multiple containers, except for the fact that they are <u>usually not multiple containers of the same kind</u>. 
+As we discussed in the previous slide, if our intention was to scale our application, then we would need to create additional PODs. 
+
+But sometimes you might have a scenario were you have a helper container, that might be doing some kind of supporting task for our web application such as processing a user entered data, processing a file uploaded by the user etc. and you want these helper containers to live along side your application container. 
+
+
+In that case, you CAN have both of these containers part of the same POD, so that when a new application container is created, the helper is also created and when it dies the helper also dies since they are part of the same POD. 
+![[Pasted image 20230708142543.png]]
+
+--
+
+The two containers can also communicate with each other directly by referring to each other as `localhost` since they share the same network namespace. 
+Plus, they can easily share the same storage space as well.
+![[Pasted image 20230708142725.png]]
+
+
+#### Understanding Pods, from a different Angle
+We could take another shot at understanding Pods from a different angle. 
+Let’s, for a moment, keep Kubernetes out of our discussion and talk about simple docker containers. 
+
+Let’s assume we were developing a process or a script to deploy our application on a docker host. So think of what all steps we would need to do in our script to successfully deploy our app, wrt the scale of our users chaning and the complexity of our application increasing?
+
+So we would first simply deploy our application using a simple `docker run python-app` command and the application runs fine, and our users are able to access it. 
+![[Pasted image 20230708143617.png]]
+
+
+When the load increases, we deploy more instances of our application by running the docker run commands many more times. This works fine and we are all happy. 
+![[Pasted image 20230708143748.png]]
+
+
+
+Now, sometime in the future our application is further developed, undergoes architectural changes and grows and gets complex. We now have new helper containers that helps our web applications by processing or fetching data from elsewhere. 
+
+These helper containers maintain a one- to-one relationship with our application container and thus, needs to communicate with the application containers directly and access data from those containers.
+
+
+So For this we would to do some changes in our script, 
+- we would need to maintain a map of what app and helper containers are connected to each other, 
+- we would also need to establish network connectivity between these containers ourselves using links and custom networks, 
+- we would need to create shareable volumes and share it among the containers and maintain a map of that as well. 
+- And most importantly we would need to monitor the state of the application container 
+- and when it dies, manually kill the helper container as well as its no longer required. 
+- Also, When a new container is deployed we would need to deploy the new helper container as well.
+
+- **Note**: I am avoiding networking and load balancing details here to keep the explanation simple, but one can imagine with those concepts a huge amount of work will need to be done in our script 
+
+![[Pasted image 20230708144554.png]]
+
+With PODs, kubernetes does all of this for us automatically. We just need to define what containers a POD consists of and the containers in a POD by default will have access to the same storage, the same network namespace, and same fate as in they will be created together and destroyed together.
+
+Even if our application didn’t happen to be so complex and we could live with a single container, kubernetes still requires you to create PODs. But this is good in the long run as your application is now equipped for architectural changes and scale in the future.
+
+However, multi-pod containers are a rare use-case and we are going to stick to single container per POD in this course.
