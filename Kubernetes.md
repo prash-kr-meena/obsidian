@@ -826,10 +826,18 @@ The `apiVersion` though is a bit different. It is **`apps/v1`** which is differe
 	- So I am going to copy contents over from `pod-definition.yaml` file.
 	- And we have number of `replicas` set to 3.
 
-However, there is **one major difference between replication controller and replica set**. Replica set **requires** a **`selector`** definition. 
+However, there is **one major difference between replication controller and replica set**. 
+- Replica set **requires** a **`selector`** definition. whereas in replication controller the selector was optional,
+  ie k8s will not fail the creation of Replication Controller Resouce/object if the selector is missing in the menifest, rather k8s will automatcially set the slector for it if not set by the user writing the menifest, and the default value which it will pick is from the `lables` in the pod `template `  
+- Furhter the selector in Replication Controller is not as powerful as in the Replication Set, specifically the selector supported in RC is equality based selector where in ReplicaSet both 
+
 The `selector` section helps the replicaset <u>identify what pods fall under it</u>. But why would you have to specify what PODs fall under it, if you have provided the contents of the pod-definition file itself in the template? It’s BECAUSE, replica set can ALSO manage pods that were not created as part of the
 
-61
+
+To better understand the difference between Replication Controller and Replica Set
+Watch This video, Great Explaination
+ ![25. Kubernetes ( In Hindi ) - ReplicaSet & Diff between Replicaset and Replication Controller](https://www.youtube.com/watch?v=iAxBaTMoRwo&ab_channel=GauravSharma) 
+
 
 replicaset creation. Say for example, there were pods created BEFORE the creation of the ReplicaSet that match the labels specified in the selector, the replica set will also take THOSE pods into consideration when creating the replicas. I will elaborate this in the next slide.
 
