@@ -256,6 +256,26 @@ With PODs, kubernetes does all of this for us automatically. We just need to def
 
 Even if our application didn’t happen to be so complex and we could live with a single container, kubernetes still requires you to create PODs. But this is good in the long run as your application is now equipped for architectural changes and scale in the future.
 
-However, multi-pod containers are a rare use-case and we are going to stick to single container per POD in this course.
+However, multi-pod containers are a rare use-case and we are going to stick to a single container per POD in this course.
 
 ### Kubectl
+Let us now look at how to deploy PODs. Earlier we learned about the kubectl run command. 
+
+What this command really does is it deploys a docker container by creating a POD. So it first <u>creates a POD automatically</u> and deploys an instance of the nginx docker image. 
+
+But were does it get the application image from? For that you need to specify the image name using the `–-image` parameter. The application image, in this case the `nginx` image, is downloaded from the **docker hub repository**. 
+![[Pasted image 20230708152336.png]]
+
+Docker hub as we discussed is a public repository were latest docker images of various applications are stored. You could configure kubernetes to pull the image from the public docker hub or a private repository within the organization.
+![[Pasted image 20230708152418.png]]
+
+
+Now that we have a POD created, how do we see the list of PODs available? The kubectl get PODs command helps us see the list of pods in our cluster. In this case we see the pod is in a `ContainerCreating` state and soon changes to a `Running` state when it is actually running.
+![[Pasted image 20230708152611.png]]
+
+
+Also remember that we haven’t really talked about the concepts on how a user can access the nginx web server. And so in the current state we haven’t made the web server accessible to external users. You can access it internally from the Node though. 
+
+For now we will just see how to deploy a POD and in a later lecture once we learn about networking and services we will get to know how to make this service accessible to end users.
+
+![[Pasted image 20230708152743.png]]
