@@ -165,13 +165,6 @@ We will explore more commands with kubectl when we learn the associated concepts
 ![[Pasted image 20230708134204.png]]
 
 
+### Pods
 
-
-
-Major topics starting points
-
-- [[Pod]]
-- [[Deployments]]
-
-then each topics
 

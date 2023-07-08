@@ -95,7 +95,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 376.50390243530273
+    "width": 376.50390243530273,
+    "collapsed": true
   },
   "right": {
     "id": "5affea21a0bdd9dc",
@@ -233,13 +234,15 @@
   },
   "active": "45f0efab7953f0d5",
   "lastOpenFiles": [
+    "Deployments.md",
+    "Kubernetes.md",
+    "Pod.md",
     "Pasted image 20230708134204.png",
     "Pasted image 20230708134145.png",
     "Pasted image 20230708134049.png",
     "Pasted image 20230708134024.png",
     "Pasted image 20230708134000.png",
     "quiz-k8s-udemy-course-20230708133847.png",
-    "Kubernetes.md",
     "Containers & Container Images.md",
     "quiz-k8s-udemy-course-72398273.png",
     "components on - master vs worker node.png",
@@ -260,7 +263,6 @@
     "What is a Hypervisor?.md",
     "Courses To Do.md",
     "Categories of Hypervisor.md",
-    "Hypervisors and their types.png",
     "kubenetes/Type1 vs Type 2 Hypervisor.png.md",
     "kubenetes",
     "Software Debugging - TODO.md",
@@ -270,7 +272,6 @@
     "Virtualizations Practical Example.md",
     "what is a container image?.md",
     "5.md",
-    "3.md",
     "Kubernetes For Beginners - Kode Kloud.pdf",
     "Canvas/Untitled.canvas",
     "Untitled 1.canvas",
