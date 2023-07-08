@@ -777,7 +777,7 @@ Upon going into the details of this Replication Controller, we can see its
 - `spec` information:  replicas, selectors
 - `status`: current replicas, desired replicas etc
 - `events`: what all events for the actions executed has been captured
-		  we can definetly see and confirm here, that replication controller has only created 2 pods only, and did not crate a 3rd pod because already one pod was present, but it started controlling it as well as we had the same selector applicable on it as well
+		  we can definetly see and confirm here, that replication controller has only created 2 pods only, and did not create a 3rd pod because already one pod was present (which did not had any owner of it), hence it started controlling it as well as we had the same selector applicable on it as well (and it did not had any owner)
 		**NOTE**: We did not actually add this selector in this, and it is generated automatically from the labels, Whereas in ReplicaSet we would mandatorily need to create this selector
 ![[Screenshot 2023-07-08 at 11.56.56 PM.png|600]]      ![[Screenshot 2023-07-08 at 11.57.56 PM.png|600]]
 
