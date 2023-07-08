@@ -709,71 +709,107 @@ In this case we know that the replication controller creates multiple instances 
 - **Now how do we DEFINE the Pod template?** 
   It’s not that hard because, we have already done that in the previous exercise. 
   Remember, we created a `pod-definition.yaml` file in the previous exercise. We could re-use the contents of the same file to populate the template section.
+  ![[Pasted image 20230708233613.png|900]]
   
-   Move all the contents of the `pod-definition.yaml` file into the `template` section of the replication controller, except for the first two lines – which are `apiVersion` and `kind`. 
+Move all the contents of the `pod-definition.yaml` file into the `template` section of the replication controller, except for the first two lines – which are `apiVersion` and `kind`.  Remember whatever we move must be UNDER the template section. 
+![[Pasted image 20230708233715.png|800]]
 
-Remember whatever we move must be UNDER the template section. Meaning, they should be intended to the right and have more spaces before them than the template line itself. Looking at our file, we now have two metadata sections – one is for the Replication Controller and another for the POD and we have two spec sections – one for each. We have nested two definition files together. The replication controller being the parent and the pod-definition being the child.
+Looking at our file, 
+- we now have two metadata sections – one is for the Replication Controller and another for the POD and 
+- we have two spec sections – one for each. 
 
-Now, there is something still missing. We haven’t mentioned how many replicas we need in the replication controller. For that, add another property to the spec called replicas and input the number of replicas you need under it. Remember that the template and replicas are direct children of the spec section. So they are siblings and must be on the same vertical line : having equal number of spaces before them.
+We have nested two definition files together. The <u>replication controller being the parent</u> and the <u>pod-definition being the child</u>.
+![[Pasted image 20230708233926.png|600]]   ![[Pasted image 20230708233953.png|600]]
 
-Once the file is ready, run the kubectl create command and input the file using the –f parameter. The replication controller Is created. When the replication controller is created it first creates the PODs using the pod-definition template as many as required, which is 3 in this case. To view the list of created replication controllers run the kubectl get replication controller command and you will see the replication controller listed. We can also see the desired number of replicas or pods, the current number of replicas and how many of them are ready. If you would like to see the pods that were created by the replication controller, run the kubectl get pods command and you will see 3 pods running. Note that all of them are starting with the name of the replication controller which is myapp-rc indicating that they are all created automatically by the replication controller.
 
-60
+Now, there is something still missing. We haven’t mentioned how many replicas we need in the replication controller. For that, add another property to the spec called `replicas` and input the number of replicas you need under it. Remember that the template and replicas are direct children of the spec section. So they are siblings and must be on the same vertical line : having equal number of spaces before them.
+![[Pasted image 20230708234151.png|500]]
 
-apiVersion: apps/v1
-
-kind: ReplicaSet
-
-pod-definition.yml
-
+`replicaset-definition.yml`
+```yaml
 apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myapp-rc
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+  replicas: 3
+```
 
-kind: Pod error: unable to recognize "replimceatasdeatt-a:
+Once the file is ready, run the kubectl create command  `kubectl create -f replicaset-definition.yml`
 
-MUMSHAD MANNAMBETH
+The replication controller Is created. 
+When the replication controller is created  it first creates the PODs using the pod-definition template as many as required, which is 3 in this case. 
 
-metadata:  
-name: myapp-replicaset
+To view the list of created replication controllers run the `kubectl get replicationcontroller` command and you will see the replication controller listed. 
+```
+NAME       DESIRED   CURRENT   READY   AGE
+myapp-rc   3         3         1       5s
+```
+We can also see the desired number of replicas or pods, the current number of replicas and how many of them are ready. 
 
-labels:  
-app: myapp
+If you would like to see the pods that were created by the replication controller, run the `kubectl get pods` command and you will see 3 pods running. 
+**Note :** that all of them are starting with the name of the replication controller which is `myapp-rc` indicating that they are all created automatically by the replication controller.
 
-definition.yml": no matches for /,naKmien:d=mRyeapplpi-pcoadSet labels:
+In my case I was already running one similar pod by name `myapp-pod`, so it did not create the 3rd pod with the name `myapp-rc`
+But we can see and confirm that now the `myapp-pod` pod is also being controlled by the Replication Controllers only.
 
-type: front-end spec:
+for the cotrast you can check the `nginxxxx` image which I had created earlier, that is not being controller by any sort of Replication Controller
+![[Screenshot 2023-07-08 at 11.52.59 PM.png]]
 
-template:
+From the Replication Controllers view also we can see, the Current Replicas and Desired Replicas, we can also see the selector that the Replia Controller is using
+![[Screenshot 2023-07-08 at 11.54.46 PM.png]]
 
-replicas: 3 selector:
+Upon going into the details of this Replication Controller, we can see its
+- `metadata` information:  name, namespace, labels
+- `spec` information:  replicas, selectors
+- `status`: current replicas, desired replicas etc
+- `events`: what all events for the actions executed has been captured
+		  we can definetly see and confirm here, that replication controller has only created 2 pods only, and did not crate a 3rd pod because already one pod was present, but it started controlling it as well as we had the same selector applicable on it as well
 
-matchLabels:  
-type: front-end
+![[Screenshot 2023-07-08 at 11.56.56 PM.png|600]]      ![[Screenshot 2023-07-08 at 11.57.56 PM.png|600]]
 
-app: myapp
+The above screenshot is basically the UI version of the `kubectl describe replicationcontroller/myapp-rc` command
 
-type: front-end spec:
+```yaml
+Name:         myapp-rc
+Namespace:    default
+Selector:     app=myapp,type=front-end
+Labels:       app=myapp
+              type=front-end
+Annotations:  <none>
+Replicas:     3 current / 3 desired
+Pods Status:  3 Running / 0 Waiting / 0 Succeeded / 0 Failed
+Pod Template:
+  Labels:  app=myapp
+           type=front-end
+  Containers:
+   nginx-container:
+    Image:        nginx
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Events:
+  Type    Reason            Age   From                    Message
+  ----    ------            ----  ----                    -------
+  Normal  SuccessfulCreate  12m   replication-controller  Created pod: myapp-rc-m66ls
+  Normal  SuccessfulCreate  12m   replication-controller  Created pod: myapp-rc-5tnnc
 
-containers:  
-- name: nginx-container
-
-image: nginx
-
-POD
-
-> kubectl create –f replicaset-definition.yml replicaset "myapp-replicaset" created
-
-> kubectl get replicaset
-
-NAME DESIRED CURRENT READY AGE myapp-replicaset 3 3 3 19s
-
-> kubectl get pods  
-NAME READY STATUS RESTARTS AGE
-
-myapp-replicaset-9ddl9 1/1 myapp-replicaset-9jtpx 1/1 myapp-replicaset-hq84m 1/1
-
-Running 0 45s Running 0 45s Running 0 45s
-
-replicaset-definition.yml
+```
 
 What we just saw was ReplicationController. Let us now look at ReplicaSet. It is very similar to replication controller. As usual, first we have apiVersion, kind, metadata and spec. The apiVersion though is a bit different. It is apps/v1 which is different from what we had before for replication controller. For replication controller it was simply v1. If you get this wrong, you are likely to get an error that looks like this. It would say no match for kind ReplicaSet, because the specified kubernetes api version has no support for ReplicaSet.
 
