@@ -5,6 +5,14 @@
       "path": "Kubernetes.md"
     },
     {
+      "basename": "Virtualization",
+      "path": "Virtualization.md"
+    },
+    {
+      "basename": "what is a container?",
+      "path": "what is a container?.md"
+    },
+    {
       "basename": "quiz-k8s-udemy-course-20230708133847",
       "path": "quiz-k8s-udemy-course-20230708133847.png"
     },
@@ -49,16 +57,8 @@
       "path": "Containers vs Virtualization.md"
     },
     {
-      "basename": "what is a container?",
-      "path": "what is a container?.md"
-    },
-    {
       "basename": "Types of Virtualization",
       "path": "Types of Virtualization.md"
-    },
-    {
-      "basename": "Virtualization",
-      "path": "Virtualization.md"
     },
     {
       "basename": "What is a Hypervisor?",

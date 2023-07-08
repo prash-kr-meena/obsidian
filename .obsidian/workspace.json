@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fd30aa008ceb3cf7",
+        "id": "1b921320c9599335",
         "type": "tabs",
         "children": [
           {
-            "id": "45f0efab7953f0d5",
+            "id": "85cefa9606f5f699",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -76,7 +76,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "7e4ee2a7062f149d",
@@ -232,10 +233,15 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "45f0efab7953f0d5",
+  "active": "85cefa9606f5f699",
   "lastOpenFiles": [
-    "Pasted image 20230708152646.png",
+    "Pasted image 20230708160417.png",
+    "Pasted image 20230708160357.png",
+    "Pasted image 20230708160333.png",
+    "Virtualization.md",
+    "what is a container?.md",
     "Kubernetes.md",
+    "Pasted image 20230708152646.png",
     "Pasted image 20230708152743.png",
     "Pasted image 20230708152611.png",
     "Pasted image 20230708152418.png",
@@ -243,8 +249,6 @@
     "Pasted image 20230708151130.png",
     "Pasted image 20230708144641.png",
     "Pasted image 20230708144454.png",
-    "Pasted image 20230708144554.png",
-    "Pasted image 20230708143748.png",
     "Deployments.md",
     "Pod.md",
     "Containers & Container Images.md",
@@ -257,9 +261,7 @@
     "Advantages of Virtual Machines.md",
     "Containers vs Virtual Machines.md",
     "Containers vs Virtualization.md",
-    "what is a container?.md",
     "Types of Virtualization.md",
-    "Virtualization.md",
     "What is a Hypervisor?.md",
     "Courses To Do.md",
     "Categories of Hypervisor.md",

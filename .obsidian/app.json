@@ -13,6 +13,8 @@
     "kubectl",
     "kube",
     "Kuberneteses",
-    " kubect"
-  ]
+    " kubect",
+    "kubernetes"
+  ],
+  "readableLineLength": false
 }

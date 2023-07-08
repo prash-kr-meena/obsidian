@@ -279,3 +279,122 @@ Also remember that we haven’t really talked about the concepts on how a user c
 For now we will just see how to deploy a POD and in a later lecture once we learn about networking and services we will get to know how to make this service accessible to end users.
 
 ![[Pasted image 20230708152743.png]]
+
+
+### Pods Demo
+Started Rancher
+
+`kubectl get all`
+```
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.43.0.1    <none>        443/TCP   2d3h
+```
+
+`kubectl get pods`
+None at this moment
+
+
+`kubectl run nginxxxx --image=nginx`
+```
+pod/nginxxxx created
+```
+
+
+`kubectl get all`
+```
+NAME           READY   STATUS    RESTARTS   AGE
+pod/nginxxxx   1/1     Running   0          39s  
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.43.0.1    <none>        443/TCP   2d3h
+```
+
+`kubectl get pods`
+```
+NAME       READY   STATUS    RESTARTS   AGE
+nginxxxx   1/1     Running   0          9m24s
+```
+
+`kubectl describe pod/nginxxxx`
+```
+Name:             nginxxxx
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             lima-rancher-desktop/192.168.5.15
+Start Time:       Sat, 08 Jul 2023 15:39:23 +0530
+Labels:           run=nginxxxx
+Annotations:      <none>
+Status:           Running
+IP:               10.42.0.14
+IPs:
+  IP:  10.42.0.14
+Containers:
+  nginxxxx:
+    Container ID:   docker://826d85d5964fb8f8d99f32bd23259ed4ddeae5bfdefd47a835cb73df4f4d057a
+    Image:          nginx
+    Image ID:       docker-pullable://nginx@sha256:08bc36ad52474e528cc1ea3426b5e3f4bad8a130318e3140d6cfe29c8892c7ef
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Sat, 08 Jul 2023 15:39:56 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-xkdm8 (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-xkdm8:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  2m14s  default-scheduler  Successfully assigned default/nginxxxx to lima-rancher-desktop
+  Normal  Pulling    2m14s  kubelet            Pulling image "nginx"
+  Normal  Pulled     102s   kubelet            Successfully pulled image "nginx" in 31.725216493s (31.725221853s including waiting)
+  Normal  Created    102s   kubelet            Created container nginxxxx
+  Normal  Started    102s   kubelet            Started container nginxxxx
+```
+**Note:** The first event is of creating and assigning the pod to the node, which has nothing to do with the image or the container. This is to say the first action of kubernetes is always to first create a pod so that it can then host the containers inside it.
+
+
+To get additional Information (e.g. The Node and Its Internal IP address)
+`kubectl get pods -o wide`
+```
+NAME       READY   STATUS    RESTARTS   AGE   IP           NODE                   NOMINATED NODE   READINESS GATES
+nginxxxx   1/1     Running   0          16m   10.42.0.14   lima-rancher-desktop   <none>           <none>
+```
+
+
+
+The above demonstration was on how to create a Pod in Kubernetes using the `kubectl run` command, later in this course we will see how to create these Pods using a Yaml Definition
+
+#### Related References
+https://kubernetes.io/docs/concepts/
+https://kubernetes.io/docs/concepts/workloads/pods/
+
+
+### Quiz
+![[Pasted image 20230708160333.png]]
+
+
+![[Pasted image 20230708160357.png]]
+
+![[Pasted image 20230708160417.png]]
+
+
+### Something
