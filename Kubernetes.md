@@ -688,7 +688,7 @@ There are minor differences in the way each works and we will look at that in a 
 
 As such we will try to stick to Replica Sets in all of our demos and implementations going forward.
 
-#### Creating a Replication Controller
+### Replication Controller
 We start by creating a replication controller definition file `rc-definition.yml`.
 
 As with any kubernetes definition file, we will have 4 sections. The apiVersion, kind, metadata and spec. 
@@ -778,7 +778,7 @@ Upon going into the details of this Replication Controller, we can see its
 - `status`: current replicas, desired replicas etc
 - `events`: what all events for the actions executed has been captured
 		  we can definetly see and confirm here, that replication controller has only created 2 pods only, and did not crate a 3rd pod because already one pod was present, but it started controlling it as well as we had the same selector applicable on it as well
-
+		**NOTE**: We did not actually add this selector in this, and it is generated automatically from the labels, Whereas in ReplicaSet we would mandatorily need to create this selector
 ![[Screenshot 2023-07-08 at 11.56.56 PM.png|600]]      ![[Screenshot 2023-07-08 at 11.57.56 PM.png|600]]
 
 The above screenshot is basically the UI version of the `kubectl describe replicationcontroller/myapp-rc` command
@@ -811,11 +811,23 @@ Events:
 
 ```
 
-What we just saw was ReplicationController. Let us now look at ReplicaSet. It is very similar to replication controller. As usual, first we have apiVersion, kind, metadata and spec. The apiVersion though is a bit different. It is apps/v1 which is different from what we had before for replication controller. For replication controller it was simply v1. If you get this wrong, you are likely to get an error that looks like this. It would say no match for kind ReplicaSet, because the specified kubernetes api version has no support for ReplicaSet.
 
-The kind would be ReplicaSet and we add name and labels in metadata.
+### Replication Set
+What we just saw was ReplicationController. Let us now look at ReplicaSet. 
+It is very similar to replication controller. As usual, first we have `apiVersion`, `kind`, `metadata` and `spec`. 
 
-The specification section looks very similar to replication controller. It has a template section were we provide pod-definition as before. So I am going to copy contents over from pod-definition file. And we have number of replicas set to 3. However, there is one major difference between replication controller and replica set. Replica set requires a selector definition. The selector section helps the replicaset identify what pods fall under it. But why would you have to specify what PODs fall under it, if you have provided the contents of the pod-definition file itself in the template? It’s BECAUSE, replica set can ALSO manage pods that were not created as part of the
+The `apiVersion` though is a bit different. It is **`apps/v1`** which is different from what we had before for replication controller. For replication controller it was simply `v1`. If you get this wrong, you are likely to get an error that looks like this. It would say no match for kind `ReplicaSet`, because the specified kubernetes api version has no support for `ReplicaSet`.
+![[Pasted image 20230709002920.png|700]]
+
+- The `kind` would be `ReplicaSet` and 
+- we add `name` and `labels` in `metadata`.
+- The `specification` section looks very similar to replication controller. 
+	- It has a template section were we provide pod-definition as before. 
+	- So I am going to copy contents over from `pod-definition.yaml` file.
+	- And we have number of `replicas` set to 3.
+
+However, there is **one major difference between replication controller and replica set**. Replica set **requires** a **`selector`** definition. 
+The `selector` section helps the replicaset <u>identify what pods fall under it</u>. But why would you have to specify what PODs fall under it, if you have provided the contents of the pod-definition file itself in the template? It’s BECAUSE, replica set can ALSO manage pods that were not created as part of the
 
 61
 
@@ -825,12 +837,7 @@ But before we get into that, I would like to mention that the selector is one of
 
 And as always to create a ReplicaSet run the kubectl create command providing the definition file as input and to see the created replicasets run the kubectl get replicaset command. To get list of pods, simply run the kubectl get pods command.
 
-61
 
-|   |
-|---|
-|Labels and Selectors<br><br>selector: matchLabels:<br><br>tier: frPOoDnt-end<br><br>MUMSHAD MANNAMBETH<br><br>replicaset-definition.yml<br><br>pod-definition.yml<br><br>POD<br><br>POD<br><br>tier: front-end<br><br>metadata:  <br>name: myapp-pod labPOeDls:<br><br>tier: front-end<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>tier: front-end<br><br>POD<br><br>POD<br><br>POD<br><br>tier: front-end<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD|
-||
 
 So what is the deal with Labels and Selectors? Why do we label our PODs and objects in kubernetes? Let us look at a simple scenario. Say we deployed 3 instances of our frontend web application as 3 PODs. We would like to create a replication controller or replica set to ensure that we have 3 active PODs at anytime. And YES that is one of the use cases of replica sets. You CAN use it to monitor existing pods, if you have them already created, as it IS in this example. In case they were not created, the replica set will create them for you. The role of the replicaset is to monitor the pods and if any of them were to fail, deploy new ones. The replica set is in FACT a process that monitors the pods. Now, how does the replicaset KNOW what pods to monitor. There could be 100s of other PODs in the cluster running different application. This is were labelling our PODs during creation comes in handy. We could now provide these labels as a filter for replicaset. Under the selector section we use the matchLabels filter and provide the same label that we used while creating the pods. This way the replicaset knows which pods to monitor.
 
