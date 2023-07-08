@@ -646,8 +646,262 @@ spec:
 
 
 
-## ReplicaSet
+## ReplicaController & ReplicaSet
+In this lecture we will discuss about Kubernetes Controllers. Controllers are the brain behind Kubernetes. They are processes that monitor kubernetes objects and respond accordingly. 
+In this lecture we will discuss about one controller in particular. And that is the **Replication Controller**.
+![[Pasted image 20230708213932.png|900]]
 
+
+#### So what is a **replica** and why do we need a replication controller? 
+Let’s go back to our **first scenario** were we had a single POD running our application. 
+What if for some reason, our application crashes and the POD fails? Users will no longer be able to access our application. 
+![[Pasted image 20230708214115.png|400]]  ![[Pasted image 20230708214137.png|400]]
+
+To prevent users from losing access to our application, we would like to have more than one instance or POD running at the same time. That way if one fails we still have our application running on the other one. The replication controller helps us run multiple instances of a single POD in the kubernetes cluster thus providing High Availability.
+
+![[Pasted image 20230708214928.png|800]]
+
+#### So does that mean you can’t use a replication controller if you plan to have a single POD?  
+No! Even if you have a single POD, the replication controller can help by automatically bringing up a new POD when the existing one fails. Thus the replication controller ensures that the specified number of PODs are running at all times. Even if it’s just 1 or 100.
+![[Pasted image 20230708215048.png|300]]
+
+
+**2nd Scenario**
+Another reason we need replication controller is to <u>create multiple PODs to share the load across them</u>. For example, in this simple scenario we have a single POD serving a set of users. When the number of users increase we deploy additional POD to balance the load across the two pods.
+![[Pasted image 20230708215311.png|400]]                 ![[Pasted image 20230708215350.png|700]]
+
+
+
+If the demand further increases and If we were to <u>run out of resources on the first node</u>, we could deploy additional PODs across other nodes in the cluster. As you can see, **the replication controller spans across multiple nodes in the cluster**. It helps us balance the load across multiple pods on different nodes as well as scale our application when the demand increases.
+![[Pasted image 20230708215552.png|1000]]
+
+
+
+### Replication Controller Vs Replica Set
+It’s important to note that there are two similar terms. Replication Controller and Replica Set. 
+Both have the same purpose but **they are not the same.**
+- Replication Controller is the older technology that is being replaced by Replica Set. 
+- Replica set is the new recommended way to setup replication. 
+
+However, whatever we discussed in the previous few slides remain applicable to both these technologies. 
+There are minor differences in the way each works and we will look at that in a bit.
+
+
+As such we will try to stick to Replica Sets in all of our demos and implementations going forward.
+
+59
+
+> kubectl create –f rc-definition.yml replicationcontroller “myapp-rc” created
+
+> kubectl get replicationcontroller
+
+NAME DESIRED CURRENT READY AGE myapp-rc 3 3 3 19s
+
+> kubectl get pods  
+NAME READY STATUS RESTARTS AGE
+
+MUMSHAD MANNAMBETH
+
+pod-definition.yml
+
+apiVersion: v1 kind: Pod
+
+metadata:  
+name: myapp-pod labels:
+
+app: myapp
+
+type: front-end spec:
+
+containers:  
+- name: nginx-container
+
+image: nginx
+
+myapp-rc-4lvk9 1/1 myapp-rc-mc2mf 1/1 myapp-rc-px9pz 1/1
+
+Running 0 20s
+
+Running 0 20s Running 0 20s
+
+rc-definition.yml
+
+|   |   |   |
+|---|---|---|
+|||POD<br><br>POD<br><br>POD|
+
+apiVersion: v1  
+kind: ReplicationController metadata: Replication Controller
+
+name: myapp-rc labels:
+
+app: myapp
+
+type: front-end  
+spec: Replication Controller
+
+template:
+
+replicas: 3
+
+Let us now look at how we create a replication controller. As with the previous lecture, we start by creating a replication controller definition file. We will name it rc- definition.yml. As with any kubernetes definition file, we will have 4 sections. The apiVersion, kind, metadata and spec. The apiVersion is specific to what we are creating. In this case replication controller is supported in kubernetes apiVersion v1. So we will write it as v1. The kind as we know is ReplicationController. Under metadata, we will add a name and we will call it myapp-rc. And we will also add a few labels, app and type and assign values to them. So far, it has been very similar to how we created a POD in the previous section. The next is the most crucial part of the definition file and that is the specification written as spec. For any kubernetes definition file, the spec section defines what’s inside the object we are creating. In this case we know that the replication controller creates multiple instances of a POD. But what POD? We create a template section under spec to provide a POD template to be used by the replication controller to create replicas. Now how do we DEFINE the POD template? It’s not that hard because, we have already done that in the previous exercise. Remember, we created a pod-definition file in the previous exercise. We could re-use the contents of the same file to populate the template section. Move all the contents of the pod-definition file into the template section of the replication controller, except for the first two lines – which are apiVersion and
+
+60
+
+kind. Remember whatever we move must be UNDER the template section. Meaning, they should be intended to the right and have more spaces before them than the template line itself. Looking at our file, we now have two metadata sections – one is for the Replication Controller and another for the POD and we have two spec sections – one for each. We have nested two definition files together. The replication controller being the parent and the pod-definition being the child.
+
+Now, there is something still missing. We haven’t mentioned how many replicas we need in the replication controller. For that, add another property to the spec called replicas and input the number of replicas you need under it. Remember that the template and replicas are direct children of the spec section. So they are siblings and must be on the same vertical line : having equal number of spaces before them.
+
+Once the file is ready, run the kubectl create command and input the file using the –f parameter. The replication controller Is created. When the replication controller is created it first creates the PODs using the pod-definition template as many as required, which is 3 in this case. To view the list of created replication controllers run the kubectl get replication controller command and you will see the replication controller listed. We can also see the desired number of replicas or pods, the current number of replicas and how many of them are ready. If you would like to see the pods that were created by the replication controller, run the kubectl get pods command and you will see 3 pods running. Note that all of them are starting with the name of the replication controller which is myapp-rc indicating that they are all created automatically by the replication controller.
+
+60
+
+apiVersion: apps/v1
+
+kind: ReplicaSet
+
+pod-definition.yml
+
+apiVersion: v1
+
+kind: Pod error: unable to recognize "replimceatasdeatt-a:
+
+MUMSHAD MANNAMBETH
+
+metadata:  
+name: myapp-replicaset
+
+labels:  
+app: myapp
+
+definition.yml": no matches for /,naKmien:d=mRyeapplpi-pcoadSet labels:
+
+type: front-end spec:
+
+template:
+
+replicas: 3 selector:
+
+matchLabels:  
+type: front-end
+
+app: myapp
+
+type: front-end spec:
+
+containers:  
+- name: nginx-container
+
+image: nginx
+
+POD
+
+> kubectl create –f replicaset-definition.yml replicaset "myapp-replicaset" created
+
+> kubectl get replicaset
+
+NAME DESIRED CURRENT READY AGE myapp-replicaset 3 3 3 19s
+
+> kubectl get pods  
+NAME READY STATUS RESTARTS AGE
+
+myapp-replicaset-9ddl9 1/1 myapp-replicaset-9jtpx 1/1 myapp-replicaset-hq84m 1/1
+
+Running 0 45s Running 0 45s Running 0 45s
+
+replicaset-definition.yml
+
+What we just saw was ReplicationController. Let us now look at ReplicaSet. It is very similar to replication controller. As usual, first we have apiVersion, kind, metadata and spec. The apiVersion though is a bit different. It is apps/v1 which is different from what we had before for replication controller. For replication controller it was simply v1. If you get this wrong, you are likely to get an error that looks like this. It would say no match for kind ReplicaSet, because the specified kubernetes api version has no support for ReplicaSet.
+
+The kind would be ReplicaSet and we add name and labels in metadata.
+
+The specification section looks very similar to replication controller. It has a template section were we provide pod-definition as before. So I am going to copy contents over from pod-definition file. And we have number of replicas set to 3. However, there is one major difference between replication controller and replica set. Replica set requires a selector definition. The selector section helps the replicaset identify what pods fall under it. But why would you have to specify what PODs fall under it, if you have provided the contents of the pod-definition file itself in the template? It’s BECAUSE, replica set can ALSO manage pods that were not created as part of the
+
+61
+
+replicaset creation. Say for example, there were pods created BEFORE the creation of the ReplicaSet that match the labels specified in the selector, the replica set will also take THOSE pods into consideration when creating the replicas. I will elaborate this in the next slide.
+
+But before we get into that, I would like to mention that the selector is one of the major differences between replication controller and replica set. The selector is not a REQUIRED field in case of a replication controller, but it is still available. When you skip it, as we did in the previous slide, it assumes it to be the same as the labels provided in the pod-definition file. In case of replica set a user input IS required for this property. And it has to be written in the form of matchLabels as shown here. The matchLabels selector simply matches the labels specified under it to the labels on the PODs. The replicaset selector also provides many other options for matching labels that were not available in a replication controller.
+
+And as always to create a ReplicaSet run the kubectl create command providing the definition file as input and to see the created replicasets run the kubectl get replicaset command. To get list of pods, simply run the kubectl get pods command.
+
+61
+
+|   |
+|---|
+|Labels and Selectors<br><br>selector: matchLabels:<br><br>tier: frPOoDnt-end<br><br>MUMSHAD MANNAMBETH<br><br>replicaset-definition.yml<br><br>pod-definition.yml<br><br>POD<br><br>POD<br><br>tier: front-end<br><br>metadata:  <br>name: myapp-pod labPOeDls:<br><br>tier: front-end<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>tier: front-end<br><br>POD<br><br>POD<br><br>POD<br><br>tier: front-end<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD<br><br>POD|
+||
+
+So what is the deal with Labels and Selectors? Why do we label our PODs and objects in kubernetes? Let us look at a simple scenario. Say we deployed 3 instances of our frontend web application as 3 PODs. We would like to create a replication controller or replica set to ensure that we have 3 active PODs at anytime. And YES that is one of the use cases of replica sets. You CAN use it to monitor existing pods, if you have them already created, as it IS in this example. In case they were not created, the replica set will create them for you. The role of the replicaset is to monitor the pods and if any of them were to fail, deploy new ones. The replica set is in FACT a process that monitors the pods. Now, how does the replicaset KNOW what pods to monitor. There could be 100s of other PODs in the cluster running different application. This is were labelling our PODs during creation comes in handy. We could now provide these labels as a filter for replicaset. Under the selector section we use the matchLabels filter and provide the same label that we used while creating the pods. This way the replicaset knows which pods to monitor.
+
+62
+
+MUMSHAD MANNAMBETH
+
+POD
+
+tier: front-end
+
+POD
+
+tier: front-end
+
+POD
+
+tier: front-end
+
+replicaset-definition.yml
+
+apiVersion: apps/v1 kind: ReplicaSet metadata:
+
+name: myapp-replicaset labels:
+
+app: myapp
+
+type: front-end spec:
+
+replicas: 3 selector:
+
+matchLabels:  
+type: front-end
+
+template: metadata:
+
+name: myapp-pod labels:
+
+app: myapp  
+T e m p l a te
+
+type: fro n t - en d spec:
+
+containers:  
+- name: nginx-container
+
+image: nginx
+
+Now let me ask you a question along the same lines. In the replicaset specification section we learned that there are 3 sections: Template, replicas and the selector. We need 3 replicas and we have updated our selector based on our discussion in the previous slide. Say for instance we have the same scenario as in the previous slide were we have 3 existing PODs that were created already and we need to create a replica set to monitor the PODs to ensure there are a minimum of 3 running at all times. When the replication controller is created, it is NOT going to deploy a new instance of POD as 3 of them with matching labels are already created. In that case, do we really need to provide a template section in the replica-set specification, since we are not expecting the replicaset to create a new POD on deployment? Yes we do, BECAUSE in case one of the PODs were to fail in the future, the replicaset needs to create a new one to maintain the desired number of PODs. And for the replica set to create a new POD, the template definition section IS required.
+
+63
+
+|   |
+|---|
+|Scale<br><br>> kubectl replace -f replicaset-definition.yml<br><br>> kubectl scale -–replicas=6 –f replicaset-definition.yml > kubectl scale -–replicas=6 replicaset myapp-replicaset<br><br>TYPE NAME<br><br>replicaset-definition.yml<br><br>MUMSHAD MANNAMBETH<br><br>apiVersion: apps/v1 kind: ReplicaSet metadata:<br><br>name: myapp-replicaset labels:<br><br>app: myapp<br><br>type: front-end spec:<br><br>template: metadata:<br><br>name: myapp-pod labels:<br><br>app: myapp<br><br>type: front-end spec:<br><br>containers:  <br>- name: nginx-container<br><br>image: nginx<br><br>replicas:36<br><br>selector: matchLabels:<br><br>type: front-end|
+||
+
+Let’s look at how we scale the replicaset. Say we started with 3 replicas and in the future we decide to scale to 6. How do we update our replicaset to scale to 6 replicas. Well there are multiple ways to do it. The first, is to update the number of replicas in the definition file to 6. Then run the kubectl replace command specifying the same file using the –f parameter and that will update the replicaset to have 6 replicas.
+
+The second way to do it is to run the kubectl scale command. Use the replicas parameter to provide the new number of replicas and specify the same file as input. You may either input the definition file or provide the replicaset name in the TYPE Name format. However, Remember that using the file name as input will not result in the number of replicas being updated automatically in the file. In otherwords, the number of replicas in the replicaset-definition file will still be 3 even though you scaled your replicaset to have 6 replicas using the kubectl scale command and the file as input.
+
+There are also options available for automatically scaling the replicaset based on load, but that is an advanced topic and we will discuss it at a later time.
+
+64
+
+|   |
+|---|
+|commands<br><br>> kubectl create –f replicaset-definition.yml  <br>> kubectl get replicaset  <br>> kubectl delete replicaset myapp-replicaset  <br>> kubectl replace -f replicaset-definition.yml  <br>> kubectl scale –replicas=6 -f replicaset-definition.yml<br><br>*Also deletes all underlying PODs<br><br>MUMSHAD MANNAMBETH|
+||
+
+Let us now review the commands real quick. The kubectl create command, as we know, is used to create a replca set. You must provide the input file using the –f parameter. Use the kubectl get command to see list of replicasets created. Use the kubectl delete replicaset command followed by the name of the replica set to delete the replicaset. And then we have the kubectl replace command to replace or update replicaset and also the kubectl scale command to scale the replicas simply from the command line without having to modify the file.
 ### Labs - Replica Set
 
 ## Deployments
