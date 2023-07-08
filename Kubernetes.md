@@ -32,15 +32,14 @@ for understanding containers, we need to understand
 
 
 
-Section 1
 
 [KUBERNETES ELIMINATES MATRIX FROM HELL](https://www.devsamurai.com/en/kubernetes-eliminates-matrix-from-hell/)
 compatibility matrix issue is usually referred to as the matrix from hell.
-![[from pdf - matrix of hell.png]]
+![[from pdf - matrix of hell.png|900]]
 
 
 
-![[from pdf - what can container do?.png]]
+![[from pdf - what can container do?.png|900]]
 
 Kubernetes = [[Containers & Container Images|Containers]] + orchestration
 
@@ -135,7 +134,7 @@ The master also has the controller manager and the scheduler.
 There are other components as well, but we will stop there for now. The reason we went through this is to understand what components constitute the master and worker nodes. This will help us install and configure the right components on different systems when we setup our infrastructure.
 
 
-![[components on - master vs worker node.png]]
+![[components on - master vs worker node.png|1000]]
 
 #### Kubectl
 We also need to learn a little bit about ONE of the command line utilities known as the kube command line tool or kubectl or kube control as it is also called. 
@@ -146,6 +145,7 @@ The `kubectl run` command is used to deploy an application on the cluster. The `
 We will explore more commands with kubectl when we learn the associated concepts.
 
 
+Answer key for my Kubernetes for Beginners Course on Udemy - https://github.com/mmumshad/kubernetes-training-answers
 ### Quiz
 
 ![[quiz-k8s-udemy-course-72398273.png]]
@@ -168,11 +168,11 @@ We will explore more commands with kubectl when we learn the associated concepts
 ### Pods
 With Kubernetes our ultimate aim is to deploy our application in the form of containers on a set of machines that are configured as worker nodes in a cluster. 
 However, Kubernetes does not deploy containers directly on the worker nodes. <u>The containers are encapsulated into a Kubernetes object known as PODs</u>. A POD is a single instance of an application. <u>A POD is the smallest object, that you can create in kubernetes</u>.
-![[Pasted image 20230708142403.png]]
+![[Pasted image 20230708142403.png|600]]
 
 
 Below we see the simplest of simplest cases were you have a single node kubernetes cluster with a single instance of your application running in a single docker container encapsulated in a POD. 
-![[Pasted image 20230708141454.png]]
+![[Pasted image 20230708141454.png|700]]
 
 
 What if the number of users accessing your application increase and you need to scale your application? You need to add additional instances of your web application to share the load. 
@@ -180,13 +180,13 @@ What if the number of users accessing your application increase and you need to 
 Now, were would you spin up additional instances? Do we bring up a new container instance within the same POD? 
 
 No! We create a new POD altogether with a new instance of the same application. As you can see we now have two instances of our web application running on two separate PODs on the same kubernetes system or node.
-![[Pasted image 20230708141750.png]]
+![[Pasted image 20230708141750.png|900]]
 
 
 
 What if the user base FURTHER increases and your current node has no sufficient capacity? 
 Well THEN you can always deploy additional PODs on a new node in the cluster. You will have a new node added to the cluster to expand the cluster’s physical capacity. 
-![[Pasted image 20230708141943.png]]
+![[Pasted image 20230708141943.png|900]]
 
 
 SO, what I am trying to illustrate in this slide is that, PODs **usually** have a one-to-one relationship with containers running your application. 
@@ -196,7 +196,7 @@ To scale UP you create new PODs and to scale down you delete PODs. You do not ad
 
 ### Multi Container Pods
 Now we just said that PODs usually have a one-to-one relationship with the containers, but, are we restricted to having a single container in a single POD? 
-![[Pasted image 20230708142450.png]]
+![[Pasted image 20230708142450.png|600]]
 
 
 No! A single POD CAN have multiple containers, except for the fact that they are <u>usually not multiple containers of the same kind</u>. 
@@ -206,13 +206,13 @@ But sometimes you might have a scenario were you have a helper container, that m
 
 
 In that case, you CAN have both of these containers part of the same POD, so that when a new application container is created, the helper is also created and when it dies the helper also dies since they are part of the same POD. 
-![[Pasted image 20230708142543.png]]
+![[Pasted image 20230708142543.png|800]]
 
 --
 
 The two containers can also communicate with each other directly by referring to each other as `localhost` since they share the same network namespace. 
 Plus, they can easily share the same storage space as well.
-![[Pasted image 20230708142725.png]]
+![[Pasted image 20230708142725.png|800]]
 
 
 #### Understanding Pods, from a different Angle
@@ -222,11 +222,11 @@ Let’s, for a moment, keep Kubernetes out of our discussion and talk about simp
 Let’s assume we were developing a process or a script to deploy our application on a docker host. So think of what all steps we would need to do in our script to successfully deploy our app, wrt the scale of our users chaning and the complexity of our application increasing?
 
 So we would first simply deploy our application using a simple `docker run python-app` command and the application runs fine, and our users are able to access it. 
-![[Pasted image 20230708143617.png]]
+![[Pasted image 20230708143617.png|1000]]
 
 
 When the load increases, we deploy more instances of our application by running the docker run commands many more times. This works fine and we are all happy. 
-![[Pasted image 20230708143748.png]]
+![[Pasted image 20230708143748.png|1000]]
 
 
 
@@ -245,13 +245,13 @@ So For this we would to do some changes in our script,
 
 - **Note**: I am avoiding networking and load balancing details here to keep the explanation simple, but one can imagine with those concepts a huge amount of work will need to be done in our script 
 
-![[Pasted image 20230708144554.png]]
+![[Pasted image 20230708144554.png|1000]]
 
 
 
 With PODs, kubernetes does all of this for us automatically. We just need to define what containers a POD consists of and the containers in a POD by default will have access to the same storage, the same network namespace, and same fate as in they will be created together and destroyed together.
 
-![[Pasted image 20230708151130.png]]
+![[Pasted image 20230708151130.png|1000]]
 
 
 Even if our application didn’t happen to be so complex and we could live with a single container, kubernetes still requires you to create PODs. But this is good in the long run as your application is now equipped for architectural changes and scale in the future.
@@ -264,21 +264,21 @@ Let us now look at how to deploy PODs. Earlier we learned about the kubectl run 
 What this command really does is it deploys a docker container by creating a POD. So it first <u>creates a POD automatically</u> and deploys an instance of the nginx docker image. 
 
 But were does it get the application image from? For that you need to specify the image name using the `–-image` parameter. The application image, in this case the `nginx` image, is downloaded from the **docker hub repository**. 
-![[Pasted image 20230708152336.png]]
+![[Pasted image 20230708152336.png|700]]
 
 Docker hub as we discussed is a public repository were latest docker images of various applications are stored. You could configure kubernetes to pull the image from the public docker hub or a private repository within the organization.
-![[Pasted image 20230708152418.png]]
+![[Pasted image 20230708152418.png|700]]
 
 
 Now that we have a POD created, how do we see the list of PODs available? The kubectl get PODs command helps us see the list of pods in our cluster. In this case we see the pod is in a `ContainerCreating` state and soon changes to a `Running` state when it is actually running.
-![[Pasted image 20230708152611.png]]
+![[Pasted image 20230708152611.png|800]]
 
 
 Also remember that we haven’t really talked about the concepts on how a user can access the nginx web server. And so in the current state we haven’t made the web server accessible to external users. You can access it internally from the Node though. 
 
 For now we will just see how to deploy a POD and in a later lecture once we learn about networking and services we will get to know how to make this service accessible to end users.
 
-![[Pasted image 20230708152743.png]]
+![[Pasted image 20230708152743.png|900]]
 
 
 ### Pods Demo
@@ -397,4 +397,78 @@ https://kubernetes.io/docs/concepts/workloads/pods/
 ![[Pasted image 20230708160417.png]]
 
 
-### Something
+
+
+### Pods / ReplicaSets / Deployments
+
+#### Pods With Yaml
+Kubernetes uses YAML files as input for the creation of objects such as Pods, Replicas, Deployments, Services etc. All of these follow similar structure. 
+
+A kubernetes definition file always contains 4 top level fields. 
+- The `apiVersion`
+- `kind`
+- `metadata` And 
+- `spec`
+These are top level or root level properties. These are all **REQUIRED fields**, so you MUST have them in your configuration file.
+![[Pasted image 20230708173653.png|500]]
+
+
+#### `apiVersion`
+This is the version of the kubernetes API we’re using to create the object. Depending on what we are trying to create we must use the RIGHT apiVersion. For now since we are working on PODs, we will set the apiVersion as v1. 
+Few other possible values for this field are apps/v1beta1, extensions/v1beta1 etc. We will see what these are for later in this course.
+
+#### `kind`
+The kind refers to the type of object we are trying to create, which in this case happens to be a POD. So we will set it as Pod. 
+Some other possible values here could be ReplicaSet or Deployment or Service, which is what you see in the kind field in the table on the right.
+
+
+#### `metadata`
+The metadata is data about the object like its name, labels etc. 
+As you can see unlike the first two were you specified a string value, this, is in the form of a dictionary. 
+
+Under metadata, the name is a string value – so you can name your POD myapp-pod - and the labels is a dictionary. So labels is a dictionary within the metadata dictionary. And it can have any key and value pairs as you wish. For now I have added a label app with the value myapp. 
+
+Similarly you could add other labels as you see fit which will help you identify these objects at a later point in time. Say for example there are 100s of PODs running a front-end application, and 100’s of them running a backend application or a database, it will be DIFFICULT for you to group these PODs once they are deployed. If you label them now as front-end, back-end or database, you will be able to filter the PODs based on this label at a later point in time.
+
+It’s **IMPORTANT** to note that under metadata, you can only specify name or labels or anything else that kubernetes expects to be under metadata. You CANNOT add any other property as you wish under this. However, under labels you CAN have any kind of key or value pairs as you see fit. So its IMPORTANT to understand what each of these parameters expect.
+
+So far we have only mentioned the type and name of the object we need to create which happens to be a POD with the name myapp-pod, but we haven’t really specified the container or image we need in the pod. The last section in the configuration file is the specification which is written as spec. Depending on the object we are going to create, this is were we provide additional information to kubernetes pertaining to that object. This is going to be different for different objects, so its important to understand or refer to the documentation section to get the right format for each. Since we are only creating a pod with a single container in it, it is easy. Spec is a dictionary so add a property under it called containers, which is a list or an array. The reason this property is a list is because the PODs can have multiple containers within them as we learned in the lecture earlier. In this case though, we will only add a single item in the list, since we plan to have only a single container in the POD. The item in the list is a dictionary, so add a name and image property. The value for image is nginx.
+
+51
+
+Once the file is created, run the command kubectl create -f followed by the file name which is pod-definition.yml and kubernetes creates the pod.
+
+So to summarize remember the 4 top level properties. apiVersion, kind, metadata and spec. Then start by adding values to those depending on the object you are creating.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

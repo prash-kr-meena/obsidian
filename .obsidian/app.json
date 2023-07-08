@@ -14,7 +14,8 @@
     "kube",
     "Kuberneteses",
     " kubect",
-    "kubernetes"
+    "kubernetes",
+    "ReplicaSets"
   ],
   "readableLineLength": false
 }
