@@ -829,7 +829,7 @@ The `apiVersion` though is a bit different. It is **`apps/v1`** which is differe
 However, there is **one major difference between replication controller and replica set**. 
 - Replica set **requires** a **`selector`** definition. whereas in replication controller the selector was optional,
   ie k8s will not fail the creation of Replication Controller Resouce/object if the selector is missing in the menifest, rather k8s will automatcially set the slector for it if not set by the user writing the menifest, and the default value which it will pick is from the `lables` in the pod `template `  
-- Furhter the selector in Replication Controller is not as powerful as in the Replication Set, specifically the selector supported in RC is equality based selector where in ReplicaSet both 
+- Furhter the selector in Replication Controller is not as powerful as in the Replication Set, specifically the selector supported in RC is equality based selector where ReplicaSet supports both equality and set based selectors
 
 The `selector` section helps the replicaset <u>identify what pods fall under it</u>. But why would you have to specify what PODs fall under it, if you have provided the contents of the pod-definition file itself in the template? It’s BECAUSE, replica set can ALSO manage pods that were not created as part of the
 
