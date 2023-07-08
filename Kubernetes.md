@@ -399,7 +399,9 @@ https://kubernetes.io/docs/concepts/workloads/pods/
 
 
 
-### Pods / ReplicaSets / Deployments
+# Pods / ReplicaSets / Deployments
+
+## Pods
 
 #### Pods With Yaml
 Kubernetes uses YAML files as input for the creation of objects such as Pods, Replicas, Deployments, Services etc. All of these follow similar structure. 
@@ -641,7 +643,14 @@ spec:
 
 
 
+
+
+
+## ReplicaSet
+
 ### Labs - Replica Set
+
+## Deployments
 ### Labs - Deployment
 ### Labs - Practice Test - Rolling Updates
 ### Labs - Services

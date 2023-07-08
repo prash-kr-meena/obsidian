@@ -5,6 +5,22 @@
       "path": "Kubernetes.md"
     },
     {
+      "basename": "Virtualization",
+      "path": "Virtualization.md"
+    },
+    {
+      "basename": "Containerization",
+      "path": "Containerization.md"
+    },
+    {
+      "basename": "Containers vs Virtual Machines",
+      "path": "Containers vs Virtual Machines.md"
+    },
+    {
+      "basename": "What are virtual machines (VMs)",
+      "path": "What are virtual machines (VMs).md"
+    },
+    {
       "basename": "Pasted image 20230708204530",
       "path": "Pasted image 20230708204530.png"
     },
@@ -15,10 +31,6 @@
     {
       "basename": "Pasted image 20230708180534",
       "path": "Pasted image 20230708180534.png"
-    },
-    {
-      "basename": "Virtualization",
-      "path": "Virtualization.md"
     },
     {
       "basename": "what is a container?",
@@ -49,20 +61,8 @@
       "path": "Docker.md"
     },
     {
-      "basename": "What are virtual machines (VMs)",
-      "path": "What are virtual machines (VMs).md"
-    },
-    {
-      "basename": "Containerization",
-      "path": "Containerization.md"
-    },
-    {
       "basename": "Scratch - Left in between",
       "path": "Scratch - Left in between.md"
-    },
-    {
-      "basename": "Containers vs Virtual Machines",
-      "path": "Containers vs Virtual Machines.md"
     },
     {
       "basename": "Containers vs Virtualization",
