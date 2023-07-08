@@ -247,8 +247,15 @@ So For this we would to do some changes in our script,
 
 ![[Pasted image 20230708144554.png]]
 
+
+
 With PODs, kubernetes does all of this for us automatically. We just need to define what containers a POD consists of and the containers in a POD by default will have access to the same storage, the same network namespace, and same fate as in they will be created together and destroyed together.
+
+![[Pasted image 20230708151130.png]]
+
 
 Even if our application didn’t happen to be so complex and we could live with a single container, kubernetes still requires you to create PODs. But this is good in the long run as your application is now equipped for architectural changes and scale in the future.
 
 However, multi-pod containers are a rare use-case and we are going to stick to single container per POD in this course.
+
+### Kubectl
