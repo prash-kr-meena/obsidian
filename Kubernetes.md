@@ -1523,9 +1523,103 @@ REVISION  CHANGE-CAUSE
 --
 While we did our last deployment with the verson `nginx:1.18-perl`, lets say something went wrong and we now want to revert that deployment
 
-To rever we can use the Undo command, se currently we are on revision 3, but we want to move to the revision 2
+To revert we can use the Undo command, se currently we are on revision 3, but we want to move to the revision 2
+
+`kubectl rollout undo deployment myapp-deployment`
+```
+deployment.apps/myapp-deployment rolled back
+```
+
+`kubectl rollout status deployment myapp-deployment`
+Here we can see it is making the changes, where it is removing the pods from revision 3 and scaling up the pods for revision 2
+```
+Waiting for deployment "myapp-deployment" rollout to finish: 3 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 3 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 3 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 3 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 4 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 5 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 5 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 5 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 5 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 5 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 2 old replicas are pending termination...
+Waiting for deployment "myapp-deployment" rollout to finish: 2 old replicas are pending termination...
+Waiting for deployment "myapp-deployment" rollout to finish: 2 old replicas are pending termination...
+Waiting for deployment "myapp-deployment" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "myapp-deployment" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "myapp-deployment" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "myapp-deployment" rollout to finish: 1 old replicas are pending termination...
+deployment "myapp-deployment" successfully rolled out
+```
 
 
+`kubectl describe deployments myapp-deployment`
+We can the same when we describe the deployment, in the events section as well as from the image tag, that here we have image `nginx:1.18` deployed instead of the `nginx:1.18-perl` image of revision 3
+```
+Name:                   myapp-deployment
+Namespace:              default
+CreationTimestamp:      Sun, 09 Jul 2023 23:03:08 +0530
+Labels:                 app=myapp
+                        type=front-end
+Annotations:            deployment.kubernetes.io/revision: 4
+                        kubernetes.io/change-cause: kubectl1.27.2 create --filename=deployment-definition.yaml --record=true
+Selector:               type=front-end
+Replicas:               6 desired | 6 updated | 6 total | 6 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=myapp
+           type=front-end
+  Containers:
+   myapp-container:
+    Image:        nginx:1.18
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  myapp-deployment-577f5d9dd7 (0/0 replicas created), myapp-deployment-7498dcc94f (0/0 replicas created)
+NewReplicaSet:   myapp-deployment-6d5b597d5f (6/6 replicas created)
+Events:
+  Type    Reason             Age                 From                   Message
+  ----    ------             ----                ----                   -------
+  Normal  ScalingReplicaSet  30m                 deployment-controller  Scaled up replica set myapp-deployment-577f5d9dd7 to 6
+  Normal  ScalingReplicaSet  24m                 deployment-controller  Scaled up replica set myapp-deployment-6d5b597d5f to 2
+  Normal  ScalingReplicaSet  24m                 deployment-controller  Scaled down replica set myapp-deployment-577f5d9dd7 to 5 from 6
+  Normal  ScalingReplicaSet  24m                 deployment-controller  Scaled up replica set myapp-deployment-6d5b597d5f to 3 from 2
+  Normal  ScalingReplicaSet  23m                 deployment-controller  Scaled down replica set myapp-deployment-577f5d9dd7 to 4 from 5
+  Normal  ScalingReplicaSet  23m                 deployment-controller  Scaled up replica set myapp-deployment-6d5b597d5f to 4 from 3
+  Normal  ScalingReplicaSet  23m                 deployment-controller  Scaled down replica set myapp-deployment-577f5d9dd7 to 2 from 4
+  Normal  ScalingReplicaSet  23m                 deployment-controller  Scaled up replica set myapp-deployment-6d5b597d5f to 6 from 4
+  Normal  ScalingReplicaSet  23m                 deployment-controller  Scaled down replica set myapp-deployment-577f5d9dd7 to 1 from 2
+  Normal  ScalingReplicaSet  11m                 deployment-controller  Scaled up replica set myapp-deployment-7498dcc94f to 2
+  Normal  ScalingReplicaSet  11m                 deployment-controller  Scaled down replica set myapp-deployment-6d5b597d5f to 5 from 6
+  Normal  ScalingReplicaSet  11m                 deployment-controller  Scaled up replica set myapp-deployment-7498dcc94f to 3 from 2
+  Normal  ScalingReplicaSet  10m                 deployment-controller  Scaled down replica set myapp-deployment-6d5b597d5f to 4 from 5
+  Normal  ScalingReplicaSet  10m                 deployment-controller  Scaled up replica set myapp-deployment-7498dcc94f to 4 from 3
+  Normal  ScalingReplicaSet  10m                 deployment-controller  Scaled down replica set myapp-deployment-6d5b597d5f to 3 from 4
+  Normal  ScalingReplicaSet  10m                 deployment-controller  Scaled up replica set myapp-deployment-7498dcc94f to 5 from 4
+  Normal  ScalingReplicaSet  10m                 deployment-controller  Scaled down replica set myapp-deployment-6d5b597d5f to 2 from 3
+  Normal  ScalingReplicaSet  10m                 deployment-controller  Scaled up replica set myapp-deployment-7498dcc94f to 6 from 5
+  Normal  ScalingReplicaSet  33s (x12 over 23m)  deployment-controller  (combined from similar events): Scaled up replica set myapp-deployment-6d5b597d5f to 6 from 5
+```
+
+
+`kubectl rollout history deployment myapp-deployment`
+```
+deployment.apps/myapp-deployment
+REVISION  CHANGE-CAUSE
+1         kubectl1.27.2 create --filename=deployment-definition.yaml --record=true
+3         kubectl1.27.2 create --filename=deployment-definition.yaml --record=true
+4         kubectl1.27.2 create --filename=deployment-definition.yaml --record=true
+```
 
 
 ## Labs - Practice Test - Rolling Updates
