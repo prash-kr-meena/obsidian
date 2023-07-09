@@ -1755,6 +1755,9 @@ Note: it has also terminated the 3 pods which were trying to make use of the wro
 
 
 
+
+## Basics of Networking in Kubernetes
+
 ## Services
 
 ### Labs - Services
