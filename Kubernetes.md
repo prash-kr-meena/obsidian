@@ -1114,25 +1114,47 @@ To see the `revisions` and `history` of rollout run the command `kubectl rollout
 #### Deployment Strategy
 There are two types of deployment strategies. 
 
+![[Pasted image 20230709191617.png|1000]]
+
+
 Say for example you have 5 replicas of your web application instance deployed.
 ![[Pasted image 20230709190525.png|500]]
-
 ##### Recreate strategy
 One way to upgrade these to a newer version is to destroy all of these and then create newer versions of application instances. 
 Meaning first, destroy the 5 running instances and then deploy 5 new instances of the new application version.
 ![[Pasted image 20230709190652.png|1000]]
 
 The problem with this as you can imagine, is that during the period after the older versions are down and before any newer version is up, the application is down and inaccessible to users. This strategy is known as the **Recreate strategy**, and thankfully **this is NOT the default deployment strategy.**
-![[Pasted image 20230709190733.png|1000]]
+![[Pasted image 20230709191004.png|1100]]
 
 
 ##### Rolling Update
+The second strategy is were we do not destroy all of them at once. 
+Instead we take down the older version and bring up a newer version one by one. 
+This way the **application never goes down** and the **upgrade is seamless**.
 
-The second strategy is were we do not destroy all of them at once. Instead we take down the older version and bring up a newer version one by one. This way the application never goes down and the upgrade is seamless.
+![[Pasted image 20230709191041.png|800]]
+![[Pasted image 20230709191108.png|800]]
 
-Remember, if you do not specify a strategy while creating the deployment, it will assume it to be Rolling Update. In other words, RollingUpdate is the default Deployment Strategy.
+
+![[Pasted image 20230709191135.png|800]]
 
 
+![[Pasted image 20230709191157.png|800]]
+
+
+![[Pasted image 20230709191228.png|800]]
+
+![[Pasted image 20230709191551.png|900]]
+Note: One thing that is a little wrong in this diagram is, k8s first deployes the pod with new revision and then will remove older pod, one by one
+ie before deletion it first does creation
+
+Remember, if you do not specify a strategy while creating the deployment, it will assume it to be **Rolling Update**. 
+In other words, **RollingUpdate** is the **default Deployment Strategy**.
+
+
+
+#### Updating Deployments
 So we talked about upgrades. How exactly DO you update your deployment? When I say update it could be different things such as updating your application version by updating the version of docker containers used, updating their labels or updating the number of replicas etc. Since we already have a deployment definition file it is easy for us to modify this file. Once we make the necessary changes, we run the kubectl apply command to apply the changes. A new rollout is triggered and a new revision of the deployment is created.
 
 But there is ANOTHER way to do the same thing. You could use the kubectl set image command to update the image of your application. But remember, doing it this way will result in the deployment-definition file having a different configuration. So you must be careful when using the same definition file to make changes in the future.
