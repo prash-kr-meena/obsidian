@@ -883,12 +883,8 @@ and to see the created replicasets run the `kubectl get replicaset` command.
 ```
 
 To get list of pods, simply run the `kubectl get pods` command.
-```yaml
-NAME             READY   STATUS    RESTARTS      AGE
-nginxxxx         1/1     Running   1 (17h ago)   20h
-myapp-rc-ct7jh   1/1     Running   0             35s
-myapp-rc-lsrbk   1/1     Running   0             35s
-myapp-rc-lsxfr   1/1     Running   0             35s
+```
+
 ```
 
 
