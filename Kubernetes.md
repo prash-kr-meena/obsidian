@@ -1058,9 +1058,8 @@ To see all the created objects at once run the `kubectl get all` command
 So far there hasn’t been much of a difference between replicaset and deployments, except for the fact that deployments created a new kubernetes object called deployments. We will see how to take advantage of the deployment using the use cases we discussed in the previous slide
 
 
-
-
 ### Labs - Deployment
+
 
 ## Rolling Updates
 ### Labs - Practice Test - Rolling Updates
