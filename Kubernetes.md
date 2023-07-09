@@ -967,7 +967,7 @@ Let us now review the commands real quick.
 5. The `kubectl scale` command to scale the replicas simply from the command line without having to modify the file.
 ![[Pasted image 20230709143501.png|1000]]
 
-**Note:** if you are running a ReplicaSet with the replica count of say 3, then if you try to manually create a new Pod which matches the selector specified in the 
+**Note:** if you are running a ReplicaSet with the replica count of say 3, then if you try to manually create a new Pod which matches the selector specified in the ReplicaSet
 
 ### Labs - Replica Set
 
