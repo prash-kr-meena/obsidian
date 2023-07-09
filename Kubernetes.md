@@ -1311,6 +1311,10 @@ Deleting deployment
 deployment.apps "myapp-deployment" deleted
 ```
 
+Creating a deployming while recording it
+the `--record` option allows us to record the cause for change when working with
+
+
 Checking status
 `kubectl rollout status deployment myapp-deployment`
 ```
