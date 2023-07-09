@@ -973,6 +973,9 @@ Let us now review the commands real quick.
 
 ### Labs - Replica Set
 
+![[Pasted image 20230709154947.png|800]]
+
+![[Pasted image 20230709155056.png|800]]
 
 
 
