@@ -923,28 +923,36 @@ This concept of labels and selecters is used in many places throughout kubernete
 
 
 
+
 Now let me ask you a question along the same lines. 
-In the replicaset specification section we learned that there are 3 sections: `template`, `replicas` and the `selector`. We need 3 replicas and we have updated our selector based on our discussion in the previous slide. Say for instance we have the same scenario as in the previous slide were we have 3 existing PODs that were created already and we need to create a replica set to monitor the PODs to ensure there are a minimum of 3 running at all times. When the replication controller is created, it is NOT going to deploy a new instance of POD as 3 of them with matching labels are already created. In that case, do we really need to provide a template section in the replica-set specification, since we are not expecting the replicaset to create a new POD on deployment? Yes we do, BECAUSE in case one of the PODs were to fail in the future, the replicaset needs to create a new one to maintain the desired number of PODs. And for the replica set to create a new POD, the template definition section IS required.
+In the replicaset specification section we learned that there are 3 sections: `template`, `replicas` and the `selector`. 
+We need 3 `replicas` and we have updated our `selector` based on our discussion in the previous slide. 
+Say for instance we have the same scenario as in the previous slide were we have 3 existing PODs that were created already and we need to create a replica set to monitor the PODs to ensure there are a minimum of 3 running at all times.
 
-63
+When the replication controller is created, it is NOT going to deploy a new instance of POD as 3 of them with matching labels are already created. **In that case, do we really need to provide a template section in the replica-set specification, since we are not expecting the replicaset to create a new POD on deployment?**
+![[Pasted image 20230709141916.png|900]]
 
-|   |
-|---|
-|Scale<br><br>> kubectl replace -f replicaset-definition.yml<br><br>> kubectl scale -–replicas=6 –f replicaset-definition.yml > kubectl scale -–replicas=6 replicaset myapp-replicaset<br><br>TYPE NAME<br><br>replicaset-definition.yml<br><br>MUMSHAD MANNAMBETH<br><br>apiVersion: apps/v1 kind: ReplicaSet metadata:<br><br>name: myapp-replicaset labels:<br><br>app: myapp<br><br>type: front-end spec:<br><br>template: metadata:<br><br>name: myapp-pod labels:<br><br>app: myapp<br><br>type: front-end spec:<br><br>containers:  <br>- name: nginx-container<br><br>image: nginx<br><br>replicas:36<br><br>selector: matchLabels:<br><br>type: front-end|
-||
+**Yes** we do, BECAUSE in case one of the PODs were to fail in the future, the <u>replicaset needs to create a new one to maintain the desired number of PODs</u>. And for the replica set to create a new POD, the template definition section IS required.
 
-Let’s look at how we scale the replicaset. Say we started with 3 replicas and in the future we decide to scale to 6. How do we update our replicaset to scale to 6 replicas. Well there are multiple ways to do it. The first, is to update the number of replicas in the definition file to 6. Then run the kubectl replace command specifying the same file using the –f parameter and that will update the replicaset to have 6 replicas.
 
-The second way to do it is to run the kubectl scale command. Use the replicas parameter to provide the new number of replicas and specify the same file as input. You may either input the definition file or provide the replicaset name in the TYPE Name format. However, Remember that using the file name as input will not result in the number of replicas being updated automatically in the file. In otherwords, the number of replicas in the replicaset-definition file will still be 3 even though you scaled your replicaset to have 6 replicas using the kubectl scale command and the file as input.
+
+### Scaling ReplicaSet
+Let’s look at how we scale the replicaset. 
+Say we started with 3 replicas and in the future we decide to scale to 6. How do we update our replicaset to scale to 6 replicas. 
+
+Well there are multiple ways to do it. 
+1. The first, is to update the number of replicas in the definition file to 6. 
+  Then run the `kubectl replace` command specifying the same file using the `–f` parameter and that will update the replicaset to have 6 replicas.
+  ![[Pasted image 20230709142613.png|900]]
+  
+2. The second way to do it is to run the `kubectl scale` command. 
+  Use the `replicas` parameter to provide the new number of replicas and specify the same file as input.
+  
+ You may either input the definition file or provide the replicaset name in the TYPE Name format. However, Remember that using the file name as input will not result in the number of replicas being updated automatically in the file. In otherwords, the number of replicas in the replicaset-definition file will still be 3 even though you scaled your replicaset to have 6 replicas using the kubectl scale command and the file as input.
 
 There are also options available for automatically scaling the replicaset based on load, but that is an advanced topic and we will discuss it at a later time.
 
-64
 
-|   |
-|---|
-|commands<br><br>> kubectl create –f replicaset-definition.yml  <br>> kubectl get replicaset  <br>> kubectl delete replicaset myapp-replicaset  <br>> kubectl replace -f replicaset-definition.yml  <br>> kubectl scale –replicas=6 -f replicaset-definition.yml<br><br>*Also deletes all underlying PODs<br><br>MUMSHAD MANNAMBETH|
-||
 
 Let us now review the commands real quick. The kubectl create command, as we know, is used to create a replca set. You must provide the input file using the –f parameter. Use the kubectl get command to see list of replicasets created. Use the kubectl delete replicaset command followed by the name of the replica set to delete the replicaset. And then we have the kubectl replace command to replace or update replicaset and also the kubectl scale command to scale the replicas simply from the command line without having to modify the file.
 ### Labs - Replica Set
