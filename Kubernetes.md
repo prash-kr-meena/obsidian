@@ -1624,6 +1624,13 @@ REVISION  CHANGE-CAUSE
 ```
 
 
+--
+
+Lets recreate a scenario, where we will again do an upgrade but the new image is an invalid image and it is basically not able to fetch it from the docker hub (or the companyies nternal resposltory)
+
+
+
+
 ## Labs - Practice Test - Rolling Updates
 ## Rolling Updates
 ### Labs - Services
