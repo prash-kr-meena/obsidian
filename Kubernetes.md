@@ -871,20 +871,24 @@ spec:
 ```
 
 And as always to create a `ReplicaSet` run the `kubectl create` command providing the definition file as input 
-`kubectl create -f replicaset-definition.yml`
+`kubectl create -f replicaset-definition.yaml`
 ```
-replicationcontroller/myapp-rc created
-```
-
-
-and to see the created replicasets run the `kubectl get replicaset` command. 
+replicaset.apps/myapp-rs created
 ```
 
+and to see the created replicasets run the `kubectl get replicaset -o wide` command. 
+```
+NAME       DESIRED   CURRENT   READY   AGE   CONTAINERS        IMAGES   SELECTOR
+myapp-rs   3         3         3       41s   myapp-container   nginx    type=front-end
 ```
 
 To get list of pods, simply run the `kubectl get pods` command.
 ```
-
+NAME             READY   STATUS    RESTARTS      AGE
+nginxxxx         1/1     Running   1 (17h ago)   20h
+myapp-rs-27bwq   1/1     Running   0             60s
+myapp-rs-29xbp   1/1     Running   0             60s
+myapp-rs-c76hd   1/1     Running   0             60s
 ```
 
 
