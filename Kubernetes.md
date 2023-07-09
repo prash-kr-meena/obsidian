@@ -1628,6 +1628,49 @@ REVISION  CHANGE-CAUSE
 
 Lets recreate a scenario, where we will again do an upgrade but the new image is an invalid image and it is basically not able to fetch it from the docker hub (or the companyies nternal resposltory)
 
+`kubectl edit deployment myapp-deployment`
+updating image to `nginx:1.18-shaka-laka-boom-boom`
+```
+deployment.apps/myapp-deployment edited
+```
+
+
+`kubectl rollout status deployment myapp-deployment`
+Now for the status command we will see that the status is stuck, and not proceeding further
+```
+Waiting for deployment "myapp-deployment" rollout to finish: 3 out of 6 new replicas have been updated...
+```
+
+This is because it is trying to build the new container but as the image is not available it is not able to create those container inside the newly created pods.
+This is to insure the other conatiners at least remains running so that the users don't get effected due to the new image which has issues
+
+we can see the same when we get the `deployment` or `pod`
+
+`kubectl get deployments`
+```
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+myapp-deployment   5/6     3            5           82m
+```
+
+`kubectl get pods`
+```
+NAME                                READY   STATUS             RESTARTS   AGE
+myapp-deployment-6d5b597d5f-qjj2f   1/1     Running            0          52m
+myapp-deployment-6d5b597d5f-g6r7f   1/1     Running            0          52m
+myapp-deployment-6d5b597d5f-jlnvs   1/1     Running            0          52m
+myapp-deployment-6d5b597d5f-mnxp8   1/1     Running            0          52m
+myapp-deployment-6d5b597d5f-2zmzd   1/1     Running            0          52m
+myapp-deployment-f784f84d-7l2zg     0/1     ImagePullBackOff   0          5m50s
+myapp-deployment-f784f84d-lzgnn     0/1     ImagePullBackOff   0          5m50s
+myapp-deployment-f784f84d-7jdms     0/1     ImagePullBackOff   0          5m50s
+```
+
+
+
+
+
+
+
 
 
 
