@@ -1794,7 +1794,7 @@ The PODs can communicate to each other through this IP.
 We will see BETTER ways to establish communication between PODs in a while. 
 For now its important to understand how the internal networking works in kubernetes.
 ![[Pasted image 20230710015002.png|600]]
-### Networking in a Kubernetes Cluster
+### Networking in a Kubernetes Cluster (Cluster Networking)
 So it’s all easy and simple to understand when it comes to networking on a single node. 
 
 #### But how does it work when you have multiple nodes in a cluster? 
@@ -1813,15 +1813,38 @@ The two networks have an address `10.244.0.0` and the PODs deployed have the sam
 ![[Pasted image 20230710015948.png|600]]
 
 
-When a kubernetes cluster is SETUP, <u>kubernetes does NOT automatically setup any kind</u> of networking to handle these issues. As a matter of fact, <u>kubernetes expects us to setup networking to meet certain fundamental requirements</u>. Some of these are that all the containers or PODs in a kubernetes cluster MUST be able to communicate with one another without having to configure NAT. All nodes must be able to communicate with containers and all containers must be able to communicate with the nodes in the cluster. Kubernetes expects US to setup a networking solution that meets these criteria
+When a kubernetes cluster is SETUP, <u>kubernetes does NOT automatically setup any kind</u> of networking to handle these issues. As a matter of fact, <u>kubernetes expects us to setup networking to meet certain fundamental requirements</u>. 
+
+Some of these are that 
+- all the containers or PODs in a kubernetes cluster MUST be able to communicate with one another without having to configure NAT. 
+- All nodes must be able to communicate with containers and 
+- all containers must be able to communicate with the nodes in the cluster without Nat
+
+Kubernetes expects US to setup a networking solution that meets these criteria
+![[Pasted image 20230710020752.png|1000]]
 
 
-Fortunately, we don’t have to set it up ALL on our own as there are multiple pre-built solutions available. Some of them are the cisco ACI networks, Cilium, Big Cloud Fabric, Flannel, Vmware NSX-t and Calico. Depending on the platform you are deploying your Kubernetes cluster on you may use any of these solutions. For example, if you were setting up a kubernetes cluster from scratch on your own systems, you may use any of these solutions like Calico, Flannel etc. If you were deploying on a Vmware environment NSX-T may be a good option. If you look at the play-with-k8s labs they use WeaveNet. In our demos in the course we used Calico. Depending on your environment and after evaluating the Pros and Cons of each of these, you may chose the right networking solution.
+**Fortunately**, we don’t have to set it up ALL on our own as there are multiple pre-built solutions available. Some of them are the cisco ACI networks, Cilium, Big Cloud Fabric, Flannel, Vmware NSX-t and Calico. 
+Depending on the platform you are deploying your Kubernetes cluster on you may use any of these solutions. 
 
-If you go back and look at the demo were we setup a kubernetes cluster initially, we setup networking based on Calico. It only took us a few set of commands to get it setup. So its pretty easy.
+![[Pasted image 20230710021002.png|700]]
+
+For example, 
+- if you were setting up a kubernetes cluster from scratch on your own systems, you may use any of these solutions like Calico, Flannel etc. 
+- If you were deploying on a Vmware environment NSX-T may be a good option. 
+- If you look at the play-with-k8s labs they use WeaveNet. 
+- In our demos in the course we used Calico. 
+
+Depending on your environment and after evaluating the Pros and Cons of each of these, you may chose the right networking solution.
 
 
-So back to our cluster, with the Calico networking setup, it now manages the networks and Ips in my nodes and assigns a different network address for each network in the nodes. This creates a virtual network of all PODs and nodes were they are all assigned a unique IP Address. And by using simple routing techniques the cluster networking enables communication between the different PODs or Nodes to meet the networking requirements of kubernetes. Thus all PODs can now communicate to each other using the assigned IP addresses.
+So back to our cluster, with the Calico networking setup,
+- it now manages the networks and IPs in my nodes and
+- assigns a different network address for each network in the nodes. 
+- This creates a virtual network of all PODs and nodes were they are all assigned a unique IP Address. 
+- And by using simple routing techniques the cluster networking enables communication between the different PODs or Nodes to meet the networking requirements of kubernetes. 
+- Thus all PODs can now communicate to each other using the assigned IP addresses.
+![[Pasted image 20230710021251.png]]
 
 
 
