@@ -1006,7 +1006,7 @@ Let us now review the commands real quick.
 
 
 ## Deployments
-![[Pasted image 20230709165123.png|900]]
+![[Pasted image 20230709165123.png|800]]
 Say you have a web server that needs to be deployed in a production environment. 
 1. You need not ONE, but many such instances of the web server running for obvious reasons.
 2. Secondly, when newer versions of application builds become available on the docker registry, you would like to **UPGRADE** your docker instances seamlessly.
@@ -1017,8 +1017,19 @@ Say you have a web server that needs to be deployed in a production environment.
    You do not want to apply each change immediately after the command is run, instead you would like to apply a **pause** to your environment, make the changes and then **resume** so that all changes are rolled-out together.
 
 All of these capabilities are available with the kubernetes `Deployments`.
+![[Pasted image 20230709165812.png|1000]]
 
-So far in this course we discussed about PODs, which deploy single instances of our application such as the web application in this case. Each container is encapsulated in PODs. Multiple such PODs are deployed using Replication Controllers or Replica Sets. And then comes Deployment which is a kubernetes object that comes higher in the hierarchy. The deployment provides us with capabilities to upgrade the underlying instances seamlessly using rolling updates, undo changes, and pause and resume changes to deployments.
+
+
+![[Pasted image 20230709165927.png|1000]]
+
+
+So far in this course we discussed about PODs, which deploy single instances of our application such as the web application in this case. Each container is encapsulated in PODs.
+![[Pasted image 20230709170058.png]]
+
+Multiple such PODs are deployed using Replication Controllers or Replica Sets. 
+And then comes Deployment which is a kubernetes object that comes higher in the hierarchy. 
+The deployment provides us with capabilities to upgrade the underlying instances seamlessly using rolling updates, undo changes, and pause and resume changes to deployments.
 
 
 ### Labs - Deployment
