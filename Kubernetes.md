@@ -1651,6 +1651,8 @@ we can see the same when we get the `deployment` or `pod`
 NAME               READY   UP-TO-DATE   AVAILABLE   AGE
 myapp-deployment   5/6     3            5           82m
 ```
+we can seee here that out of 6 only 5 are available
+
 
 `kubectl get pods`
 ```
@@ -1664,6 +1666,7 @@ myapp-deployment-f784f84d-7l2zg     0/1     ImagePullBackOff   0          5m50s
 myapp-deployment-f784f84d-lzgnn     0/1     ImagePullBackOff   0          5m50s
 myapp-deployment-f784f84d-7jdms     0/1     ImagePullBackOff   0          5m50s
 ```
+Here also we can verify that 5 pods are running while it has deleted 1 of the older pod, but it is trying to create new 3 Pods, which are failing and due to that the deployment will remain in this same state untill it is able to get these images
 
 
 
