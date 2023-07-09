@@ -1722,6 +1722,7 @@ Note: it has also terminated the 3 pods which were trying to make use of the wro
 
 ### Labs - Practice Test - Rolling Updates
 
+![[Screenshot 2023-07-10 at 12.50.48 AM.png|1200]]
 
 
 ## Rolling Updates
