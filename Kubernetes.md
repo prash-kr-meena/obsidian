@@ -1612,12 +1612,14 @@ Events:
 ```
 
 
+Checking the Revision history we see that now we have 3 revisions in total
+There is a new revision created which is 4, but the revision number 2 is gone, that is because the 4th revision is essentially the same as the 2nd one and the change-cause we see is exactly the one which we recorded for revision 2.
 `kubectl rollout history deployment myapp-deployment`
 ```
 deployment.apps/myapp-deployment
 REVISION  CHANGE-CAUSE
 1         kubectl1.27.2 create --filename=deployment-definition.yaml --record=true
-3         kubectl1.27.2 create --filename=deployment-definition.yaml --record=true
+3         kubectl set image deployment myapp-deployment nginx=nginx:1.18-perl --record=true
 4         kubectl1.27.2 create --filename=deployment-definition.yaml --record=true
 ```
 
