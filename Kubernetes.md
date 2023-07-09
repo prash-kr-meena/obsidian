@@ -1200,7 +1200,6 @@ When a new deployment is created, say to deploy 5 replicas,
 
 ![[Pasted image 20230709221400.png|700]]
 
-
 When you **upgrade your application** as we saw in the previous slide, 
 the kubernetes deployment object creates a **NEW replicaset** under the hoods and starts deploying the containers there. 
 At the same time taking down the Pods in the old replica-set following a `RollingUpdate` strategy.
@@ -1215,8 +1214,10 @@ Here we see the old replicaset with 0 Pods and the new replicaset with 5 Pods.
 
 
 
-Say for instance once you upgrade your application, you realize something isn’t very right. 
+Say for instance once you upgrade your application, you realize something isn’t right. 
 Something’s wrong with the new version of build you used to upgrade. So you would like to rollback your update. Kubernetes deployments allow you to rollback to a previous revision. To undo a change run the command kubectl rollout undo followed by the name of the deployment. The deployment will then destroy the PODs in the new replicaset and bring the older ones up in the old replicaset. And your application is back to its older format.
+
+![[Pasted image 20230709222349.png|1100]]
 
 When you compare the output of the kubectl get replicasets command, before and after the rollback, you will be able to notice this difference. Before the rollback the first replicaset had 0 PODs and the new replicaset had 5 PODs and this is reversed after the rollback is finished.
 
