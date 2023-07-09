@@ -841,14 +841,13 @@ But before we get into understanding these selector, lets solidify the differenc
 ### Replication Controller Vs Replica Set
 <u>The selector is one of the major differences between ReplicationController and ReplicaSet</u>. 
 - The selector is **not a REQUIRED** field in case of a replication controller, **but it is still available**. When you skip it, as we did in the previous slide, *it assumes it to be the same as the labels provided in the pod-definition file.* 
+	- ie k8s will not fail the creation of Replication Controller Resouce/object if the selector is missing in the menifest, rather k8s will automatcially set the slector for it if not set by the user writing the menifest, and the default value which it will pick is from the `lables` in the pod `template `  
 - In case of replica set a user **input is REQUIRED** for this property. And it has to be written in the form of `matchLabels` as shown. 
 	- The `matchLabels` selector simply matches the labels specified under it to the labels on the PODs. 
 	- The `ReplicaSet` selector also provides <u>many other options for matching labels</u> that were **not available in a replication controller**.
 
 TODOO
-However, there is **one major difference between replication controller and replica set**. 
-- Replica set **requires** a **`selector`** definition. whereas in replication controller the selector was optional,
-  ie k8s will not fail the creation of Replication Controller Resouce/object if the selector is missing in the menifest, rather k8s will automatcially set the slector for it if not set by the user writing the menifest, and the default value which it will pick is from the `lables` in the pod `template `  
+However, there is **one major difference between replication controller and replica set**.
 - Furhter the selector in Replication Controller is not as powerful as in the Replication Set, specifically the selector supported in RC is equality based selector where ReplicaSet supports both **equality** and **Set** based selectors
 
 
