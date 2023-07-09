@@ -1086,7 +1086,6 @@ So far there hasn’t been much of a difference between replicaset and deploymen
 
 
 ### Updates and Rollbacks in a Deployment
-## Labs - Practice Test - Rolling Updates
 In this lecture we will talk about updates and rollbacks in a Deployment.
 Before we look at how we upgrade our application, let’s try to understand Rollouts and Versioning in a deployment. 
 ![[Pasted image 20230709185451.png|900]]
@@ -1107,12 +1106,27 @@ This helps us keep track of the changes made to our deployment and enables us to
 You can see the status of your `rollout` by running the command: `kubectl rollout status` followed by the name of the deployment.
 ![[Pasted image 20230709190014.png|900]]
 
-To see the revisions and history of rollout run the command kubectl rollout history followed by the deployment name and this will show you the revisions.
+#### Rollout history & Revision
+To see the `revisions` and `history` of rollout run the command `kubectl rollout history` followed by the deployment name and this will show you the revisions.
+![[Pasted image 20230709190223.png|900]]
 
 
+#### Deployment Strategy
+There are two types of deployment strategies. 
+
+Say for example you have 5 replicas of your web application instance deployed.
+![[Pasted image 20230709190525.png|500]]
+
+##### Recreate strategy
+One way to upgrade these to a newer version is to destroy all of these and then create newer versions of application instances. 
+Meaning first, destroy the 5 running instances and then deploy 5 new instances of the new application version.
+![[Pasted image 20230709190652.png|1000]]
+
+The problem with this as you can imagine, is that during the period after the older versions are down and before any newer version is up, the application is down and inaccessible to users. This strategy is known as the **Recreate strategy**, and thankfully **this is NOT the default deployment strategy.**
+![[Pasted image 20230709190733.png|1000]]
 
 
-There are two types of deployment strategies. Say for example you have 5 replicas of your web application instance deployed. One way to upgrade these to a newer version is to destroy all of these and then create newer versions of application instances. Meaning first, destroy the 5 running instances and then deploy 5 new instances of the new application version. The problem with this as you can imagine, is that during the period after the older versions are down and before any newer version is up, the application is down and inaccessible to users. This strategy is known as the Recreate strategy, and thankfully this is NOT the default deployment strategy.
+##### Rolling Update
 
 The second strategy is were we do not destroy all of them at once. Instead we take down the older version and bring up a newer version one by one. This way the application never goes down and the upgrade is seamless.
 
@@ -1142,8 +1156,7 @@ And finally let’s get back to one of the commands we ran initially when we lea
 
 To summarize the commands real quick, use the kubectl create command to create the deployment, get deployments command to list the deployments, apply and set image commands to update the deployments, rollout status command to see the status of rollouts and rollout undo command to rollback a deployment operation.
 
-
-
+## Labs - Practice Test - Rolling Updates
 ## Rolling Updates
 ### Labs - Services
 
