@@ -1746,6 +1746,9 @@ Note: it has also terminated the 3 pods which were trying to make use of the wro
 
 ![[Pasted image 20230710011149.png|1000]]
 
+![[Pasted image 20230710011600.png|1000]]
+
+
 
 
 ## Rolling Updates
