@@ -1300,7 +1300,32 @@ REVISION  CHANGE-CAUSE
 ```
 
 We can observer here that it has one revision which we just did above, 
-Note that there is another column called CHANGE-CAUSE, which is `none`, 
+Note that there is another column called CHANGE-CAUSE, which is `none`, and that is because we did not sepcifically ask k8s to record the cause of change, while we did our last deployment
+
+We can add it, firstly lets delete the deloyment and start over
+
+
+Deleting deployment
+`kubectl delete -f deployment-definition.yaml`
+```
+deployment.apps "myapp-deployment" deleted
+```
+
+Checking status
+`kubectl rollout status deployment myapp-deployment`
+```
+Waiting for deployment "myapp-deployment" rollout to finish: 0 of 6 updated replicas are available...
+Waiting for deployment "myapp-deployment" rollout to finish: 1 of 6 updated replicas are available...
+Waiting for deployment "myapp-deployment" rollout to finish: 2 of 6 updated replicas are available...
+Waiting for deployment "myapp-deployment" rollout to finish: 3 of 6 updated replicas are available...
+Waiting for deployment "myapp-deployment" rollout to finish: 4 of 6 updated replicas are available...
+Waiting for deployment "myapp-deployment" rollout to finish: 5 of 6 updated replicas are available...
+deployment "myapp-deployment" successfully rolled out
+```
+
+
+
+
 
 
 
