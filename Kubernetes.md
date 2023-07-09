@@ -1194,10 +1194,18 @@ Let’s look at how a deployment performs an upgrade underthehoods.
 When a new deployment is created, say to deploy 5 replicas,
 - it first creates a Replicaset automatically, 
 - which in turn creates the number of PODs required to meet the number of replicas. 
+![[Pasted image 20230709221208.png|700]]
+![[Pasted image 20230709221251.png|700]]
+![[Pasted image 20230709221338.png|700]]
+
+![[Pasted image 20230709221400.png|700]]
+
 
 When you upgrade your application as we saw in the previous slide, 
-the kubernetes deployment object creates a NEW replicaset under the hoods and starts deploying the containers there. 
+the kubernetes deployment object creates a **NEW replicaset** under the hoods and starts deploying the containers there. 
 At the same time taking down the PODs in the old replica-set following a RollingUpdate strategy.
+
+![[Pasted image 20230709221533.png|700]]
 
 This can be seen when you try to list the replicasets using the `kubectl get replicasets` command. 
 Here we see the old replicaset with 0 Pods and the new replicaset with 5 Pods.
