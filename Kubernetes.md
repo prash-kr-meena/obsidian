@@ -906,7 +906,9 @@ The replica set is in FACT a process that monitors the pods.
 #### Now, how does the replicaset KNOW what pods to monitor?. 
 There could be 100s of other PODs in the cluster running different application. 
 ![[Pasted image 20230709121222.png|600]]
-This is were labelling our PODs during creation comes in handy. We could now provide these labels as a filter for replicaset. Under the selector section we use the matchLabels filter and provide the same label that we used while creating the pods. This way the replicaset knows which pods to monitor.
+This is were labelling our PODs during creation comes in handy. 
+We could now provide these labels as a filter for replicaset. Under the selector section we use the `matchLabels` filter and provide the same label that we used while creating the pods. This way the replicaset knows which pods to monitor.
+![[Pasted image 20230709121349.png|1000]]
 
 
 
