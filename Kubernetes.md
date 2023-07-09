@@ -1173,11 +1173,15 @@ A new `rollout` is triggered and a new `revision` of the deployment is created.
 
 ##### Another Way to update the Deployment
 There is ANOTHER way  to do the same thing. You could use the `kubectl set` image command to update the image of your application. 
-But **remember**, <u>doing it this way will result in the deployment-definition file having a different configuration</u>. So you must be careful when using the same definition file to make changes in the future.
+But **remember**, <u>doing it this way will result in the deployment-definition file having a different configuration</u>. 
+So you must be careful when using the same definition file to make changes in the future.
+![[Pasted image 20230709220140.png|600]]
 
 
-The difference between the recreate and rollingupdate strategies can also be seen when you view the deployments in detail. Run the kubectl describe deployment command to see detailed information regarding the deployments. You will notice when the Recreate strategy was used the events indicate that the old replicaset was scaled down to 0 first and the new replica set scaled up to 5. However when the RollingUpdate strategy was used the old replica set was scaled down one at a time simultaneously scaling up the new replica set one at a time.
+#### Recreate vs Rollingupdate Strategy
+The difference between the `recreate` and `rollingupdate` strategies can also be seen when you view the deployments in detail. Run the kubectl describe deployment command to see detailed information regarding the deployments. You will notice when the Recreate strategy was used the events indicate that the old replicaset was scaled down to 0 first and the new replica set scaled up to 5. However when the RollingUpdate strategy was used the old replica set was scaled down one at a time simultaneously scaling up the new replica set one at a time.
 
+![[Pasted image 20230709220332.png]]
 
 Let’slookathowadeploymentperformsanupgradeunderthehoods. Whenanew deployment is created, say to deploy 5 replicas, it first creates a Replicaset automatically, which in turn creates the number of PODs required to meet the number of replicas. When you upgrade your application as we saw in the previous slide, the kubernetes deployment object creates a NEW replicaset under the hoods and starts deploying the containers there. At the same time taking down the PODs in the old replica-set following a RollingUpdate strategy.
 
