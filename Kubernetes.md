@@ -996,6 +996,9 @@ Let us now review the commands real quick.
 ![[Pasted image 20230709161114.png|800]]
 
 
+![[Pasted image 20230709161501.png|900]]
+
+
 ## Deployments
 ### Labs - Deployment
 ### Labs - Practice Test - Rolling Updates
