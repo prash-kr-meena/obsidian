@@ -1312,7 +1312,14 @@ deployment.apps "myapp-deployment" deleted
 ```
 
 Creating a deployming while recording it
-the `--record` option allows us to record the cause for change when working with
+the `--record` option allows us to record the cause for change
+Note: It has been deprecated
+
+`kubectl create -f deployment-definition.yaml --record`
+```
+Flag --record has been deprecated, --record will be removed in the future
+deployment.apps/myapp-deployment created
+```
 
 
 Checking status
@@ -1330,9 +1337,56 @@ deployment "myapp-deployment" successfully rolled out
 Checking Rollout History
 `kubectl rollout status deployment myapp-deployment`
 ```
+deployment.apps/myapp-deployment 
+REVISION  CHANGE-CAUSE
+1         kubectl1.27.2 create --filename=deployment-definition.yaml --record=true
+```
+Here now we can see the cause of change, which currently is the exact command as we used to create the deployment
+
+
+`kubectl describe deployments myapp-deployment`
+Note: Now here in the annotations alow the command is being recorded
+```
+Name:                   myapp-deployment
+Namespace:              default
+CreationTimestamp:      Sun, 09 Jul 2023 23:03:08 +0530
+Labels:                 app=myapp
+                        type=front-end
+Annotations:            deployment.kubernetes.io/revision: 1
+                        kubernetes.io/change-cause: kubectl1.27.2 create --filename=deployment-definition.yaml --record=true
+Selector:               type=front-end
+Replicas:               6 desired | 6 updated | 6 total | 6 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=myapp
+           type=front-end
+  Containers:
+   myapp-container:
+    Image:        nginx
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   myapp-deployment-577f5d9dd7 (6/6 replicas created)
+Events:
+  Type    Reason             Age    From                   Message
+  ----    ------             ----   ----                   -------
+  Normal  ScalingReplicaSet  2m21s  deployment-controller  Scaled up replica set myapp-deployment-577f5d9dd7 to 6
 
 ```
 
+
+Updating the Deployment while also recording at the same time
+We are trying to chenge the image for the deployment
 
 
 
