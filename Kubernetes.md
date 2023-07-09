@@ -1668,10 +1668,55 @@ myapp-deployment-f784f84d-7jdms     0/1     ImagePullBackOff   0          5m50s
 ```
 Here also we can verify that 5 pods are running while it has deleted 1 of the older pod, but it is trying to create new 3 Pods, which are failing and due to that the deployment will remain in this same state untill it is able to get these images
 
+This is due to the default starategy of `rolling update` but if we would have used the `recreate` strategy then all the older running pods would be terminated, and the new pods that would be created all would have this `ImagePullBackOff` error leading to the scenario our whole application would be down.
 
 
+`kubectl rollout history deployment myapp-deployment`
+As we have done this new upgrade in our deployment we can see a new revision of our deployment created **revision 5**
+```
+deployment.apps/myapp-deployment 
+REVISION  CHANGE-CAUSE
+1         kubectl1.27.2 create --filename=deployment-definition.yaml --record=true
+3         kubectl1.27.2 create --filename=deployment-definition.yaml --record=true
+4         kubectl1.27.2 set image deployment myapp-deployment nginx=nginx:1.18-shaka-laka-boom-boom --record=true
+5         kubectl1.27.2 set image deployment myapp-deployment nginx=nginx:1.18-shaka-laka-boom-boom --record=true
+
+```
+
+--
+
+As we know there is issue with our image so we will need to revert this deployment and go back to the revision 4
+
+`kubectl rollout undo deployment myapp-deployment`
+```
+deployment.apps/myapp-deployment rolled back
+```
+
+`kubectl rollout status deployment myapp-deployment`
+Notice: the message says that out of the 6 requried replicas 5 are already available, 
+so we only need 1 which it created as we can verify from get deployments and get pods command
+```
+Waiting for deployment "myapp-deployment" rollout to finish: 5 of 6 updated replicas are available...
+deployment "myapp-deployment" successfully rolled out
+```
 
 
+`kubectl get deployments`
+```
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+myapp-deployment   6/6     6            6           95m
+```
+
+`kubectl get pods`
+```
+NAME                                READY   STATUS    RESTARTS   AGE
+myapp-deployment-6d5b597d5f-qjj2f   1/1     Running   0          65m
+myapp-deployment-6d5b597d5f-g6r7f   1/1     Running   0          65m
+myapp-deployment-6d5b597d5f-jlnvs   1/1     Running   0          65m
+myapp-deployment-6d5b597d5f-mnxp8   1/1     Running   0          65m
+myapp-deployment-6d5b597d5f-2zmzd   1/1     Running   0          65m
+myapp-deployment-6d5b597d5f-6xzbd   1/1     Running   0          2m31s
+```
 
 
 
