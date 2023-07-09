@@ -1269,6 +1269,23 @@ spec:
       type: front-end
 ```
 
+`kubectl rollout status deployment myapp-deployment`
+```
+deployment "myapp-deployment" successfully rolled out
+```
+
+
+if we ran this command just after we did our deployment we would get the status, output in progress
+```
+Waiting for deployment "myapp-deployment" rollout to finish: 0 of 6 updated replicas are available...
+Waiting for deployment "myapp-deployment" rollout to finish: 1 of 6 updated replicas are available...
+Waiting for deployment "myapp-deployment" rollout to finish: 2 of 6 updated replicas are available...
+Waiting for deployment "myapp-deployment" rollout to finish: 3 of 6 updated replicas are available...
+Waiting for deployment "myapp-deployment" rollout to finish: 4 of 6 updated replicas are available...
+Waiting for deployment "myapp-deployment" rollout to finish: 5 of 6 updated replicas are available...
+deployment "myapp-deployment" successfully rolled out
+```
+
 `kubectl create -f deployment-definition.yaml`
 ```
 deployment.apps/myapp-deployment created
