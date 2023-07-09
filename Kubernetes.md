@@ -1523,6 +1523,9 @@ REVISION  CHANGE-CAUSE
 --
 While we did our last deployment with the verson `nginx:1.18-perl`, lets say something went wrong and we now want to revert that deployment
 
+To rever we can use the Undo command, se currently we are on revision 3, but we want to move to the revision 2
+
+
 
 
 ## Labs - Practice Test - Rolling Updates
