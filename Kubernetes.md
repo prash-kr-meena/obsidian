@@ -840,7 +840,7 @@ But before we get into understanding these selector, lets solidify the differenc
 
 ### Replication Controller Vs Replica Set
 <u>The selector is one of the major differences between ReplicationController and ReplicaSet</u>. 
-- The selector is **not a REQUIRED** field in case of a replication controller, **but it is still available**. When you skip it, as we did in the previous slide, it assumes it to be the same as the labels provided in the pod-definition file. 
+- The selector is **not a REQUIRED** field in case of a replication controller, **but it is still available**. When you skip it, as we did in the previous slide, *it assumes it to be the same as the labels provided in the pod-definition file.* 
 - In case of replica set a user **input is REQUIRED** for this property. And it has to be written in the form of `matchLabels` as shown. 
 	- The `matchLabels` selector simply matches the labels specified under it to the labels on the PODs. 
 	- The `ReplicaSet` selector also provides <u>many other options for matching labels</u> that were **not available in a replication controller**.
