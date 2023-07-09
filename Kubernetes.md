@@ -971,8 +971,10 @@ Let us now review the commands real quick.
 - You might think that a new Pod will be created along side the old 3 pods but it could be a scenario that this pod will not be controlled by ReplicaSet
 - But that is not the case, a new Pod will definetly be created but one of the older pods will be deleted by ReplicaSet as this new Pod will also be controlled by the same ReplicaSet only, and as the ReplicaSet is required to maintain the desired number of Pods, in this case 3 so it will be required to delete the extra pod which is there
 
-
 ### Labs - Replica Set
+
+
+
 
 ## Deployments
 ### Labs - Deployment
