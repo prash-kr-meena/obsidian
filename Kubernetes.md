@@ -1242,6 +1242,8 @@ To summarize the commands real quick
 
 
 ## Demo - Deployment / Rollout / Rollback
+
+`deployment-definition.yaml`
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -1265,6 +1267,34 @@ spec:
   selector:
     matchLabels:
       type: front-end
+```
+
+`kubectl create -f deployment-definition.yaml`
+```
+deployment.apps/myapp-deployment created
+```
+
+`kubectl get deployments`
+```
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+myapp-deployment   6/6     6            6           18s
+```
+
+`kubectl get replicaset`
+```
+NAME                          DESIRED   CURRENT   READY   AGE
+myapp-deployment-577f5d9dd7   6         6         6       23s
+```
+
+`kubectl get pods`
+```
+NAME                                READY   STATUS    RESTARTS   AGE
+myapp-deployment-577f5d9dd7-wt89w   1/1     Running   0          29s
+myapp-deployment-577f5d9dd7-44mmf   1/1     Running   0          30s
+myapp-deployment-577f5d9dd7-wxsmw   1/1     Running   0          29s
+myapp-deployment-577f5d9dd7-hsnk2   1/1     Running   0          29s
+myapp-deployment-577f5d9dd7-rmf6r   1/1     Running   0          30s
+myapp-deployment-577f5d9dd7-wxcng   1/1     Running   0          30s
 ```
 
 
