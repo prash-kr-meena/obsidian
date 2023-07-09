@@ -1384,6 +1384,8 @@ Events:
 
 ```
 
+--
+
 
 Updating the Deployment while also recording at the same time
 We are trying to chenge the image for the deployment, to an older image of nginx, ie `nginx:1.18`
@@ -1463,29 +1465,63 @@ Events:
 ```
 
 
-`kubectl get deployments`
+Rollout History
+`kubectl rollout history deployment myapp-deployment`
 ```
-NAME               READY   UP-TO-DATE   AVAILABLE   AGE
-myapp-deployment   6/6     6            6           18s
-```
-
-`kubectl get replicaset`
-```
-NAME                          DESIRED   CURRENT   READY   AGE
-myapp-deployment-577f5d9dd7   6         6         6       23s
+deployment.apps/myapp-deployment 
+REVISION  CHANGE-CAUSE
+1         kubectl1.27.2 create --filename=deployment-definition.yaml --record=true
+2         kubectl1.27.2 create --filename=deployment-definition.yaml --record=true
 ```
 
-`kubectl get pods`
+--
+
+Now lets say we are upgrading again, with the new image which is `nginx:18-perl`
+
+Updating the Deployment while also recording at the same time  `nginx:1.18`
+this time lets say we use another way of upgrading the image instead of the edit command
+
+here last one is the `container_name:image_name`
+`kubectl set image deployment myapp-deployment nginx=nginx:1.18 --record`` 
 ```
-NAME                                READY   STATUS    RESTARTS   AGE
-myapp-deployment-577f5d9dd7-wt89w   1/1     Running   0          29s
-myapp-deployment-577f5d9dd7-44mmf   1/1     Running   0          30s
-myapp-deployment-577f5d9dd7-wxsmw   1/1     Running   0          29s
-myapp-deployment-577f5d9dd7-hsnk2   1/1     Running   0          29s
-myapp-deployment-577f5d9dd7-rmf6r   1/1     Running   0          30s
-myapp-deployment-577f5d9dd7-wxcng   1/1     Running   0          30s
+deployment.apps/myapp-deployment edited
 ```
 
+Now  if you see the rollout status 
+`kubectl rollout status deployment myapp-deployment`
+We see that it is doing a rolling update here, were old replicas for `nginx:1.18` are terminating and replica for `nginx:1.18-perl` are scaling up
+```
+Waiting for deployment "myapp-deployment" rollout to finish: 3 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 3 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 3 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 3 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 3 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 3 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 4 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 4 out of 6 new replicas have been updated...
+Waiting for deployment "myapp-deployment" rollout to finish: 2 old replicas are pending termination...
+Waiting for deployment "myapp-deployment" rollout to finish: 2 old replicas are pending termination...
+Waiting for deployment "myapp-deployment" rollout to finish: 2 old replicas are pending termination...
+Waiting for deployment "myapp-deployment" rollout to finish: 2 old replicas are pending termination...
+Waiting for deployment "myapp-deployment" rollout to finish: 1 old replicas are pending termination...
+deployment "myapp-deployment" successfully rolled out
+```
+
+
+Rollout History
+`kubectl rollout history deployment myapp-deployment`
+we see our all the 3 deployment upgrades we carried out
+```
+deployment.apps/myapp-deployment 
+REVISION  CHANGE-CAUSE
+1         kubectl1.27.2 create --filename=deployment-definition.yaml --record=true
+2         kubectl1.27.2 create --filename=deployment-definition.yaml --record=true
+3         kubectl set image deployment myapp-deployment nginx=nginx:1.18-perl --record=true
+```
+
+
+--
+While we did our last deployment with the verson `nginx:1.18-perl`, lets say something went wrong and we now want to revert that deployment
 
 
 
