@@ -866,56 +866,14 @@ However, there is **one major difference between replication controller and repl
 - Furhter the selector in Replication Controller is not as powerful as in the Replication Set, specifically the selector supported in RC is equality based selector where ReplicaSet supports both **equality** and **Set** based selectors
 
 
-To better understand the difference between Replication Controller and Replica Set
+To better understand the handson difference between Replication Controller and Replica Set
 Watch This video, Great Explaination
 
  ![25. Kubernetes ( In Hindi ) - ReplicaSet & Diff between Replicaset and Replication Controller](https://www.youtube.com/watch?v=iAxBaTMoRwo&ab_channel=GauravSharma) 
-
-
-62
-
-MUMSHAD MANNAMBETH
-
-POD
-
-tier: front-end
-
-POD
-
-tier: front-end
-
-POD
-
-tier: front-end
-
-replicaset-definition.yml
-
-apiVersion: apps/v1 kind: ReplicaSet metadata:
-
-name: myapp-replicaset labels:
-
-app: myapp
-
-type: front-end spec:
-
-replicas: 3 selector:
-
-matchLabels:  
-type: front-end
-
-template: metadata:
-
-name: myapp-pod labels:
-
-app: myapp  
-T e m p l a te
-
-type: fro n t - en d spec:
-
-containers:  
-- name: nginx-container
-
-image: nginx
+ Note It is recommended that if you are creating a standalone Pod (ie a pod which is not being controller by anyone) then make sure to not add any labels to it, reason being in future if any one introduced some sort of Resoucre that works on selector (eg RC, RS, Deployments) then they might take over that standalone pod and now that resouce has controll over it and can manage it 
+ eg. once ReplicaSet got the controll over the standalone Pod, then once we delete the ReplicaSet that Pod will also be deleted, 
+       also, it is possible that 
+ 
 
 Now let me ask you a question along the same lines. In the replicaset specification section we learned that there are 3 sections: Template, replicas and the selector. We need 3 replicas and we have updated our selector based on our discussion in the previous slide. Say for instance we have the same scenario as in the previous slide were we have 3 existing PODs that were created already and we need to create a replica set to monitor the PODs to ensure there are a minimum of 3 running at all times. When the replication controller is created, it is NOT going to deploy a new instance of POD as 3 of them with matching labels are already created. In that case, do we really need to provide a template section in the replica-set specification, since we are not expecting the replicaset to create a new POD on deployment? Yes we do, BECAUSE in case one of the PODs were to fail in the future, the replicaset needs to create a new one to maintain the desired number of PODs. And for the replica set to create a new POD, the template definition section IS required.
 
