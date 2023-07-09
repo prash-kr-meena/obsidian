@@ -1006,6 +1006,20 @@ Let us now review the commands real quick.
 
 
 ## Deployments
+![[Pasted image 20230709165123.png|900]]
+Say you have a web server that needs to be deployed in a production environment. 
+1. You need not ONE, but many such instances of the web server running for obvious reasons.
+2. Secondly, when newer versions of application builds become available on the docker registry, you would like to **UPGRADE** your docker instances seamlessly.
+3. However, when you upgrade your instances, you <u>do not want to upgrade all of them at once</u> as we just did. This may impact users accessing our applications, so you may want to upgrade them one after the other. 
+   And that kind of upgrade is known as **Rolling Updates**.
+4. Suppose one of the upgrades you performed resulted in an unexpected error and you are asked to <u>undo the recent update</u>. You would like to be able to **RollBack** the changes that were recently carried out.
+5. Finally, say for example you would like to make multiple changes to your environment such as upgrading the underlying WebServer versions, as well as scaling your environment and also modifying the resource allocations etc. 
+   You do not want to apply each change immediately after the command is run, instead you would like to apply a **pause** to your environment, make the changes and then **resume** so that all changes are rolled-out together.
+
+All of these capabilities are available with the kubernetes `Deployments`.
+
+So far in this course we discussed about PODs, which deploy single instances of our application such as the web application in this case. Each container is encapsulated in PODs. Multiple such PODs are deployed using Replication Controllers or Replica Sets. And then comes Deployment which is a kubernetes object that comes higher in the hierarchy. The deployment provides us with capabilities to upgrade the underlying instances seamlessly using rolling updates, undo changes, and pause and resume changes to deployments.
+
 
 ### Labs - Deployment
 
