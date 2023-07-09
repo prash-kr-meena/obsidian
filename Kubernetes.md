@@ -1025,11 +1025,15 @@ All of these capabilities are available with the kubernetes `Deployments`.
 
 
 So far in this course we discussed about PODs, which deploy single instances of our application such as the web application in this case. Each container is encapsulated in PODs.
-![[Pasted image 20230709170058.png]]
+![[Pasted image 20230709170058.png|900]]
 
 Multiple such PODs are deployed using Replication Controllers or Replica Sets. 
+![[Pasted image 20230709170930.png|900]]
+
 And then comes Deployment which is a kubernetes object that comes higher in the hierarchy. 
 The deployment provides us with capabilities to upgrade the underlying instances seamlessly using rolling updates, undo changes, and pause and resume changes to deployments.
+
+![[Pasted image 20230709171020.png|900]]
 
 
 ### Labs - Deployment
