@@ -1394,6 +1394,7 @@ deployment.apps/myapp-deployment edited
 
 Now  if you see the rollout status 
 `kubectl rollout status deployment myapp-deployment`
+We see that it is doing a rolling update here
 ```
 Waiting for deployment "myapp-deployment" rollout to finish: 3 out of 6 new replicas have been updated...
 Waiting for deployment "myapp-deployment" rollout to finish: 3 out of 6 new replicas have been updated...
@@ -1411,7 +1412,55 @@ Waiting for deployment "myapp-deployment" rollout to finish: 1 old replicas are 
 deployment "myapp-deployment" successfully rolled out
 ```
 
+We can see the same when we see the `event` section of the describe deployment command
 
+`kubectl describe deployments myapp-deployment`
+where we see it is scaling up the new pods and scaling down the old pods at the same time one after the onother
+```
+Name:                   myapp-deployment
+Namespace:              default
+CreationTimestamp:      Sun, 09 Jul 2023 23:03:08 +0530
+Labels:                 app=myapp
+                        type=front-end
+Annotations:            deployment.kubernetes.io/revision: 2
+                        kubernetes.io/change-cause: kubectl1.27.2 create --filename=deployment-definition.yaml --record=true
+Selector:               type=front-end
+Replicas:               6 desired | 6 updated | 6 total | 6 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=myapp
+           type=front-end
+  Containers:
+   myapp-container:
+    Image:        nginx:1.18
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  myapp-deployment-577f5d9dd7 (0/0 replicas created)
+NewReplicaSet:   myapp-deployment-6d5b597d5f (6/6 replicas created)
+Events:
+  Type    Reason             Age    From                   Message
+  ----    ------             ----   ----                   -------
+  Normal  ScalingReplicaSet  12m    deployment-controller  Scaled up replica set myapp-deployment-577f5d9dd7 to 6
+  Normal  ScalingReplicaSet  6m15s  deployment-controller  Scaled up replica set myapp-deployment-6d5b597d5f to 2
+  Normal  ScalingReplicaSet  6m15s  deployment-controller  Scaled down replica set myapp-deployment-577f5d9dd7 to 5 from 6
+  Normal  ScalingReplicaSet  6m15s  deployment-controller  Scaled up replica set myapp-deployment-6d5b597d5f to 3 from 2
+  Normal  ScalingReplicaSet  5m42s  deployment-controller  Scaled down replica set myapp-deployment-577f5d9dd7 to 4 from 5
+  Normal  ScalingReplicaSet  5m42s  deployment-controller  Scaled up replica set myapp-deployment-6d5b597d5f to 4 from 3
+  Normal  ScalingReplicaSet  5m42s  deployment-controller  Scaled down replica set myapp-deployment-577f5d9dd7 to 2 from 4
+  Normal  ScalingReplicaSet  5m42s  deployment-controller  Scaled up replica set myapp-deployment-6d5b597d5f to 6 from 4
+  Normal  ScalingReplicaSet  5m29s  deployment-controller  Scaled down replica set myapp-deployment-577f5d9dd7 to 1 from 2
+  Normal  ScalingReplicaSet  5m29s  deployment-controller  (combined from similar events): Scaled down replica set myapp-deployment-577f5d9dd7 to 0 from 1
+```
 
 
 `kubectl get deployments`
