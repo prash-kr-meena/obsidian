@@ -878,6 +878,9 @@ replicationcontroller/myapp-rc created
 
 
 and to see the created replicasets run the `kubectl get replicaset` command. 
+```
+
+```
 
 To get list of pods, simply run the `kubectl get pods` command.
 ```yaml
