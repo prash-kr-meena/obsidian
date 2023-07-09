@@ -847,11 +847,46 @@ But before we get into understanding these selector, lets solidify the differenc
 
 ![[Pasted image 20230709015921.png|700]]
 
+`replicaset-definition.yml`
+```yaml
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myapp-rc
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+  replicas: 3
+```
+
 And as always to create a `ReplicaSet` run the `kubectl create` command providing the definition file as input 
 `kubectl create -f replicaset-definition.yml`
+```
+replicationcontroller/myapp-rc created
+```
+
 
 and to see the created replicasets run the `kubectl get replicaset` command. 
+
 To get list of pods, simply run the `kubectl get pods` command.
+```yaml
+NAME             READY   STATUS    RESTARTS      AGE
+nginxxxx         1/1     Running   1 (17h ago)   20h
+myapp-rc-ct7jh   1/1     Running   0             35s
+myapp-rc-lsrbk   1/1     Running   0             35s
+myapp-rc-lsxfr   1/1     Running   0             35s
+```
 
 
 
