@@ -1088,10 +1088,24 @@ So far there hasn’t been much of a difference between replicaset and deploymen
 ### Updates and Rollbacks in a Deployment
 ## Labs - Practice Test - Rolling Updates
 In this lecture we will talk about updates and rollbacks in a Deployment.
+Before we look at how we upgrade our application, let’s try to understand Rollouts and Versioning in a deployment. 
+![[Pasted image 20230709185451.png|900]]
 
-Before we look at how we upgrade our application, let’s try to understand Rollouts and Versioning in a deployment. Whenever you create a new deployment or upgrade the images in an existing deployment it triggers a Rollout. A rollout is the process of gradually deploying or upgrading your application containers. When you first create a deployment, it triggers a rollout. A new rollout creates a new Deployment revision. Let’s call it revision 1. In the future when the application is upgraded – meaning when the container version is updated to a new one – a new rollout is triggered and a new deployment revision is created named Revision 2. This helps us keep track of the changes made to our deployment and enables us to rollback to a previous version of deployment if necessary.
+Whenever you create a new `deployment` or **upgrade** the `images` in an existing deployment it triggers a `Rollout`. 
+A rollout is the process of gradually deploying or upgrading your application containers. 
 
-You can see the status of your rollout by running the command: kubectl rollout status followed by the name of the deployment.
+When you first create a deployment, it triggers a `rollout`. A new `rollout` creates a new **Deployment `revision`**. Let’s call it  *revision 1*.
+![[Pasted image 20230709185653.png|900]]
+
+In the future when the application is **upgraded** – meaning when the container version is updated to a new one
+– a new `rollout` is triggered and a new deployment revision is created named *Revision 2*. 
+This helps us keep track of the changes made to our deployment and enables us to rollback to a previous version of deployment if necessary.
+![[Pasted image 20230709185752.png|900]]
+
+
+#### Rollout Status
+You can see the status of your `rollout` by running the command: `kubectl rollout status` followed by the name of the deployment.
+![[Pasted image 20230709190014.png|900]]
 
 To see the revisions and history of rollout run the command kubectl rollout history followed by the deployment name and this will show you the revisions.
 
