@@ -983,6 +983,8 @@ Let us now review the commands real quick.
 ![[Pasted image 20230709155509.png|1000]]
 
 
+![[Pasted image 20230709155702.png|900]]
+
 
 
 ## Deployments
