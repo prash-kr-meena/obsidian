@@ -980,6 +980,10 @@ Let us now review the commands real quick.
 ![[Pasted image 20230709155342.png|800]]
 
 
+![[Pasted image 20230709155509.png|1000]]
+
+
+
 
 ## Deployments
 ### Labs - Deployment
