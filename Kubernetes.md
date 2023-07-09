@@ -1006,7 +1006,12 @@ Let us now review the commands real quick.
 
 
 ## Deployments
+
 ### Labs - Deployment
+
+## Rolling Updates
 ### Labs - Practice Test - Rolling Updates
+
+## Rolling Updates
 ### Labs - Services
 
