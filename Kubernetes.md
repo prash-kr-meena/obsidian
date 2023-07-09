@@ -1386,7 +1386,80 @@ Events:
 
 
 Updating the Deployment while also recording at the same time
-We are trying to chenge the image for the deployment
+We are trying to chenge the image for the deployment, to an older image
+`kubectl edit deployment myapp-deployment`
+```
+deployment.apps/myapp-deployment edited
+```
+
+```
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "2"
+    kubernetes.io/change-cause: kubectl1.27.2 create --filename=deployment-definition.yaml
+      --record=true
+  creationTimestamp: "2023-07-09T17:33:08Z"
+  generation: 2
+  labels:
+    app: myapp
+    type: front-end
+  name: myapp-deployment
+  namespace: default
+"/var/folders/pn/kb8xgd_x09120fz1h9c3999c0000gq/T/kubectl1.27.2-edit-1754244138.yaml" 72L, 1999B
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "2"
+    kubernetes.io/change-cause: kubectl1.27.2 create --filename=deployment-definition.yaml
+      --record=true
+  creationTimestamp: "2023-07-09T17:33:08Z"
+  generation: 2
+  labels:
+    app: myapp
+    type: front-end
+  name: myapp-deployment
+  namespace: default
+  resourceVersion: "30129"
+  uid: f0c66838-24df-4f11-935b-d43cef991e9f
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 6
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      type: front-end
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: myapp
+        type: front-end
+      name: myapp-pod
+    spec:
+      containers:
+      - image: nginx:1.18
+
+
+
+```
+
+
 
 
 
