@@ -835,31 +835,6 @@ Say for example, there were pods created BEFORE the creation of the ReplicaSet t
 
 Now, This is exactly the same behaviour as we saw in `ReplicationController` as well its just we don't really specify any selector in it (its not mandatory).
 
-
-But before we get into understanding these selector, lets solidify the difference between `ReplicationController` and `ReplicaSet`
-
-### Replication Controller Vs Replica Set
-<u>The selector is one of the major differences between ReplicationController and ReplicaSet</u>. 
-- The selector is **not a REQUIRED** field in case of a replication controller, **but it is still available**. When you skip it, as we did in the previous slide, *it assumes it to be the same as the labels provided in the pod-definition file.* 
-	- ie k8s will not fail the creation of Replication Controller Resouce/object if the selector is missing in the menifest, rather k8s will automatcially set the slector for it if not set by the user writing the menifest, and the default value which it will pick is from the `lables` in the pod `template `  
-- In case of replica set a user **input is REQUIRED** for this property. And it has to be written in the form of `matchLabels` as shown. 
-	- The `matchLabels` selector simply matches the labels specified under it to the labels on the PODs. 
-	- The `ReplicaSet` selector also provides <u>many other options for matching labels</u> that were **not available in a replication controller**.
-
-TODOO
-However, there is **one major difference between replication controller and replica set**.
-- Furhter the selector in Replication Controller is not as powerful as in the Replication Set, specifically the selector supported in RC is equality based selector where ReplicaSet supports both **equality** and **Set** based selectors
-
-
-To better understand the handson difference between Replication Controller and Replica Set
-Watch This video, Great Explaination
-
- ![25. Kubernetes ( In Hindi ) - ReplicaSet & Diff between Replicaset and Replication Controller](https://www.youtube.com/watch?v=iAxBaTMoRwo&ab_channel=GauravSharma) 
- Note It is recommended that if you are creating a standalone Pod (ie a pod which is not being controller by anyone) then make sure to not add any labels to it, reason being in future if any one introduced some sort of Resoucre that works on selector (eg RC, RS, Deployments) then they might take over that standalone pod and now that resouce has controll over it and can manage it 
- eg. once ReplicaSet got the controll over the standalone Pod, then once we delete the ReplicaSet that Pod will also be deleted, 
-       also, it is possible that the traffic that was for ReplicaSet will also reach this Pod
-
-
 ![[Pasted image 20230709015921.png|700]]
 
 `replicaset-definition.yml`
@@ -907,6 +882,25 @@ myapp-rs-c76hd   1/1     Running   0             60s
 ```
 
 
+Before we get into understanding these selector, lets solidify the difference between `ReplicationController` and `ReplicaSet`
+
+### Replication Controller Vs Replica Set
+<u>The selector is one of the major differences between ReplicationController and ReplicaSet</u>. 
+- The selector is **not a REQUIRED** field in case of a replication controller, **but it is still available**. When you skip it, as we did in the previous slide, *it assumes it to be the same as the labels provided in the pod-definition file.* 
+	- ie k8s will not fail the creation of Replication Controller Resouce/object if the selector is missing in the menifest, rather k8s will automatcially set the slector for it if not set by the user writing the menifest, and the default value which it will pick is from the `lables` in the pod `template `  
+- In case of replica set a user **input is REQUIRED** for this property. And it has to be written in the form of `matchLabels` as shown. 
+	- The `matchLabels` selector simply matches the labels specified under it to the labels on the PODs. 
+	- The `ReplicaSet` selector also provides <u>many other options for matching labels</u> that were **not available in a replication controller**.
+		- ie The selector in Replication Controller is not as powerful as in the Replication Set, specifically the selector supported in RC is equality based selector where ReplicaSet supports both **equality** and **Set** based selectors
+
+To better understand the handson difference between Replication Controller and Replica Set
+Watch This video, Great Explaination
+ ![25. Kubernetes - ReplicaSet & Diff between Replicaset and Replication Controller](https://www.youtube.com/watch?v=iAxBaTMoRwo&ab_channel=GauravSharma) 
+ **Note:** It is recommended that if you are creating a standalone Pod (ie a pod which is not being controller by anyone) then make sure to not add any labels to it, reason being in future if any one introduced some sort of Resoucre that works on selector (eg RC, RS, Deployments) then they might take over that standalone pod and now that resouce has controll over it and can manage it 
+ eg. once ReplicaSet got the controll over the standalone Pod, then once we delete the ReplicaSet that Pod will also be deleted, 
+       also, it is possible that the traffic that was for ReplicaSet will also reach this Pod
+
+
 
 ### So what is the deal with Labels and Selectors? Why do we label our PODs and objects in kubernetes?
 Let us look at a simple scenario. 
@@ -929,9 +923,8 @@ This concept of labels and selecters is used in many places throughout kubernete
 
 
 
- 
-
-Now let me ask you a question along the same lines. In the replicaset specification section we learned that there are 3 sections: Template, replicas and the selector. We need 3 replicas and we have updated our selector based on our discussion in the previous slide. Say for instance we have the same scenario as in the previous slide were we have 3 existing PODs that were created already and we need to create a replica set to monitor the PODs to ensure there are a minimum of 3 running at all times. When the replication controller is created, it is NOT going to deploy a new instance of POD as 3 of them with matching labels are already created. In that case, do we really need to provide a template section in the replica-set specification, since we are not expecting the replicaset to create a new POD on deployment? Yes we do, BECAUSE in case one of the PODs were to fail in the future, the replicaset needs to create a new one to maintain the desired number of PODs. And for the replica set to create a new POD, the template definition section IS required.
+Now let me ask you a question along the same lines. 
+In the replicaset specification section we learned that there are 3 sections: `template`, `replicas` and the `selector`. We need 3 replicas and we have updated our selector based on our discussion in the previous slide. Say for instance we have the same scenario as in the previous slide were we have 3 existing PODs that were created already and we need to create a replica set to monitor the PODs to ensure there are a minimum of 3 running at all times. When the replication controller is created, it is NOT going to deploy a new instance of POD as 3 of them with matching labels are already created. In that case, do we really need to provide a template section in the replica-set specification, since we are not expecting the replicaset to create a new POD on deployment? Yes we do, BECAUSE in case one of the PODs were to fail in the future, the replicaset needs to create a new one to maintain the desired number of PODs. And for the replica set to create a new POD, the template definition section IS required.
 
 63
 
