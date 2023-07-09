@@ -1155,9 +1155,25 @@ In other words, **RollingUpdate** is the **default Deployment Strategy**.
 
 
 #### Updating Deployments
-So we talked about upgrades. How exactly DO you update your deployment? When I say update it could be different things such as updating your application version by updating the version of docker containers used, updating their labels or updating the number of replicas etc. Since we already have a deployment definition file it is easy for us to modify this file. Once we make the necessary changes, we run the kubectl apply command to apply the changes. A new rollout is triggered and a new revision of the deployment is created.
+So we talked about upgrades. 
 
-But there is ANOTHER way to do the same thing. You could use the kubectl set image command to update the image of your application. But remember, doing it this way will result in the deployment-definition file having a different configuration. So you must be careful when using the same definition file to make changes in the future.
+##### How exactly DO you update your deployment? 
+When I say update, it could be different things such as
+- updating your application version 
+- updating the version of docker containers used, 
+- updating their labels or updating the number of replicas etc. 
+
+Since we already have a deployment definition file it is easy for us to modify this file. 
+![[Pasted image 20230709215458.png|400]]       ![[Pasted image 20230709215529.png|400]]
+
+Once we make the necessary changes, we run the `kubectl apply` command to apply the changes. 
+A new `rollout` is triggered and a new `revision` of the deployment is created.
+![[Pasted image 20230709215628.png|600]]
+
+
+##### Another Way to update the Deployment
+There is ANOTHER way  to do the same thing. You could use the `kubectl set` image command to update the image of your application. 
+But **remember**, <u>doing it this way will result in the deployment-definition file having a different configuration</u>. So you must be careful when using the same definition file to make changes in the future.
 
 
 The difference between the recreate and rollingupdate strategies can also be seen when you view the deployments in detail. Run the kubectl describe deployment command to see detailed information regarding the deployments. You will notice when the Recreate strategy was used the events indicate that the old replicaset was scaled down to 0 first and the new replica set scaled up to 5. However when the RollingUpdate strategy was used the old replica set was scaled down one at a time simultaneously scaling up the new replica set one at a time.
