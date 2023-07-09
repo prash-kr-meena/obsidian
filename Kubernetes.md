@@ -1717,12 +1717,13 @@ myapp-deployment-6d5b597d5f-mnxp8   1/1     Running   0          65m
 myapp-deployment-6d5b597d5f-2zmzd   1/1     Running   0          65m
 myapp-deployment-6d5b597d5f-6xzbd   1/1     Running   0          2m31s
 ```
+Observe the ages of the pods, all of them are ther for 65 minutes except the last one which got created just 2 minutes back
+Note: it has also terminated the 3 pods which were trying to make use of the wrong image
+
+### Labs - Practice Test - Rolling Updates
 
 
 
-
-
-## Labs - Practice Test - Rolling Updates
 ## Rolling Updates
 ### Labs - Services
 
