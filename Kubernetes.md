@@ -958,7 +958,15 @@ There are also options available for **automatically scaling the replicaset base
 
 
 
-Let us now review the commands real quick. The kubectl create command, as we know, is used to create a replica set. You must provide the input file using the –f parameter. Use the kubectl get command to see list of replicasets created. Use the kubectl delete replicaset command followed by the name of the replica set to delete the replicaset. And then we have the kubectl replace command to replace or update replicaset and also the kubectl scale command to scale the replicas simply from the command line without having to modify the file.
+### Review Commands for ReplicaSet
+Let us now review the commands real quick. 
+1. The `kubectl create` command, as we know, is used to create a replica set. You must provide the input file using the `–f` parameter. 
+2. Use the `kubectl get` command to see list of replicasets created. 
+3. Use the `kubectl delete` replicaset command followed by the name of the replica set to delete the replicaset. 
+4. And then we have the `kubectl replace` command to replace or update replicaset and also 
+5. The `kubectl scale` command to scale the replicas simply from the command line without having to modify the file.
+![[Pasted image 20230709143501.png|1000]]
+
 ### Labs - Replica Set
 
 ## Deployments
