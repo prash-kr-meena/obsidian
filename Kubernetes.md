@@ -991,6 +991,10 @@ Let us now review the commands real quick.
 
 ![[Pasted image 20230709160417.png|900]]
 
+![[Pasted image 20230709161010.png|1000]]
+
+![[Pasted image 20230709161114.png|800]]
+
 
 ## Deployments
 ### Labs - Deployment
