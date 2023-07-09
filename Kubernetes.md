@@ -1269,11 +1269,17 @@ spec:
       type: front-end
 ```
 
+
+`kubectl create -f deployment-definition.yaml`
+```
+deployment.apps/myapp-deployment created
+```
+
+
 `kubectl rollout status deployment myapp-deployment`
 ```
 deployment "myapp-deployment" successfully rolled out
 ```
-
 
 if we ran this command just after we did our deployment we would get the status, output in progress
 ```
@@ -1286,10 +1292,17 @@ Waiting for deployment "myapp-deployment" rollout to finish: 5 of 6 updated repl
 deployment "myapp-deployment" successfully rolled out
 ```
 
-`kubectl create -f deployment-definition.yaml`
+`kubectl rollout history deployment  myapp-deployment`
 ```
-deployment.apps/myapp-deployment created
+deployment.apps/myapp-deployment 
+REVISION  CHANGE-CAUSE
+1         <none>
 ```
+
+We can observer here that it has one revision which we just did above, 
+Note that there is another column called CHANGE-CAUSE, which is `none`, 
+
+
 
 `kubectl get deployments`
 ```
@@ -1313,6 +1326,7 @@ myapp-deployment-577f5d9dd7-hsnk2   1/1     Running   0          29s
 myapp-deployment-577f5d9dd7-rmf6r   1/1     Running   0          30s
 myapp-deployment-577f5d9dd7-wxcng   1/1     Running   0          30s
 ```
+
 
 
 
