@@ -1076,6 +1076,12 @@ So far there hasn’t been much of a difference between replicaset and deploymen
 ![[Pasted image 20230709182956.png|800]]
 
 
+![[Pasted image 20230709183425.png|800]]
+
+![[Pasted image 20230709183454.png|800]]
+
+
+
 ## Rolling Updates
 ### Labs - Practice Test - Rolling Updates
 
