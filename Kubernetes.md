@@ -1724,6 +1724,9 @@ Note: it has also terminated the 3 pods which were trying to make use of the wro
 
 ![[Screenshot 2023-07-10 at 12.50.48 AM.png|1200]]
 
+![[Pasted image 20230710005317.png|800]]
+
+
 
 ## Rolling Updates
 ### Labs - Services
