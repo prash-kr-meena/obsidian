@@ -1323,8 +1323,11 @@ Waiting for deployment "myapp-deployment" rollout to finish: 5 of 6 updated repl
 deployment "myapp-deployment" successfully rolled out
 ```
 
+Checking Rollout History
+`kubectl rollout status deployment myapp-deployment`
+```
 
-
+```
 
 
 
