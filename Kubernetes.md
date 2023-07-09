@@ -1757,16 +1757,58 @@ Note: it has also terminated the 3 pods which were trying to make use of the wro
 
 
 ## Basics of Networking in Kubernetes
-In this lecture we will discuss about Networking in kubernetes.
-Let us look at the very basics of networking in Kubernetes. We will start with a single node kubernetes cluster. The node has an IP address, say it is 192.168.1.2 in this case. This is the IP address we use to access the kubernetes node, SSH into it etc. On a side note, remember if you are using a MiniKube setup, then I am talking about the IP address of the minikube virtual machine inside your Hypervisor. Your laptop may be having a different IP like 192.168.1.10. So its important to understand how VMs are setup.
 
-So on the single node kubernetes cluster we have created a Single POD. As you know a POD hosts a container. Unlike in the docker world were an IP address is always assigned to a Docker CONTAINER,
+### Networking on a single Node
+Let us look at the very basics of networking in Kubernetes. 
 
-in Kubernetes the IP address is assigned to a POD. Each POD in kubernetes gets its own internal IP Address. In this case its in the range 10.244 series and the IP assigned to the POD is 10.244.0.2. So how is it getting this IP address? When Kubernetes is initially configured it creates an internal private network with the address 10.244.0.0 and all PODs are attached to it. When you deploy multiple PODs, they all get a separate IP assigned. The PODs can communicate to each other through this IP. But accessing other PODs using this internal IP address MAY not be a good idea as its subject to change when PODs are recreated. We will see BETTER ways to establish
-communication between PODs in a while. For now its important to understand how the internal networking works in kubernetes.
+We will start with a single node kubernetes cluster. 
+The node has an IP address, say it is `192.168.1.2` in this case. 
+This is the IP address we use to access the kubernetes node, SSH into it etc. 
+![[Pasted image 20230710014241.png|500]]
 
 
-So it’s all easy and simple to understand when it comes to networking on a single node. But how does it work when you have multiple nodes in a cluster? In this case we have two nodes running kubernetes and they have IP addresses 192.168.1.2 and 192.168.1.3 assigned to them. Note that they are not part of the same cluster yet. Each of them has a single POD deployed. As discussed in the previous slide these pods are attached to an internal network and they have their own IP addresses assigned. HOWEVER, if you look at the network addresses, you can see that they are the same. The two networks have an address 10.244.0.0 and the PODs deployed have the same address too.
+On a side note, remember if you are using a MiniKube setup, then I am talking about the IP address of the minikube virtual machine inside your Hypervisor. 
+Your laptop may be having a different IP like `192.168.1.10`. 
+So its important to understand how VMs are setup.
+![[Pasted image 20230710014348.png|300]]
+
+
+So on the single node kubernetes cluster we have created a Single POD. 
+As you know a POD hosts a container. 
+Unlike in the docker world were an IP address is always assigned to a Docker CONTAINER, 
+in Kubernetes the IP address is assigned to a POD. 
+Each POD in kubernetes gets its own internal IP Address. 
+![[Pasted image 20230710014601.png|600]]
+In this case its in the range **10.244 series** and the IP assigned to the POD is `10.244.0.2`. 
+
+
+#### So how is it getting this IP address? 
+
+When Kubernetes is initially configured it creates an internal private network with the address `10.244.0.0` and all Pods are attached to it.
+![[Pasted image 20230710014655.png|600]]
+
+
+When you deploy multiple Pods, they all get a separate IP assigned. 
+The PODs can communicate to each other through this IP. 
+<u>But accessing other PODs using this internal IP address MAY not be a good idea as its subject to change when PODs are recreated</u>. 
+We will see BETTER ways to establish communication between PODs in a while. 
+For now its important to understand how the internal networking works in kubernetes.
+![[Pasted image 20230710015002.png|600]]
+### Networking in a Kubernetes Cluster
+So it’s all easy and simple to understand when it comes to networking on a single node. 
+
+#### But how does it work when you have multiple nodes in a cluster? 
+In this case we have two nodes running kubernetes and they have IP addresses `192.168.1.2` and `192.168.1.3` assigned to them. 
+Note that they are not part of the same cluster yet. 
+Each of them has a single POD deployed. 
+![[Pasted image 20230710015514.png|500]]
+
+
+As discussed in the previous slide these pods are attached to an internal network and they have their own IP addresses assigned. 
+HOWEVER, if you look at the network addresses, you can see that they are the same. 
+The two networks have an address `10.244.0.0` and the PODs deployed have the same address too.
+
+
 
 This is NOT going to work well when the nodes are part of the same cluster. The PODs have the same IP addresses assigned to them and that will lead to IP conflicts in the network. Now that’s ONE problem. When a kubernetes cluster is SETUP, kubernetes does NOT automatically setup any kind of networking to handle these issues. As a matter of fact, kubernetes expects US to setup networking to meet certain fundamental requirements. Some of these are that all the containers or PODs in a kubernetes cluster MUST be able to communicate with one another without having to configure NAT. All nodes must be able to communicate with containers and all containers must be able to communicate with the nodes in the cluster. Kubernetes expects US to setup a networking solution that meets these criteria
 
@@ -1777,8 +1819,6 @@ If you go back and look at the demo were we setup a kubernetes cluster initially
 
 
 So back to our cluster, with the Calico networking setup, it now manages the networks and Ips in my nodes and assigns a different network address for each network in the nodes. This creates a virtual network of all PODs and nodes were they are all assigned a unique IP Address. And by using simple routing techniques the cluster networking enables communication between the different PODs or Nodes to meet the networking requirements of kubernetes. Thus all PODs can now communicate to each other using the assigned IP addresses.
-
-
 
 
 
