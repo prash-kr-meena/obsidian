@@ -1201,14 +1201,18 @@ When a new deployment is created, say to deploy 5 replicas,
 ![[Pasted image 20230709221400.png|700]]
 
 
-When you upgrade your application as we saw in the previous slide, 
+When you **upgrade your application** as we saw in the previous slide, 
 the kubernetes deployment object creates a **NEW replicaset** under the hoods and starts deploying the containers there. 
-At the same time taking down the PODs in the old replica-set following a RollingUpdate strategy.
-
+At the same time taking down the Pods in the old replica-set following a `RollingUpdate` strategy.
 ![[Pasted image 20230709221533.png|700]]
+![[Pasted image 20230709221646.png|700]]
+![[Pasted image 20230709221719.png|700]]
+
 
 This can be seen when you try to list the replicasets using the `kubectl get replicasets` command. 
 Here we see the old replicaset with 0 Pods and the new replicaset with 5 Pods.
+![[Pasted image 20230709221747.png|1100]]
+
 
 
 Say for instance once you upgrade your application, you realize something isn’t very right. 
