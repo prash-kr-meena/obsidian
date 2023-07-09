@@ -943,18 +943,22 @@ Say we started with 3 replicas and in the future we decide to scale to 6. How do
 Well there are multiple ways to do it. 
 1. The first, is to update the number of replicas in the definition file to 6. 
   Then run the `kubectl replace` command specifying the same file using the `–f` parameter and that will update the replicaset to have 6 replicas.
+  Here it is obivious that the replica inside the manifest (file) has been updated
   ![[Pasted image 20230709142613.png|900]]
   
 2. The second way to do it is to run the `kubectl scale` command. 
-  Use the `replicas` parameter to provide the new number of replicas and specify the same file as input.
-  
- You may either input the definition file or provide the replicaset name in the TYPE Name format. However, Remember that using the file name as input will not result in the number of replicas being updated automatically in the file. In otherwords, the number of replicas in the replicaset-definition file will still be 3 even though you scaled your replicaset to have 6 replicas using the kubectl scale command and the file as input.
+	- Use the `replicas` parameter to provide the new number of replicas and specify the same file as input.
+	  ![[Pasted image 20230709142859.png|700]]
+	- You may either input the definition file or provide the replicaset name in the TYPE Name format.
+	  ![[Pasted image 20230709142921.png|700]]
+  	**However**, Remember that <u>using the file name as input</u> **will not result** in the number of **replicas being updated automatically in the file**. 
+       In otherwords, the number of replicas in the replicaset-definition file will still be 3 even though you scaled your replicaset to have 6 replicas using the kubectl scale command and the file as input.
 
-There are also options available for automatically scaling the replicaset based on load, but that is an advanced topic and we will discuss it at a later time.
+There are also options available for **automatically scaling the replicaset based on load**, but that is an advanced topic and we will discuss it at a **later time**.
 
 
 
-Let us now review the commands real quick. The kubectl create command, as we know, is used to create a replca set. You must provide the input file using the –f parameter. Use the kubectl get command to see list of replicasets created. Use the kubectl delete replicaset command followed by the name of the replica set to delete the replicaset. And then we have the kubectl replace command to replace or update replicaset and also the kubectl scale command to scale the replicas simply from the command line without having to modify the file.
+Let us now review the commands real quick. The kubectl create command, as we know, is used to create a replica set. You must provide the input file using the –f parameter. Use the kubectl get command to see list of replicasets created. Use the kubectl delete replicaset command followed by the name of the replica set to delete the replicaset. And then we have the kubectl replace command to replace or update replicaset and also the kubectl scale command to scale the replicas simply from the command line without having to modify the file.
 ### Labs - Replica Set
 
 ## Deployments
