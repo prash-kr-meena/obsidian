@@ -1085,7 +1085,8 @@ So far there hasn’t been much of a difference between replicaset and deploymen
 
 
 
-### Updates and Rollbacks in a Deployment
+
+## Rollout and Rollbacks in a Deployment
 In this lecture we will talk about updates and rollbacks in a Deployment.
 Before we look at how we upgrade our application, let’s try to understand Rollouts and Versioning in a deployment. 
 ![[Pasted image 20230709185451.png|900]]
@@ -1102,16 +1103,16 @@ This helps us keep track of the changes made to our deployment and enables us to
 ![[Pasted image 20230709185752.png|900]]
 
 
-#### Rollout Status
+### Rollout Status
 You can see the status of your `rollout` by running the command: `kubectl rollout status` followed by the name of the deployment.
 ![[Pasted image 20230709190014.png|900]]
 
-#### Rollout history & Revision
+### Rollout history & Revision
 To see the `revisions` and `history` of rollout run the command `kubectl rollout history` followed by the deployment name and this will show you the revisions.
 ![[Pasted image 20230709190223.png|900]]
 
 
-#### Deployment Strategy
+### Deployment Strategy
 There are two types of deployment strategies. 
 
 ![[Pasted image 20230709191617.png|1000]]
@@ -1119,7 +1120,7 @@ There are two types of deployment strategies.
 
 Say for example you have 5 replicas of your web application instance deployed.
 ![[Pasted image 20230709190525.png|500]]
-##### Recreate strategy
+#### Recreate strategy
 One way to upgrade these to a newer version is to destroy all of these and then create newer versions of application instances. 
 Meaning first, destroy the 5 running instances and then deploy 5 new instances of the new application version.
 ![[Pasted image 20230709190652.png|1000]]
@@ -1128,7 +1129,7 @@ The problem with this as you can imagine, is that during the period after the ol
 ![[Pasted image 20230709191004.png|1100]]
 
 
-##### Rolling Update
+#### Rolling Update
 The second strategy is were we do not destroy all of them at once. 
 Instead we take down the older version and bring up a newer version one by one. 
 This way the **application never goes down** and the **upgrade is seamless**.
@@ -1154,10 +1155,10 @@ In other words, **RollingUpdate** is the **default Deployment Strategy**.
 
 
 
-#### Updating Deployments
+### Updating Deployments
 So we talked about upgrades. 
 
-##### How exactly DO you update your deployment? 
+#### How exactly DO you update your deployment? 
 When I say update, it could be different things such as
 - updating your application version 
 - updating the version of docker containers used, 
@@ -1171,14 +1172,14 @@ A new `rollout` is triggered and a new `revision` of the deployment is created.
 ![[Pasted image 20230709215628.png|600]]
 
 
-##### Another Way to update the Deployment
+#### Another Way to update the Deployment
 There is ANOTHER way  to do the same thing. You could use the `kubectl set` image command to update the image of your application. 
 But **remember**, <u>doing it this way will result in the deployment-definition file having a different configuration</u>. 
 So you must be careful when using the same definition file to make changes in the future.
 ![[Pasted image 20230709220140.png|600]]
 
 
-#### Recreate vs Rollingupdate Strategy
+### Recreate vs Rollingupdate Strategy
 The difference between the `recreate` and `rollingupdate` strategies can also be seen when you view the deployments in detail. 
 Run the `kubectl describe` deployment command to see detailed information regarding the deployments. 
 
@@ -1213,7 +1214,7 @@ Here we see the old replicaset with 0 Pods and the new replicaset with 5 Pods.
 ![[Pasted image 20230709221747.png|1100]]
 
 
-#### Rollback
+### Rollback
 Say for instance once you upgrade your application, you realize something isn’t right. 
 Something’s wrong with the new version of build you used to upgrade. So you would like to `rollback` your update. 
 
@@ -1230,8 +1231,43 @@ And your application is back to its older format.
 When you compare the output of the kubectl get replicasets command, before and after the rollback, you will be able to notice this difference. Before the rollback the first replicaset had 0 PODs and the new replicaset had 5 PODs and this is reversed after the rollback is finished.
 ![[Pasted image 20230709223132.png|1000]]
 
-#### Summarize
-To summarize the commands real quick, use the kubectl create command to create the deployment, get deployments command to list the deployments, apply and set image commands to update the deployments, rollout status command to see the status of rollouts and rollout undo command to rollback a deployment operation.
+### Summarize
+To summarize the commands real quick
+- use the `kubectl create` command to create the deployment, 
+- get deployments command to list the deployments, 
+- apply and set image commands to update the deployments, 
+- rollout status command to see the status of rollouts and 
+- rollout undo command to rollback a deployment operation.
+![[Pasted image 20230709223423.png|1000]]
+
+
+## Demo - Deployment / Rollout / Rollback
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+      - name: myapp-container
+        image: nginx
+  replicas: 6
+  selector:
+    matchLabels:
+      type: front-end
+```
+
+
 
 ## Labs - Practice Test - Rolling Updates
 ## Rolling Updates
