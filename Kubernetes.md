@@ -1918,6 +1918,7 @@ We said that a Service can help us by mapping a port on the Node to a port on th
 
 
 Let’s take a **closer look** at the Service. 
+
 If you look at it, there are **3 ports involved**. 
 Remember, these terms are from the <u>viewpoint of the service</u>
 - The port on the POD where the actual web server is running is port 80. 
@@ -1929,14 +1930,29 @@ Remember, these terms are from the <u>viewpoint of the service</u>
 - And finally we have the port on the Node itself which we use to access the web server externally. 
   And that is known as the `NodePort`.  As you can see, it is 30008. 
   That is because `NodePorts` can only be in a valid range which is from **`30000` to `32767`**.
+![[Pasted image 20230710145252.png|700]]
 
 
-
-Let us now look at how to create the service. 
-Just like how we created a Deployment, ReplicaSet or Pod, we will use a definition file to create a service.  
+#### Creating the `NodePort` Service
+Let us now look at how to **create the service**. 
+Just like how we created a `Deployment`, `ReplicaSet` or `Pod`, we will use a definition file to create a service.  
 The high level structure of the file remains the same. As before we have apiVersion, kind, metadata and spec sections. The
 
-apiVersion is going to be v1. The kind is ofcourse service. The metadata will have a name and that will be the name of the service. It can have labels, but we don’t need that for now. Next we have spec. and as always this is the most crucial part of the file as this is were we will be defining the actual services and this is the part of a definition file that differs between different objects. In the spec section of a service we have type and ports. The type refers to the type of service we are creating. As discussed before it could be ClusterIP, NodePort, or LoadBalancer. In this case since we are creating a NodePort we will set it as NodePort. The next part of spec is ports. This is were we input information regarding what we discussed on the left side of this screen. The first type of port is the targetPort, which we will set to 80. The next one is simply port, which is the port on the service object and we will set that to 80 as well. The third is NodePort which we will set to 30008 or any number in the valid range. Remember that out of these, the only mandatory field is port . If you don’t provide a targetPort it is assumed to be the same as port and if you don’t provide a nodePort a free port in the valid range between 30000 and 32767 is automatically allocated. Also note that ports is an array.
+`apiVersion` is going to be v1. 
+The `kind` of courseurse is `Service`. 
+The `metadata` will have 
+	a `name` and that will be the name of the service. 
+	It will have `labels`
+![[Pasted image 20230710145425.png|400]]
+
+Next we have `spec` and as always this is the most crucial part of the file 
+as this is were we will be defining the actual services and this is the part of a definition file that differs between different objects. 
+
+In the spec section of a service we have `type` and `ports`. 
+- The `type` refers to the type of service we are creating. 
+  As discussed before it could be `ClusterIP`, `NodePort`, or `LoadBalancer`. 
+  In this case since we are creating a `NodePort` we will set it as `NodePort`. 
+- The next part of spec is ports. This is were we input information regarding what we discussed on the left side of this screen. The first type of port is the targetPort, which we will set to 80. The next one is simply port, which is the port on the service object and we will set that to 80 as well. The third is NodePort which we will set to 30008 or any number in the valid range. Remember that out of these, the only mandatory field is port . If you don’t provide a targetPort it is assumed to be the same as port and if you don’t provide a nodePort a free port in the valid range between 30000 and 32767 is automatically allocated. Also note that ports is an array.
 
 98
 
