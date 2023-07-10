@@ -1875,16 +1875,21 @@ Let’s start with **external communication.**
 #### So we deployed our POD having a web application running on it. How do WE as an external user access the web page?
 Firstly, lets look at the existing setup. 
 
-The Kubernetes Node has an IP address and that is `192.168.1.2`. My laptop is on the same network as well, so it has an IP address `192.168.1.10`. The internal POD network is in the range `10.244.0.0` and the POD has an IP `10.244.0.2`. Clearly, I cannot ping or access the POD at address `10.244.0.2` as its in a **separate network**. 
-
+The Kubernetes Node has an IP address and that is `192.168.1.2`. 
+My laptop is on the same network as well, so it has an IP address `192.168.1.10`. 
+The internal POD network is in the range `10.244.0.0` and the POD has an IP `10.244.0.2`. 
 ![[Pasted image 20230710140317.png|700]]
+Clearly, I cannot ping or access the POD at address `10.244.0.2` as it's in a **separate network**. 
 
+##### So what are the options to see the webpage?
 
-So what are the options to see the webpage?
+First, if we were to SSH into the kubernetes node at `192.168.1.2`,  → from the node, we would be able to access the POD’s webpage by
+- doing a curl address `http://10.244.0.2` **or**
+- if the node has a GUI, we could fire up a browser and see the webpage in a browser following the address `http://10.244.0.2`.
 
-First, if we were to SSH into the kubernetes node at 192.168.1.2, from the node, we would be able to access the POD’s webpage by doing a curl or if the node has a GUI, we could fire up a browser and see the webpage in a browser following the address http://10.244.0.2. But this is from inside the kubernetes Node and that’s not what I really want. I want to be able to access the web server from my own laptop without having to SSH into the node and simply by accessing the IP of the kubernetes node. So we need something in the middle to help us map requests to the node from our laptop through the node to the POD running the web container.
+But this is from inside the kubernetes Node and <u>that’s not what I really want</u>. 
 
-93
+<u>I want to be able to access the web server from my own laptop without having to SSH into the node</u> and <u>simply by accessing the IP</u> of the kubernetes node. So we need something in the middle to help us map requests to the node from our laptop through the node to the POD running the web container.
 
 That is where the kubernetes service comes into play. The kubernetes service is an object just like PODs, Replicaset or Deployments that we worked with before. One of its use case is to listen to a port on the Node and forward requests on that port to a port on the POD running the web application. This type of service is known as a NodePort service because the service listens to a port on the Node and forwards requests to PODs. There are other kinds of services available which we will now discuss.
 
