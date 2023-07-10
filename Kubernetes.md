@@ -1848,13 +1848,32 @@ So back to our cluster, with the Calico networking setup,
 
 
 ## Services
-Kubernetes Services enable communication between various components within and outside of the application. 
+Kubernetes Services enable communication between various components **within** and **outside** of the application.
 Kubernetes Services helps us connect applications together with other applications or users.
-For example, our application has groups of PODs running various sections, such as a group for serving front-end load to users, another group running back-end processes, and a third group connecting to an external data source. It is Services that enable connectivity between these groups of PODs. Services enable the front-end application to be made available to users, it helps communication between back-end and front-end PODs, and helps in establishing connectivity to an external data source. Thus services enable loose coupling between microservices in our application.
+![[Pasted image 20230710135657.png|600]]
+
+For **example**, our application has groups of PODs running various sections, such as a group for serving front-end load to users, another group running back-end processes, and a third group connecting to an external data source. 
+
+It is Services that enable connectivity between these groups of PODs. 
+- Services enable the front-end application to be made available to users,
+- it helps communication between back-end and front-end PODs, and 
+- helps in establishing connectivity to an external data source. 
+
+Thus services enable **loose coupling** between microservices in our application.
+
+![[Pasted image 20230710135829.png|700]]
 
 
 
-Let’s take a look at one use case of Services. So far we talked about how PODs communicate with each other through internal networking. Let’s look at some other aspects of networking in this lecture. Let’s start with external communication. So we deployed our POD having a web application running on it. How do WE as an external user access the web page? First of all, lets look at the existing setup. The Kubernetes Node has an IP address and that is 192.168.1.2. My laptop is on the same network as well, so it has an IP address 192.168.1.10. The internal POD network is in the range 10.244.0.0 and the POD has an IP 10.244.0.2. Clearly, I cannot ping or access the POD at address 10.244.0.2 as its in a separate network. So what are the options to see the webpage?
+
+Let’s take a look at one **use case of Services.** 
+So far we talked about how Pods communicate with each other through internal networking. 
+
+Let’s look at some other aspects of networking in this lecture. 
+
+Let’s start with external communication. 
+So we deployed our POD having a web application running on it. How do WE as an external user access the web page?
+First of all, lets look at the existing setup. The Kubernetes Node has an IP address and that is 192.168.1.2. My laptop is on the same network as well, so it has an IP address 192.168.1.10. The internal POD network is in the range 10.244.0.0 and the POD has an IP 10.244.0.2. Clearly, I cannot ping or access the POD at address 10.244.0.2 as its in a separate network. So what are the options to see the webpage?
 
 First, if we were to SSH into the kubernetes node at 192.168.1.2, from the node, we would be able to access the POD’s webpage by doing a curl or if the node has a GUI, we could fire up a browser and see the webpage in a browser following the address http://10.244.0.2. But this is from inside the kubernetes Node and that’s not what I really want. I want to be able to access the web server from my own laptop without having to SSH into the node and simply by accessing the IP of the kubernetes node. So we need something in the middle to help us map requests to the node from our laptop through the node to the POD running the web container.
 
