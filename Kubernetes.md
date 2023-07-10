@@ -2053,6 +2053,11 @@ the service is created exactly the same without you having to do any additional 
 When Pods are removed or added the service is automatically updated, making it highly flexible and adaptive. 
 Once created you won’t typically have to make any additional configuration changes.
 
+#### Demo - NodePort
+
+### Cluster IP Kubernetes Service
+
+
 
 
 ### Labs - Services
