@@ -1954,7 +1954,7 @@ In the spec section of a service we have `type` and `ports`.
   In this case since we are creating a `NodePort` we will set it as `NodePort`. 
 - The next part of spec is `ports`. 
   So note the dash under the ports section that indicate the first element in the array. 
-  You can have multiple such port mappings within a single service.Which is an **array** (ie we can add mulitple such triplets of ports)
+  You can have multiple such port mappings within a single service. Which is an **array** (i.e. we can add multiple such triplets of ports)
   This is where we input information regarding what we discussed on the different ports involved. 
 	- The first type of port is the `targetPort`, which we will set to 80. 
 	  ![[Pasted image 20230710150257.png|800]]
