@@ -1952,11 +1952,24 @@ In the spec section of a service we have `type` and `ports`.
 - The `type` refers to the type of service we are creating. 
   As discussed before it could be `ClusterIP`, `NodePort`, or `LoadBalancer`. 
   In this case since we are creating a `NodePort` we will set it as `NodePort`. 
-- The next part of spec is ports. This is were we input information regarding what we discussed on the left side of this screen. The first type of port is the targetPort, which we will set to 80. The next one is simply port, which is the port on the service object and we will set that to 80 as well. The third is NodePort which we will set to 30008 or any number in the valid range. Remember that out of these, the only mandatory field is port . If you don’t provide a targetPort it is assumed to be the same as port and if you don’t provide a nodePort a free port in the valid range between 30000 and 32767 is automatically allocated. Also note that ports is an array.
+- The next part of spec is `ports`. 
+  So note the dash under the ports section that indicate the first element in the array. 
+  You can have multiple such port mappings within a single service.Which is an **array** (ie we can add mulitple such triplets of ports)
+  This is where we input information regarding what we discussed on the different ports involved. 
+	- The first type of port is the `targetPort`, which we will set to 80. 
+	  ![[Pasted image 20230710150257.png|800]]
+	- The next one is simply `port`, which is the port on the service Object and we will set that to 80 as well. 
+	  ![[Pasted image 20230710150359.png|800]]
+	- The third is `NodePort` which we will set to 30008 or any number in the valid range. 
+	 ![[Pasted image 20230710150440.png|800]]
+	  
+	- **Remember** that out of these, the only **mandatory field** is `port`. 
+	  If you don’t provide a `targetPort` it is <u>assumed to be the same as port</u> 
+	  and if you don’t provide a `nodePort` a <u>free port in the valid range between 30000 and 32767 is automatically allocated</u>. 
 
-98
 
-So note the dash under the ports section that indicate the first element in the array. You can have multiple such port mappings within a single service.
+
+
 
 So we have all the information in, but something is really missing. There is nothing here in the definition file that connects the service to the POD. We have simply specified the targetPort but we didn’t mention the targetPort on which POD. There could be 100s of other PODs with web services running on port 80. So how do we do that?
 
