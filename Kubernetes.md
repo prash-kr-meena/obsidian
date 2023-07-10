@@ -2055,6 +2055,39 @@ Once created you won’t typically have to make any additional configuration cha
 
 #### Demo - NodePort
 
+░▒▓ ~/Desktop/k8s  clear                                                                                                                   ✔  ⎈ rancher-desktop ▓▒░
+░▒▓ ~/Desktop/k8s  kubectl get all                                                                                                         ✔  ⎈ rancher-desktop ▓▒░
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.43.0.1    <none>        443/TCP   4d4h
+░▒▓ ~/Desktop/k8s  kubectl apply -f deployment-definition.yaml                                                                             ✔  ⎈ rancher-desktop ▓▒░
+deployment.apps/myapp-deployment created
+░▒▓ ~/Desktop/k8s  kubectl get pods                                                                                                        ✔  ⎈ rancher-desktop ▓▒░
+NAME                                READY   STATUS              RESTARTS   AGE
+myapp-deployment-577f5d9dd7-49tvf   0/1     ContainerCreating   0          9s
+myapp-deployment-577f5d9dd7-zb2vv   0/1     ContainerCreating   0          9s
+myapp-deployment-577f5d9dd7-c2r4m   0/1     ContainerCreating   0          9s
+myapp-deployment-577f5d9dd7-kkltf   0/1     ContainerCreating   0          9s
+myapp-deployment-577f5d9dd7-q44rq   0/1     ContainerCreating   0          9s
+myapp-deployment-577f5d9dd7-qdvts   0/1     ContainerCreating   0          9s
+░▒▓ ~/Desktop/k8s  kubectl get all                                                                                                         ✔  ⎈ rancher-desktop ▓▒░
+NAME                                    READY   STATUS    RESTARTS   AGE
+pod/myapp-deployment-577f5d9dd7-49tvf   1/1     Running   0          17s
+pod/myapp-deployment-577f5d9dd7-qdvts   1/1     Running   0          17s
+pod/myapp-deployment-577f5d9dd7-q44rq   1/1     Running   0          17s
+pod/myapp-deployment-577f5d9dd7-c2r4m   1/1     Running   0          17s
+pod/myapp-deployment-577f5d9dd7-kkltf   1/1     Running   0          17s
+pod/myapp-deployment-577f5d9dd7-zb2vv   1/1     Running   0          17s
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.43.0.1    <none>        443/TCP   4d4h
+
+NAME                               READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/myapp-deployment   6/6     6            6           17s
+
+NAME                                          DESIRED   CURRENT   READY   AGE
+replicaset.apps/myapp-deployment-577f5d9dd7   6         6         6       17s
+░▒▓ ~/Desktop/k8s                   
+
 ### Cluster IP Kubernetes Service
 
 
