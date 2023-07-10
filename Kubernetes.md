@@ -2055,13 +2055,48 @@ Once created you won’t typically have to make any additional configuration cha
 
 #### Demo - NodePort
 
-░▒▓ ~/Desktop/k8s  clear                                                                                                                   ✔  ⎈ rancher-desktop ▓▒░
-░▒▓ ~/Desktop/k8s  kubectl get all                                                                                                         ✔  ⎈ rancher-desktop ▓▒░
+
+`kubectl get all`
+```
 NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
 service/kubernetes   ClusterIP   10.43.0.1    <none>        443/TCP   4d4h
-░▒▓ ~/Desktop/k8s  kubectl apply -f deployment-definition.yaml                                                                             ✔  ⎈ rancher-desktop ▓▒░
+```
+
+
+`deployment-definition.yaml`
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+      - name: myapp-container
+        image: nginx
+  replicas: 6
+  selector:
+    matchLabels:
+      type: front-end
+```
+
+
+`kubectl apply -f deployment-definition.yaml`
+```
 deployment.apps/myapp-deployment created
-░▒▓ ~/Desktop/k8s  kubectl get pods                                                                                                        ✔  ⎈ rancher-desktop ▓▒░
+```
+
+`kubectl get pods`
+```
 NAME                                READY   STATUS              RESTARTS   AGE
 myapp-deployment-577f5d9dd7-49tvf   0/1     ContainerCreating   0          9s
 myapp-deployment-577f5d9dd7-zb2vv   0/1     ContainerCreating   0          9s
@@ -2069,7 +2104,10 @@ myapp-deployment-577f5d9dd7-c2r4m   0/1     ContainerCreating   0          9s
 myapp-deployment-577f5d9dd7-kkltf   0/1     ContainerCreating   0          9s
 myapp-deployment-577f5d9dd7-q44rq   0/1     ContainerCreating   0          9s
 myapp-deployment-577f5d9dd7-qdvts   0/1     ContainerCreating   0          9s
-░▒▓ ~/Desktop/k8s  kubectl get all                                                                                                         ✔  ⎈ rancher-desktop ▓▒░
+```
+
+`kubectl get all`
+```
 NAME                                    READY   STATUS    RESTARTS   AGE
 pod/myapp-deployment-577f5d9dd7-49tvf   1/1     Running   0          17s
 pod/myapp-deployment-577f5d9dd7-qdvts   1/1     Running   0          17s
@@ -2086,17 +2124,40 @@ deployment.apps/myapp-deployment   6/6     6            6           17s
 
 NAME                                          DESIRED   CURRENT   READY   AGE
 replicaset.apps/myapp-deployment-577f5d9dd7   6         6         6       17s
-░▒▓ ~/Desktop/k8s                   
+```
 
 
 
-░▒▓ ~/Desktop/k8s  kubectl apply -f service-definition.yaml                                                                                ✔  ⎈ rancher-desktop ▓▒░
+`service-definition.yaml`
+here the selector we are using is defined int the above `pod-definition.yaml` file
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
+  selector:
+    app: myapp
+    type: front-end
+```
+
+
+`kubectl apply -f service-definition.yaml`
+```
 service/my-service created
-░▒▓ ~/Desktop/k8s  kubectl get service                                                                                                     ✔  ⎈ rancher-desktop ▓▒░
+```
+
+`kubectl get service`
+```
 NAME         TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)        AGE
 kubernetes   ClusterIP   10.43.0.1     <none>        443/TCP        4d4h
 my-service   NodePort    10.43.14.89   <none>        80:30660/TCP   7s
-░▒▓ ~/Desktop/k8s                                                 
+```
 
 
 
