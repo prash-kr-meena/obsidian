@@ -1984,22 +1984,62 @@ Under the selector provide a<u>list of labels to identify the POD</u>.
 For this refer to the `pod-definition.yaml` file used to create the POD. 
 ![[Pasted image 20230710152430.png|800]]
 
-Pull the labels from the pod-definition file and place it under the selector section. 
+Pull the labels from the `pod-definition.yaml` file and place it under the selector section. 
 This links the service to the pod. 
+![[Pasted image 20230710153236.png|700]]
 
 
-Once done create the `service` using the `kubectl create` command and input the `service-definition.yaml` file and there you have the service created.
-
-To see the created service, run the kubectl get services command that lists the services, their cluster-ip and the mapped ports. The type is NodePort as we created and the port on the node automatically assigned is 32432. We can now use this port to access the web service using curl or a web browser.
-
-So far we talked about a service mapped to a single POD. But that’s not the case all the time, what do you do when you have multiple PODs? In a production environment you have multiple instances of your web application running for high- availability and load balancing purposes.
-
-In this case we have multiple similar PODs running our web application. They all have the same labels with a key app set to value myapp. The same label is used as a selector during the creation of the service. So when the service is created, it looks for matching PODs with the labels and finds 3 of them. The service then automatically selects all the 3 PODs as endpoints to forward the external requests coming from the user. You don’t have to do any additional configuration to make this happen. And if you are wondering what algorithm it uses to balance load, it uses a random algorithm. Thus the service acts as a built-in load balancer to distribute load across different PODs.
+#### Create NodePort Service
+Once done, create the `service` using the `kubectl create` command and input the `service-definition.yaml` file 
+![[Pasted image 20230710153432.png|700]]
 
 
+To see the created service, `run the kubectl get services` command that lists the services, their `cluster-ip` and the `mapped ports`. 
+The type is `NodePort` as we created and the `port` on the node is  assigned to 30008, as that's the port we specified in the definition file
+![[Pasted image 20230710153454.png|700]]
 
-And finally, lets look at what happens when the PODs are distributed across multiple nodes. In this case we have the web application on PODs on separate nodes in the cluster. When we create a service , without us having to do ANY kind of additional configuration, kubernetes creates a service that spans across all the nodes in the cluster and maps the target port to the SAME NodePort on all the nodes in the cluster. This way you can access your application using the IP of any node in the cluster and using the same port number which in this case is 30008.
+We can now use this port to access the web service using curl or a web browser.
+`curl to http://{ip-of-the-node}:{port-on-the-node ie nodePort}`
+![[Pasted image 20230710153644.png|700]]
 
+
+--
+
+#### Service With Multiple Pods in a Single Node
+So far, we talked about a service mapped to a single POD. 
+But that’s not the case all the time, what do you do when you have multiple Pods? 
+In a production environment, you have multiple instances of your web application running for **high-availability** and **load balancing** purposes.
+![[Pasted image 20230710154104.png|500]]                 ![[Pasted image 20230710154216.png|500]]
+
+
+In this case, we have multiple similar pods running our web application. 
+They all have the **same labels** `app: myapp`
+The same `label` is used as a `selector` during the creation of the service.
+![[Pasted image 20230710154557.png|600]]
+
+So when the service is created, it looks for matching Pods with the labels and finds 3 of them. 
+The service then automatically selects all the 3 Pods as endpoints to forward the external requests coming from the user. 
+You don’t have to do any additional configuration to make this happen. 
+![[Pasted image 20230710154706.png|600]]
+
+And if you are wondering what algorithm it uses to balance load, it uses a **random algorithm**.
+![[Pasted image 20230710154851.png|500]]
+Thus, the service acts as a built-in load balancer to distribute load across different Pods.
+
+
+
+#### Service With Multiple Pods in across Multiple Nodes in a Cluster
+And finally, let's look at what happens when the **Pods are distributed across multiple nodes.**
+In this case we have the web application on Pods on separate nodes in the cluster. 
+![[Pasted image 20230710155006.png|700]]
+
+When we create a service, without us having to do ANY kind of additional configuration, kubernetes creates a service that spans across all the nodes in the cluster and maps the target port to the SAME NodePort on all the nodes in the cluster. 
+
+This way you can access your application using the IP of any node in the cluster and using the same port number which in this case is 30008.
+
+
+
+#### Summarize
 To summarize – in ANY case weather it be a single pod in a single node, multiple pods on a single node, multiple pods on multiple nodes, the service is created exactly the same without you having to do any additional steps during the service creation. When PODs are removed or added the service is automatically updated making it highly flexible and adaptive. Once created you won’t typically have to make any additional configuration changes.
 
 
