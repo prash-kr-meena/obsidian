@@ -2088,6 +2088,18 @@ NAME                                          DESIRED   CURRENT   READY   AGE
 replicaset.apps/myapp-deployment-577f5d9dd7   6         6         6       17s
 ░▒▓ ~/Desktop/k8s                   
 
+
+
+░▒▓ ~/Desktop/k8s  kubectl apply -f service-definition.yaml                                                                                ✔  ⎈ rancher-desktop ▓▒░
+service/my-service created
+░▒▓ ~/Desktop/k8s  kubectl get service                                                                                                     ✔  ⎈ rancher-desktop ▓▒░
+NAME         TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)        AGE
+kubernetes   ClusterIP   10.43.0.1     <none>        443/TCP        4d4h
+my-service   NodePort    10.43.14.89   <none>        80:30660/TCP   7s
+░▒▓ ~/Desktop/k8s                                                 
+
+
+
 ### Cluster IP Kubernetes Service
 
 
