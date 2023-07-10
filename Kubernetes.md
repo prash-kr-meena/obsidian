@@ -1885,16 +1885,22 @@ Clearly, I cannot ping or access the POD at address `10.244.0.2` as it's in a **
 
 First, if we were to SSH into the kubernetes node at `192.168.1.2`  → from the node, we would be able to access the POD’s webpage by
 - doing a curl address `http://10.244.0.2` **or**
-- if the node has a GUI, we could fire up a browser and see the webpage in a browser on the address `http://10.244.0.2`.
-
+- If the node has a GUI, we could fire up a browser and see the webpage in a browser on the address `http://10.244.0.2`.
+![[Pasted image 20230710143826.png|650]]  ![[Pasted image 20230710143855.png|650]]
 But this is from inside the kubernetes Node, and <u>that’s not what I really want</u>. 
+<u>I want to be able to access the web server from my own laptop without having to SSH into the node</u> and <u>simply by accessing the IP</u> of the kubernetes node. 
+![[Pasted image 20230710144104.png|600]]
 
-<u>I want to be able to access the web server from my own laptop without having to SSH into the node</u> and <u>simply by accessing the IP</u> of the kubernetes node. So we **need something in the middle** to help us <u>map requests to the node from our laptop through the node to the POD running the web container</u>.
+So we **need something in the middle** to help us
+<u>map requests to the node from our laptop through the node to the POD running the web container</u>.
+![[Pasted image 20230710144220.png|600]]
+
 
 That is where the **kubernetes service** comes into play
 The kubernetes service is an object just like `Pod`, `Replicaset` or `Deployment` that we worked with before. 
 One of its use case is to <u>listen to a port on the Node</u> and <u>forward requests on that port</u> to<u> a port on the POD</u> running the web application. 
 This type of <u>service is known as</u> a **NodePort** **service** because the service listens to a port on the Node and forwards requests to pods. 
+![[Pasted image 20230710144254.png|800]]
 
 
 There are other kinds of services available, which we will now discuss.
@@ -1903,10 +1909,10 @@ There are other kinds of services available, which we will now discuss.
 3. The third type is a **`LoadBalancer`** – where it provisions a load balancer for our service in supported cloud providers. 
    A good example of that would be to distribute load across different web servers. 
 ![[Pasted image 20230710142351.png|1100]]
-We will now look at Each of these in a bit more detail, along with some Demos.
+We will look at Each of these in a bit more detail, along with some Demos.
 
 
-### NodePort
+### NodePort 
 In this lecture we will discuss about the NodePort Kubernetes Service.
 Getting back to NodePort, few slides back we discussed about external access to the application. We said that a Service can help us by mapping a port on the Node to a port on the POD.
 
