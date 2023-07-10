@@ -2105,6 +2105,8 @@ myapp-deployment-577f5d9dd7-kkltf   0/1     ContainerCreating   0          9s
 myapp-deployment-577f5d9dd7-q44rq   0/1     ContainerCreating   0          9s
 myapp-deployment-577f5d9dd7-qdvts   0/1     ContainerCreating   0          9s
 ```
+Now here for me to be able to acess the application running in the pods, I would need to create a `Serivce` 
+
 
 `kubectl get all`
 ```
@@ -2129,7 +2131,8 @@ replicaset.apps/myapp-deployment-577f5d9dd7   6         6         6       17s
 
 
 `service-definition.yaml`
-here the selector we are using is defined int the above `pod-definition.yaml` file
+Creating service descriptor
+here is the selector we are using is defined int the above `pod-definition.yaml` file
 ```
 apiVersion: v1
 kind: Service
