@@ -1889,12 +1889,21 @@ First, if we were to SSH into the kubernetes node at `192.168.1.2`,  → from th
 
 But this is from inside the kubernetes Node and <u>that’s not what I really want</u>. 
 
-<u>I want to be able to access the web server from my own laptop without having to SSH into the node</u> and <u>simply by accessing the IP</u> of the kubernetes node. So we need something in the middle to help us map requests to the node from our laptop through the node to the POD running the web container.
+<u>I want to be able to access the web server from my own laptop without having to SSH into the node</u> and <u>simply by accessing the IP</u> of the kubernetes node. So we **need something in the middle** to help us <u>map requests to the node from our laptop through the node to the POD running the web container</u>.
 
-That is where the kubernetes service comes into play. The kubernetes service is an object just like PODs, Replicaset or Deployments that we worked with before. One of its use case is to listen to a port on the Node and forward requests on that port to a port on the POD running the web application. This type of service is known as a NodePort service because the service listens to a port on the Node and forwards requests to PODs. There are other kinds of services available which we will now discuss.
+That is where the **kubernetes service comes into play**. 
+The kubernetes service is an object just like `Pod`, `Replicaset` or `Deployment` that we worked with before. 
+One of its use case is to <u>listen to a port on the Node</u> and <u>forward requests on that port</u> to<u> a port on the POD</u> running the web application. 
+This type of <u>service is known as</u> a **NodePort** **service** because the service listens to a port on the Node and forwards requests to Pods. 
 
+There are other kinds of services available, which we will now discuss.
+1. The first one is what we discussed already – **NodePort** 
+   where the service makes an internal POD accessible on a Port on the Node. 
+2. The second is **ClusterIP** – and in this case the service creates a virtual IP inside the cluster to enable communication between different services, such as a set of front-end servers to a set of backend-servers. 
+3. The third type is a **LoadBalancer** – wwhereit provisions a load balancer for our service in supported cloud providers. 
+   A good example of that would be to distribute load across different web servers. 
 
-The first one is what we discussed already – NodePort were the service makes an internal POD accessible on a Port on the Node. The second is ClusterIP – and in this case the service creates a virtual IP inside the cluster to enable communication between different services such as a set of front-end servers to a set of backend- servers. The third type is a LoadBalancer, were it provisions a load balancer for our service in supported cloud providers. A good example of that would be to distribute load across different web servers. We will now look at Each of these in a bit more detail along with some Demos.
+We will now look at Each of these in a bit more ddetail,along with some Demos.
 
 In this lecture we will discuss about the NodePort Kubernetes Service.
 

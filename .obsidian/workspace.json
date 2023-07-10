@@ -11,8 +11,13 @@
             "id": "1ceb90f39e2898ac",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Kubernetes.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ],
@@ -108,6 +113,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Kubernetes.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -141,7 +147,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Kubernetes.md"
+              }
             }
           },
           {
@@ -184,6 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Kubernetes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,6 +204,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Kubernetes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -226,6 +236,7 @@
   },
   "active": "1ceb90f39e2898ac",
   "lastOpenFiles": [
+    "Virtualization.md",
     "Kubernetes.md",
     "Pasted image 20230710140317.png",
     "Pasted image 20230710140212.png",
@@ -238,7 +249,6 @@
     "Pasted image 20230710015704.png",
     "Pasted image 20230710015514.png",
     "Pasted image 20230708232135.png.md",
-    "Virtualization.md",
     "Containerization.md",
     "Containers vs Virtual Machines.md",
     "What are virtual machines (VMs).md",
