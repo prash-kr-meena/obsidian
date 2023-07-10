@@ -2183,7 +2183,15 @@ we can check the nodes
 NAME                   STATUS   ROLES                 AGE   VERSION       INTERNAL-IP    EXTERNAL-IP   OS-IMAGE       CONTAINER-RUNTIME
 lima-rancher-desktop   Ready    control-plane,master  4d4h  v1.27.3+k3s1  192.168.5.15   <none>        Alpine Linux v3.18   docker://23.0.6
 ```                   
-You can observe above that it does have an `INTERNAL-IP` but it don't have `EXTERNAL-IP`
+You can observe above that it does have an `INTERNAL-IP` but it doesn't have `EXTERNAL-IP`, so we can't directly access it with the Internal-IP
+
+Now either we figure out how to create an external-ip for the rancher node
+(which will take some time)
+OR
+we can do port forwar to
+
+
+
 
 
 
