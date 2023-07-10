@@ -1842,8 +1842,7 @@ So back to our cluster, with the Calico networking setup,
 - it now manages the networks and IPs in my nodes and
 - assigns a different network address for each network in the nodes. 
 - This creates a virtual network of all PODs and nodes were they are all assigned a unique IP Address. 
-- And by using simple routing techniques the cluster networking enables communication between the different PODs or Nodes to meet the networking requirements of kubernetes. 
-- Thus all PODs can now communicate to each other using the assigned IP addresses.
+- And by using simple routing techniques the cluster networking enables communication between the different PODs or Nodes to meet the networking requirements of kubernetes. Thus all PODs can now communicate to each other using the assigned IP addresses.
 ![[Pasted image 20230710021251.png]]
 
 

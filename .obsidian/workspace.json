@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "1b921320c9599335",
+        "id": "adcb819d61ae5e03",
         "type": "tabs",
         "children": [
           {
-            "id": "c11a9efdc25a4412",
+            "id": "d0ecc513710cd3db",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Kubernetes.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ],
@@ -113,7 +108,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Kubernetes.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -147,9 +141,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Kubernetes.md"
-              }
+              "state": {}
             }
           },
           {
@@ -192,7 +184,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -204,7 +195,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -234,12 +224,12 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "c11a9efdc25a4412",
+  "active": "d0ecc513710cd3db",
   "lastOpenFiles": [
+    "Kubernetes.md",
     "Pasted image 20230710021251.png",
     "Pasted image 20230710021002.png",
     "Pasted image 20230710020752.png",
-    "Kubernetes.md",
     "Pasted image 20230710015948.png",
     "Pasted image 20230710015704.png",
     "Pasted image 20230710015514.png",
@@ -247,7 +237,6 @@
     "Pasted image 20230710014655.png",
     "Pasted image 20230710014601.png",
     "Pasted image 20230710014348.png",
-    "Pasted image 20230710014241.png",
     "Pasted image 20230708232135.png.md",
     "Virtualization.md",
     "Containerization.md",
