@@ -2033,18 +2033,25 @@ And finally, let's look at what happens when the **Pods are distributed across m
 In this case we have the web application on Pods on separate nodes in the cluster. 
 ![[Pasted image 20230710155006.png|700]]
 
-When we create a service, without us having to do ANY kind of additional configuration, kubernetes creates a service that spans across all the nodes in the cluster and maps the target port to the SAME NodePort on all the nodes in the cluster. 
+When we create a service, without us having to do ANY kind of additional configuration, 
+kubernetes creates a service that spans across all the nodes in the cluster and 
+**maps the target port to the SAME `NodePort` on all the nodes in the cluster.**
+**Note**: The same port is made available on all the nodes which are part of the cluster by the service
+![[Pasted image 20230710155238.png|700]]
 
-This way you can access your application using the IP of any node in the cluster and using the same port number which in this case is 30008.
-
-
-
-#### Summarize
-To summarize – in ANY case weather it be a single pod in a single node, multiple pods on a single node, multiple pods on multiple nodes, the service is created exactly the same without you having to do any additional steps during the service creation. When PODs are removed or added the service is automatically updated making it highly flexible and adaptive. Once created you won’t typically have to make any additional configuration changes.
-
-
+This way you can access your application **using the IP of any node** in the cluster and using the same port number, which in this case is 30008.
+![[Pasted image 20230710155402.png|700]]
 
 
+#### To Summarize
+in ANY case whether it is
+- a single pod in a single node, 
+- multiple pods on a single node, 
+- multiple pods on multiple nodes, 
+the service is created exactly the same without you having to do any additional steps during the service creation.
+
+When Pods are removed or added the service is automatically updated, making it highly flexible and adaptive. 
+Once created you won’t typically have to make any additional configuration changes.
 
 
 
