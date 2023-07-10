@@ -2105,7 +2105,7 @@ myapp-deployment-577f5d9dd7-kkltf   0/1     ContainerCreating   0          9s
 myapp-deployment-577f5d9dd7-q44rq   0/1     ContainerCreating   0          9s
 myapp-deployment-577f5d9dd7-qdvts   0/1     ContainerCreating   0          9s
 ```
-Now here for me to be able to acess the application running in the pods, I would need to create a `Serivce` 
+Now here for me to be able to access the application running in the pods, I would need to create a `Serivce` 
 
 
 `kubectl get all`
@@ -2161,6 +2161,14 @@ NAME         TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)        AGE
 kubernetes   ClusterIP   10.43.0.1     <none>        443/TCP        4d4h
 my-service   NodePort    10.43.14.89   <none>        80:30660/TCP   7s
 ```
+We can see here, the Type of the service is `NodePort` 
+the `Cluster-IP` is `10.43.14.89`, it is the address created for the service within the internal `cluster network`. 
+And we have this port `80:30660/TCP` that we can see, where the port 30660 is mapped to the Worker Node, i.e. `NodePort` it is chosen automatically as we did not specify one in our `service-definition.yaml` file
+
+
+Now If we know our Node's IP we just do a curl or open our browser for the URL : `http://{ip-of-the-node}:30660`
+
+
 
 
 
