@@ -2188,7 +2188,8 @@ You can observe above that it does have an `INTERNAL-IP` but it doesn't have `EX
 Now either we figure out how to create an external-ip for the rancher node
 (which will take some time)
 OR
-we can do port forwar to
+we can do port forward to of this service and then access the website
+
 
 
 
