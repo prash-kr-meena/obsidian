@@ -2191,8 +2191,24 @@ OR
 we can do port forward to of this service and then access the website
 
 
+-- Lens UI
+From the lens UI also we can get some details
+
+Firstly we can see the Type, Cluster-IP, Port mapping, as well as slelector
+![[Screenshot 2023-07-10 at 4.56.56 PM.png|1300]]
 
 
+When we go in the details we can see the selectors and annotations, namespaces details
+**Note:** We also have a way here to do the port-foward this service
+
+also Notice the endpoint sections, below we will go in depth in the next screen
+![[Screenshot 2023-07-10 at 5.00.10 PM.png|700]]
+
+
+here you can see the endpoints, and these endpoints are for all the Pods which this service is able to acess 
+and as we had 6 pods which we created, with the help of selector this service is able to connect to all of them and server traffice to them
+
+![[Screenshot 2023-07-10 at 4.57.40 PM.png|700]]
 
 
 
