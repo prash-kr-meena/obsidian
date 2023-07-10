@@ -2168,7 +2168,22 @@ And we have this port `80:30660/TCP` that we can see, where the port 30660 is ma
 
 Now If we know our Node's IP we just do a curl or open our browser for the URL : `http://{ip-of-the-node}:30660`
 
+in case of `minikube`
+we can use the `service` command
+`minikube service my-service --url`
+```
+http://192.168.99.101:30660
+```
 
+
+In my case I am using `rancher-desktop` which used some K3d inside to setup kubernetes
+we can check the nodes
+`kubectl get nodes -o wide`
+```
+NAME                   STATUS   ROLES                 AGE   VERSION       INTERNAL-IP    EXTERNAL-IP   OS-IMAGE       CONTAINER-RUNTIME
+lima-rancher-desktop   Ready    control-plane,master  4d4h  v1.27.3+k3s1  192.168.5.15   <none>        Alpine Linux v3.18   docker://23.0.6
+```                   
+You can observe above that it does have an `INTERNAL-IP` but it don't have `EXTERNAL-IP`
 
 
 
