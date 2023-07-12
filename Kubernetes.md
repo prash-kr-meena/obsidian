@@ -2251,8 +2251,8 @@ In the service definition file, first use the default template which has `apiVer
 	- The `type` is `ClusterIP`. 
 	  In fact, `ClusterIP` **is the default type**, so even if you didn’t specify it, it will automatically assume it to be `ClusterIP`. 
 	- Under `ports` we have a `targetPort` and `port`. 
-		- The `targetPort` is the port were the back-end is exposed, which in this case is 80. 
-		- And the `port` is were the service is exposed. Which is 80 as well. 
+		- The `targetPort` is the port where the back-end is exposed, which in this case is 80. 
+		- And the `port` is where the service is exposed. Which is 80 as well. 
 	- To link the service to a set of PODs, we use `selector`
 		- We will refer to the `pod-definition.yaml` file and copy the labels from it and move it under selector. 
 
@@ -2269,7 +2269,8 @@ The service can be accessed by other PODs using the `ClusterIP` or the service n
 
 --
 
-In this lecture we will discuss about the third kind of Kubernetes Service - LoadBalancer.
+
+In this lecture, we will discuss about the third kind of Kubernetes Service - `LoadBalancer`.
 
 We will quickly recap what we learned about the two service types, so that we can work our way to the LoadBalancer type. We have a 3 node cluster with Ips 192.168.1.2,3 and 4. Our application is two tier, there is a database service and a front-end web service for users to access the application. The default service type – known as ClusterIP – makes a service, such as a redis or database service available internally within the kubernetes cluster for other applications to consume.
 
