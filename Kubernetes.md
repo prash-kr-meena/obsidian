@@ -2234,12 +2234,37 @@ For example
 
 This enables us to easily and effectively deploy a microservices based application on Kubernetes cluster. 
 
-Each layer can now scale or move as required without impacting communication between the various services. Each service gets an IP and name assigned to it inside the cluster, and that is the name that should be used by other PODs to access the service. This type of service is known as Cluster IP.
+![[Pasted image 20230712152827.png|800]]
+Each layer can now scale or move as required without impacting communication between the various services. 
+<u>Each service gets an IP and name assigned to it inside the cluster</u>, and that is the name that should be used by other PODs to access the service. 
+This type of service is known as **Cluster IP**.
 
+
+#### Creating Service
 To create such a service, as always, use a definition file. 
-In the service definition file, first use the default template which has `apiVersion`, `kind`, `metadata` and spec. The apiVersion is v1 , kind is Service and we will give a name to our service – we will call itback-end. UnderSpecificationwehavetypeandports.ThetypeisClusterIP.In fact, ClusterIP is the default type, so even if you didn’t specify it, it will automatically assume it to be ClusterIP. Under ports we have a targetPort and port. The target port is the port were the back-end is exposed, which in this case is 80. And the port is were the service is exposed. Which is 80 as well. To link the service to a set of PODs, we use selector.
+In the service definition file, first use the default template which has `apiVersion`, `kind`, `metadata` and `spec`. 
+     ![[Pasted image 20230712153439.png|300]]                              ![[Pasted image 20230712153550.png|800]]
 
-We will refer to the pod-definition file and copy the labels from it and move it under selector. And that should be it. We can now create the service using the kubectl create command and then check its status using the kubectl get services command. The service can be accessed by other PODs using the ClusterIP or the service name.
+- The `apiVersion` is `v1`. - kind is Service and 
+- Inside `metadata` we will give a name to our service – we will call it `back-end`. 
+- Under Specification (`spec`) we have `type` and `ports`. 
+	- The `type` is `ClusterIP`. 
+	  In fact, `ClusterIP` **is the default type**, so even if you didn’t specify it, it will automatically assume it to be `ClusterIP`. 
+	- Under `ports` we have a `targetPort` and `port`. 
+		- The `targetPort` is the port were the back-end is exposed, which in this case is 80. 
+		- And the `port` is were the service is exposed. Which is 80 as well. 
+	- To link the service to a set of PODs, we use `selector`
+		- We will refer to the `pod-definition.yaml` file and copy the labels from it and move it under selector. 
+
+And that should be it. 
+
+We can now create the service using the `kubectl create` command 
+![[Pasted image 20230712153729.png|500]]
+
+and then check its status using the kubectl get services command 
+![[Pasted image 20230712153756.png|600]]
+
+The service can be accessed by other PODs using the `ClusterIP` or the service name.
 
 
 --
