@@ -2280,6 +2280,38 @@ Now, what IP do you give your end users to access your application? You cannot g
 
 Ips of the Kubernetes nodes. I will then configure my organizations DNS to point to this load balancer when a user hosts http://myapp.com. Now setting up that load balancer by myself is a tedious task, and I might have to do that in my local or on- prem environment. However, if I happen to be on a supported CloudPlatform, like Google Cloud Platform, I could leverage the native load balancing functionalities of the cloud platform to set this up. Again you don’t have to set that up manually, Kubernetes sets it up for you. Kubernetes has built-in integration with supported cloud platforms.
 
+
+--
+
+In this lecture we will try and understand Microservices architecture using a simple web application. We will then try and deploy this web application on multiple different kubernetes platforms.
+
+So this is what we saw in the last demo. We deployed PODs and services to keep it really simple. But this has its own challenges. Deploying PODs doesn’t help us scale our application easily. Also if a POD was to fail it doesn’t come back up or deploy a new POD automatically. We could deploy multiple PODs one after the other, but there are easier ways to scale using ReplicaSets and Deployments as we discussed in the lectures.
+Let us now improvise our setup using Deployments. We chose deployments over ReplicaSets as Deployments automatically create replica sets as required and it can help us perform rolling updates and roll backs etc. Deployments are the way to go. So we add more PODs for the front end applications voting-app and result-app by creating a deployment with 3 replicas. We also encapsulate database and workers in deployments. Let’s take a look at that now.
+
+Let us now focus on the front end applications – voting-app and result-app. We know that these PODs are hosted on different Nodes. The services with type NodePOrt help in receiving traffic on the ports on the Nodes and routing and load balancing them to appropriate PODs. But what IP address would you give your end users to access the applications. You could access any of these two applications using IP of any of the Nodes and the high end port the service is exposed on. That would be 4 IP and port combination for the voting-app and 4 IP and port combination for the result-app. But that’s not what the end users want. They need a single URL like example-vote.com or example-result.com. One way to achieve this in my current VirtualBox setup is to create a new VM for Load Balancer purpose and install and configure a suitable load balancer on it like HAProxy or NGINX etc. The load balancer would then re-route traffic to underlying nodes and then through to PODs to serve the users.
+
+Now setting all of that external load balancing can be a tedious task. However, if I was on a supported cloud platform like Google Cloud, I could leverage the native load balancer to do that configuration for me. Kubernetes has support for getting that done for us automatically. All you need to do is set the Service Type for the front end services to LoadBalancer. Remember this only, works with supported cloud platforms. If you set the Type of service to LoadBalancer in an unsupported environment like VirtualBox, then it would simply be considered as if you set it to NodePOrt, were the services are exported on a high-end port on the Nodes. The same setup we had earlier. Let us take a look at how we can achieve this on Google Cloud Platform.
+
+We are at the end of the Kubernetes for Beginners course. I hope I have covered enough topics to get you started with Kubernetes. We started with Containers and Docker and we looked what container orchestration is. We looked at various options available to setup kubernetes. We went through some of the concepts such as PODs, ReplicaSets, Deployments and Services. We also looked at Networking in Kubernetes. We also spent some time on working with kubectl commands and kubernetes definition files. I hope you got enough hands-on experience in developing kubernetes definition files. And finally we also saw how to deploy a sample microservices application on Kubernetes on Google Cloud Platform.
+
+I will be adding additional topics to the course in the near future. So watch out for an announcement from me. In case you need me to cover any other topics, feel free to send me a message or post a question and I will try my best to add a new lecture on it.
+
+We also have an assignment as part of this course. So if you have time, please go ahead and develop your solution and submit your assignment. Feel free to review other students assignments and share your views on them.
+
+116
+
+It was really nice having you for this course. I hope you gained enough knowledge and experience to get started with kubernetes at your work or otherwise and I wish you good luck in your Kubernetes Journey. See you in the next course, until then Good Bye!
+
+--------
+
+We will quickly recap what we learned about the two service types, so that we can work our way to the LoadBalancer type. We have a 3 node cluster with Ips 192.168.1.2,3 and 4. Our application is two tier, there is a database service and a front-end web service for users to access the application. The default service type – known as ClusterIP – makes a service, such as a redis or database service available internally within the kubernetes cluster for other applications to consume.
+
+The next tier in my application happens to be a python based web front-end. This application connects to the backend using Service created for the redis service. To expose the application to the end users, we create another service of type NodePort. Creating a service of type NodePort exposes the application on a high end port of the Node and the users can access the application at any IP of my nodes with the port 30008.
+
+Now, what IP do you give your end users to access your application? You cannot give them all three and let them choose one of their own. What end users really want is a single URL to access the application. For this, you will be required to setup a separate Load Balancer VM in your environment. In this case I deploy a new VM for load balancer purposes and configure it to forward requests that come to it to any of the
+
+Ips of the Kubernetes nodes. I will then configure my organizations DNS to point to this load balancer when a user hosts http://myapp.com. Now setting up that load balancer by myself is a tedious task, and I might have to do that in my local or on- prem environment. However, if I happen to be on a supported CloudPlatform, like Google Cloud Platform, I could leverage the native load balancing functionalities of the cloud platform to set this up. Again you don’t have to set that up manually, Kubernetes sets it up for you. Kubernetes has built-in integration with supported cloud platforms.
+
 --
 
 We will quickly recap what we learned about the two service types, so that we can work our way to the LoadBalancer type. We have a 3 node cluster with Ips 192.168.1.2,3 and 4. Our application is two tier, there is a database service and a front-end web service for users to access the application. The default service type – known as ClusterIP – makes a service, such as a redis or database service available internally within the kubernetes cluster for other applications to consume.
