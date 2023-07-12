@@ -2272,7 +2272,11 @@ The service can be accessed by other PODs using the `ClusterIP` or the service n
 
 In this lecture, we will discuss about the third kind of Kubernetes Service - `LoadBalancer`.
 
-We will quickly recap what we learned about the two service types, so that we can work our way to the `LoadBalancer` type. We have a 3 node cluster with Ips 192.168.1.2,3 and 4. Our application is two tier, there is a database service and a front-end web service for users to access the application. The default service type – known as `ClusterIP` – makes a service, such as a Redis or database service available internally within the kubernetes cluster for other applications to consume.
+![[Pasted image 20230712160617.png|1200]]
+
+We will quickly recap what we learned about the two service types, so that we can work our way to the `LoadBalancer` type. 
+
+We have a 3 node cluster with Ips 192.168.1.2,3 and 4. Our application is two tier, there is a database service and a front-end web service for users to access the application. The default service type – known as `ClusterIP` – makes a service, such as a Redis or database service available internally within the kubernetes cluster for other applications to consume.
 
 The next tier in my application happens to be a python based web front-end. This application connects to the backend using Service created for the redis service. To expose the application to the end users, we create another service of type NodePort. Creating a service of type NodePort exposes the application on a high end port of the Node and the users can access the application at any IP of my nodes with the port 30008.
 
