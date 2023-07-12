@@ -17,7 +17,8 @@
     "kubernetes",
     "ReplicaSets",
     "NodePort",
-    "*POD"
+    "*POD",
+    "PODs"
   ],
   "readableLineLength": false
 }
