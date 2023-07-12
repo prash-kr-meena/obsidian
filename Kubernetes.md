@@ -2292,7 +2292,15 @@ Ips of the Kubernetes nodes. I will then configure my organizations DNS to point
 ### Labs - Services
 
 
-## Microservices Application
+TODO ^^
+
+
+----
+----
+----
+----
+
+## Microservices Application (Only Using Docker)
 In this lecture we will try and understand microservices architecture using a simple web application.
 We will then try and deploy this web application on multiple different Kubernetes platforms, such as Google Cloud Platform.
 
@@ -2360,13 +2368,43 @@ Finally, we deploy the worker by running an instance of the worker image.
 
 Okay. Now this is all good.
 
-And we can see that all the instances are running on the host. 
-But there is some problem. It just does not seem to work. 
+And we can see that all the instances are running on the host. <u>But there is some problem</u>. It just does not seem to work. 
 
-The problem is that we have successfully run all the different containers, but we haven't actually linked them together. 
-As in, we haven't told the voting web application to use this particular reddest instance.  There could be multiple red instances running. 
-
-We haven't told the worker and the resulting app to use this particular PostgreSQL database that we ran.
+The problem is that we have successfully run all the different containers, **but we haven't actually linked them together**. 
+- As in, we haven't told the voting web application to use this particular reddest instance.  There could be multiple red instances running. 
+- We haven't told the worker and the resulting app to use this particular PostgreSQL database that we ran.
 
 **So how do we do that?** 
-That is where we use links. Link is a command line option which can be used to link to containers together. For example, the voting app web service is dependent on the reader service when the web server starts. As you can see in this piece of code on the web server. It looks for a ready service running on host Redis, but the voting app container cannot resolve a host by the name Redis. To make the voting app aware of the list service. We add a link option while running the voting app container to link it to the red disk container, adding a dash dash link option to the Docker run command and specifying the name of the red container, which is which in this case is Redis, followed by a colon and the name of the host that the voting app is looking for, which is also read this in this case. Remember that this is why we named the container when we ran it the first time so we could use its name while creating a link. What this is in fact doing is it creates an entry into the Etsy host file on the voting app container, adding an entry with the host name. Read this with the internal IP of the red disk container. Similarly, we add a link for the result app to communicate with the database by adding a link option to refer the database by the name DB. As you can see in this source code of the application, it makes an attempt to connect to a Postgres database on host DB. Finally, the worker application requires access to both the red list as well as the Postgres database. So we add two links to the worker application, one link to link the list and the other link to link PostgreSQL database. Note that using links this way is deprecated and the support may be removed in future in Docker. This is because, as we will see in some time, advanced and newer concepts in Docker Swarm and networking supports better ways of achieving what we just did here with links. But I wanted to mention that anyway. So you learn the concept from the very basics.
+That is where we use links.  **`Link` is a command line option** which can be <u>used to link to containers together</u>. 
+**For example,** the voting app web service is dependent on the Redis service when the web server starts. 
+As you can see in this piece of code on the web server. 
+It looks for a Redis service running on host Redis, but the voting app container cannot resolve a host by the name Redis. 
+To make the voting app aware of the list service. We add a ``link`` option while running the voting app container to link it to the Redis container, adding a `--link` option to the Docker run command and specifying the name of the Redis container, which is which in this case is `redis`, followed by a colon and the name of the host that the voting app is looking for, which is also `redis`  in this case.
+ie `--link {contain_name}:{host_name_in_code}`
+![[Pasted image 20230712164705.png|1000]]
+
+**Remember** that <u>this is why we named the container when we ran it the first time</u> so we could **use its name while creating a link**. 
+
+What this is in fact doing is it creates an entry into the `etc/host` file on the voting app container, adding an entry with the host name.  Redis with the internal IP of the redis container. 
+![[Pasted image 20230712165337.png|500]]
+
+
+
+
+**Similarly,** we add a link for the result app to communicate with the database by adding a `link` option to refer the database by the name DB. 
+As you can see in this source code of the application, it makes an attempt to connect to a Postgres database on host `db`. 
+![[Pasted image 20230712165455.png|800]]
+
+
+Finally, the worker application requires access to both the red list as well as the Postgres database. 
+So we add two links to the worker application, one link to link the list and the other link to link PostgreSQL database. 
+![[Pasted image 20230712165633.png|800]]
+
+
+#### Deprecation Warning
+**Note** that using links this way is deprecated and the support may be removed in future in Docker. 
+This is because, as we will see in some time, advanced and newer concepts in Docker Swarm and networking supports better ways of achieving what we just did here with links. 
+But I wanted to mention that anyway.
+So you learn the concept from the very basics.
+
+## Microservices Architechtrue in Kubernetes
