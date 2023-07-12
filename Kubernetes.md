@@ -2322,12 +2322,29 @@ As you can see, this sample application is built with a combination of different
 
 Let us see how we can put together this application stack on a single Docker engine using Docker run commands. 
 Let us assume that all images of applications are already built and are available on Docker Repository.
+![[Pasted image 20230712162744.png|800]]
 
-Let us start with the **data layer**.
+
+#### Let us start with the data layer
 First, we run the Docker run command to start an instance of Redis.
-By running the Docker run, read this command. We will add the dash parameter to run this container in the background and we will also name the container. Read this. Now naming the containers is important. Why is that important? Hold that thought. We will come to that in a bit. Next we will deploy the PostgreSQL database by running the Docker run PostgreSQL Command.
+By running the `Docker run -d --name=redis redis` command. 
+We will add the `-d` parameter to run this container in the background
+and we will also name the container `redis`
+![[Pasted image 20230712162910.png|800]]
 
-This time too. We will add the option to run this in the background and name this container db for database. Next, we will start with the application services. We will deploy a front end app for voting interface by running an instance of voting app image. Run the Docker run command and name the instance vote. Since this is a web server, it has a web UI instance running on Port 80. We will publish that port to 5000 on the host system so we can access it from a browser. Next, we will deploy the results web application that shows the results to the user. For this, we deploy a container using the results app image and publish port 80 to port 5001 on the host.
+
+#### Now naming the containers is important. Why is that important? Hold that thought. 
+##### We will come to that in a bit.
+
+Next,t we will deploy the **PostgreSQL database** by running the `docker run -d --name=db postgres:9.4` Command.
+We will add the option to run this in the background and name this container db for database. 
+![[Pasted image 20230712163247.png|800]]
+
+
+Next, we will start with the application services. 
+We will deploy a front end app for voting interface by running an instance of voting app image. 
+`docker run -d --name=vote -p 5000:80 voting-app`
+Run the Docker run command and name the instance vote. Since this is a web server, it has a web UI instance running on Port 80. We will publish that port to 5000 on the host system so we can access it from a browser. Next, we will deploy the results web application that shows the results to the user. For this, we deploy a container using the results app image and publish port 80 to port 5001 on the host.
 
 This way we can access the web UI of the resulting app on a browser. Finally, we deploy the worker by running an instance of the worker image. Okay. Now this is all good.
 
