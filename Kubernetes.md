@@ -2298,13 +2298,26 @@ We will then try and deploy this web application on multiple different Kubernete
 
 I'm going to use a simple application developed by Docker to demonstrate the various features available in running and application stack on Docker. So let's first get familiarized with the application because we will be working with the same application in different sections through the rest of this course. 
 
-This is a sample voting application which provides an interface for a user to vote and another interface to show the results. The application consists of various components such as the voting app, which is a web application developed in Python to provide the user with an interface to choose between two options a cat and a dog. When you make a selection, the vote is stored in Redis.
 
-For those of you who are new to read, this read is in this case serves as a database in memory. This vote is then processed by the worker, which is an application written in dot net. The worker application takes the new vote and updates the persistent database, which is a PostgreSQL. In our case, the PostgreSQL simply has a table with a number of votes for each category cats and dogs. In this case, it increments the number of votes for cats as our vote was for cats.
+This is a sample voting application which provides an interface for a user to vote and another interface to show the results. 
 
-Finally, the result of the vote is displayed in a web interface, which is another web application developed in Node.js.
-This resulting application rates the count of votes from the Postgres SQL database and displays it to the user.
-So that is the architecture and data flow of this sample voting application stack. As you can see, this sample application is built with a combination of different services, different development tools and multiple different development platforms such as Python, Node.js, dot, net, etc.. This sample application will be used to showcase how easy it is to set up an entire application stack consisting of diverse components in Docker. Let us see how we can put together this application stack on a single Docker engine using Docker run commands. Let us assume that all images of applications are already built and are available on Docker Repository.
+![[Pasted image 20230712161837.png|500]]                  ![[Pasted image 20230712161902.png|500]]
+
+The application consists of various components such as 
+- the voting app, which is a web application developed in Python to provide the user with an interface to choose between two options a cat and a dog. 
+- When you make a selection, the vote is stored in Redis.  Redis is in this case serves as a database in memory. 
+- This vote is then processed by the worker, which is an application written in dot net. 
+- The worker application takes the new vote and updates the persistent database, which is a PostgreSQL. 
+  In our case, the PostgreSQL simply has a table with a number of votes for each category cats and dogs. 
+  In this case, it increments the number of votes for cats as our vote was for cats.
+- Finally, the result of the vote is displayed in a web interface, which is another web application developed in Node.js.
+  This resulting application rates the count of votes from the Postgres SQL database and displays it to the user.
+
+So that is the architecture and data flow of this sample voting application stack. 
+![[Pasted image 20230712161801.png|1100]]
+
+
+As you can see, this sample application is built with a combination of different services, different development tools and multiple different development platforms such as Python, Node.js, dot, net, etc.. This sample application will be used to showcase how easy it is to set up an entire application stack consisting of diverse components in Docker. Let us see how we can put together this application stack on a single Docker engine using Docker run commands. Let us assume that all images of applications are already built and are available on Docker Repository.
 
 Let us start with the data layer. First, we run the Docker run command to start an instance of Redis.
 By running the Docker run, read this command. We will add the dash parameter to run this container in the background and we will also name the container. Read this. Now naming the containers is important. Why is that important? Hold that thought. We will come to that in a bit. Next we will deploy the PostgreSQL database by running the Docker run PostgreSQL Command.
