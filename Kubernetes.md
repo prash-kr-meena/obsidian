@@ -2210,8 +2210,6 @@ and as we had 6 pods which we created, with the help of selector this service is
 
 ![[Screenshot 2023-07-10 at 4.57.40 PM.png|700]]
 
-
-
 ### Cluster IP Kubernetes Service
 
 
