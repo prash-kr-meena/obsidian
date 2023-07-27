@@ -2413,6 +2413,6 @@ So you learn the concept from the very basics.
 
 
 
-d 289, D-Block, Bharat Vihar, Kakrola, South West Delhi 110078
+D 289, D-Block, Bharat Vihar, Kakrola, South West Delhi 110078
 
 2 apr 1978
