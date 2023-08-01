@@ -2420,16 +2420,15 @@ So our goal is to
 - then enable external access for the external facing applications which are the voting and the result app so that the users can access the web browser.  
 
 ![[Pasted image 20230801174952.png|700]]
-
-Right.    
-So how do we go about this?  
-Now we know that we cannot deploy containers directly on Kubernetes.  
+Now we know that we cannot deploy containers directly on Kubernetes.
 We learned that the smallest object that we can create on a Kubernetes cluster is a pod.  
-So we must first deploy these applications as a pod on our Kubernetes cluster.  
-Or we could deploy them as replica assets or deployments as we have seen through throughout this course.  
-  
-But at first, for the sake of simplicity, we will stick to pods in this lecture, and later we will  
-see how to easily convert that to a deployment.  
+So we must first deploy these applications as a `pod` on our Kubernetes cluster Or we could deploy them as `replicasets` or `deployments` as we have seen through throughout this course.
+
+But at first, for the sake of simplicity, we will stick to pods in this lecture, and later we will  see how to easily convert that to a deployment.  
+
+![[Pasted image 20230801175341.png|700]]
+
+
 So once the pods are deployed, the next step is to enable connectivity between the services.  
 So it's important to know what the connectivity requirements are.  
 So we must be very clear about what application requires access to what services.  
