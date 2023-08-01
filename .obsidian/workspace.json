@@ -220,7 +220,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 461.5
+    "width": 461.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -233,7 +234,7 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "67de59b7dfb63a5a",
+  "active": "c5b3ed388efa8016",
   "lastOpenFiles": [
     "Pasted image 20230712165633.png",
     "Pasted image 20230712165455.png",
