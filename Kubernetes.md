@@ -2435,13 +2435,13 @@ So we must be very clear about what application requires access to what services
 
 - We know that the `redis` database is accessed by the voting app and the worker app.
 - The voting app saves the vote to the Redis database, and the worker app reads the vote from the Redis database.  
-- We know that the PostgreSQL database is accessed by the Worker app to update it with the total count of votes, and it's also accessed by the result app to read the total count of votes to be displayed  in the resulting web page in the browser.  
-  
-So we know that the voting app is accessed by the external users, the voters, and the result app is  
-also accessed by the external users to view the results.  
+- We know that the PostgreSQL database is accessed by the Worker app to update it with the total count of votes, 
+- and it's also accessed by the result app to read the total count of votes to be displayed  in the resulting web page in the browser.  
+- So we know that the voting app is accessed by the external users, the voters, and the result app is  also accessed by the external users to view the results.  
+![[Pasted image 20230801180034.png|600]]
 So most of the components are being accessed by another component except for the worker app.  
-Note that the worker app is not being accessed by anyone.  
-  
+**Note** that the worker app is not being accessed by anyone.
+
 You can see arrows going into all of these components, but there are no arrows going into worker,  
 which means none of the other components or external users are accessing the worker app.  
   
