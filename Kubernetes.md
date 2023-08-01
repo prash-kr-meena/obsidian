@@ -2465,10 +2465,11 @@ Say, for example how do you make the Redis database accessible by the voting app
 Should the voting app use the IP address of the redis pod?  
 Perhaps no, because that can change.  The IP of the port can change if the port restarts.
 And you may also run into issues when you try to scale your applications in the future, the right way  to do it is to use a `service`.  
-Now we learned that a service can be used to expose an application to other applications or users for  
-external access.
-  
-So we will create a service for the `redis` pod so that it can be accessed by the voting app and the worker app.  And we will call it as `redis` this service and it will be accessible anywhere within the cluster by the  name of the service redis.
+Now we learned that a service can be used to expose an application to other applications or users for external access.
+ 
+So we will create a service for the `redis` pod so that it can be accessed by the voting app and the worker app.  And we will call it as `redis` this service and it will be accessible anywhere within the cluster by the  name of the service `redis`.
+![[Pasted image 20230801182924.png|700]]
+
 **So why is that name important?** 
 The source code within the voting app and the worker app are hardcoded to point to a Redis database  running on a host by the name `redis`.  
 So it's important to name your service as `redis`. So that these applications can connect to the Red List database.  
