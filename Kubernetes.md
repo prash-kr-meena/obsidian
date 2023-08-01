@@ -2456,34 +2456,22 @@ Now, while the
 - and the PostgreSQL database has a service that listens on Port 5432.    
 The worker app has no service because it's just a worker and it's not accessed by any other service  or external users.  
 So keep that in mind.    
-
-So how do you make one component accessible by another?
 ![[Pasted image 20230801181541.png|600]]
   
-Say, for example, how do you make the Red List database accessible by the voting app?  
+
+So how do you make one component accessible by another?
+Say, for example how do you make the Redis database accessible by the voting app?  
   
-Should the voting app use the IP address of the red spot?  
-Perhaps no, because that can change.  
-The IP of the port can change if the port restarts.  
-  
-And you may also run into issues when you try to scale your applications in the future, the right way  
-to do it is to use a service.  
-  
+Should the voting app use the IP address of the redis pod?  
+Perhaps no, because that can change.  The IP of the port can change if the port restarts.
+And you may also run into issues when you try to scale your applications in the future, the right way  to do it is to use a `service`.  
 Now we learned that a service can be used to expose an application to other applications or users for  
-external access.  
+external access.
   
-So we will create a service for the red spot so that it can be accessed by the voting app and the worker  
-app.  
-  
-And we will call it a red this service and it will be accessible anywhere within the cluster by the  
-name of the service red.  
-  
-So why is that name important?  
-  
-The source code within the voting app and the worker app are hardcoded to point to a Redis database  
-running on a host by the name Redis.  
-So it's important to name your service as Redis.  
-So that these applications can connect to the Red List database.  
+So we will create a service for the `redis` pod so that it can be accessed by the voting app and the worker app.  And we will call it as `redis` this service and it will be accessible anywhere within the cluster by the  name of the service redis.
+**So why is that name important?** 
+The source code within the voting app and the worker app are hardcoded to point to a Redis database  running on a host by the name `redis`.  
+So it's important to name your service as `redis`. So that these applications can connect to the Red List database.  
 And this is not a best practice to hard code stuff like this within the source code of an application.  
   
 Instead, you should be using environment variables or something, but for the sake of simplicity,  
