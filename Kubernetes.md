@@ -2371,7 +2371,7 @@ Okay. Now this is all good.
 And we can see that all the instances are running on the host. <u>But there is some problem</u>. It just does not seem to work. 
 
 The problem is that we have successfully run all the different containers, **but we haven't actually linked them together**. 
-- As in, we haven't told the voting web application to use this particular reddest instance.  There could be multiple red instances running. 
+- As in, we haven't told the voting web application to use this particular Redis instance.  There could be multiple red instances running. 
 - We haven't told the worker and the resulting app to use this particular PostgreSQL database that we ran.
 
 **So how do we do that?** 
