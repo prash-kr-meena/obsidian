@@ -2325,7 +2325,7 @@ So that is the architecture and data flow of this sample voting application stac
 ![[Pasted image 20230712161801.png|1100]]
 
 
-As you can see, this sample application is built with a combination of different services, different development tools and multiple different development platforms such as Python, Node.js, dot, net, etc. This sample application will be used to showcase how easy it is to set up an entire application stack consisting of diverse components in Docker. 
+As you can see, this sample application is built with a combination of different services, different development tools and multiple different development platforms such as Python, Node.js, dot net etc. This sample application will be used to showcase how easy it is to set up an entire application stack consisting of diverse components in Docker. 
 
 
 Let us see how we can put together this application stack on a single Docker engine using Docker run commands. 
