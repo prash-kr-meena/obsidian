@@ -2471,34 +2471,30 @@ So we will create a service for the `redis` pod so that it can be accessed by th
 ![[Pasted image 20230801182924.png|700]]
 
 **So why is that name important?** 
-The source code within the voting app and the worker app are hardcoded to point to a Redis database  running on a host by the name `redis`.  
+The source code within the voting app and the worker app are hardcoded to point to a Redis database running on a host by the name `redis`.
 So it's important to name your service as `redis`. So that these applications can connect to the Red List database.  
-And this is not a best practice to hard code stuff like this within the source code of an application.  
+![[Pasted image 20230801183047.png|800]]
   
-Instead, you should be using environment variables or something, but for the sake of simplicity,  
-we will just follow this application as it is developed.  
+And this is not a best practice to hard code stuff like this within the source code of an application.
+Instead, you should be using environment variables or something, but for the sake of simplicity, we will just follow this application as it is developed.
+
+Right now, these services are not to be accessed outside the cluster, so they should just be of type  `Cluster IP`.  
+So we will follow the the same approach of creating a service for the PostgreSQL pod so that the PostgreSQL  DB can be accessed by the worker and the result app.  
+
+So what should we name the PostgreSQL Service?    
+If you look at the source code of the result app and the worker app, you will see that they are looking for a database at the address.  
+DB So the service that we create for PostgreSQL should be named `DB`.  
+![[Pasted image 20230801183443.png|800]]
   
-Right now, these services are not to be accessed outside the cluster, so they should just be of type  
-cluster IP.  
-  
-So we will follow the the same approach of creating a service for the PostgreSQL pod so that the PostgreSQL  
-DB can be accessed by the worker and the result app.  
-  
-So what should we name the PostgreSQL Service?  
-  
-If you look at the source code of the result app and the worker app, you will see that they are looking  
-for a database at the address.  
-DB So the service that we create for PostgreSQL should be named DB.  
-  
-Also note that while connecting to the database, the worker and the result apps passing a username  
-and password to connect to the database, both of which are set to Postgres.  
-  
-So when we deploy the Postgres DB pod, we must make sure that we set the these credentials for it as  
-the initial set of credentials to while creating the database.  
-Now the next task is to enable external access.  
-So for this we saw that we could use a service with a type set to node port.  
-So we create services for voting app and the result app and set their type to node port.  
-  
+Also note that while connecting to the database, the worker and the result apps passing a `username`  and `password` to connect to the database, both of which are set to `postgres`.  
+So when we deploy the Postgres DB pod, we must make sure that we set the these credentials for it as the <u>initial set of credentials</u> to while creating the database.  
+
+Now the next task is to enable external access.
+So for this we saw that we could use a service with a type set to `node port`.
+So we create services for voting app and the result app and set their type to node port.
+![[Pasted image 20230801183656.png|600]]
+
+
 Now we could decide on what port we are going to make them available on and it would be a high port  
 with a port number greater than 30,000.  
 So we'll do that when we create the service.  
