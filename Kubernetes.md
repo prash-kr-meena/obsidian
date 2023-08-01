@@ -2495,40 +2495,28 @@ So we create services for voting app and the result app and set their type to no
 ![[Pasted image 20230801183656.png|600]]
 
 
-Now we could decide on what port we are going to make them available on and it would be a high port  
-with a port number greater than 30,000.  
+Now we could decide on what port we are going to make them available on and it would be a high port with a port no. greater than 30,000.  
 So we'll do that when we create the service.  
-So we are done and we have the high level steps ready.  
-  
-So to summarize, we will be deploying five ports in total and we have four services, one for Redis,  
-another for PostgreSQL, both of which are internal services.  
-  
-So they are of type cluster IP and we then have external facing services for voting app and the result  
-app.  
-  
-However, we have no service for the worker pod and this is because it is not running any service that  
-must be accessed by another application or external users.  
-So it is just a worker process that reads from one database and updates another.  
-So it's not going to require a service.  
-Now I say that again as that's a common question that I get when we talk about services.  
-  
-Why does this worker not require a service?  
-Right.  
-  
-So a service is only required if the application has some kind of process or database service or web  
-  
-service that needs to be exposed, that needs to be accessed by others in this case, that's that's  
-not true for the worker app.  
-  
-Now, before we we get started with the deployment node that we will be using the following Docker images  
-for these applications.  
+
+
+So we are done and we have the high level steps ready.
+![[Pasted image 20230801184005.png|900]]
+
+
+So to **summarize**, we will be deploying five ports in total and we have four services, one for Redis, another for PostgreSQL, both of which are internal services.   So they are of type `cluster IP` and we then have external facing services for voting app and the result  app.  
+However, we have no service for the worker pod and this is because it is not running any service that must be accessed by another application or external users.  So it is just a worker process that reads from one database and updates another, So it's not going to require a service.  
+
+Now I say that again as that's a common question that I get when we talk about services.  Why does this worker not require a service?
+So a service is only required if the application has some kind of process or database service or web service that needs to be exposed, that needs to be accessed by others in this case, that's not true for the worker app.  
+
+
+
+
+Now, before we we get started with the deployment note that we will be using the following Docker images for these applications.  
 So these images are built from a fork of the original developed at the Docker Samples repository.  
-  
-The image names are called cloud slash example voting app underscore vote with a tag of V one and then  
-again worker v one result v one.  
+![[Pasted image 20230801184340.png|800]]
+The image names are `kodekloud/examplevotingapp_vote:v1` , `kodekloud/examplevotingapp_result:v1` , `kodekloud/examplevotingapp_worker:v1` for voting app, result app and worker app respectiverly
 And for the databases we will use the official Redis and PostgreSQL releases that are available.  
-  
-Right?  
-So that's it for now and we will see this in action in the upcoming demo.
 
 
+## Demo - Deploying Microservices Application on Kubernetes
