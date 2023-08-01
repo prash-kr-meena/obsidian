@@ -2349,7 +2349,7 @@ We will add the option to run this in the background and name this container db 
 ![[Pasted image 20230712163247.png|800]]
 
 
-Next, we will start with the application services. 
+Next, we will start with the application services.
 We will deploy a front end app for voting interface by running an instance of voting app image. 
 
 Run the `docker run -d --name=vote -p 5000:80 voting-app` command and name the instance vote. 
