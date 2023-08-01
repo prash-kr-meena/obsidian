@@ -2385,14 +2385,14 @@ ie `--link {contain_name}:{host_name_in_code}`
 
 **Remember** that <u>this is why we named the container when we ran it the first time</u> so we could **use its name while creating a link**. 
 
-What this is in fact doing is it creates an entry into the `etc/host` file on the voting app container, adding an entry with the host name.  Redis with the internal IP of the redis container. 
+What this is in fact doing is it creates an entry into the `etc/host` file on the voting app container, adding an entry with the host name `redis` with the internal IP of the redis container. 
 ![[Pasted image 20230712165337.png|500]]
 
 
 
 
 **Similarly,** we add a link for the result app to communicate with the database by adding a `link` option to refer the database by the name DB. 
-As you can see in this source code of the application, it makes an attempt to connect to a Postgres database on host `db`. 
+As you can see in this source code of the application, it makes an attempt to connect to a Postgres database on host `db`.
 ![[Pasted image 20230712165455.png|800]]
 
 
