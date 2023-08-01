@@ -2442,11 +2442,9 @@ So we must be very clear about what application requires access to what services
 So most of the components are being accessed by another component except for the worker app.  
 **Note** that the worker app is not being accessed by anyone.
 
-You can see arrows going into all of these components, but there are no arrows going into worker,  
-which means none of the other components or external users are accessing the worker app.  
+You can see arrows going into all of these components, but there are no arrows going into worker,  which means none of the other components or external users are accessing the worker app.  
   
-The worker app simply reads the count of votes from the database and then updates the total count of  
-votes on the PostgreSQL database.  
+The worker app simply reads the count of votes from the database and then updates the total count of  votes on the PostgreSQL database.  
 So none of the other components nor the external users ever access the worker app.  
   
 Now, while the voting app has a Python web server that listens on Port 80 and the result app also has  
