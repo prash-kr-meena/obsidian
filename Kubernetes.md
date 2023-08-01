@@ -2412,16 +2412,16 @@ So we just saw how the voting application works on Docker.
 
 Let's now see how to deploy it on Kubernetes.  
 So it's important to have a clear idea of what we are trying to achieve and plan accordingly, before we get started.
-So we already know how the application works and it's a good idea to write down what we plan to do.  
+So we already know how the application works, and it's a good idea to write down what we plan to do.  
   
-So our goal is to deploy these containers, these applications as containers on a Kubernetes cluster,  
-  
-and then enable connectivity between the containers so that the applications can access each other and  
-  
-the databases and then enable external access for the external facing applications which are the voting  
-and the result app so that the users can access the web browser.  
-Right.  
-  
+So our goal is to 
+- deploy these containers, these applications as containers on a Kubernetes cluster, 
+- and then enable connectivity between the containers so that the applications can access each other and  the databases and 
+- then enable external access for the external facing applications which are the voting and the result app so that the users can access the web browser.  
+
+![[Pasted image 20230801174952.png|700]]
+
+Right.    
 So how do we go about this?  
 Now we know that we cannot deploy containers directly on Kubernetes.  
 We learned that the smallest object that we can create on a Kubernetes cluster is a pod.  
