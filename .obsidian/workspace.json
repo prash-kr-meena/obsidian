@@ -19,19 +19,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "7290e56ddb00ce0e",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.3.7"
-              }
-            }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -87,8 +76,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "7e4ee2a7062f149d",
@@ -245,8 +233,10 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "7290e56ddb00ce0e",
+  "active": "c4aecd372ca4c972",
   "lastOpenFiles": [
+    "Kubernetes.md",
+    "KubernetesForBeginners-MumshadMannambeth.pdf",
     "Pasted image 20230801184340.png",
     "Pasted image 20230801184005.png",
     "Pasted image 20230801183656.png",
@@ -255,11 +245,9 @@
     "Pasted image 20230801182924.png",
     "Pasted image 20230801181541.png",
     "System Design.md",
-    "Kubernetes.md",
     "Pasted image 20230801180034.png",
     "Pasted image 20230801175341.png",
     "Pasted image 20230801174952.png",
-    "Pasted image 20230712165633.png",
     "Virtualization.md",
     "Pasted image 20230708232135.png.md",
     "Containerization.md",
@@ -270,7 +258,6 @@
     "Pod.md",
     "Containers & Container Images.md",
     "Pasted image 20230708132603.png.md",
-    "KubernetesForBeginners-MumshadMannambeth.pdf",
     "Docker.md",
     "Scratch - Left in between.md",
     "Advantages of Virtual Machines.md",

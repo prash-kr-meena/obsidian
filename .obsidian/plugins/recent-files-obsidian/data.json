@@ -5,6 +5,10 @@
       "path": "Kubernetes.md"
     },
     {
+      "basename": "KubernetesForBeginners-MumshadMannambeth",
+      "path": "KubernetesForBeginners-MumshadMannambeth.pdf"
+    },
+    {
       "basename": "System Design",
       "path": "System Design.md"
     },
@@ -55,10 +59,6 @@
     {
       "basename": "components on - master vs worker node",
       "path": "components on - master vs worker node.png"
-    },
-    {
-      "basename": "KubernetesForBeginners-MumshadMannambeth",
-      "path": "KubernetesForBeginners-MumshadMannambeth.pdf"
     },
     {
       "basename": "Docker",
