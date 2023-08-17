@@ -2878,6 +2878,235 @@ Well, that's it for now and I will see you in the next one.
 
 ## Demo - Deploying Microservices Application on Kubernetes (Using Kubernetes)
 
+Okay.
+
+So this is what we saw in the last demo.
+![[Pasted image 20230818001956.png|700]]
+
+So we deployed parts and services to keep it really simple and we were able to access our application
+
+from a browser.
+
+But deploying applications as just pod has its own challenges.
+
+Deploying Pods doesn't help us scale our application easily.
+
+If we wanted to add more instances of a particular service, and if we wanted to update the application
+
+like an image that was used in the application, then your application will have to be taken down while
+
+the new pod is created so that that may result in a downtime.
+
+So the right approach is to use deployments to deploy an application.
+
+So let us now improvise our setup using deployments.
+
+So we choose deployments over replica sets as deployments automatically create replica sets as required.
+
+And it can have it can help us perform rolling updates and rollbacks and maintain a record of revisions
+
+and record the cause of change as we have seen in the previous demos.
+
+So deployments are the way to go.
+
+So we'll add more pods if required for the front end applications like voting app and result app.
+
+By creating a deployment and setting the replicas to three, we'll initially start off with just one
+
+replicas for all for each of these components, and later we'll see how easy it is to scale them to
+
+three or more.
+
+Right?
+
+So we will also encapsulate the databases and the worker applications within deployments.
+
+So let's take a look at that now.
+
+So here I am in the Visual Studio code, and this is the project directory which has all the parts and
+
+service definition files.
+
+So let's create a new file for the deployments.
+
+So we'll start with the voting app itself.
+
+So I'll name this file as a voting app, dash, deploy, YAML, and I'm going to use the split screen
+
+function so that I can open the pod and the deployment definition file side by side.
+
+So let's create the deployment file for the building, the application by using the pod definition file
+
+as the template.
+
+So let's start with the API version and it will be apps slash V one, the kind will be deployment and
+
+let's add the metadata.
+
+The name of the deployment would be voting app dash deploy and we'll add some labels.
+
+Next, let's add the spec section.
+
+So it has already pre-populated a couple of entries for us.
+
+So we should be specifying the number of replicas.
+
+And for all our parts, we're just going to stick to one replica to begin with.
+
+And since we are on a single node cluster to save some resources and under the selector section, I'm
+
+going to add the labels from the part.
+
+So we use the match labels option and then we will copy and paste the labels over from the pod definition
+
+file.
+
+Now under the template section, I'm just going to copy everything from the metadata to the end of the
+
+file and then paste it under the template section.
+
+Once done, we fix the formatting.
+
+All right, so that looks good.
+
+So let's proceed with the next deployment, which will be the deployment.
+
+So again, I open is the red is part definition file.
+
+And just like before we create a new file called Redis that deployed YAML.
+
+And then we will copy the contents of the voting app deployment file just to get started.
+
+And we will change the name of the deployment to red is deployed and the same for labels as well.
+
+So we'll stick to replica one and we will copy the labels from the pod definition file for Red is.
+
+And then we copy over the template from the parts and then paste it and then fix the formatting.
+
+So that's done and we will proceed with the PostgreSQL deployment.
+
+Let's copy the deployment file and I'll open the pod definition file for reference and let's make the
+
+changes to the names and labels and update the selector labels with the ones on the pod.
+
+And then move over the the definition under the template section and then we fix the formatting.
+
+Okay.
+
+So that looks all right.
+
+Next, let's proceed with the worker.
+
+So we're going to close this.
+
+Let's create a worker app deployment file.
+
+And we will copy and paste the template and update the name.
+
+And let's copy the labels from the pot definition file and put it under the selector section and the
+
+same as before.
+
+Let's copy the manifest file and paste it under the template section.
+
+So that's the deployment for worker and now we are left with one for the result app.
+
+So again, we close these two and here is our result app.
+
+We will create a new file result app deployed YAML and we copy and paste a template again and we update
+
+the name and labels and the template as we did before.
+
+So we are now done with all our deployment definition files and I'm going to get rid of all of this.
+
+So here is all the new deployment files that we created.
+
+And now let's head back to our terminal and create these deployments along with the services.
+
+So before we do that, let's make sure that there are no parts and services running in the cluster.
+
+So we have cleaned up everything that was created for the previous demonstration.
+
+So there are no parts or services other than the default Kubernetes one.
+
+And now let's refresh and make sure that all our deployment files have been created.
+
+So here we have the five new deployments that we created and the services will remain the same.
+
+So we'll first start with the the voting app deployment.
+
+So we'll create it using the create command and passing the app deployment file as input.
+
+And let's also create the service and let's do a quick check on the deployment and make sure that it's
+
+running.
+
+So yes, we see that it is in a running state.
+
+So now let's create the readiness deployment and followed by the ready service.
+
+And similarly, let's create the post Chris deployment and the post service and let's make sure that
+
+everything is up.
+
+So we see that all the ports are up, the deployments are running one out of one ports, which means
+
+that the ports are up and running and let's check the service.
+
+So we have the DB service, we have the ready service and the Voting App Service creator so far.
+
+So now let's clear the screen and we create the worker deployment.
+
+Now, remember, the worker does not have a service, so let's make sure that everything is running
+
+as expected.
+
+And we see that the worker part of the deployment is running as well.
+
+So finally, we create the result app deployment and the result app service.
+
+And we now see that everything is running as expected.
+
+So let's change this to deployments.
+
+SVC So we have all the the five deployments in a running state and we have four services.
+
+So now let's get the URLs for our two front end services.
+
+So we'll use mini queue service and the name of the service with the URL flag.
+
+And let's do the same for the result service as well.
+
+And we get the URLs with the ports, 30,004 and 30,005.
+
+So now I'm going to launch the Web browser and we'll try to access these applications.
+
+So let's look at the first URL, which is the voting app itself, and let's get the vote.
+
+And let me open another window here, which will go to 30,005.
+
+And you can see that the result is shown as expected.
+
+So now I'm going to scale up the deployment.
+
+So run the equip scale command and specify the number of replicas to three.
+
+To add two more replicas for the voting application.
+
+So when we run the Get Deployments command, we see that there are three parts for the voting app right
+
+now.
+
+Now, if we now go to the URL and refresh the page, each time we see that the page is served by a new
+
+part each time.
+
+So we see how easy it is to scale our applications with deployments.
+
+Well, that's it for this demo.
+
+I will see you in the next.
+
 ```
 
 ```

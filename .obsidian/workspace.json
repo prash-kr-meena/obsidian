@@ -95,8 +95,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 376.50390243530273,
-    "collapsed": true
+    "width": 376.50390243530273
   },
   "right": {
     "id": "5affea21a0bdd9dc",
@@ -235,6 +234,7 @@
   },
   "active": "c4aecd372ca4c972",
   "lastOpenFiles": [
+    "Pasted image 20230818001956.png",
     "Kubernetes.md",
     "KubernetesForBeginners-MumshadMannambeth.pdf",
     "Pasted image 20230801184340.png",
