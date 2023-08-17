@@ -95,7 +95,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 376.50390243530273
+    "width": 376.50390243530273,
+    "collapsed": true
   },
   "right": {
     "id": "5affea21a0bdd9dc",
@@ -234,6 +235,10 @@
   },
   "active": "c4aecd372ca4c972",
   "lastOpenFiles": [
+    "Pasted image 20230818013829.png",
+    "Pasted image 20230818013720.png",
+    "Pasted image 20230818013702.png",
+    "Pasted image 20230818013617.png",
     "Pasted image 20230818004226.png",
     "Pasted image 20230818004114.png",
     "Pasted image 20230818003639.png",
@@ -243,10 +248,6 @@
     "KubernetesForBeginners-MumshadMannambeth.pdf",
     "Pasted image 20230801184340.png",
     "Pasted image 20230801184005.png",
-    "Pasted image 20230801183656.png",
-    "Pasted image 20230801183443.png",
-    "Pasted image 20230801183047.png",
-    "Pasted image 20230801182924.png",
     "System Design.md",
     "Virtualization.md",
     "Pasted image 20230708232135.png.md",

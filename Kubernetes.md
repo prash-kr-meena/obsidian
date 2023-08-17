@@ -2286,19 +2286,23 @@ Now, what IP do you give your end users to access your application? You cannot g
 
 Ips of the Kubernetes nodes. I will then configure my organizations DNS to point to this load balancer when a user hosts http://myapp.com. Now setting up that load balancer by myself is a tedious task, and I might have to do that in my local or on- prem environment. However, if I happen to be on a supported CloudPlatform, like Google Cloud Platform, I could leverage the native load balancing functionalities of the cloud platform to set this up. Again you don’t have to set that up manually, Kubernetes sets it up for you. Kubernetes has built-in integration with supported cloud platforms.
 
+## Labs - Services
 
---
-
-### Labs - Services
-
-
-TODO ^^
+![[Pasted image 20230818013617.png]]
+Answere --> 1
+![[Pasted image 20230818013702.png]]
 
 
-----
-----
-----
-----
+![[Pasted image 20230818013720.png]]
+Answer --> ClusterIP
+
+
+![[Pasted image 20230818013829.png]]
+Answer --> 6443
+
+
+
+
 
 ## Microservices Application (Only Using Docker)
 In this lecture we will try and understand microservices architecture using a simple web application.
@@ -3348,8 +3352,6 @@ spec:
       - name: worker-app
         image: kodekloud/examplevotingapp_worker:v1
 ```
-
-
 ##  Kubernetes  on Cloud
 ![[Pasted image 20230818003639.png|700]]
 
