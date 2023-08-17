@@ -2319,11 +2319,21 @@ Answer --> No
 
 ![[Pasted image 20230818014906.png|600]]
 
+![[Pasted image 20230818015051.png|700]]
+
+
+![[Pasted image 20230818015149.png|900]]
 
 
 
 
 
+![[Pasted image 20230818015307.png]]
+
+![[Pasted image 20230818015236.png]]
+
+
+![[Pasted image 20230818015332.png]]
 
 
 ## Microservices Application (Only Using Docker)
