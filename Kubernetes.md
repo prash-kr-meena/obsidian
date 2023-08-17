@@ -2307,6 +2307,9 @@ Answer --> 2
 ![[Pasted image 20230818014345.png]]
 Answer --> 2
 
+![[Pasted image 20230818014538.png]]
+Answer --> 1
+
 
 
 
