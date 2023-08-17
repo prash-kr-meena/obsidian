@@ -2310,6 +2310,16 @@ Answer --> 2
 ![[Pasted image 20230818014538.png]]
 Answer --> 1
 
+![[Pasted image 20230818014727.png]]
+Anser --> kodekloud/simple-webapp:red
+
+
+![[Pasted image 20230818014838.png]]
+Answer --> No
+
+![[Pasted image 20230818014906.png|600]]
+
+
 
 
 
