@@ -2900,6 +2900,8 @@ the new pod is created so that that may result in a downtime.
 So the right approach is to use deployments to deploy an application.
 
 So let us now improvise our setup using deployments.
+![[Pasted image 20230818002308.png|900]]
+
 
 So we choose deployments over replica sets as deployments automatically create replica sets as required.
 
