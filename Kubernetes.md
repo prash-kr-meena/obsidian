@@ -2301,6 +2301,15 @@ Answer --> ClusterIP
 Answer --> 6443
 
 
+![[Pasted image 20230818014306.png]]
+Answer --> 2
+
+![[Pasted image 20230818014345.png]]
+Answer --> 2
+
+
+
+
 
 
 
