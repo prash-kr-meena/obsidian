@@ -3109,7 +3109,319 @@ Well, that's it for this demo.
 
 I will see you in the next.
 
+
+
+postgres-deploy.yaml.yml
+```
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-deploy
+  labels:
+    name: postgres-deploy
+    app: demo-voting-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: postgres-pod
+      app: demo-voting-app
+  template:
+    metadata:
+      name: postgres-pod
+      labels:
+        name: postgres-pod
+        app: demo-voting-app
+    spec:
+      containers:
+      - name: postgres
+        image: postgres
+        ports:
+        - containerPort: 5432
+        env:
+          - name: POSTGRES_USER
+            value: "postgres"
+          - name: POSTGRES_PASSWORD
+            value: "postgres"
+          - name: POSTGRES_HOST_AUTH_METHOD
+            value: trust
 ```
 
+
+postgres-service.yaml
+```
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: db
+  labels:
+    name: postgres-service
+    app: demo-voting-app
+spec:
+  ports:
+  - port: 5432
+    targetPort: 5432
+  selector:
+    name: postgres-pod
+    app: demo-voting-app
 ```
 
+redis-deploy.yaml
+```
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-deploy
+  labels:
+    name: redis-deploy
+    app: demo-voting-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: redis-pod
+      app: demo-voting-app
+  template:
+    metadata:
+      name: redis-pod
+      labels:
+        name: redis-pod
+        app: demo-voting-app
+    spec:
+      containers:
+      - name: redis
+        image: redis
+        ports:
+        - containerPort: 6379
+```
+
+
+redis-service.yaml
+```
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+  labels:
+    name: redis-service
+    app: demo-voting-app
+spec:
+  ports:
+  - port: 6379
+    targetPort: 6379
+  selector:
+    name: redis-pod
+    app: demo-voting-app
+```
+
+result-app-deploy.yaml
+```
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: result-app-deploy
+  labels:
+    name: result-app-deploy
+    app: demo-voting-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: result-app-pod
+      app: demo-voting-app
+  template:
+    metadata:
+      name: result-app-pod
+      labels:
+        name: result-app-pod
+        app: demo-voting-app
+    spec:
+      containers:
+      - name: result-app
+        image: kodekloud/examplevotingapp_result:v1
+        ports:
+        - containerPort: 80
+```
+
+result-app-service.yaml
+```
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: result-service
+  labels:
+    name: result-service
+    app: demo-voting-app
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30005
+  selector:
+    name: result-app-pod
+    app: demo-voting-app
+```
+
+voting-app-deploy.yaml
+```
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voting-app-deploy
+  labels:
+    name: voting-app-deploy
+    app: demo-voting-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: voting-app-pod
+      app: demo-voting-app
+  template:
+    metadata:
+      name: voting-app-pod
+      labels:
+        name: voting-app-pod
+        app: demo-voting-app
+    spec:
+      containers:
+      - name: voting-app
+        image: kodekloud/examplevotingapp_vote:v1
+        ports:
+        - containerPort: 80
+```
+
+
+voting-app-service.yaml
+```
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: voting-service
+  labels:
+    name: voting-service
+    app: demo-voting-app
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30004
+  selector:
+    name: voting-app-pod
+    app: demo-voting-app
+```
+
+worker-app-deploy.yaml
+```
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker-app-deploy
+  labels:
+    name: worker-app-deploy
+    app: demo-voting-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: worker-app-pod
+      app: demo-voting-app
+  template:
+    metadata:
+      name: worker-app-pod
+      labels:
+        name: worker-app-pod
+        app: demo-voting-app
+    spec:
+      containers:
+      - name: worker-app
+        image: kodekloud/examplevotingapp_worker:v1
+```
+
+
+##  Kubernetes  on Cloud
+![[Pasted image 20230818003639.png|700]]
+
+
+In this section, we will look at the various options available for deploying a Kubernetes cluster on the cloud.
+
+In the scope of this beginner's course, we will look at the simplest form of getting started with Kubernetes in each of these cloud platforms Google Cloud and Azure.
+
+So for production purposes, there are many ways to get started with a Kubernetes cluster, both in a private or a public cloud environment.
+
+And I would categorise them as either self-hosted or turnkey solutions and hosted or managed solutions.
+
+So turnkey solutions are where you provision the required VMs and use some kind of tools or scripts to configure the Kubernetes cluster on them.
+
+So at the end of the day, you are responsible for maintaining those VMs and patching them and upgrading
+
+them, etc. But provisioning the cluster itself and managing the lifecycle of the cluster are mostly
+
+made easy using certain tools and scripts.
+
+For example, deploying a Kubernetes cluster on AWS can be made easy using tools like copse or cube
+
+one, etc. In the certified Kubernetes administrator's course, we explore setting up Kubernetes clusters
+
+using the the cube admin tool.
+
+Hosted solutions or managed solutions are more like Kubernetes as a service solution, where the cluster,
+
+along with the required VMs, are deployed by the provider and Kubernetes is configured by them by the
+
+provider.
+
+So the VMs are maintained by the provider.
+
+For example, the Google container engine lets you or the Google Kubernetes engine lets you provision
+
+a Kubernetes cluster in a matter of minutes with just a few clicks without having to perform any kind
+
+of configuration by yourself.
+
+So in these environments, mostly you won't have access to the master nodes, or you you would most
+
+likely not have access to the VMs themselves to perform any kind of configuration changes on the master
+
+nodes.
+
+The version of Kubernetes and the master nodes are all managed by the by the provider.
+
+So that's what we will look at in this section of the course.
+
+So we will look at deploying our example voting application on the Google Kubernetes engine on Google
+
+Cloud, the Azure Kubernetes service and the XE Solutions.
+
+Now, note that each of these require its own separate course, and we will only be looking at the simplest
+
+way of getting started with this.
+
+So a lot of concepts that we learned throughout this course about Kubernetes itself don't change and
+
+are applicable to any of these Kubernetes environments.
+
+All that we will be doing is provisioning, manage Kubernetes cluster and reuse the deployment and service
+
+definition files that we created and see how we can deploy the same application on all of these different
+
+platforms.
+
+Also note that this is not a demo of deploying a production grade Kubernetes cluster, and for that
+
+you must have a good understanding of the various concepts that we discuss in the Sitka and Xcode courses.
+
+And this is only a beginner's guide to deploying the same application in a learning environment, in
+
+different cloud platforms in the simplest form.
