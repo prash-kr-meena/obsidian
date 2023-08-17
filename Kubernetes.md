@@ -3382,3 +3382,16 @@ All that we will be doing is provisioning, manage Kubernetes cluster and reuse t
 Also note that this is not a demo of deploying a production grade Kubernetes cluster, and for that you must have a good understanding of the various concepts that we discuss in the Sitka and Xcode courses. And this is only a beginner's guide to deploying the same application in a learning environment, in different cloud platforms in the simplest form.
 
 ![[Pasted image 20230818004226.png|800]]
+
+## Setup multinode kubernetes cluster using kubeadm
+Oracle VirtualBox:  [https://www.virtualbox.org/](https://www.virtualbox.org/)
+Vagrant: [https://www.vagrantup.com/](https://www.vagrantup.com/)
+Link to download VM images: [http://osboxes.org/](http://osboxes.org/)
+Link to kubeadm installation instructions: [https://kubernetes.io/docs/setup/independent/install-kubeadm/](https://kubernetes.io/docs/setup/independent/install-kubeadm/)
+  
+The link to Vagrant file:  
+[https://github.com/kodekloudhub/certified-kubernetes-administrator-course](https://github.com/kodekloudhub/certified-kubernetes-administrator-course)  
+
+If you are new to VirtualBox or Vagrant, please follow this pre-requisites course to learn about it: [https://www.youtube.com/watch?v=Wvf0mBNGjXY](https://www.youtube.com/watch?v=Wvf0mBNGjXY)
+
+
