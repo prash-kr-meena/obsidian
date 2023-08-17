@@ -3366,15 +3366,11 @@ So turnkey solutions are where you provision the required VMs and use some kind 
 
 So at the end of the day, you are responsible for maintaining those VMs and patching them and upgrading
 
-them, etc. But provisioning the cluster itself and managing the lifecycle of the cluster are mostly
+them, etc. But provisioning the cluster itself and managing the lifecycle of the cluster are mostly made easy using certain tools and scripts.
 
-made easy using certain tools and scripts.
+For example, deploying a Kubernetes cluster on AWS can be made easy using tools like copse or cube one, etc. 
 
-For example, deploying a Kubernetes cluster on AWS can be made easy using tools like copse or cube
-
-one, etc. In the certified Kubernetes administrator's course, we explore setting up Kubernetes clusters
-
-using the the cube admin tool.
+In the certified Kubernetes administrator's course, we explore setting up Kubernetes clusters using the the cube admin tool.
 
 Hosted solutions or managed solutions are more like Kubernetes as a service solution, where the cluster,
 
