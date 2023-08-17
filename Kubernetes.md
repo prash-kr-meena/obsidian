@@ -2520,9 +2520,361 @@ And for the databases we will use the official Redis and PostgreSQL releases tha
 
 
 ## Demo - Deploying Microservices Application on Kubernetes (Only Using Docker)
+
+postgres-pod.yaml.yml
+```
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgres-pod
+  labels:
+    name: postgres-pod
+    app: demo-voting-app
+spec:
+    containers:
+    - name: postgres
+      image: postgres
+      ports:
+      - containerPort: 5432
+      env:
+        - name: POSTGRES_USER
+          value: "postgres"
+        - name: POSTGRES_PASSWORD
+          value: "postgres"
+        - name: POSTGRES_HOST_AUTH_METHOD
+          value: trust
+          
 ```
 
+
+postgres-service.yaml
 ```
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: db # The name of the postgres database must be db, as the worker app expects it to be db
+  labels:
+    name: postgres-service
+    app: demo-voting-app
+spec:
+  ports:
+  - port: 5432
+    targetPort: 5432
+  selector:
+    name: postgres-pod
+    app: demo-voting-app
+```
+
+redis-pod.yaml
+```
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-pod
+  labels:
+    name: redis-pod
+    app: demo-voting-app
+spec:
+    containers:
+    - name: redis
+      image: redis
+      ports:
+      - containerPort: 6379
+```
+
+redis-service.yaml
+```
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+  labels:
+    name: redis-service
+    app: demo-voting-app
+spec:
+  ports:
+  - port: 6379
+    targetPort: 6379
+  selector:
+    name: redis-pod
+    app: demo-voting-app
+```
+
+result-app-pod.yaml
+```
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: result-app-pod
+  labels:
+    name: result-app-pod
+    app: demo-voting-app
+spec:
+    containers:
+    - name: result-app
+      image: kodekloud/examplevotingapp_result:v1
+      ports:
+      - containerPort: 80
+```
+
+result-app-service.yaml
+```
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: result-service
+  labels:
+    name: result-service
+    app: demo-voting-app
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30005
+  selector:
+    name: result-app-pod
+    app: demo-voting-app
+```
+
+voting-app-pod.yaml
+```
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: voting-app-pod
+  labels:
+    name: voting-app-pod
+    app: demo-voting-app
+spec:
+    containers:
+    - name: voting-app
+      image: kodekloud/examplevotingapp_vote:v1
+      ports:
+      - containerPort: 80
+```
+
+voting-app-service.yaml
+```
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: voting-service
+  labels:
+    name: voting-service
+    app: demo-voting-app
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30004
+  selector:
+    name: voting-app-pod
+    app: demo-voting-app
+```
+
+worker-app-pod.yaml
+```
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: worker-app-pod
+  labels:
+    name: worker-app-pod
+    app: demo-voting-app
+spec:
+    containers:
+    - name: worker-app
+      image: kodekloud/examplevotingapp_worker:v1
+      # as no serivces listening, no port definition is required
+```
+
+
+
+So we are done with all the all the files and we have completed the creation of all the pod and service
+
+YAML definition files.
+
+And we will now proceed with the creation of these objects and we will then try to access the application
+
+on the web browser.
+
+So we will switch to the terminal of our system and we are in the voting app directory and which is
+
+where we created all the port and service definition files.
+
+So now we can start creating these objects.
+
+So first, let's check if there are any port or deployments or services running on the server.
+
+So when we see we see that there is nothing except for the default Kubernetes service.
+
+There is there's nothing else running.
+
+So let's start with the port and the service for the voting application.
+
+So we'll start with one by one and we'll test and make sure that they're working as expected, and then
+
+we'll proceed further.
+
+So to create the port, we will use the create command and specify the port definition file.
+
+And similarly, let's create the service using the service definition file for voting app.
+
+So let us now inspect the status of the pod and service.
+
+So if we want to see the the pod and the service in a single command, we can run the cube cutter,
+
+get pods, command and specify the service as SVC and separated by a comma.
+
+And so it is both the objects.
+
+So we can see that the service for the voting app is created and it is of type node port and the pod
+
+is also created and it is in a running state.
+
+Now, before we proceed further, let's test to see if that bit is working.
+
+So what we could do is simply access the voting app service using a URL which could be formed by the
+
+IP of the mini cube node.
+
+So if you know the IP, you could just use the port number, which is 30,000 zero for the port number
+
+of the service and view it in a browser.
+
+Or if you're not sure about the IP, you could run the command mini cube service and specify the name
+
+of the service with the dash dash URL option, and it'll give you the URL that you can use.
+
+So we'll copy the URL and we will try to access this in our local browser on my system.
+
+So here I'm at the local browser and I'm going to try and access this.
+
+And as you can see, we are now able to load the voting application.
+
+So that's that's one step which is complete.
+
+Now let's not try and cast any vote for now as we don't have the databases ready.
+
+Now let's go ahead and create the remaining objects, the parts and services.
+
+So back to the terminal.
+
+The next part and service that we created is the red spot.
+
+So we run the create command with the red is part definition file and then the service file.
+
+And as before we run the QR code will get parts and service command.
+
+And as you can see, the red is part and service are created.
+
+The service is now the cluster IP because this is an internal service and let's create the Postgres
+
+database now.
+
+We'll create the Postgres database with the PostgreSQL definition file.
+
+And as well as the service definition file for creating the service.
+
+Again, let's check the status and we can see that the PostgreSQL pod is in a running state and similar
+
+to the ready service.
+
+And we can see also that the post Postgres service is up as well with its name set to DB.
+
+All right.
+
+So now that both are Redes and Postgres, parts and services are up and running, we can now create
+
+the worker pod.
+
+And to do this, we will use the zip code to create command with the worker pod definition file.
+
+So let's check the status of the part and I can see that the worker part is also now in a running state.
+
+Now finally let us create the pod and service for our result application.
+
+So let's do the same thing as before.
+
+Keep an eye on the cubicle, create a result App Command, and let us run the create the result app
+
+service as well.
+
+Okay.
+
+So now let's check the status of all the parts and services.
+
+And now you can see that all of our five pots are up and running and we can see that we have two node
+
+port services, one for our sole service and one for our voting service.
+
+The other two services that we created are the Redis and database service, which are internal only.
+
+So we've already accessed the voting application.
+
+Let us also generate the URL for our results service.
+
+So for that, I'm going to use the same command as before.
+
+The Service Voting Service Command will give us the URL to access our voting app and let us change the
+
+name here to get the the URL of the result app.
+
+So we now have both the URLs.
+
+So let's go back to our Web page.
+
+And here we have the voting application, which is running on port 30,004.
+
+Let's copy and paste the new URL.
+
+So this is going to be 30,005.
+
+So let's try and cast a vote here.
+
+So I'm going to click on the dog's selection and here you can see that there is a check mark against
+
+the vote that we selected, which indicates that our vote has been recorded now, as in it has been
+
+saved in the red database.
+
+And you can also see that below that there's this particular web page is being processed by the voting
+
+app pod.
+
+Now, if you go to the results page, you can see that the the dog's application has 100% of votes because
+
+in this case, we just have one vote, and that was for dogs.
+
+And I can also change the vote if I want, so I could go back and click on Cats and I can see that the
+
+result has changed to Cats.
+
+So that's our demo.
+
+We have successfully deployed a multi-tier application on a Kubernetes cluster and we have confirmed
+
+that it's working right.
+
+So the data actually goes through from one end, all the way through, through the database, through
+
+the worker pod to the PostgreSQL database and up to the result pod.
+
+So it's working as expected.
+
+Well, that's it for now and I will see you in the next one.
+
 
 ## Demo - Deploying Microservices Application on Kubernetes (Using Kubernetes)
 
