@@ -3361,63 +3361,24 @@ In the scope of this beginner's course, we will look at the simplest form of get
 So for production purposes, there are many ways to get started with a Kubernetes cluster, both in a private or a public cloud environment.
 
 And I would categorise them as either self-hosted or turnkey solutions and hosted or managed solutions.
+![[Pasted image 20230818004114.png|1000]]
 
 So turnkey solutions are where you provision the required VMs and use some kind of tools or scripts to configure the Kubernetes cluster on them.
+So at the end of the day, you are responsible for maintaining those VMs and patching them and upgrading them, etc. 
 
-So at the end of the day, you are responsible for maintaining those VMs and patching them and upgrading
+But provisioning the cluster itself and managing the lifecycle of the cluster are mostly made easy using certain tools and scripts. For example, deploying a Kubernetes cluster on AWS can be made easy using tools like copse or cube one, etc. 
 
-them, etc. But provisioning the cluster itself and managing the lifecycle of the cluster are mostly made easy using certain tools and scripts.
-
-For example, deploying a Kubernetes cluster on AWS can be made easy using tools like copse or cube one, etc. 
-
-In the certified Kubernetes administrator's course, we explore setting up Kubernetes clusters using the the cube admin tool.
-
-Hosted solutions or managed solutions are more like Kubernetes as a service solution, where the cluster,
-
-along with the required VMs, are deployed by the provider and Kubernetes is configured by them by the
-
-provider.
+In the certified Kubernetes administrator's course, we explore setting up Kubernetes clusters using the the cube admin tool. Hosted solutions or managed solutions are more like Kubernetes as a service solution, where the cluster, along with the required VMs, are deployed by the provider and Kubernetes is configured by them by the provider.
 
 So the VMs are maintained by the provider.
+For example, the Google container engine lets you or the Google Kubernetes engine lets you provision a Kubernetes cluster in a matter of minutes with just a few clicks without having to perform any kind of configuration by yourself. So in these environments, mostly you won't have access to the master nodes, or you would most likely not have access to the VMs themselves to perform any kind of configuration changes on the master nodes.
 
-For example, the Google container engine lets you or the Google Kubernetes engine lets you provision
+The version of Kubernetes and the master nodes are all managed by the provider. So that's what we will look at in this section of the course. So we will look at deploying our example voting application on the Google Kubernetes engine on Google Cloud, the Azure Kubernetes service and the XE Solutions.
 
-a Kubernetes cluster in a matter of minutes with just a few clicks without having to perform any kind
+Now, note that each of these require its own separate course, and we will only be looking at the simplest way of getting started with this.
+So a lot of concepts that we learned throughout this course about Kubernetes itself don't change and are applicable to any of these Kubernetes environments.
+All that we will be doing is provisioning, manage Kubernetes cluster and reuse the deployment and service definition files that we created and see how we can deploy the same application on all of these different platforms.
 
-of configuration by yourself.
+Also note that this is not a demo of deploying a production grade Kubernetes cluster, and for that you must have a good understanding of the various concepts that we discuss in the Sitka and Xcode courses. And this is only a beginner's guide to deploying the same application in a learning environment, in different cloud platforms in the simplest form.
 
-So in these environments, mostly you won't have access to the master nodes, or you you would most
-
-likely not have access to the VMs themselves to perform any kind of configuration changes on the master
-
-nodes.
-
-The version of Kubernetes and the master nodes are all managed by the by the provider.
-
-So that's what we will look at in this section of the course.
-
-So we will look at deploying our example voting application on the Google Kubernetes engine on Google
-
-Cloud, the Azure Kubernetes service and the XE Solutions.
-
-Now, note that each of these require its own separate course, and we will only be looking at the simplest
-
-way of getting started with this.
-
-So a lot of concepts that we learned throughout this course about Kubernetes itself don't change and
-
-are applicable to any of these Kubernetes environments.
-
-All that we will be doing is provisioning, manage Kubernetes cluster and reuse the deployment and service
-
-definition files that we created and see how we can deploy the same application on all of these different
-
-platforms.
-
-Also note that this is not a demo of deploying a production grade Kubernetes cluster, and for that
-
-you must have a good understanding of the various concepts that we discuss in the Sitka and Xcode courses.
-
-And this is only a beginner's guide to deploying the same application in a learning environment, in
-
-different cloud platforms in the simplest form.
+![[Pasted image 20230818004226.png|800]]
