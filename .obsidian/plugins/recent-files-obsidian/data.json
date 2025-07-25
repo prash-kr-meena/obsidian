@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Untitled",
+      "path": "Untitled.canvas"
+    },
+    {
       "basename": "Kubernetes",
       "path": "Kubernetes.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "What is a Bare Metal Server?",
       "path": "What is a Bare Metal Server?.md"
-    },
-    {
-      "basename": "Elasticity in Cloud Computing",
-      "path": "Elasticity in Cloud Computing.md"
     }
   ],
   "omittedPaths": [],
